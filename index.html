@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sam Wolfe Portfolio</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="dist/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="bg-img"></div>
+        <img class="plant" src="assets/plant.png">
+        <img class="coffee" src="assets/coffee.png">
+        <img class="gummies" src="assets/gummies.png">
+        <div class="contact clickable">
+            <ul>
+                <li>(678) 314-8280</li>
+                <li>samgwolfe12@gmail.com</li>
+            </ul>
+        </div>
+        <div class="laptop clickable"  id ="laptop">
+            <div class="window">
+                <div class="location">
+                    <div class="path"></div>
+                </div>
+                <div class="content">
+                    <div class="left">
+                        <ul>
+                            <li>Documents</li>
+                            <li>Downloads</li>
+                            <li>Pictures</li>
+                        </ul>
+                    </div>
+                    <div class ="right">
+                        <a class="project" src="https://samgwolfe12.github.io/WCC2/index.html">
+                            <img class="folder" src="assets/folder.png">
+                            <h2>Portfolio Repo</h2>
+                        </a>
+                        <a class="project" src="https://samgwolfe12.github.io/WCC2/index.html">
+                            <img class="folder" src="assets/folder.png">
+                            <h2>WCC Website</h2>
+                        </a>
+                        <a class="project" src="https://samgwolfe12.github.io/WCC2/index.html">
+                            <img class="folder" src="assets/folder.png">
+                            <h2>WCC Website</h2>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img class="pens" src="assets/pens.png">
+        
+        <img class="clock" src="assets/clock.gif">
+        <img class="jewelery" src="assets/jewelery.png">
+        <img class="notebook" src = "assets/notebook.png">
+        <img class="airpods" src="assets/airpods.png">
+        <img class="sunnies" src="assets/sunnies.png">
+
+    </div>
+</body>
+</html>
+<script>
+    
+$(document).ready(function() {
+    /*
+    var dots = [],
+        mouse = {
+          x: 0,
+          y: 0
+        };
+
+    var Dot = function() {
+      this.x = 0;
+      this.y = 0;
+      this.node = $('<div>').addClass('trail').appendTo('body');
+    };
+    Dot.prototype.draw = function() {
+      this.node.css({
+        left: this.x + 'px',
+        top: this.y + 'px'
+      });
+    };
+
+    for (var i = 0; i < 12; i++) {
+      var d = new Dot();
+      dots.push(d);
+    }
+
+    function draw() {
+      var x = mouse.x,
+          y = mouse.y;
+      
+      $.each(dots, function(index, dot) {
+        var nextDot = dots[(index + 1) % dots.length];
+        
+        dot.x = x + 20;
+        dot.y = y + 40;
+        dot.draw();
+        x += (nextDot.x - dot.x) * 0.6;
+        y += (nextDot.y - dot.y) * 0.6;
+      });
+    }
+
+    $(document).on('mousemove', function(event) {
+      mouse.x = event.pageX;
+      mouse.y = event.pageY;
+    });
+
+    function animate() {
+      draw();
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+    */
+
+    
+    // Check if the clicked element is inside the laptop
+    $('#laptop').on('click', function(e) {
+
+    
+    // Check if the clicked element is a link
+    var $clickedElement = $(e.target);
+    if ($clickedElement.is('a')) {
+        // Clicked on a link, do nothing
+        console.log("click");
+    } else {
+        // Clicked outside a link, toggle classes normally
+        $('.contact').removeClass('scale-up active');
+        $(this).toggleClass('scale-up active');
+    }
+});
+
+    $('.contact').on('click', function(e) {
+        e.preventDefault();
+        $('.laptop').removeClass('scale-up active');
+        $(this).toggleClass('scale-up active');
+        
+    });
+    
+});
+</script>
+    
