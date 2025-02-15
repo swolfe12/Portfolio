@@ -90,7 +90,7 @@
           padding-left: 5px; }
           .laptop .window .content .left ul li {
             list-style: none;
-            color: #fbeefa; }
+            color: rgba(251, 238, 250, 0.5); }
       .laptop .window .content .right {
         width: 60%;
         height: 100%;
@@ -126,7 +126,8 @@
   left: 50%;
   margin-left: -380px;
   top: 40%;
-  z-index: 4; }
+  z-index: 4;
+  transition: ease .3s; }
   .contact ul {
     position: relative;
     padding: 30px 20px;
@@ -164,13 +165,14 @@
   position: relative; }
 
 .clickable {
-  /*animation: glow-effect 1s;*/ }
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; }
 
 @keyframes glow-effect {
   0% {
-    filter: drop-shadow(12px 12px 10px #fff) drop-shadow(-12px -12px 10px #fff); }
+    filter: none; }
   100% {
-    filter: drop-shadow(12px 12px 10px #fff) drop-shadow(-12px -12px 10px #fff); } }
+    filter: drop-shadow(12px 12px 10px #fff) drop-shadow(-12px -12px 10px #fff) drop-shadow(12px -12px 10px rgba(255, 255, 255, 0.5)) drop-shadow(-12px 12px 10px rgba(255, 255, 255, 0.5)); } }
 
 .pens {
   position: absolute;
