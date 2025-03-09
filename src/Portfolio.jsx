@@ -63,7 +63,7 @@ const Portfolio = () => {
                 <img className="folder" src="assets/folder.png" alt="Folder" />
                 <h2>Portfolio Repo</h2>
               </a>
-              <a className="project" target="_blank" rel="noopener noreferrer" href="https://samgwolfe12.github.io/WCC2/index.html">
+              <a className="project" target="_blank" rel="noopener noreferrer" href="https://wcchurch.org/">
                 <img className="folder" src="assets/folder.png" alt="Folder" />
                 <h2>WCC Website</h2>
               </a>
