@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # or 'master', depending on your default branch name
+      - main
 
 jobs:
   deploy:
@@ -27,5 +27,7 @@ jobs:
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
-        deploy_branch: gh-pages
+        publish_branch: gh-pages
         publish_dir: ./build
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # This automatically sets up a token for you
