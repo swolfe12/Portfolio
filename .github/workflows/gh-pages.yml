@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - main  # Or 'master', depending on your default branch name
 
 jobs:
   deploy:
@@ -29,5 +29,11 @@ jobs:
       with:
         publish_branch: gh-pages
         publish_dir: ./build
+        allow_empty_commit: false
+        keep_files: false
+        force_orphan: false
+        enable_jekyll: false
+        disable_nojekyll: false
+        exclude_assets: .github
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # This automatically sets up a token for you test
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Ensure this is correct
