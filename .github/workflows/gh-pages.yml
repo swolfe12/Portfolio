@@ -30,4 +30,4 @@ jobs:
         publish_branch: gh-pages
         publish_dir: ./build
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # This automatically sets up a token for you
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # This automatically sets up a token for you test
