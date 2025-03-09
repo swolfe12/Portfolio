@@ -1,0 +1,12 @@
+# Node modules
+/node_modules
+
+# Build folder (created after npm run build)
+/build
+
+# Environment files
+.env
+
+# Log files
+*.log
+
