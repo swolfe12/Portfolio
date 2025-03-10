@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a personal portfolio website featuring hand-drawn components and links to my projects. The site is built with React and is deployed using GitHub Pages via GitHub Actions.
 
-## Available Scripts
+Features
 
-In the project directory, you can run:
+Hand-drawn components that give the site a unique, artistic touch.
 
-### `npm start`
+Links to my projects, showcasing my work and experience.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Responsive design, ensuring a great experience across devices.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Build and Deployment Instructions
 
-### `npm test`
+Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Make sure you have the following installed:
 
-### `npm run build`
+Node.js (LTS version recommended)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+npm (comes with Node.js)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+A GitHub repository with GitHub Pages enabled
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the Repository
 
-### `npm run eject`
+git clone https://github.com/swolfe12/Portfolio.git
+cd Portfolio
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Install Dependencies
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. Build the Project
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+npm run build
 
-## Learn More
+This will generate a build/ directory containing the optimized static files.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. Deploy the Site
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Deployment is handled automatically by GitHub Actions when you push to the main branch. However, you can also manually deploy using:
 
-### Code Splitting
+npm run deploy
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+This will push the build/ folder to the gh-pages branch and update the live site.
 
-### Analyzing the Bundle Size
+5. Access the Live Site
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Once deployed, the site will be available at:
 
-### Making a Progressive Web App
+https://swolfe12.github.io/Portfolio
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Author: swolfe12
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
