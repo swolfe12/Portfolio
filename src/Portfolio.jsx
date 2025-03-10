@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import $ from "jquery";
 import "./styles/style.scss";
+import Calendar from './Calendar';
 import contact from './assets/contact.png';
 import laptop from './assets/laptop.png';
 import bgRoom from './assets/bg-room.png';
@@ -78,6 +79,7 @@ const Portfolio = () => {
       <img className="notebook" src="assets/notebook.png" alt="Notebook" />
       <img className="airpods" src="assets/airpods.png" alt="Airpods" />
       <img className="sunnies" src="assets/sunnies.png" alt="Sunnies" />
+      <Calendar></Calendar>
     </div>
   );
 };
