@@ -25,16 +25,16 @@ A GitHub repository with GitHub Pages enabled
 
 ### 1. Clone the Repository
 
-git clone https://github.com/swolfe12/Portfolio.git
-cd Portfolio
+``` git clone https://github.com/swolfe12/Portfolio.git ```
+```cd Portfolio```
 
 ### 2. Install Dependencies
 
-npm install
+```npm install ```
 
 ### 3. Build the Project
 
-npm run build
+```npm run build```
 
 This will generate a build/ directory containing the optimized static files.
 
@@ -42,7 +42,7 @@ This will generate a build/ directory containing the optimized static files.
 
 Deployment is handled automatically by GitHub Actions when you push to the main branch. However, you can also manually deploy using:
 
-npm run deploy
+```npm run deploy```
 
 This will push the build/ folder to the gh-pages branch and update the live site.
 
