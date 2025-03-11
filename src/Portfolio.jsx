@@ -23,6 +23,7 @@ import dogs from './assets/dogs.png';
 import desk from './assets/desk.png';
 import window from './assets/window.png';
 import paper from './assets/paper.png';
+import samBubble from './assets/sam-bubble.png';
 
 
 const Portfolio = () => {
@@ -53,6 +54,11 @@ const Portfolio = () => {
   return (
     <div className="container">
       <div className="bg-img" style={{backgroundImage: `url(${bgRoom})` }}></div>
+      <div className = "popup">
+        <img className="sam-bubble" src={samBubble} alt="text bubble"/>
+        <p>Hey!</p>
+        
+      </div>
       <img className="plant" src={plant} alt="Plant" />
       <img className="coffee" src={coffee} alt="Coffee" />
       <img className="gummies" src={gummies} alt="Gummies" />
@@ -97,7 +103,7 @@ const Portfolio = () => {
       <img className="sam-poster" src={samPoster} alt="Sam Wolfe"/>
       <img className="desk" src={desk} alt="desk"/>
       <img className="window" src={window} alt="window"/>
-      <img className="paper" src={paper} aly="paper"/>
+      <img className="paper" src={paper} alt="paper"/>
       <img className="dogs" src={dogs} alt="dogs"/>
       <img className="pens" src={pens} alt="Pens" />
       <img className="clock" src={clock} alt="Clock" />

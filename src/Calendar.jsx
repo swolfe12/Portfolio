@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import calendar from './assets/calendar.png';
 import x from './assets/x.png';
 
 export const Calendar = () => {
