@@ -1,5 +1,5 @@
 $calendar-color: rgba(46, 28, 126, 0.8);
-$calendar-bg: rgb(136, 79, 160);
+$calendar-bg: #744890;
 body {
     
 }
@@ -13,11 +13,13 @@ body {
       
 }
 .plant {
-    height: 280px;
+    height: 290px;
     position: absolute;
     left: 50%;
-    top: 8%;
+    top: 50%;
     margin-left: -480px;
+    margin-top: -370px;
+    z-index: 2
 }
 .gummies{
     height: 350px;
@@ -25,8 +27,9 @@ body {
     left: 50%;
     top: 50%;
     margin-top: 200px;
-    margin-left: -650px;
+    margin-left: -700px;
     transform: rotate(-25deg);
+    z-index: 4;
 }
 .bg-img {
     position: absolute;
@@ -37,6 +40,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background: #43288c !important;
     //background-image: url('/assets/bg-room.png');
   }
   
@@ -48,7 +52,8 @@ body {
     width: 650px;
     position: absolute;
     left: 50%;
-    top: 40%;
+    top: 50%;
+    margin-top: -95px;
     margin-left: -280px;
     z-index: 4;
     transition: ease .3s;
@@ -58,7 +63,7 @@ body {
         left: 50%;
         margin-left: -285px;
         cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="36" height="48" viewBox="0 0 24 24"><path fill="%23FFF" stroke="%23000" stroke-width="2" stroke-linejoin="round" d="M18 14.88 8.16 3.15c-.26-.31-.76-.12-.76.28v15.31c0 .36.42.56.7.33l3.1-2.6 1.55 4.25c.08.22.33.34.55.26l1.61-.59a.43.43 0 0 0 .26-.55l-1.55-4.25h4.05c.36 0 .56-.42.33-.7Z"></path></svg>'), auto;
-        .window{
+        .explorer{
             .project{
                 &:hover{
                     transform: scale(1.1);
@@ -71,13 +76,22 @@ body {
         drop-shadow(12px -12px 10px rgba(255, 255, 255, 0.5)) 
         drop-shadow(-12px 12px 10px rgba(255, 255, 255, 0.5));
     }
-    .window {
+    .screen {
+        position: absolute;
+        background-size: cover;
+        height: 187px;
+        top: 55px;
+        width: 348px;
+        left: 140px;
+    }
+    .explorer {
         position: relative;
-        width: 40%;
-        height: 35%;
+        width: 60%;
+        height: 70%;
         background: #191919;
-        top: 16%;
-        left: 28%;
+        top: 8%;
+        left: 20%;
+        
         .location{
             position: relative;
             top: 0px;
@@ -114,7 +128,7 @@ body {
                 }
             }
             .right{
-                width: 60%;
+                width: 55%;
                 height: 100%;
                 margin: 10px;
                 .project{
@@ -148,13 +162,14 @@ body {
   .contact{
     //background: url('/assets/contact.png');
     background-size: cover;
-    height: 180px;
+    height: 170px;
     background-position: center;
     width: 180px;
     position: absolute;
     left: 50%;
     margin-left: -380px;
-    top: 40%;
+    top: 50%;
+    margin-top: -80px;
     z-index: 4;
     transition: ease .3s;
     ul{
@@ -183,12 +198,79 @@ body {
     }
   }
 
+  .bulletin {
+    width: 1000px;
+    top: 50%;
+    left: 50%;
+    margin-top: -460px;
+    margin-left: 0px;
+    position: absolute;
+  }
+
+  .jellyfish {
+    width: 210px;
+    top: 50%;
+    left: 50%;
+    margin-left: 280px;
+    margin-top: -400px;
+    position: absolute;
+    z-index: 3;
+  }
+
+  .sam-poster{
+    width: 220px;
+    top: 50%;
+    left: 50%;
+    margin-left: 50px;
+    margin-top: -330px;
+    position: absolute;
+    z-index: 3;
+  }
+  .dogs {
+    width: 140px;
+    top: 50%;
+    left: 50%;
+    margin-left: 270px;
+    margin-top: -200px;
+    position: absolute;
+    z-index: 3;
+  }
+  .window {
+    width: 470px;
+    top: 50%;
+    left: 50%;
+    margin-left: -660px;
+    margin-top: -460px;
+    position: absolute;
+    z-index: 0;
+  }
+  .desk {
+    width: 2000px;
+    top: 50%;
+    left: 50%;
+    margin-top: 25px;
+    margin-left: -1000px;
+    position: absolute;
+    z-index: 0;
+  }
+  .paper {
+    width: 400px;
+    top: 50%;
+    left: 50%;
+    margin-left: -525px;
+    margin-top: 184px;
+    z-index: 2;
+    position: absolute;
+  }
+
   .coffee {
     height:  250px;
     left: 50%;
-    margin-left: -500px;
-    top: 60%;
-    position: relative;
+    margin-left: -540px;
+    top: 50%;
+    margin-top: 40px;
+    position: absolute;
+    z-index: 3;
   }
   .scale-up{
 
@@ -201,9 +283,10 @@ body {
   .clock {
     height: 150px;
     left: 50%;
-    top: 40%;
-    margin-left: 700px;
-    position: relative;
+    top: 50%;
+    margin-top: 40px;
+    margin-left: 380px;
+    position: absolute;
   }
 
   .clickable {
@@ -228,7 +311,7 @@ body {
     left: 50%;
     margin-left: 190px;
     top: 50%;
-    margin-top: -60px;
+    margin-top: -75px;
     height: 200px;
   }
 
@@ -236,53 +319,59 @@ body {
     position: absolute;
     left: 50%;
     top: 50%;
-    margin-left: -650px;
-    margin-top: 100px;
+    margin-left: -670px;
+    margin-top: 50px;
     height: 150px;
   }
   .airpods {
     position: absolute;
     left: 50%;
     top: 50%;
-    height: 180px;
-    margin-left: 550px;
-    margin-top: 250px;
+    height: 218px;
+    margin-left: -320px;
+    margin-top: 50px;
   }
   .notebook{
     position: absolute;
     left: 50%;
     top: 50%;
-    height: 270px;
-    margin-left: 235px;
+    height: 340px;
+    margin-left: 295px;
     margin-top: 150px;
 
   }
   .sunnies {
     position: absolute;
     left: 50%;
+    margin-left: -600px;
     top: 50%;
-    height: 100px;
+    margin-top: -210px;
+    height: 200px;
   }
   .calendar {
     height: 330px;
-    width: 350px;
-    background: $calendar-bg;
+    width: 320px;
+    //background: $calendar-bg;
     position: absolute; 
     left: 50%;
-    top: 0%;
-    margin-left: 440px;
+    top: 50%;
+    margin-top: -460px;
+    margin-left: 500px;
     color: rgb(49, 42, 82);
     box-shadow: 0px 4px 0 rgb(43, 6, 6);
+    background-size: cover;
+    background-image: url("../assets/calendar.png");
+
     h2 {
         text-align: center;
         text-transform: uppercase;
         font-family: impact;
         letter-spacing: 3px;
         margin-bottom: 0px;
-        margin-top: 30px;
+        margin-top: 40px;
         font-size: 38px;
         color: $calendar-bg;
-        background-color: $calendar-bg;
+        //background-color: $calendar-bg;
         text-shadow: -2px -2px 0 $calendar-color, 2px -2px 0 $calendar-color, -2px 2px 0 $calendar-color, 2px 2px 0 $calendar-color;
     }
     table {
@@ -308,7 +397,7 @@ body {
                 position: absolute;
                 top: 0;
                 left: 0;
-                opacity: .3;
+                //opacity: .3;
             }
         }
         th {

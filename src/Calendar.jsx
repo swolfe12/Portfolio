@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import checkmark from './assets/check.jpeg'; 
+import calendar from './assets/calendar.png';
+import x from './assets/x.png';
 
 export const Calendar = () => {
     const [date, setDate] = useState(new Date());
@@ -31,7 +32,7 @@ export const Calendar = () => {
                     <td key={dayCounter} className={dayCounter < currentDay ? 'highlight' : ''}>
                         <p>{dayCounter}</p>
                         {dayCounter < currentDay && (
-                            <img src={checkmark} alt="Completed" className="checkmark-icon" />
+                            <img src={x} alt="Completed" className="checkmark-icon" />
                         )}
                     </td>
                 );
@@ -42,7 +43,7 @@ export const Calendar = () => {
     }
 
     return (
-        <div className="calendar">
+        <div className="calendar" id="test" >
             <h2>{date.toLocaleString('default', { month: 'long' })}</h2>
             <table>
                 <thead>
