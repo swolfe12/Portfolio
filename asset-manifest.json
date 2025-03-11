@@ -1,19 +1,39 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.1d9fb7e5.css",
-    "main.js": "/Portfolio/static/js/main.ea9e5eda.js",
+    "main.css": "/Portfolio/static/css/main.dfec3784.css",
+    "main.js": "/Portfolio/static/js/main.6c367d7b.js",
     "static/js/453.1407b060.chunk.js": "/Portfolio/static/js/453.1407b060.chunk.js",
-    "static/media/bg-room.png": "/Portfolio/static/media/bg-room.6661a43323923d9364ee.png",
+    "static/media/bg-room.png": "/Portfolio/static/media/bg-room.e5926842e27bdec49d20.png",
+    "static/media/sam-bubble.png": "/Portfolio/static/media/sam-bubble.2638630bad83f0de4bef.png",
+    "static/media/gummies.png": "/Portfolio/static/media/gummies.c00199fca8a6a9d41012.png",
+    "static/media/x.png": "/Portfolio/static/media/x.4455cc87219d01428aea.png",
+    "static/media/coffee.png": "/Portfolio/static/media/coffee.72e8784d11607b92a871.png",
+    "static/media/notebook.png": "/Portfolio/static/media/notebook.accef6b4a0cca5e35452.png",
+    "static/media/screensaver.jpg": "/Portfolio/static/media/screensaver.2c0467816c7de8a310bf.jpg",
+    "static/media/bulletin.png": "/Portfolio/static/media/bulletin.4f0559166799467dd90f.png",
+    "static/media/plant.png": "/Portfolio/static/media/plant.fd6ca237d148d8030491.png",
+    "static/media/clock-clean.png": "/Portfolio/static/media/clock-clean.5e6771c0a109cb42d851.png",
+    "static/media/jewelery-bowl.png": "/Portfolio/static/media/jewelery-bowl.3a59e04de8d8ac1eb9fe.png",
+    "static/media/pens.png": "/Portfolio/static/media/pens.3934546a58e40a132efa.png",
+    "static/media/sunnies.png": "/Portfolio/static/media/sunnies.dfd11457c8fb0ae3dcaf.png",
     "static/media/laptop.png": "/Portfolio/static/media/laptop.5f15e80e0dfb4ed7d812.png",
     "static/media/contact.png": "/Portfolio/static/media/contact.ac3d0eb9bee82ed7123f.png",
-    "static/media/check.jpeg": "/Portfolio/static/media/check.199c3cf3c974e5889912.jpeg",
+    "static/media/desk.png": "/Portfolio/static/media/desk.68bb80aff5f4f12f7189.png",
+    "static/media/airpods.png": "/Portfolio/static/media/airpods.6969a7402d988d3d6f1a.png",
+    "static/media/folder.png": "/Portfolio/static/media/folder.ee4c1d5a26f5406fc158.png",
+    "static/media/window.png": "/Portfolio/static/media/window.92d63102c27495831871.png",
+    "static/media/jellyfish.png": "/Portfolio/static/media/jellyfish.bcbbff75aee1d3166a25.png",
+    "static/media/paper.png": "/Portfolio/static/media/paper.f6c9738a4ce36afaa6df.png",
+    "static/media/sam-poster.png": "/Portfolio/static/media/sam-poster.f571d9075b484b865f8d.png",
+    "static/media/calendar.png": "/Portfolio/static/media/calendar.1c99c757091fc93fb568.png",
+    "static/media/dogs.png": "/Portfolio/static/media/dogs.1f59f0c9e5329762c719.png",
     "index.html": "/Portfolio/index.html",
-    "main.1d9fb7e5.css.map": "/Portfolio/static/css/main.1d9fb7e5.css.map",
-    "main.ea9e5eda.js.map": "/Portfolio/static/js/main.ea9e5eda.js.map",
+    "main.dfec3784.css.map": "/Portfolio/static/css/main.dfec3784.css.map",
+    "main.6c367d7b.js.map": "/Portfolio/static/js/main.6c367d7b.js.map",
     "453.1407b060.chunk.js.map": "/Portfolio/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1d9fb7e5.css",
-    "static/js/main.ea9e5eda.js"
+    "static/css/main.dfec3784.css",
+    "static/js/main.6c367d7b.js"
   ]
 }
