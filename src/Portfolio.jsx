@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import $ from "jquery";
 import "./styles/style.scss";
 import Calendar from './Calendar';
@@ -24,9 +24,13 @@ import desk from './assets/desk.png';
 import window from './assets/window.png';
 import paper from './assets/paper.png';
 import samBubble from './assets/sam-bubble.png';
+import starbies from './assets/starbies.png';
+import mouse from './assets/mouse.png';
 
 
 const Portfolio = () => {
+  const [isModalOpen, setIsModalOpen] = useState(true);
+
   useEffect(() => {
     // Laptop Click Handling
     $("#laptop").on("click", function (e) {
@@ -54,11 +58,20 @@ const Portfolio = () => {
   return (
     <div className="container">
       <div className="bg-img" style={{backgroundImage: `url(${bgRoom})` }}></div>
+
+      {isModalOpen && (
       <div className = "popup">
-        <img className="sam-bubble" src={samBubble} alt="text bubble"/>
-        <p>Hey!</p>
-        
+       <div className="popup-content">
+            <button className="close-btn" onClick={() => setIsModalOpen(false)}>
+              &times;
+            </button>
+            <img className="sam-bubble" src={samBubble} alt="Sam Bubble" />
+            <p>Hey! Nice to meet you, I'm Sam. Welcome to my room! Feel free to look around!
+              <br></br><br></br>
+            P.S. I have some cool projects on my laptop. You should check them out!</p>
+        </div>
       </div>
+      )}
       <img className="plant" src={plant} alt="Plant" />
       <img className="coffee" src={coffee} alt="Coffee" />
       <img className="gummies" src={gummies} alt="Gummies" />
@@ -111,6 +124,8 @@ const Portfolio = () => {
       <img className="notebook" src={notebook} alt="Notebook" />
       <img className="airpods" src={airpods} alt="Airpods" />
       <img className="sunnies" src={sunnies} alt="Sunnies" />
+      <img className="starbies" src={starbies} alt="Stabucks Cup" />
+      <img className="mouse" src={mouse} alt="Mouse pad"/>
       <Calendar></Calendar>
       <div class="bottom-border">
         <span>SAM WOLFE</span>

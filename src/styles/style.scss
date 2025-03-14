@@ -167,9 +167,9 @@ body {
     width: 180px;
     position: absolute;
     left: 50%;
-    margin-left: -380px;
+    margin-left: -430px;
     top: 50%;
-    margin-top: -80px;
+    margin-top: -90px;
     z-index: 4;
     transition: ease .3s;
     ul{
@@ -284,7 +284,7 @@ body {
     height: 150px;
     left: 50%;
     top: 50%;
-    margin-top: 40px;
+    margin-top: -5px;
     margin-left: 380px;
     position: absolute;
   }
@@ -309,36 +309,57 @@ body {
   .pens {
     position: absolute;
     left: 50%;
-    margin-left: 190px;
+    margin-left: -267px;
     top: 50%;
-    margin-top: -75px;
-    height: 200px;
+    margin-top: -92px;
+    height: 210px;
   }
 
   .jewelery {
     position: absolute;
     left: 50%;
     top: 50%;
-    margin-left: -670px;
+    margin-left: -680px;
     margin-top: 50px;
     height: 150px;
+    transform: rotate(-12deg);
   }
   .airpods {
     position: absolute;
     left: 50%;
     top: 50%;
-    height: 218px;
+    height: 200px;
     margin-left: -320px;
-    margin-top: 50px;
+    margin-top: 90px;
   }
   .notebook{
     position: absolute;
     left: 50%;
     top: 50%;
-    height: 340px;
-    margin-left: 295px;
-    margin-top: 150px;
+    height: 290px;
+    margin-left: 220px;
+    margin-top: 60px;
 
+  }
+  .starbies {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 340px;
+    margin-left: 200px;
+    margin-top: -150px;
+    z-index: 4;
+    transform: rotate(-3deg);
+    display: none;
+  }
+  .mouse {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 450px;
+    margin-left: 270px;
+    margin-top: 160px;
+    transform: rotate(6deg);
   }
   .sunnies {
     position: absolute;
@@ -416,22 +437,44 @@ body {
     margin-left: -500px;
     margin-top: -400px;
     top: 50%;
-    display:none;
+
+    .popup-content {
+        //background: white;
+        //padding: 20px;
+        //border-radius: 10px;
+        //position: relative;
+        //text-align: center;
     
-    img {
-        width: 1000px;
-        /*filter: drop-shadow(12px 12px 10px #fff) drop-shadow(-12px -12px 10px #fff) 
-        drop-shadow(12px -12px 10px rgba(255, 255, 255, 0.5)) 
-        drop-shadow(-12px 12px 10px rgba(255, 255, 255, 0.5));*/
-    }
-    p {
-        font-size: 40px;
-        color: white;
-        position: absolute;
-        z-index: 11;
-        top: 50%;
-        margin-top: -150px;
-        left: 50%;
-        margin-left: -50px;
+  
+        .close-btn {
+            position: absolute;
+            top: 30px;
+            right: 15px;
+            font-size: 24px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            background-color: white;
+            border-radius: 50%;
+        }
+            
+        img {
+            width: 1000px;
+            /*filter: drop-shadow(12px 12px 10px #fff) drop-shadow(-12px -12px 10px #fff) 
+            drop-shadow(12px -12px 10px rgba(255, 255, 255, 0.5)) 
+            drop-shadow(-12px 12px 10px rgba(255, 255, 255, 0.5));*/
+        }
+        p {
+            font-size: 30px;
+            color: white;
+            position: absolute;
+            width: 350px;
+            height: 500px;
+            z-index: 11;
+            top: 50%;
+            margin-top: -150px;
+            left: 50%;
+            margin-left: -50px;
+        }
     }
   }
