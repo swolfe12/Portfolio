@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.81c1cc81.css",
-    "main.js": "/Portfolio/static/js/main.6c367d7b.js",
+    "main.css": "/Portfolio/static/css/main.11eed7aa.css",
+    "main.js": "/Portfolio/static/js/main.b33108f1.js",
     "static/js/453.1407b060.chunk.js": "/Portfolio/static/js/453.1407b060.chunk.js",
     "static/media/bg-room.png": "/Portfolio/static/media/bg-room.e5926842e27bdec49d20.png",
     "static/media/sam-bubble.png": "/Portfolio/static/media/sam-bubble.2638630bad83f0de4bef.png",
@@ -11,10 +11,12 @@
     "static/media/notebook.png": "/Portfolio/static/media/notebook.accef6b4a0cca5e35452.png",
     "static/media/screensaver.jpg": "/Portfolio/static/media/screensaver.2c0467816c7de8a310bf.jpg",
     "static/media/bulletin.png": "/Portfolio/static/media/bulletin.4f0559166799467dd90f.png",
+    "static/media/starbies.png": "/Portfolio/static/media/starbies.892953f76ea2557e3d1f.png",
     "static/media/plant.png": "/Portfolio/static/media/plant.fd6ca237d148d8030491.png",
     "static/media/clock-clean.png": "/Portfolio/static/media/clock-clean.5e6771c0a109cb42d851.png",
     "static/media/jewelery-bowl.png": "/Portfolio/static/media/jewelery-bowl.3a59e04de8d8ac1eb9fe.png",
     "static/media/pens.png": "/Portfolio/static/media/pens.3934546a58e40a132efa.png",
+    "static/media/mouse.png": "/Portfolio/static/media/mouse.4842b024ea1ab9a601b2.png",
     "static/media/sunnies.png": "/Portfolio/static/media/sunnies.dfd11457c8fb0ae3dcaf.png",
     "static/media/laptop.png": "/Portfolio/static/media/laptop.5f15e80e0dfb4ed7d812.png",
     "static/media/contact.png": "/Portfolio/static/media/contact.ac3d0eb9bee82ed7123f.png",
@@ -28,12 +30,12 @@
     "static/media/calendar.png": "/Portfolio/static/media/calendar.1c99c757091fc93fb568.png",
     "static/media/dogs.png": "/Portfolio/static/media/dogs.1f59f0c9e5329762c719.png",
     "index.html": "/Portfolio/index.html",
-    "main.81c1cc81.css.map": "/Portfolio/static/css/main.81c1cc81.css.map",
-    "main.6c367d7b.js.map": "/Portfolio/static/js/main.6c367d7b.js.map",
+    "main.11eed7aa.css.map": "/Portfolio/static/css/main.11eed7aa.css.map",
+    "main.b33108f1.js.map": "/Portfolio/static/js/main.b33108f1.js.map",
     "453.1407b060.chunk.js.map": "/Portfolio/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.81c1cc81.css",
-    "static/js/main.6c367d7b.js"
+    "static/css/main.11eed7aa.css",
+    "static/js/main.b33108f1.js"
   ]
 }
