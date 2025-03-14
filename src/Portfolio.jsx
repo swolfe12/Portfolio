@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import $ from "jquery";
 import "./styles/style.scss";
 import Calendar from './Calendar';
+import Clock from './Clock';
 import contact from './assets/contact.png';
 import laptop from './assets/laptop.png';
 import bgRoom from './assets/bg-room.png';
@@ -127,8 +128,8 @@ const Portfolio = () => {
       <img className="starbies" src={starbies} alt="Stabucks Cup" />
       <img className="mouse" src={mouse} alt="Mouse pad"/>
       <Calendar></Calendar>
-      <div class="bottom-border">
-        <span>SAM WOLFE</span>
+      <Clock></Clock>
+      <div class="border-top">
       </div>
     </div>
   );
