@@ -103,6 +103,18 @@ $calendar-bg: #744890;
         width: 348px;
         left: 140px;
     }
+    .resume {
+      position: absolute;
+      //height:  150px;
+      //width: 150px;
+      top: -400px;
+      object-fit: contain;
+      iframe {
+        top: 0;
+        position: relative;
+        transform: scale(.2);
+      }
+    }
     .explorer {
         position: relative;
         width: 60%;
@@ -110,6 +122,7 @@ $calendar-bg: #744890;
         background: #191919;
         top: 8%;
         left: 20%;
+        display: none;
         
         .location{
             position: relative;
