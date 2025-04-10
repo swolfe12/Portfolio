@@ -13,7 +13,7 @@ $calendar-bg: #744890;
     //background: blue;
     margin: auto;
 
-    height: 100vh;
+    height: 100%;
     background: rgb(238, 187, 255);
 
     .inner-container{
@@ -60,6 +60,7 @@ $calendar-bg: #744890;
     background-position: center;
     background-repeat: no-repeat;
     background: #43288c !important;
+    display: none;
     //background-image: url('/assets/bg-room.png');
   }
   
@@ -104,16 +105,16 @@ $calendar-bg: #744890;
         left: 140px;
     }
     .resume {
-      position: absolute;
+      position: relative;
+      top: -70px;
+      left: -60px;
       //height:  150px;
       //width: 150px;
-      top: -400px;
+      transform: scale(.5);
+
       object-fit: contain;
-      iframe {
-        top: 0;
-        position: relative;
-        transform: scale(.2);
-      }
+      overflow: scroll;
+      height: 320px;
     }
     .explorer {
         position: relative;

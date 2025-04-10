@@ -27,6 +27,7 @@ import paper from './assets/paper.png';
 import samBubble from './assets/sam-bubble.png';
 import starbies from './assets/starbies.png';
 import mouse from './assets/mouse.png';
+import resume from './assets/resume.png';
 
 
 const Portfolio = () => {
@@ -89,7 +90,7 @@ const Portfolio = () => {
       <div className="laptop clickable" style={{ backgroundImage: `url(${laptop})` }} id="laptop">
         <div class="screen" style={{ backgroundImage: `url(${screensaver})` }}>
           <div class="resume">
-            <iframe src="https://docs.google.com/document/d/1ei5dTmXsQ0X0AeQnxmuT2cDt-WKHS_6uZe_WAqVl7yU/edit?usp=sharing" width="700px" height="1000px" title="Embedded PDF Viewer"></iframe>
+           <img src={resume} alt="Sam Wolfe Resume" height="500px"></img>
             </div>
           <div className="explorer">
             <div className="location">
