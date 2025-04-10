@@ -11,7 +11,6 @@ import coffee from './assets/coffee.png';
 import gummies from './assets/gummies.png';
 import folder from './assets/folder.png';
 import pens from './assets/pens.png';
-import clock from './assets/clock-clean.png';
 import jewelery from './assets/jewelery-bowl.png';
 import notebook from './assets/notebook.png';
 import airpods from './assets/airpods.png';
@@ -30,7 +29,7 @@ import mouse from './assets/mouse.png';
 
 
 const Portfolio = () => {
-  const [isModalOpen, setIsModalOpen] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     // Laptop Click Handling
@@ -57,9 +56,11 @@ const Portfolio = () => {
   }, []);
 
   return (
-    <div className="container">
-      <div className="bg-img" style={{backgroundImage: `url(${bgRoom})` }}></div>
 
+    <div className="portfolio">
+      <div className="inner-container">
+      <div className="bg-img" style={{backgroundImage: `url(${bgRoom})` }}></div>
+      
       {isModalOpen && (
       <div className = "popup">
        <div className="popup-content">
@@ -90,15 +91,15 @@ const Portfolio = () => {
             <div className="location">
               <div className="path"></div>
             </div>
-            <div className="content">
-              <div className="left">
+            <div className="content-latptop">
+              <div className="left-laptop">
                 <ul>
                   <li>Documents</li>
                   <li>Downloads</li>
                   <li>Pictures</li>
                 </ul>
               </div>
-              <div className="right">
+              <div className="right-laptop">
                 <a className="project" target="_blank" rel="noopener noreferrer" href="https://github.com/swolfe12/Portfolio">
                   <img className="folder" src={folder} alt="Folder" />
                   <h2>Portfolio Repo</h2>
@@ -120,7 +121,6 @@ const Portfolio = () => {
       <img className="paper" src={paper} alt="paper"/>
       <img className="dogs" src={dogs} alt="dogs"/>
       <img className="pens" src={pens} alt="Pens" />
-      <img className="clock" src={clock} alt="Clock" />
       <img className="jewelery" src={jewelery} alt="Jewelery" />
       <img className="notebook" src={notebook} alt="Notebook" />
       <img className="airpods" src={airpods} alt="Airpods" />
@@ -129,8 +129,8 @@ const Portfolio = () => {
       <img className="mouse" src={mouse} alt="Mouse pad"/>
       <Calendar></Calendar>
       <Clock></Clock>
-      <div class="border-top">
-      </div>
+
+    </div>
     </div>
   );
 };

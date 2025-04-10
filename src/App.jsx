@@ -1,7 +1,8 @@
-import Portfolio from "./Portfolio";
+
+import Home from "./Home"
 
 function App() {
-  return <Portfolio />;
+  return <Home />;
 }
 
 export default App;
