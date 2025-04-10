@@ -6,15 +6,31 @@
 $calendar-color: rgba(46, 28, 126, 0.8);
 $calendar-bg: #744890;
 
-.container{
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        overflow: hidden;
+.portfolio {
+  //padding: 20px;
+    display: flex;
+    //overflow: hidden;
+    //background: blue;
+    margin: auto;
+
+    height: 100vh;
+    background: rgb(238, 187, 255);
+
+    .inner-container{
+      position: relative;
+      //top: 0px;
+      //left: 0px;
+      width: 1700px;
+      height: 900px;
+      margin: auto auto;
+     //margin-bottom: 10px;
       
-}
+      overflow: hidden;
+      background: #43288c !important;
+      //border-radius: 0 0 3%;
+      
+
+
 .plant {
     height: 290px;
     position: absolute;
@@ -520,3 +536,5 @@ $calendar-bg: #744890;
     position: absolute;
     z-index: 20;
   }
+}
+}

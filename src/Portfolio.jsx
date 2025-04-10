@@ -57,7 +57,9 @@ const Portfolio = () => {
   }, []);
 
   return (
-    <div className="container">
+    <div className="portfolio">
+      <div className="inner-container">
+
       <div className="bg-img" style={{backgroundImage: `url(${bgRoom})` }}></div>
 
       {isModalOpen && (
@@ -131,6 +133,7 @@ const Portfolio = () => {
       <Clock></Clock>
       <div class="border-top">
       </div>
+    </div>
     </div>
   );
 };
