@@ -9,6 +9,12 @@
     top: 40px;
     left: 20px;
     transform: rotate(90deg);
+    &:hover {
+        filter: drop-shadow(12px 12px 10px #fff) drop-shadow(-12px -12px 10px #fff) 
+        drop-shadow(12px -12px 10px rgba(255, 255, 255, 0.5)) 
+        drop-shadow(-12px 12px 10px rgba(255, 255, 255, 0.5));
+
+    }
   }
   
   .switch-input {

@@ -3,6 +3,7 @@ import $ from "jquery";
 import "./../../styles/main.scss";
 import Calendar from './Calendar';
 import Clock from './Clock';
+import GenericSite from "../GenerciSite/GenericSite";
 import contact from './../../assets/contact.png';
 import laptop from './../../assets/laptop.png';
 import bgRoom from './../../assets/bg-room.png';
@@ -94,7 +95,9 @@ const Portfolio = () => {
       <div className="laptop clickable" style={{ backgroundImage: `url(${laptop})` }} id="laptop">
         <div class="screen" style={{ backgroundImage: `url(${screensaver})` }}>
           <div className="browser">
-            <img src={browser} alt="browser"></img>
+            
+            <img src={browser} alt="broswer"/>
+            <GenericSite/>
           </div>
           <div className="explorer">
             <div className="location">
