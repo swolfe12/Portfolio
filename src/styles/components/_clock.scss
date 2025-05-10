@@ -1,0 +1,28 @@
+.clock-container{
+    position: absolute;
+    height: 150px;
+    left: 50%;
+    top: 50%;
+    margin-top: -5px;
+    margin-left: 380px;
+    background: white;
+    .clock {
+        height: 100%;
+        position: absolute;
+        cursor: default;
+    }
+    span {
+        position: absolute; 
+        top: 50%;
+        left: 50%;
+        margin-top: -26px;
+        margin-left: 36px;
+        color: rgb(161, 160, 160);
+        font-size: 23px;
+        width: 140px;
+        font-family: "Orbitron", sans-serif;
+        font-weight: 700;
+        animation: blink 2s infinite steps(1, end);
+        cursor: default;
+    }
+}

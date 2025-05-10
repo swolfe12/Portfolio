@@ -1,0 +1,362 @@
+
+
+.portfolio {
+    //padding: 20px;
+      display: flex;
+      //overflow: hidden;
+      //background: blue;
+      margin: auto;
+  
+      height: 100%;
+      background: rgb(238, 187, 255);
+  
+      .inner-container{
+        position: relative;
+        //top: 0px;
+        //left: 0px;
+        width: 1700px;
+        height: 900px;
+        margin: auto auto;
+       //margin-bottom: 10px;
+        
+        overflow: hidden;
+        background: #43288c !important;
+        //border-radius: 0 0 3%;
+        
+  
+  
+  .plant {
+      height: 310px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -480px;
+      margin-top: -380px;
+      z-index: 2
+  }
+  .gummies{
+      height: 350px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-top: 200px;
+      margin-left: -700px;
+      transform: rotate(-25deg);
+      z-index: 4;
+  }
+  .bg-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background: #43288c !important;
+      display: none;
+      //background-image: url('/assets/bg-room.png');
+    }
+    
+
+  .trail { /* className for the trail elements */
+      position: absolute;
+      height: 8px; width: 8px;
+      border-radius: 4px;
+      background: white;
+      border: 1px solid black;
+      z-index: 10;
+    }
+    .contact{
+      //background: url('/assets/contact.png');
+      background-size: cover;
+      height: 170px;
+      background-position: center;
+      width: 180px;
+      position: absolute;
+      left: 50%;
+      margin-left: -430px;
+      top: 50%;
+      margin-top: -90px;
+      z-index: 4;
+      transition: ease .3s;
+      ul{
+          position: relative;
+          padding: 25px 24px;
+          top: 20px;
+          transform: rotate(-2deg);
+          opacity: 1;
+          li{
+              list-style: none;
+              color: #fedeff;
+              font-size: 8px;
+              font-family: "Edu AU VIC WA NT Hand", cursive;
+          }
+      }
+      &:hover {
+          filter: drop-shadow(12px 12px 10px #fff) drop-shadow(-12px -12px 10px #fff) 
+          drop-shadow(12px -12px 10px rgba(255, 255, 255, 0.5)) 
+          drop-shadow(-12px 12px 10px rgba(255, 255, 255, 0.5));
+  
+      }
+      &.scale-up{
+          transform: scale(5);
+          margin-left: 0;
+  
+      }
+    }
+  
+    .bulletin {
+      width: 1000px;
+      top: 50%;
+      left: 50%;
+      margin-top: -460px;
+      margin-left: 0px;
+      position: absolute;
+    }
+  
+    .jellyfish {
+      width: 210px;
+      top: 50%;
+      left: 50%;
+      margin-left: 280px;
+      margin-top: -400px;
+      position: absolute;
+      z-index: 3;
+    }
+  
+    .sam-poster{
+      width: 220px;
+      top: 50%;
+      left: 50%;
+      margin-left: 50px;
+      margin-top: -330px;
+      position: absolute;
+      z-index: 3;
+    }
+    .dogs {
+      width: 140px;
+      top: 50%;
+      left: 50%;
+      margin-left: 270px;
+      margin-top: -200px;
+      position: absolute;
+      z-index: 3;
+    }
+    .window {
+      width: 470px;
+      top: 50%;
+      left: 50%;
+      margin-left: -660px;
+      margin-top: -460px;
+      position: absolute;
+      z-index: 0;
+    }
+    /* video
+    .clouds {
+      width: 376px;
+      top: 50%;
+      left: 50%;
+      margin-left: -594px;
+      margin-top: -682px;
+      position: absolute;
+      z-index: 0;
+    }*/
+    .clouds {
+      width: 377px;
+      top: 50%;
+      left: 50%;
+      margin-left: -594px;
+      margin-top: -545px;
+      position: absolute;
+      z-index: 1;
+    }
+  
+    .speaker {
+      width: 330px;
+      top: 50%;
+      left: 50%;
+      position: absolute;
+      margin-left: -830px;
+      margin-top: -190px;
+      z-index: 1;
+      transform: rotate(-3deg);
+    }
+  
+    .desk {
+      width: 2000px;
+      top: 50%;
+      left: 50%;
+      margin-top: 25px;
+      margin-left: -1000px;
+      position: absolute;
+      z-index: 0;
+    }
+    .paper {
+      width: 340px;
+      top: 50%;
+      left: 50%;
+      margin-left: -560px;
+      margin-top: 200px;
+      z-index: 2;
+      position: absolute;
+    }
+  
+    .coffee {
+      height:  250px;
+      left: 50%;
+      margin-left: -610px;
+      top: 50%;
+      margin-top: 30px;
+      position: absolute;
+      z-index: 3;
+    }
+
+    .pens {
+      position: absolute;
+      left: 50%;
+      margin-left: -280px;
+      top: 50%;
+      margin-top: -96px;
+      height: 230px;
+    }
+  
+    .jewelery {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -780px;
+      margin-top: 110px;
+      height: 150px;
+      transform: rotate(-180deg);
+      z-index: 2;
+      display:none;
+    }
+    .airpods {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      height: 200px;
+      margin-left: -320px;
+      margin-top: 90px;
+      display: none;
+    }
+    .headphones {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      height: 220px;
+      margin-left: -470px;
+      margin-top: 60px;
+      z-index: 2;
+    }
+    .lavalamp {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      height: 390px;
+      margin-left: 550px;
+      margin-top: -220px;
+      z-index: 2;
+    }
+    .notebook{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      height: 280px;
+      margin-left: 228px;
+      margin-top: 65px;
+      z-index:1;
+  
+    }
+    .starbies {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      height: 340px;
+      margin-left: 200px;
+      margin-top: -150px;
+      z-index: 4;
+      transform: rotate(-3deg);
+      display: none;
+    }
+    .mouse {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      height: 450px;
+      margin-left: 270px;
+      margin-top: 160px;
+      transform: rotate(6deg);
+    }
+    .sunnies {
+      position: absolute;
+      left: 50%;
+      margin-left: -600px;
+      top: 50%;
+      margin-top: -230px;
+      height: 230px;
+    }
+
+    .popup {
+      position: relative;
+      width: 1000px;
+      height: 600px;
+      z-index: 10;
+      left: 50%;
+      margin-left: -500px;
+      margin-top: -400px;
+      top: 50%;
+      display: none;
+      .popup-content {
+          //background: white;
+          //padding: 20px;
+          //border-radius: 10px;
+          //position: relative;
+          //text-align: center;
+      
+    
+          .close-btn {
+              position: absolute;
+              top: 30px;
+              right: 15px;
+              font-size: 24px;
+              border: none;
+              background: none;
+              cursor: pointer;
+              background-color: white;
+              border-radius: 50%;
+          }
+              
+          img {
+              width: 1000px;
+              /*filter: drop-shadow(12px 12px 10px #fff) drop-shadow(-12px -12px 10px #fff) 
+              drop-shadow(12px -12px 10px rgba(255, 255, 255, 0.5)) 
+              drop-shadow(-12px 12px 10px rgba(255, 255, 255, 0.5));*/
+          }
+          p {
+              font-size: 30px;
+              color: white;
+              position: absolute;
+              width: 350px;
+              height: 500px;
+              z-index: 11;
+              top: 50%;
+              margin-top: -150px;
+              left: 50%;
+              margin-left: -50px;
+          }
+      }
+    }
+  
+    .border-top{
+      width: 100%;
+      height: 100px;
+      background: black;
+      top: 50%;
+      margin-top: -560px;
+      position: absolute;
+      z-index: 20;
+    }
+  }
+  }

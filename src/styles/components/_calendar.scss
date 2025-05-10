@@ -1,0 +1,57 @@
+@import '../abstracts/variables';
+.calendar {
+    height: 330px;
+    width: 320px;
+    position: absolute; 
+    left: 50%;
+    top: 50%;
+    margin-top: -460px;
+    margin-left: 500px;
+    color: rgb(49, 42, 82);
+    box-shadow: 0px 4px 0 rgb(43, 6, 6);
+    background-size: cover;
+    background-image: url("../../assets/calendar.png");
+
+    h2 {
+        text-align: center;
+        text-transform: uppercase;
+        font-family: impact;
+        letter-spacing: 3px;
+        margin-bottom: 0px;
+        margin-top: 40px;
+        font-size: 38px;
+        color: $calendar-bg;
+        text-shadow: -2px -2px 0 $calendar-color, 2px -2px 0 $calendar-color, -2px 2px 0 $calendar-color, 2px 2px 0 $calendar-color;
+    }
+    table {
+        //border: 2px solid rgb(49, 42, 82);
+        color: $calendar-color;
+        border-collapse: collapse;
+        margin: auto;
+        td {
+            border: 2px solid $calendar-color;
+            width: 40px;
+            height: 32px;
+            position: relative;
+            p{
+                margin: 0;
+                font-size: 11px;
+                width: 14px;
+                margin-top: -16px;
+            }
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+                //opacity: .3;
+            }
+        }
+        th {
+            width: 40px;
+            margin-bottom: -5px;
+        }
+    }
+  }
