@@ -177,6 +177,8 @@
       margin-top: -190px;
       z-index: 1;
       transform: rotate(-3deg);
+      margin-left: 600px;
+      transform: rotate(3deg);
     }
   
     .desk {
@@ -199,11 +201,11 @@
     }
   
     .coffee {
-      height:  250px;
+      height:  300px;
       left: 50%;
-      margin-left: -610px;
+      margin-left: -710px;
       top: 50%;
-      margin-top: 30px;
+      margin-top: -50px;
       position: absolute;
       z-index: 3;
     }
@@ -250,18 +252,19 @@
       position: absolute;
       left: 50%;
       top: 50%;
-      height: 390px;
-      margin-left: 550px;
-      margin-top: -220px;
+      height: 590px;
+      margin-left: 500px;
+      margin-top: -295px;
       z-index: 2;
+      margin-left: -920px;
     }
     .notebook{
       position: absolute;
       left: 50%;
       top: 50%;
-      height: 280px;
-      margin-left: 228px;
-      margin-top: 65px;
+      height: 320px;
+      margin-left: 208px;
+      margin-top: 50px;
       z-index:1;
   
     }
@@ -280,9 +283,9 @@
       position: absolute;
       left: 50%;
       top: 50%;
-      height: 450px;
-      margin-left: 270px;
-      margin-top: 160px;
+      height: 465px;
+      margin-left: 275px;
+      margin-top: 170px;
       transform: rotate(6deg);
     }
     .sunnies {

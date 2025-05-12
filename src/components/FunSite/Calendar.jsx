@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import x from './../../assets/x.png';
+import todayImg from './../../assets/x.png';
 
 export const Calendar = () => {
     const [date, setDate] = useState(new Date());
@@ -28,13 +29,26 @@ export const Calendar = () => {
                 row.push(<td key={`empty-${week}-${day}`}></td>); // Empty cells before the first day
             } else {
                 row.push(
-                    <td key={dayCounter} className={dayCounter < currentDay ? 'highlight' : ''}>
+                    <td
+                        key={dayCounter}
+                        className={
+                            dayCounter < currentDay
+                                ? 'highlight'
+                                : dayCounter === currentDay
+                                ? 'today'
+                                : ''
+                        }
+                    >
                         <p>{dayCounter}</p>
                         {dayCounter < currentDay && (
                             <img src={x} alt="Completed" className="checkmark-icon" />
                         )}
+                        {dayCounter === currentDay && (
+                            <img src={todayImg} alt="Today" className="today-icon" />
+                        )}
                     </td>
                 );
+                
                 dayCounter++;
             }
         }

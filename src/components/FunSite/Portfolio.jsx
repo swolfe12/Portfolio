@@ -95,9 +95,20 @@ const Portfolio = () => {
       <div className="laptop clickable" style={{ backgroundImage: `url(${laptop})` }} id="laptop">
         <div class="screen" style={{ backgroundImage: `url(${screensaver})` }}>
           <div className="browser">
+            <div className="topBar">
+              <button className="close"></button>
+              <button className="minimize"></button>
+              <button className="expand"></button>
+            </div>
+            <div className="terminal">
+              <span>Last login: Fri Mar 7 23:58:32 on ttys003</span><br></br>
+              <span>samgwolfe@MacBookAir ~ % hack the mainframe</span><br></br>
+              <span>zsh: command not found: hack</span><br></br>
+              <span>samgwolfe@MacBookAir ~ %</span>
+            </div>
             
             <img src={browser} alt="broswer"/>
-            <GenericSite/>
+
           </div>
           <div className="explorer">
             <div className="location">
