@@ -3,7 +3,6 @@ import $ from "jquery";
 import "./../../styles/main.scss";
 import Calendar from './Calendar';
 import Clock from './Clock';
-import GenericSite from "../GenerciSite/GenericSite";
 import contact from './../../assets/contact.png';
 import laptop from './../../assets/laptop.png';
 import bgRoom from './../../assets/bg-room.png';

@@ -9,7 +9,7 @@ const GenericSite = () => {
           <div className="work">
             <h2>My Work</h2>
             <div className="card">
-              <a href="" target="_blank" className="" >
+              <a href="index.html" target="_blank" className="" >
                 <div className="front">
                   <div className="imgContainer">
                     <img src={wcc} alt="WCC website"></img>
