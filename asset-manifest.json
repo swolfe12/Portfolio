@@ -1,18 +1,20 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.ed383c5e.css",
-    "main.js": "/Portfolio/static/js/main.dcfc4ee1.js",
+    "main.css": "/Portfolio/static/css/main.d08c2891.css",
+    "main.js": "/Portfolio/static/js/main.c75bf70c.js",
     "static/js/453.1407b060.chunk.js": "/Portfolio/static/js/453.1407b060.chunk.js",
     "static/media/coffee.png": "/Portfolio/static/media/coffee.0f0e5809593deaaedf54.png",
     "static/media/lavalamp.png": "/Portfolio/static/media/lavalamp.b9950cd500588bb8a3cf.png",
     "static/media/window.mp4": "/Portfolio/static/media/window.126024573dd888adc020.mp4",
     "static/media/WCC.png": "/Portfolio/static/media/WCC.ac4d170997c003c4f786.png",
+    "static/media/title.png": "/Portfolio/static/media/title.fcedb6bf51dd89dbda66.png",
     "static/media/paper.png": "/Portfolio/static/media/paper.559a292d7a8dc8538921.png",
     "static/media/bg-room.png": "/Portfolio/static/media/bg-room.e5926842e27bdec49d20.png",
     "static/media/sam-bubble.png": "/Portfolio/static/media/sam-bubble.2638630bad83f0de4bef.png",
     "static/media/gummies.png": "/Portfolio/static/media/gummies.c00199fca8a6a9d41012.png",
     "static/media/speaker.png": "/Portfolio/static/media/speaker.27983d3dbe912ad8119c.png",
     "static/media/x.png": "/Portfolio/static/media/x.4455cc87219d01428aea.png",
+    "static/media/sam.png": "/Portfolio/static/media/sam.b018b98a342abf1978f9.png",
     "static/media/screensaver.jpg": "/Portfolio/static/media/screensaver.2c0467816c7de8a310bf.jpg",
     "static/media/notebook.png": "/Portfolio/static/media/notebook.60418ffd0c8463fa6f94.png",
     "static/media/bulletin.png": "/Portfolio/static/media/bulletin.4f0559166799467dd90f.png",
@@ -23,6 +25,7 @@
     "static/media/pens.png": "/Portfolio/static/media/pens.0ef2d599a43b3b39ebbd.png",
     "static/media/headphones.png": "/Portfolio/static/media/headphones.7c42c2a0ff7cfbb220b4.png",
     "static/media/mouse.png": "/Portfolio/static/media/mouse.98f4e60c00edc19cbf83.png",
+    "static/media/goodreads.png": "/Portfolio/static/media/goodreads.84aa16de182d2538829e.png",
     "static/media/sunnies.png": "/Portfolio/static/media/sunnies.dfd11457c8fb0ae3dcaf.png",
     "static/media/laptop.png": "/Portfolio/static/media/laptop.5f15e80e0dfb4ed7d812.png",
     "static/media/contact.png": "/Portfolio/static/media/contact.ac3d0eb9bee82ed7123f.png",
@@ -36,12 +39,12 @@
     "static/media/calendar.png": "/Portfolio/static/media/calendar.1c99c757091fc93fb568.png",
     "static/media/dogs.png": "/Portfolio/static/media/dogs.1f59f0c9e5329762c719.png",
     "index.html": "/Portfolio/index.html",
-    "main.ed383c5e.css.map": "/Portfolio/static/css/main.ed383c5e.css.map",
-    "main.dcfc4ee1.js.map": "/Portfolio/static/js/main.dcfc4ee1.js.map",
+    "main.d08c2891.css.map": "/Portfolio/static/css/main.d08c2891.css.map",
+    "main.c75bf70c.js.map": "/Portfolio/static/js/main.c75bf70c.js.map",
     "453.1407b060.chunk.js.map": "/Portfolio/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ed383c5e.css",
-    "static/js/main.dcfc4ee1.js"
+    "static/css/main.d08c2891.css",
+    "static/js/main.c75bf70c.js"
   ]
 }
