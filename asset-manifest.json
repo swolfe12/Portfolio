@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.a52b78ae.css",
-    "main.js": "/Portfolio/static/js/main.c75bf70c.js",
+    "main.css": "/Portfolio/static/css/main.efaa0931.css",
+    "main.js": "/Portfolio/static/js/main.35163210.js",
     "static/js/453.1407b060.chunk.js": "/Portfolio/static/js/453.1407b060.chunk.js",
     "static/media/coffee.png": "/Portfolio/static/media/coffee.0f0e5809593deaaedf54.png",
     "static/media/lavalamp.png": "/Portfolio/static/media/lavalamp.b9950cd500588bb8a3cf.png",
@@ -9,6 +9,7 @@
     "static/media/WCC.png": "/Portfolio/static/media/WCC.ac4d170997c003c4f786.png",
     "static/media/title.png": "/Portfolio/static/media/title.fcedb6bf51dd89dbda66.png",
     "static/media/paper.png": "/Portfolio/static/media/paper.559a292d7a8dc8538921.png",
+    "static/media/work-sign.png": "/Portfolio/static/media/work-sign.288603fe4d91ac5c6087.png",
     "static/media/bg-room.png": "/Portfolio/static/media/bg-room.e5926842e27bdec49d20.png",
     "static/media/sam-bubble.png": "/Portfolio/static/media/sam-bubble.2638630bad83f0de4bef.png",
     "static/media/gummies.png": "/Portfolio/static/media/gummies.c00199fca8a6a9d41012.png",
@@ -39,12 +40,12 @@
     "static/media/calendar.png": "/Portfolio/static/media/calendar.1c99c757091fc93fb568.png",
     "static/media/dogs.png": "/Portfolio/static/media/dogs.1f59f0c9e5329762c719.png",
     "index.html": "/Portfolio/index.html",
-    "main.a52b78ae.css.map": "/Portfolio/static/css/main.a52b78ae.css.map",
-    "main.c75bf70c.js.map": "/Portfolio/static/js/main.c75bf70c.js.map",
+    "main.efaa0931.css.map": "/Portfolio/static/css/main.efaa0931.css.map",
+    "main.35163210.js.map": "/Portfolio/static/js/main.35163210.js.map",
     "453.1407b060.chunk.js.map": "/Portfolio/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a52b78ae.css",
-    "static/js/main.c75bf70c.js"
+    "static/css/main.efaa0931.css",
+    "static/js/main.35163210.js"
   ]
 }
