@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { isMobile } from 'react-device-detect';
 import Portfolio from "./components/FunSite/Portfolio";
 import GenericSite from './components/GenerciSite/GenericSite';
+import WorkPopup from './components/WorkPopup'; 
+
 
 function App() {
   const [useGeneric, setUseGeneric] = useState(isMobile);
@@ -33,6 +35,7 @@ function App() {
 
   return (
     <div>
+     <WorkPopup />
       {!isMobile && (
         // Switch design by @oguzyagizkara
         // at: https://twitter.com/oguzyagizkara/status/1636391069981216773
