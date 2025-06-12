@@ -5,6 +5,7 @@
     flex: none;
     width: 30%;
     max-width: 28rem;
+    gap: 40px;
 
     a {
 
@@ -24,6 +25,7 @@
                 overflow: hidden;
                 width: 100%;
                 object-fit: contain;
+                background: rgb(197, 197, 197);
 
                 img {
                     width: 100%;
@@ -31,10 +33,24 @@
             }
             .description {
                 color: black;
-                padding:  20px 30px;
+                padding:  10px 30px;
                 text-decoration: none;
+                display: flex;
+                flex-wrap:wrap;
                 h2 {
                     padding-bottom: 0;
+                    font-size: 20px;
+                    width: 100%;
+                }
+                h3 {
+                    padding-left: 10px;
+                    text-align: left;
+                    width: 100%;
+                }
+                li {
+                    text-decoration: none;
+                    //list-style: none;
+                    text-align:left;
                 }
             
             }
@@ -63,6 +79,20 @@
         
     }
     &:hover {
+        .front{
+            transform: rotate(3deg) translateY(-40px);
+
+        }
+        .back {
+            transform:rotate(-3deg) translateY(10px);
+            
+        }
+    }
+    @media (max-width: 1200px){
+        width: 50%;
+    }
+    @media (max-width: 748px){
+        width: 90%;
         .front{
             transform: rotate(3deg) translateY(-40px);
 
