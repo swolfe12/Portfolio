@@ -11,7 +11,7 @@
 
         .front {
             transition: .5s ease;
-            border: 2px solid rgb(55, 162, 219);
+            border: 2px solid #7550d9c7;
             border-radius: .6rem;
             width: 100%;
             position: relative;
@@ -25,7 +25,7 @@
                 overflow: hidden;
                 width: 100%;
                 object-fit: contain;
-                background: rgb(197, 197, 197);
+                background:     rgb(197, 197, 197);
 
                 img {
                     width: 100%;
@@ -57,13 +57,13 @@
         }
         .back {
             transition: .5s ease;
-            border: 2px solid rgb(55, 162, 219);
+            border: 2px solid #7550d9c7;
             border-radius: .6rem;
             width: 100%;
             position: relative;
             overflow: hidden;
             z-index: 0;
-            background-color: rgb(55, 162, 219);
+            background-color: #7550d9c7;
             letter-spacing: .05rem;
             flex-direction: row;
             justify-content: space-between;
