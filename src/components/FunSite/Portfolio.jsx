@@ -4,6 +4,7 @@ import "./../../styles/main.scss";
 import Calendar from './Calendar';
 import Clock from './Clock';
 import Laptop from './Laptop';
+import MashImg from './MashImage';
 import contact from './../../assets/contact.png';
 import bgRoom from './../../assets/bg-room.png';
 import plant from './../../assets/plant.png';
@@ -28,6 +29,8 @@ import starbies from './../../assets/starbies.png';
 import mouse from './../../assets/mouse.png';
 import clouds from './../../assets/window.mp4';
 import speaker from './../../assets/speaker.png';
+import neon from './../../assets/neon.png';
+
 
 const Portfolio = () => {
   const [isModalOpen, setIsModalOpen] = useState(true);
@@ -119,7 +122,7 @@ const Portfolio = () => {
           <Laptop isOpen={true} />
         </div>
 
-
+          <img className="neon" src={neon} alt="neon sign" />
         <img className="bulletin" src={bulletin} alt="bulletin" />
         <img className="jellyfish" src={jellyfish} alt="jellyfish" />
         <img className="sam-poster" src={samPoster} alt="Sam Wolfe" />
@@ -136,6 +139,7 @@ const Portfolio = () => {
         <img className="pens" src={pens} alt="Pens" />
         <img className="jewelery" src={jewelery} alt="Jewelery" />
         <img className="notebook" src={notebook} alt="Notebook" />
+        <MashImg />
         <img className="airpods" src={airpods} alt="Airpods" />
         <img className="headphones" src={headphones} alt="Headphones" />
         <img className="lavalamp" src={lavalamp} alt="Lavalamp" />

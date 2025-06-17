@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import x from './../../assets/x.png';
-import todayImg from './../../assets/x.png';
+import todayImg from './../../assets/today.png';
 
 export const Calendar = () => {
     const [date, setDate] = useState(new Date());

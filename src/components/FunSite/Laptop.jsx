@@ -5,7 +5,9 @@ import laptop from './../../assets/laptop.png';
 import screensaver from './../../assets/screensaver.jpg';
 import browser from './../../assets/browser.PNG';
 import folder from './../../assets/folder.png';
-
+import github from './../../assets/github.png';
+import terminalIcon from './../../assets/terminal.png';
+import logo from './../../assets/logo.png';
 const Laptop = ({ isOpen }) => {
   const screenRef = useRef(null);
 
@@ -65,7 +67,9 @@ const Laptop = ({ isOpen }) => {
           }}
         >
           <div className="topBar" onMouseDown={handleExplorerMouseDown}>
-            <h4>File Explorer</h4>
+          <button className="close"></button>
+            <button className="minimize"></button>
+            <button className="expand"></button>
           </div>
           <div className="location">
             <div className="path"></div>
@@ -92,7 +96,11 @@ const Laptop = ({ isOpen }) => {
         </div>
 
         <div className='iconBar'>
-            
+        <img className="folderIcon" src={folder} alt="folder"></img>
+          <img className="github" src={github} alt="github icon"></img>
+          <img className="terminalIcon" src={terminalIcon} alt="terminal icon"></img>
+          <img className="logo" src={logo} alt="SW logo"></img>
+          
         </div>
       </div>
     </div>

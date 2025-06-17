@@ -93,10 +93,32 @@
             height: 20px;
             position: absolute;
             bottom: 1px;
-            background: rgba(208, 66, 237, 0.643);
+            background: #5ef7f5d0;
             width: 90%;
             left:5%;
             border-radius: 5px;
+            display: flex;
+            justify-content: space-evenly;
+            .terminalIcon {
+                //position: relative;
+                height: 45px;
+                margin-top: -10px;
+                //left: 10px;
+                //bottom: -15px;
+                //z-index: 10000;
+            }
+            .github {
+                height: 36px;
+                margin-top: -5px;
+            }
+            .logo {
+                height: 28px;
+                margin-top: -2px;
+            }
+            .folderIcon {
+                height: 26px;
+                margin-top: -1px;
+            }
         }
     }
     .resume {
@@ -128,11 +150,11 @@
         }
       .terminal{
         color: white;
-      font-size: 6px;
-      top: 14px;
-      left: 5px;
-      position: relative;
-      font-family: monospace;
+        font-size: 5px;
+        top: 14px;
+        left: 5px;
+        position: relative;
+        font-family: monospace;
       }
         .topBar {
             width: 100%;
@@ -187,16 +209,38 @@
     }
     
     .explorer {
-        position: relative;
-        width: 60%;
-        height: 70%;
+        //position: relative;
+        display:none;
+        height: 130px;
         background: #191919;
         top: 0%;
         left: 24%;
-        margin-top: -150px;
-        z-index: -1;
-        display: none;
-        
+        z-index: 11;
+            .topBar {
+                height: 8px;
+                cursor: grab;
+                user-select: none;
+            
+            button {
+                    height: 6px;
+                    //width: 2px;
+                    border-radius: 100%;
+                    position: absolute;
+                    border: none;
+                    &.close{
+                        background: red;
+                        left: 4px;
+                    }
+                    &.minimize{
+                        background: yellow;
+                        left: 12px;
+                    }
+                    &.expand {
+                        background: green;
+                        left: 20px;
+                    }
+            }
+        }
         .location{
             position: relative;
             top: 0px;
@@ -217,7 +261,7 @@
         .content{
             display: flex;
             flex-wrap: wrap;
-            font-size: 8px;
+            font-size: 6px;
             height: 90%;
             .left{
                 width: 30%;
