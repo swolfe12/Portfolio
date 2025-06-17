@@ -98,9 +98,10 @@
     }
     @media (max-width: 1200px){
         width: 50%;
+        margin-block: 50px;
     }
     @media (max-width: 748px){
-        width: 90%;
+        width: 80%;
         .front{
             transform: rotate(3deg) translateY(-40px);
 
