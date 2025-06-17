@@ -11,7 +11,7 @@
 
         .front {
             transition: .5s ease;
-            border: 2px solid #7550d9c7;
+            border: 2px solid $purple;
             border-radius: .6rem;
             width: 100%;
             position: relative;
@@ -57,13 +57,13 @@
         }
         .back {
             transition: .5s ease;
-            border: 2px solid #7550d9c7;
+            border: 2px solid $purple;
             border-radius: .6rem;
             width: 100%;
             position: relative;
             overflow: hidden;
             z-index: 0;
-            background-color: #7550d9c7;
+            background-color: $purple;
             letter-spacing: .05rem;
             flex-direction: row;
             justify-content: space-between;
@@ -76,7 +76,7 @@
             position: absolute;
             inset: 0%;
             a {
-                color: white;
+                //color: white;
                 font-style: normal;
                 font-size: 1.2rem;
                 text-align: center;
