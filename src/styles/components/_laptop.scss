@@ -1,3 +1,54 @@
+.laptop-wrapper {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    margin-left: 34px;
+    margin-top: 30px;
+    transform: scale(0.42);
+    transform-origin: top left;
+    transition: transform 0.3s ease;
+    z-index: 4;
+    pointer-events: auto;
+    &.active {
+        transform: scale(1);
+        z-index: 9999;
+        top: 45%;
+        margin-left: 0;
+        margin-top: 0;
+    }
+  .laptop-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%; // covers full scaled area
+    height: 200%;
+    background: transparent;
+    z-index: 1000;
+    pointer-events: all; // block interactions
+  }
+  }
+  
+  .laptop-close-btn {
+    position: absolute;
+    top: -320px;
+    left: 500px;
+    background: white;
+    border: 1px solid #aaa;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    z-index: 2000;
+    z-index: 99999;
+    cursor: pointer;
+  
+    &:hover {
+      background: #eee;
+    }
+  }
+  
 .laptop{
     //background-image: url('/assets/laptop.png');
     background-size: contain;
@@ -5,18 +56,18 @@
     height: 450px;
     width: 650px;
     position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-top: -95px;
-    margin-left: -280px;
-    z-index: 4;
+
+    //z-index: 4;
     transition: ease .3s;
     &.scale-up{
         transform: scale(2.6);
         top: 50%;
         left: 50%;
         margin-left: -285px;
-        cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="36" height="48" viewBox="0 0 24 24"><path fill="%23FFF" stroke="%23000" stroke-width="2" stroke-linejoin="round" d="M18 14.88 8.16 3.15c-.26-.31-.76-.12-.76.28v15.31c0 .36.42.56.7.33l3.1-2.6 1.55 4.25c.08.22.33.34.55.26l1.61-.59a.43.43 0 0 0 .26-.55l-1.55-4.25h4.05c.36 0 .56-.42.33-.7Z"></path></svg>'), auto;
+        &:hover {
+            filter: none !important;
+        }
+        //cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="36" height="48" viewBox="0 0 24 24"><path fill="%23FFF" stroke="%23000" stroke-width="2" stroke-linejoin="round" d="M18 14.88 8.16 3.15c-.26-.31-.76-.12-.76.28v15.31c0 .36.42.56.7.33l3.1-2.6 1.55 4.25c.08.22.33.34.55.26l1.61-.59a.43.43 0 0 0 .26-.55l-1.55-4.25h4.05c.36 0 .56-.42.33-.7Z"></path></svg>'), auto;
         .explorer{
             .project{
                 &:hover{
@@ -31,12 +82,22 @@
         drop-shadow(-12px 12px 10px rgba(255, 255, 255, 0.5));
     }
     .screen {
-        position: absolute;
+        position: relative;
         background-size: cover;
         height: 197px;
         top: 44px;
         width: 348px;
         left: 140px;
+
+        .iconBar {
+            height: 20px;
+            position: absolute;
+            bottom: 1px;
+            background: rgba(208, 66, 237, 0.643);
+            width: 90%;
+            left:5%;
+            border-radius: 5px;
+        }
     }
     .resume {
       position: relative;
@@ -60,6 +121,11 @@
       background: rgb(15, 15, 15);
       border-radius: 5px;
       overflow: hidden;
+      cursor: grab;
+
+        &.dragging {
+            cursor: grabbing;
+        }
       .terminal{
         color: white;
       font-size: 6px;
@@ -82,7 +148,11 @@
                 border: none;
                 
                 transform: scale(.5);
-                cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="36" height="48" viewBox="0 0 24 24"><path fill="%23FFF" stroke="%23000" stroke-width="2" stroke-linejoin="round" d="M18 14.88 8.16 3.15c-.26-.31-.76-.12-.76.28v15.31c0 .36.42.56.7.33l3.1-2.6 1.55 4.25c.08.22.33.34.55.26l1.61-.59a.43.43 0 0 0 .26-.55l-1.55-4.25h4.05c.36 0 .56-.42.33-.7Z"></path></svg>'), auto;
+                //cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="36" height="48" viewBox="0 0 24 24"><path fill="%23FFF" stroke="%23000" stroke-width="2" stroke-linejoin="round" d="M18 14.88 8.16 3.15c-.26-.31-.76-.12-.76.28v15.31c0 .36.42.56.7.33l3.1-2.6 1.55 4.25c.08.22.33.34.55.26l1.61-.59a.43.43 0 0 0 .26-.55l-1.55-4.25h4.05c.36 0 .56-.42.33-.7Z"></path></svg>'), auto;
+                .topBar {
+                    cursor: grab;
+                    user-select: none;
+                  }
                 &.close{
                     background: red;
                     left: 4px;
