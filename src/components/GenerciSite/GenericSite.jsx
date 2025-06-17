@@ -1,6 +1,7 @@
 import wcc from './../../assets/WCC.png';
 import greatreads from './../../assets/goodreads.png';
 import title from './../../assets/title.png';
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 const GenericSite = () => {
     return (
@@ -18,7 +19,7 @@ const GenericSite = () => {
           <div className="work">
             <h2>- My Projects -</h2>
             <div className="card">
-              <a href="index.html" target="_blank" className="" >
+              <a href="https://github.com/swolfe12/Greatreads-backend" target="_blank" rel="noreferrer" className="" >
                 <div className="front">
                   <div className="imgContainer">
                     <img src={greatreads} alt="Greadreads Website"></img>
@@ -40,12 +41,12 @@ const GenericSite = () => {
                   </div>
                 </div>
                 <div className="back">
-                 
+                <a href="https://github.com/swolfe12/Greatreads-backend">Check it out <FaExternalLinkAlt /></a>
                 </div>
               </a>
             </div>
             <div className="card">
-              <a href="index.html" target="_blank" className="" >
+              <a href="https://www.wcchurch.org/" target="_blank" rel="noreferrer" className="" >
                 <div className="front">
                   <div className="imgContainer">
                     <img src={wcc} alt="WCC website"></img>
@@ -61,7 +62,7 @@ const GenericSite = () => {
                   </div>
                 </div>
                 <div className="back">
-                 
+                <a href="https://www.wcchurch.org/">Check it out <FaExternalLinkAlt /></a>
                 </div>
               </a>
             </div>
