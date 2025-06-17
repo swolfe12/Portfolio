@@ -1,6 +1,5 @@
 import wcc from './../../assets/WCC.png';
 import greatreads from './../../assets/goodreads.png';
-import sam from './../../assets/sam.png';
 import title from './../../assets/title.png';
 
 const GenericSite = () => {
