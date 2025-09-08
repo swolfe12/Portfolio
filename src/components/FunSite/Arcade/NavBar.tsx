@@ -22,7 +22,7 @@ type NavbarProps = {
   onNavigate?: (pageId: string) => void; // used when isArcade === false
 };
 
-export default function Navbar({ isArcade, onNavigate }: NavbarProps) {
+export default function Navbar({ isArcade = true, onNavigate }: NavbarProps) {
   const [open, setOpen] = useState(false);
   const [expanded, setExpanded] = useState<Record<string, boolean>>({});
   const navId = useId();

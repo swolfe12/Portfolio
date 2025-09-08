@@ -104,6 +104,7 @@
         //position: absolute;
         margin-right: 0;
         margin-top: 0px;
+        margin-bottom: 50px;
         
     }
 
@@ -288,3 +289,16 @@
 }
 
 
+
+.not-found {
+  h1 {
+    font-size: 40px;
+    min-height: 600px;
+  }
+      position: relative;
+    background: $indigo;
+    background-size: cover;
+    overflow: scroll;
+    //transform: scale(.7);
+    height: 100%;
+}
