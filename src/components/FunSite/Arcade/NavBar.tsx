@@ -147,7 +147,7 @@ export default function Navbar({ isArcade, onNavigate }: NavbarProps) {
           aria-label={`${c.label} subcategories`}
           hidden={!isOpen}
         >
-          <ul className="sub-list" role="list">
+          <div className="sub-list" role="list">
             {c.subitems!.map((s) => (
               <li key={s.id}>
                 {isArcade ? (
@@ -172,7 +172,7 @@ export default function Navbar({ isArcade, onNavigate }: NavbarProps) {
                 )}
               </li>
             ))}
-          </ul>
+          </div>
         </div>
       </li>
     );
@@ -209,9 +209,9 @@ export default function Navbar({ isArcade, onNavigate }: NavbarProps) {
             id={navId}
             role="navigation"
           >
-            <ul className="nav-list" role="list">
+            <div className="nav-list" role="list">
               {CATEGORIES.map((c, i) => renderDesktopItem(c, i))}
-            </ul>
+            </div>
           </nav>
 
           {/* Mobile toggle */}
@@ -273,9 +273,9 @@ export default function Navbar({ isArcade, onNavigate }: NavbarProps) {
             </div>
 
             <nav aria-label="Primary" role="navigation">
-              <ul className="drawer-list" role="list">
+              <div className="drawer-list" role="list">
                 {CATEGORIES.map((c) => renderDrawerItem(c))}
-              </ul>
+              </div>
             </nav>
           </div>
         </div>
