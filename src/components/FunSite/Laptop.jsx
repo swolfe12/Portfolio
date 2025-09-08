@@ -1,29 +1,37 @@
 // src/components/FunSite/Laptop.jsx
-import React, { useRef } from 'react';
-import useDraggable from './../../hooks/useDraggable';
+import React from 'react';
+import Arcade from '../FunSite/Arcade/Arcade';
+import Links from '../FunSite/Arcade/Links';
+import Resume from '../FunSite/Arcade/Resume';
 import laptop from './../../assets/laptop.png';
-import screensaver from './../../assets/screensaver.jpg';
-import browser from './../../assets/browser.PNG';
-import folder from './../../assets/folder.png';
-import github from './../../assets/github.png';
-import terminalIcon from './../../assets/terminal.png';
-import logo from './../../assets/logo.png';
-const Laptop = ({ isOpen }) => {
-  const screenRef = useRef(null);
 
-  const {
-    elementRef: browserRef,
-    position: browserPos,
-    dragging: browserDragging,
-    handleMouseDown: handleBrowserMouseDown
-  } = useDraggable(screenRef);
+// If you have other sections, import them here:
+// import Games from '../FunSite/Arcade/Games';
+// import Gallery from '../FunSite/Arcade/Gallery';
+// import Music from '../FunSite/Arcade/Music';
+// import Chat from '../FunSite/Arcade/Chat';
 
-  const {
-    elementRef: explorerRef,
-    position: explorerPos,
-    dragging: explorerDragging,
-    handleMouseDown: handleExplorerMouseDown
-  } = useDraggable(screenRef);
+const Laptop = ({ isOpen, currentPage, onNavigate }) => {
+  const renderScreen = () => {
+    switch (currentPage) {
+      case 'home':
+        return <Arcade isArcade={false} onNavigate={onNavigate} />; // desktop-in-laptop landing
+      case 'links':
+        return <Links />;
+      case 'resume':
+        return <Resume />;
+      // case 'games':
+      //   return <Games />;
+      // case 'gallery':
+      //   return <Gallery />;
+      // case 'music':
+      //   return <Music />;
+      // case 'chat':
+      //   return <Chat />;
+      default:
+        return <Arcade isArcade={false} onNavigate={onNavigate} />;
+    }
+  };
 
   return (
     <div
@@ -31,77 +39,8 @@ const Laptop = ({ isOpen }) => {
       style={{ backgroundImage: `url(${laptop})` }}
       id="laptop"
     >
-      <div className="screen" style={{ backgroundImage: `url(${screensaver})` }} ref={screenRef}>
-        {/* Draggable Browser */}
-        <div
-          className={`browser${browserDragging ? ' dragging' : ''}`}
-          ref={browserRef}
-          style={{
-            top: `${browserPos.y}px`,
-            left: `${browserPos.x}px`,
-            position: 'absolute'
-          }}
-        >
-          <div className="topBar" onMouseDown={handleBrowserMouseDown}>
-            <button className="close"></button>
-            <button className="minimize"></button>
-            <button className="expand"></button>
-          </div>
-          <div className="terminal">
-            <span>Last login: Fri Mar 7 23:58:32 on ttys003</span><br />
-            <span>samgwolfe@MacBookAir ~ % hack the mainframe</span><br />
-            <span>zsh: command not found: hack</span><br />
-            <span>samgwolfe@MacBookAir ~ %</span>
-          </div>
-          <img src={browser} alt="browser" />
-        </div>
-
-        {/* Draggable Explorer */}
-        <div
-          className={`explorer${explorerDragging ? ' dragging' : ''}`}
-          ref={explorerRef}
-          style={{
-            top: `${explorerPos.y}px`,
-            left: `${explorerPos.x}px`,
-            position: 'absolute'
-          }}
-        >
-          <div className="topBar" onMouseDown={handleExplorerMouseDown}>
-          <button className="close"></button>
-            <button className="minimize"></button>
-            <button className="expand"></button>
-          </div>
-          <div className="location">
-            <div className="path"></div>
-          </div>
-          <div className="content">
-            <div className="left">
-              <ul>
-                <li>Documents</li>
-                <li>Downloads</li>
-                <li>Pictures</li>
-              </ul>
-            </div>
-            <div className="right">
-              <a className="project" target="_blank" rel="noopener noreferrer" href="https://github.com/swolfe12/Portfolio">
-                <img className="folder" src={folder} alt="Folder" />
-                <h2>Portfolio Repo</h2>
-              </a>
-              <a className="project" target="_blank" rel="noopener noreferrer" href="https://wcchurch.org/">
-                <img className="folder" src={folder} alt="Folder" />
-                <h2>WCC Website</h2>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div className='iconBar'>
-        <img className="folderIcon" src={folder} alt="folder"></img>
-          <img className="github" src={github} alt="github icon"></img>
-          <img className="terminalIcon" src={terminalIcon} alt="terminal icon"></img>
-          <img className="logo" src={logo} alt="SW logo"></img>
-          
-        </div>
+      <div className="screen">
+        {renderScreen()}
       </div>
     </div>
   );

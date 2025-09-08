@@ -2,9 +2,9 @@
     position: absolute;
     top: 50%; 
     left: 50%;
-    margin-left: 34px;
-    margin-top: 30px;
-    transform: scale(0.42);
+    margin-left: -320px;
+    margin-top: -130px;
+    //transform: scale(0.42);
     transform-origin: top left;
     transition: transform 0.3s ease;
     z-index: 4;
@@ -15,6 +15,9 @@
         top: 45%;
         margin-left: 0;
         margin-top: 0;
+        .laptop {
+            filter: none !important;
+        }
     }
   .laptop-overlay {
     position: absolute;
@@ -53,8 +56,8 @@
     //background-image: url('/assets/laptop.png');
     background-size: contain;
     background-repeat: no-repeat;
-    height: 450px;
-    width: 650px;
+    height: 540px;
+    width: 700px;
     position: absolute;
 
     //z-index: 4;
@@ -64,9 +67,7 @@
         top: 50%;
         left: 50%;
         margin-left: -285px;
-        &:hover {
-            filter: none !important;
-        }
+
         //cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="36" height="48" viewBox="0 0 24 24"><path fill="%23FFF" stroke="%23000" stroke-width="2" stroke-linejoin="round" d="M18 14.88 8.16 3.15c-.26-.31-.76-.12-.76.28v15.31c0 .36.42.56.7.33l3.1-2.6 1.55 4.25c.08.22.33.34.55.26l1.61-.59a.43.43 0 0 0 .26-.55l-1.55-4.25h4.05c.36 0 .56-.42.33-.7Z"></path></svg>'), auto;
         .explorer{
             .project{
@@ -84,10 +85,11 @@
     .screen {
         position: relative;
         background-size: cover;
-        height: 197px;
-        top: 44px;
-        width: 348px;
-        left: 140px;
+        height: 685px;
+        top: -188px;
+        width: 1200px;
+        left: -259px;
+        transform: scale(.32);
 
         .iconBar {
             height: 20px;

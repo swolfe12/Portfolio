@@ -2,16 +2,27 @@ import wcc from './../../assets/WCC.png';
 import greatreads from './../../assets/goodreads.png';
 import title from './../../assets/title.png';
 import { FaExternalLinkAlt } from "react-icons/fa";
+import Navbar from './NavBar';
+import Ducks from './Ducks';
+import portrait from './../../assets/portrait.png';
 
 const GenericSite = () => {
     return (
+
         <div className="generic">
+          <Navbar/>
           <div className="hero"  >
             <div className="left">
-              <img src={title} alt="Sam Wolfe - Software Engineer"></img>
+            <div className="stack">
+                <div className='popup' id="p1"></div>
+                <div className='popup' id="p2"></div>
+                <div className='popup' id="p3">
+                  <img src={portrait} alt="Sam Wolfe"></img>
+                </div>
+              </div>
             </div>
             <div className="right">
-     
+             <img src={title} alt="Sam Wolfe - Software Engineer"></img>
             </div>
             
 
@@ -97,6 +108,7 @@ const GenericSite = () => {
 
             
           </div>
+          <Ducks/>
         </div>
       );
     };

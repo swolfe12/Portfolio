@@ -1,0 +1,76 @@
+.ducks {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  
+    &__tabs {
+      display: flex;
+      justify-content: center;
+      //gap: 5px;
+      margin-top: 1rem;
+  
+      .ducks__tab {
+        padding: 0.5rem 1rem;
+        background: $purple;
+        cursor: pointer;
+        font-weight: bold;
+        border: none;
+        //border: 2px solid $duck-active;
+        width: 33.3%;
+        height: 350px;
+        color: white;
+        font-size: 28px;
+        
+        label {
+            width: 100%;
+        }
+        img {
+            width: 50%;
+        }
+  
+        &.active {
+          background: $duck-active;
+          border-bottom: none;
+        }
+      }
+    }
+  
+    &__content {
+      margin-top: 2rem;
+    }
+  
+    &__pane {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: fadeIn 0.3s ease;
+      margin-top: -32px;
+      background: $duck-active;
+      min-height: 300px;
+    }
+  
+    &__image {
+      width: 150px;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+  
+    &__subtitle {
+      font-size: 1.1rem;
+      color: #333;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

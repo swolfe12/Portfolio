@@ -36,6 +36,7 @@ const Portfolio = () => {
   const [isModalOpen, setIsModalOpen] = useState(true);
   const [isLaptopOpen, setIsLaptopOpen] = useState(false);
   const [isContactOpen, setIsContactOpen] = useState(false);
+  const [currentPage, setCurrentPage] = useState('home');
   const laptopRef = useRef();
 
   useEffect(() => {
@@ -119,7 +120,11 @@ const Portfolio = () => {
               ✕
             </button>
           )}
-          <Laptop isOpen={true} />
+          <Laptop
+            isOpen={isLaptopOpen}
+            currentPage={currentPage}
+            onNavigate={setCurrentPage}
+          />
         </div>
 
           <img className="neon" src={neon} alt="neon sign" />

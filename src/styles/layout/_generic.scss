@@ -14,10 +14,10 @@ a:-webkit-any-link {
     .hero {
         width: 100%;
         position: relative;
-        height: 700px;
+        height: 750px;
         background-position: bottom;
         background-repeat: no-repeat;
-        top: 0;
+        top: 0px;
         background: #9d94c3;
         background: $purple;
         color: black;
@@ -30,16 +30,14 @@ a:-webkit-any-link {
             height: 360px;
         }
 
-        .left {
-            width: 65%;
-            position: absolute;
-            left: 0;
-            top: 0;
+        .right {
+            width: 50%;
+            margin-top: 60px;
             @media (max-width: 748px){
                 width: 100%;
             }
             img {
-                height: 600px;
+                height: 500px;
                 @media (max-width: 748px){
                     height: 320px;
                     margin-top: 20px;
@@ -48,19 +46,43 @@ a:-webkit-any-link {
             }
            
         }
-        .right {
-            width: 35%;
-            position: absolute;
-                bottom: 0;
-                right: 0;
-            img {
-                height: 600px;
-                margin-right: 0;
-                
-            }
+        .left {
+            width: 45%;
+            margin-top: 80px;
+            margin-left: 20px;
+                .popup{
+                    height: 500px;
+                    width: 500px;
+                    background: $light-pink;
+                    padding: 40px 0 0;
+                    border: 1px solid black;
+                    position: absolute;
+                    left: 12%;
+                    &#p1 {
+                        margin-left: -24px;
+                        margin-top: 24px;
+                    }
+                    &#p2 {
+                        margin-left: -12px;
+                        margin-top: 12px;
+                    }
+                    img {
+                        position: absolute;
+                        width: 100%;
+                        border-top: 1px solid black;
+                    }
+                }
+            @media (max-width: 740px){
+                width: 100%;
+                .popup {
+                    height: 200px;
+                    width: 200px;
+                }
+           } 
         }
 
         @media (max-width: 740px){
+            
             h1 {
                 font-size: 28px;
             }

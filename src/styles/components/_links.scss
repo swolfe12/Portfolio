@@ -1,0 +1,184 @@
+// --- Vars ---
+$partHeight: 100px;
+$verticalPadding: 15px;
+$horizontalPadding: 20px;
+
+$paper-bg: #fffefb;                 // warm white
+$rule-color: rgba(0, 92, 255, .18); // notebook blue
+$margin-color: rgba(255, 0, 0, .22); // notebook red
+$rule-gap: 24px;                    // distance between lines
+
+
+
+h2 { font-size: 10px; font-weight: bold; }
+p { font-size: 8px; line-height: 12px; margin: 0; }
+
+// --- Helpers ---
+@mixin lined-paper {
+  background:
+    /* faint top-to-bottom shading for paper */
+    linear-gradient(to bottom, rgba(0,0,0,.03), rgba(0,0,0,0)) 0 0 / 100% 100%,
+    /* blue horizontal rules */
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent $rule-gap,
+      $rule-color $rule-gap,
+      $rule-color ($rule-gap + 1px)
+    );
+  background-color: $paper-bg;
+  position: relative;
+
+  /* red left margin line */
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0; bottom: 0;
+    left: $horizontalPadding + 12px; // margin line in a bit from padding
+    width: 1px;
+    background: $margin-color;
+    pointer-events: none;
+  }
+}
+
+// --- Paper ---
+.paper {
+  height: $partHeight * 3;
+  width: 80%;
+  margin: 50px auto;
+  perspective: 800px;
+  backface-visibility: hidden;
+
+  .part1, .part2, .part3 {
+    @include lined-paper;
+    transition: box-shadow .6s linear;
+    will-change: transform, box-shadow;
+  }
+
+  .part1 {
+    position: relative;
+    z-index: 2;
+    height: $partHeight - $verticalPadding;
+    padding: $verticalPadding $horizontalPadding 0 $horizontalPadding;
+
+    // START folded (same look you had on :hover), then unfold to flat
+    transform: rotateX(-30deg) translateY(0.65em) scale(0.98);
+    transform-origin: 50% 100%;
+    box-shadow:
+      inset 0 0 100px rgba(0,0,0,.5),
+      0 -20px 10px rgba(0,0,0,.1);
+
+    animation: unfold-top .6s ease-out .15s forwards;
+  }
+
+  .part2 {
+    height: $partHeight;
+    padding: 0 $horizontalPadding;
+
+    transform: rotateX(30deg) scale(1);
+    transform-origin: 50% 50%;
+    box-shadow: inset 0 80px 100px rgba(0,0,0,.4);
+
+    animation: unfold-mid .6s ease-out .3s forwards;
+  }
+
+  .part3 {
+    height: $partHeight - $verticalPadding;
+    padding: 0 $horizontalPadding $verticalPadding $horizontalPadding;
+
+    transform: rotateX(-30deg) translateY(-0.45em) scale(1.026);
+    transform-origin: 50% 0%;
+    box-shadow: inset 0 80px 100px rgba(0,0,0,.4);
+
+    animation: unfold-bottom .6s ease-out .45s forwards;
+  }
+}
+
+// --- Keyframes: go from folded -> flat (transform: none) and settle shadows ---
+@keyframes unfold-top {
+  0% {
+    transform: rotateX(-30deg) translateY(0.65em) scale(0.98);
+    box-shadow:
+      inset 0 0 100px rgba(0,0,0,.5),
+      0 -20px 10px rgba(0,0,0,.1);
+  }
+  100% {
+    transform: none;
+    box-shadow:
+      inset 0 0 100px rgba(0,0,0,.3),
+      0 -4px 10px rgba(0,0,0,.4);
+  }
+}
+
+@keyframes unfold-mid {
+  0% {
+    transform: rotateX(30deg) scale(1);
+    box-shadow: inset 0 80px 100px rgba(0,0,0,.4);
+  }
+  100% {
+    transform: none;
+    box-shadow:
+      inset 0 0 100px rgba(0,0,0,.2),
+      0 0 10px rgba(0,0,0,.9);
+  }
+}
+
+@keyframes unfold-bottom {
+  0% {
+    transform: rotateX(-30deg) translateY(-0.45em) scale(1.026);
+    box-shadow: inset 0 80px 100px rgba(0,0,0,.4);
+  }
+  100% {
+    transform: none;
+    box-shadow:
+      inset 0 0 100px rgba(0,0,0,.3),
+      0 4px 10px rgba(0,0,0,.4);
+  }
+}
+
+// --- Reduced motion: keep it flat and accessible ---
+@media (prefers-reduced-motion: reduce) {
+  .paper .part1,
+  .paper .part2,
+  .paper .part3 {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
+
+
+.links {
+    position: relative;
+    background: $indigo;
+    background-size: cover;
+    overflow: scroll;
+    //transform: scale(.7);
+    height: 100%;
+    .grid {
+    padding: 0px 12px;
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-rows: 50px;
+    margin-top: 30px;
+    @media (min-width: 960px){
+        padding: 00px 60px;
+    }
+
+    .list{
+        background: $hot-pink;
+        border-radius: 24px;
+        width: 100%;
+        height: 100%;
+        min-height: 500px;
+        box-shadow: inset 0 4px 0 rgb(255, 163, 209), inset 0 -5px 0 rgba(0, 0, 0, 0.2), 0 6px 0 rgba(0, 0, 0, 0.5);
+
+        ul {
+            list-style:none;
+            li {
+                font-size: 26px;
+            }
+        }
+    }
+}
+}
