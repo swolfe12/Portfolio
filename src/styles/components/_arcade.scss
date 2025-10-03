@@ -22,10 +22,12 @@
 .arcade {
     position: relative;
     background: $indigo;
-    background-size: cover;
+    background-size: contain;
     overflow: scroll;
     //transform: scale(.7);
     height: 100%;
+    //min-height: 850px;
+
 
 }
 /* Container with gingham bg (updated to match navbar colors) */

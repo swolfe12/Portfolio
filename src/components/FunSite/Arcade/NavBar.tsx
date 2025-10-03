@@ -10,7 +10,7 @@ type Category = {
 };
 
 const CATEGORIES: Category[] = [
-  { id: "chat", label: "Chat Room", href: "/chat" },
+  { id: "about", label: "About Me", href: "/about" },
   { id: "games", label: "Games", href: "/games" },
   { id: "gallery", label: "Gallery", href: "/gallery" },
   { id: "resume", label: "Resume", href: "/resume" },

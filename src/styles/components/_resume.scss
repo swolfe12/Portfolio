@@ -1,7 +1,7 @@
 .resume-page{
     position: relative;
     background: $indigo;
-    background-size: cover;
+    background-size: contain;
     overflow: scroll;
     //transform: scale(.7);
     height: 100%;
@@ -16,7 +16,126 @@
         padding: 00px 60px;
     }
     img {
-        width: 100%;
+        width: 80%;
+        margin: auto;
     }
 }
+}
+
+/* src/components/FunSite/Arcade/ResumeInteractive.scss */
+
+.resume-page {
+  min-height: 100dvh;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.resume-grid {
+  display: grid;
+  place-items: center;
+  padding: clamp(12px, 3vw, 32px);
+}
+
+.resume-figure {
+  position: relative;
+  width: min(100%, 940px);
+  aspect-ratio: 8.5 / 11; /* keep roughly letter ratio for the image layout */
+  display: grid;
+  place-items: center;
+
+  .resume-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 6px 28px rgba(0,0,0,.35);
+  }
+}
+
+/* Star buttons */
+.star-btn {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  color: #24d6ff;               /* cyan star */
+  background: #0b0f2a;          /* dark inner glow */
+  box-shadow: 0 0 0 2px white, 0 8px 20px rgba(0,0,0,.4);
+  transition: transform .15s ease, box-shadow .2s ease, color .2s ease;
+  outline-offset: 2px;
+
+  svg {
+    width: 70%;
+    height: 70%;
+  }
+
+  &:hover,
+  &:focus-visible {
+    transform: scale(1.08);
+    box-shadow: 0 0 0 2px #e567ae, 0 10px 26px rgba(0,0,0,.5);
+    color: #e567ae;
+  }
+
+  &.active {
+    color: #ffd166; /* gold when active */
+  }
+}
+
+/* Blurb panel */
+.blurb-panel {
+  position: absolute;
+  max-width: clamp(220px, 36vw, 360px);
+  background: rgba(255,255,255,.96);
+  color: #222;
+  border-radius: 12px;
+  box-shadow: 0 12px 28px rgba(0,0,0,.35);
+  padding: 12px 12px 14px;
+  border: 2px solid #222;
+  transform-origin: top left;
+  animation: pop .12s ease-out;
+
+  @keyframes pop {
+    from { transform: scale(.96); opacity: 0; }
+    to   { transform: scale(1);   opacity: 1; }
+  }
+
+  .blurb-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: space-between;
+    margin-bottom: 6px;
+  }
+
+  .blurb-title {
+    font-size: clamp(14px, 2.2vw, 18px);
+    line-height: 1.2;
+    margin: 0;
+    letter-spacing: .2px;
+  }
+
+  .blurb-close {
+    border: 0;
+    background: transparent;
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 4px;
+  }
+
+  .blurb-body {
+    font-size: clamp(13px, 1.9vw, 15px);
+    margin: 0;
+  }
+}
+
+/* Small screens: keep panel inside the viewport */
+@media (max-width: 480px) {
+  .blurb-panel {
+    max-width: 86vw;
+  }
 }

@@ -8,7 +8,7 @@ export const NotFound = ({ isArcade = true, onNavigate }) =>  {
         <div className='not-found' style={{ backgroundImage: `url(${screensaver})` }}>
             <Navbar isArcade={isArcade} onNavigate={onNavigate} />
             <div className="grid">
-                <h1> Sorry, this page is in progress</h1>
+                <h1> </h1>
             </div>
 
         </div>

@@ -26,28 +26,28 @@ export const Arcade = ({ isArcade = true, onNavigate }) => {
             <li>
               <a href="#fortune">
                 <span className="dot" aria-hidden="true" />
-                <span className="title">fortune fun</span>
+                <span className="title">front-end fun</span>
                 <span className="sub">what’s in the cards for you?</span>
               </a>
             </li>
             <li>
               <a href="#story">
                 <span className="dot" aria-hidden="true" />
-                <span className="title">my story</span>
+                <span className="title">back-end basics</span>
                 <span className="sub">it’s all about me!</span>
               </a>
             </li>
             <li>
               <a href="#look">
                 <span className="dot" aria-hidden="true" />
-                <span className="title">my look</span>
+                <span className="title">accessibility</span>
                 <span className="sub">the scoop on my style</span>
               </a>
             </li>
             <li>
               <a href="#trivia">
                 <span className="dot" aria-hidden="true" />
-                <span className="title">trivia</span>
+                <span className="title">UI/UX  design</span>
                 <span className="sub">a few fave facts</span>
               </a>
             </li>

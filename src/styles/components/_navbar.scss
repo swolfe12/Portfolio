@@ -270,8 +270,9 @@ body.nav-scroll-lock {
       text-decoration: none;
       background: linear-gradient(180deg, var(--pink-hi), var(--pink));
       box-shadow: inset 0 -4px 0 var(--pink-lo), 0 2px 0 rgba(0,0,0,.35);
-      font-size: 16px;
+      font-size: 14px;
       border:none;
+      font-family: "Press Start 2P", monospace;
 
       &:hover { transform: translateY(-1px); }
       &:active { transform: translateY(1px); box-shadow: inset 0 2px 0 var(--pink-lo); }
