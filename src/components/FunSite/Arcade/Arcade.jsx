@@ -1,6 +1,6 @@
 // src/components/FunSite/Arcade/Arcade.jsx
 import React from 'react';
-import avatar from '../../../assets/avatar2.png';
+import avatar from '../../../assets/avatar3.png';
 import Navbar from './NavBar.tsx';
 import butterfly1 from '../../../assets/butterfly1.png';
 import butterfly2 from '../../../assets/butterfly2.png';

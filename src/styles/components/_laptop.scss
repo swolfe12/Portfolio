@@ -135,6 +135,9 @@
       overflow: scroll;
       height: 320px;
     }
+    ::-webkit-scrollbar {
+    display: none;
+}
     .browser {
       position: relative;
       width: 200px;
