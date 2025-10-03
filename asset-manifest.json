@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.da47a31a.css",
-    "main.js": "/Portfolio/static/js/main.7916140f.js",
+    "main.css": "/Portfolio/static/css/main.99228d53.css",
+    "main.js": "/Portfolio/static/js/main.98063483.js",
     "static/js/453.1407b060.chunk.js": "/Portfolio/static/js/453.1407b060.chunk.js",
     "static/media/coffee.png": "/Portfolio/static/media/coffee.0f0e5809593deaaedf54.png",
     "static/media/lavalamp.png": "/Portfolio/static/media/lavalamp.b9950cd500588bb8a3cf.png",
     "static/media/window.mp4": "/Portfolio/static/media/window.126024573dd888adc020.mp4",
+    "static/media/avatar3.png": "/Portfolio/static/media/avatar3.d0562be46f9efcc1ab61.png",
     "static/media/mash.png": "/Portfolio/static/media/mash.2fafb75e8227bfb03a77.png",
-    "static/media/avatar2.png": "/Portfolio/static/media/avatar2.5eacba7e2be18920dc3e.png",
     "static/media/paper.png": "/Portfolio/static/media/paper.559a292d7a8dc8538921.png",
     "static/media/work-sign.png": "/Portfolio/static/media/work-sign.288603fe4d91ac5c6087.png",
     "static/media/neon.png": "/Portfolio/static/media/neon.3757a17e55fb1a038784.png",
@@ -41,12 +41,12 @@
     "static/media/butterfly2.png": "/Portfolio/static/media/butterfly2.df9b1a9beb0467da5306.png",
     "static/media/dogs.png": "/Portfolio/static/media/dogs.1f59f0c9e5329762c719.png",
     "index.html": "/Portfolio/index.html",
-    "main.da47a31a.css.map": "/Portfolio/static/css/main.da47a31a.css.map",
-    "main.7916140f.js.map": "/Portfolio/static/js/main.7916140f.js.map",
+    "main.99228d53.css.map": "/Portfolio/static/css/main.99228d53.css.map",
+    "main.98063483.js.map": "/Portfolio/static/js/main.98063483.js.map",
     "453.1407b060.chunk.js.map": "/Portfolio/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.da47a31a.css",
-    "static/js/main.7916140f.js"
+    "static/css/main.99228d53.css",
+    "static/js/main.98063483.js"
   ]
 }
