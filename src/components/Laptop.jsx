@@ -1,10 +1,12 @@
 // src/components/FunSite/Laptop.jsx
 import React from 'react';
-import Arcade from '../pages/arcade/Arcade';
-import Links from '../pages/arcade/Links';
+import Arcade from '../pages/arcade/Arcade.tsx';
+//import Links from '../pages/arcade/Links';
 import Resume from '../pages/arcade/Resume';
 import SkillsHub from '../pages/arcade/SkillsHub.tsx';
-import AboutMe from '../pages/arcade/AboutMe.tsx';
+import TempPage from '../pages/arcade/TempPage.tsx';
+import SkillsCategory from '../pages/arcade/SkillsCategory.tsx';
+//import AboutMe from '../pages/arcade/AboutMe.tsx';
 import laptop from './../assets/laptop.png';
 
 
@@ -15,19 +17,42 @@ import laptop from './../assets/laptop.png';
 // import Chat from '../FunSite/Arcade/Chat';
 
 const Laptop = ({ isOpen, currentPage, onNavigate }) => {
+
+  if (typeof currentPage === 'string' && currentPage.startsWith('skills/')) {
+    const categoryId = currentPage.slice('skills/'.length);
+    return (
+      <div
+        className={`laptop clickable${isOpen ? ' scale-up active' : ''}`}
+        style={{ backgroundImage: `url(${laptop})` }}
+        id="laptop"
+      >
+        <div className="screen">
+          <SkillsCategory
+            isArcade={false}
+            onNavigate={onNavigate}
+            categoryId={categoryId}   // pass it in (see next step)
+          />
+        </div>
+      </div>
+    );
+  }
+
   const renderScreen = () => {
     switch (currentPage) {
       case 'home':
         return <Arcade isArcade={false} onNavigate={onNavigate} />; // desktop-in-laptop landing
       case 'links':
-        return <Links isArcade={false} onNavigate={onNavigate} />;
+        return <TempPage isArcade={false} onNavigate={onNavigate} />;
+        //return <Links isArcade={false} onNavigate={onNavigate} />;
       case 'resume':
         return <Resume isArcade={false} onNavigate={onNavigate} />;
       case 'about':
-        return <AboutMe isArcade={false} onNavigate={onNavigate} />; 
+        return <TempPage isArcade={false} onNavigate={onNavigate} />;
+        //return <AboutMe isArcade={false} onNavigate={onNavigate} />; 
       case 'projects':
-         return <Arcade isArcade={false} onNavigate={onNavigate} />; 
+        return <TempPage isArcade={false} onNavigate={onNavigate} />;
       case 'skills':
+        console.log("case: skills");
         return <SkillsHub isArcade={false} onNavigate={onNavigate} />;
       default:
         return <Arcade isArcade={false} onNavigate={onNavigate} />; 

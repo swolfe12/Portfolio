@@ -207,6 +207,30 @@
       outline-offset: 2px;
     }
   }
+  li button{
+    border: none;
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    text-decoration: none;
+    gap: 0 12px;
+    padding: 10px 12px;
+    border-radius: 14px;
+    background: color-mix(in oklab, white, $hot-pink 6%);
+    box-shadow: 0 2px 0 rgba(0,0,0,.05) inset;
+    transition: transform .12s ease, box-shadow .12s ease;
+        font-family: "VT323", monospace;
+        text-align: left;
+        font-size: 24px;
+
+    &:hover, &:focus-visible {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(0,0,0,.10);
+      outline: 2px solid color-mix(in oklab, $hot-pink, white 40%);
+      outline-offset: 2px;
+  }
+}
 
   .dot {
     inline-size: 26px;
@@ -303,4 +327,71 @@
     overflow: scroll;
     //transform: scale(.7);
     height: 100%;
+}
+
+.temp {
+    @include gradient-bg;
+    position: relative;
+    background: $indigo;
+    background-size: cover;
+    overflow: scroll;
+    //transform: scale(.7);
+    height: 100%;
+  .popup-overlay {
+        position: relative;
+    width: 90%;
+    margin: auto;
+    height: 90%;
+    inset: 0;
+    background: rgba(223, 184, 255, 0.45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .popup-box {
+    background: transparent;
+    padding: 20px;
+    border-radius: 10px;
+    animation: float 2.5s ease-in-out infinite;
+  }
+  .popup-close {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #fff;
+    color: #000000;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.612);
+    transition: transform 0.2s;
+    @media(max-width: 959px){
+      right: 16px;
+      top: 0;
+    }
+  }
+  
+  .popup-close:hover {
+    transform: scale(1.2);
+  }
+  
+  .sign-img {
+    width: 440px;
+    height: auto;
+    @media (max-width: 959px){
+      width: 360px;
+    }
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
 }

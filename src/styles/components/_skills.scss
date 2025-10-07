@@ -44,16 +44,24 @@
 
             .skills-card {
                 background: $skills-blue;
+                border: none;
                 width: 40%;
                 border-radius: 16px;
                 box-shadow: var(--shadow);
                 outline: 3px solid #b2d9ff;
                 position: relative;
                 isolation: isolate;
-                img {
-                    width: 100%;
-                    padding: 0;
+                button{//only in desktop
+                      //border:none;
+                      background: $skills-blue;
                 }
+                a {
+                    border: 1px solid black;
+                }
+                img {
+                        width: 100%;
+                        padding: 0;
+                    }
                 
                 }
         }

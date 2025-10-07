@@ -19,7 +19,9 @@ const CATEGORIES = [
 ] as const;
 
 export default function SkillsHub ({ isArcade = true, onNavigate }){
+   console.log("Hub Is arcade", isArcade);
   return (
+   
     <div className="skills-hub" aria-labelledby="skills-title">
       <NavBar isArcade={isArcade} onNavigate={onNavigate} />
       <div className="game-box">
@@ -33,22 +35,42 @@ export default function SkillsHub ({ isArcade = true, onNavigate }){
         {CATEGORIES.map((c) => (
           <article key={c.id} role="listitem" className="skills-card">
             <h2 className="sr-only">{c.label}</h2>
-            <Link
-              to={`/skills/${c.id}`}
-              className="skills-card__link"
-              aria-label={`Open ${c.label}`}
-            >
-              <img
-                src={c.img}
-                alt=""
-                loading="lazy"
-                decoding="async"
-                width={120}
-                height={120}
-                className="skills-card__img"
-              />
-              <span className="sr-only">{c.label}</span>
-            </Link>
+            {isArcade ? (
+  
+              <Link
+                to={`/skills/${c.id}`}
+                className="skills-card__link"
+                aria-label={`Open ${c.label}`}
+              >
+                <img
+                  src={c.img}
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                  width={120}
+                  height={120}
+                  className="skills-card__img"
+                />
+                <span className="sr-only">{c.label}</span>
+              </Link>
+            ) : (
+                <button
+                  type="button"
+                  className="skills-card__link"
+                  onClick={() => onNavigate?.(`skills/${c.id}`)} // <-- important
+                  aria-label={`Open ${c.label}`}
+                >
+                  <img
+                  src={c.img}
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                  width={120}
+                  height={120}
+                  className="skills-card__img"
+                />
+                </button>
+            )}
           </article>
         ))}
       </div>

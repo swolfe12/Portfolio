@@ -2,10 +2,11 @@
 import React, { useEffect, useState } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Portfolio from './pages/Portfolio';
-import Arcade from './pages/arcade/Arcade';
+import Arcade from './pages/arcade/Arcade.tsx';
 import Resume from './pages/arcade/Resume';
 import Links from './pages/arcade/Links';
 import SkillsHub from './pages/arcade/SkillsHub.tsx';
+import SkillsCategory from './pages/arcade/SkillsCategory.tsx';
 import WorkPopup from './components/WorkPopup';
 
 
@@ -32,12 +33,14 @@ export default function App() {
           <Route path="/links" element={<Links isArcade />} />
           <Route path="/resume" element={<Resume isArcade />} />
           <Route path="/skills" element={<SkillsHub isArcade/>} />
+          <Route path="/skills/:categoryId" element={<SkillsCategory />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       ) : (
         <Routes>
           <Route path="/" element={<Portfolio />} />
-          <Route path="/skills" element={<SkillsHub />} />
+          <Route path="/skills" element={<SkillsHub isArcade/>} />
+          <Route path="/skills/:categoryId" element={<SkillsCategory />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       )}

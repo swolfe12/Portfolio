@@ -62,6 +62,7 @@ const HOTSPOTS = [
 ];
 
 export default function ResumeInteractive({ isArcade = true, onNavigate }) {
+  console.log("Arcade:", isArcade);
   const [openId, setOpenId] = useState(null);
   const overlayRef = useRef(null);
   const panelRef = useRef(null);
@@ -96,7 +97,7 @@ export default function ResumeInteractive({ isArcade = true, onNavigate }) {
       style={{ backgroundImage: `url(${screensaver})` }}
     >
       <Navbar isArcade={isArcade} onNavigate={onNavigate} />
-
+      <h1>{isArcade} </h1>
       <div className="resume-grid">
         {/* Image wrapper is the positioning context */}
         <div className="resume-figure" ref={overlayRef}>
