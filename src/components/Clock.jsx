@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import ClockIMG from './../../assets/clock-clean.png';
+import ClockIMG from './../assets/clock-clean.png';
 
 export const Clock = () => {
     const [time, setTime] = useState(new Date().toLocaleTimeString());

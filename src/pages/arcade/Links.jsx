@@ -1,6 +1,6 @@
 
-import Navbar from './NavBar.tsx';
-import screensaver from '../../../assets/screensaver.jpg';
+import Navbar from '../../components/NavBar.tsx';
+import screensaver from '../../assets/screensaver.jpg';
 
 
 export const Links = ({ isArcade = true, onNavigate }) => {

@@ -21,7 +21,7 @@
 }
 .arcade {
     position: relative;
-    background: $indigo;
+    @include gradient-bg;
     background-size: contain;
     overflow: scroll;
     //transform: scale(.7);

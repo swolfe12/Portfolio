@@ -18,10 +18,10 @@ export const Resume = ({ isArcade = true, onNavigate }) =>  {
 export default Resume;
 */
 // src/components/FunSite/Arcade/ResumeInteractive.jsx
-import React, { useEffect, useId, useRef, useState } from "react";
-import Navbar from "./NavBar.tsx";
-import screensaver from "../../../assets/screensaver.jpg";
-import resumeImg from "../../../assets/resume.png";
+import { useEffect, useId, useRef, useState } from "react";
+import Navbar from "../../components/NavBar.tsx"
+import screensaver from "../../assets/screensaver.jpg";
+import resumeImg from "../../assets/resume.png";
 
 const STAR_SIZE = 36; // px for the clickable star
 

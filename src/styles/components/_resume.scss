@@ -1,6 +1,7 @@
 .resume-page{
     position: relative;
-    background: $indigo;
+    //background: $skills-blue !important;
+    @include gradient-bg;
     background-size: contain;
     overflow: scroll;
     //transform: scale(.7);

@@ -1,6 +1,6 @@
 // src/components/FunSite/Arcade/NavBar.tsx
 import React, { useEffect, useId, useRef, useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 type Category = {
   id: string;
@@ -11,8 +11,8 @@ type Category = {
 
 const CATEGORIES: Category[] = [
   { id: "about", label: "About Me", href: "/about" },
-  { id: "games", label: "Games", href: "/games" },
-  { id: "gallery", label: "Gallery", href: "/gallery" },
+  { id: "projects", label: "Projects", href: "/projects" },
+  { id: "skills", label: "Skills", href: "/skills"},
   { id: "resume", label: "Resume", href: "/resume" },
   { id: "links", label: "Links", href: "/links" },
 ];
@@ -23,6 +23,10 @@ type NavbarProps = {
 };
 
 export default function Navbar({ isArcade = true, onNavigate }: NavbarProps) {
+
+
+  const { pathname } = useLocation();
+  const isActive = (href?: string) => !!href && (pathname === href || pathname.startsWith(href + "/"));
   const [open, setOpen] = useState(false);
   const [expanded, setExpanded] = useState<Record<string, boolean>>({});
   const navId = useId();
@@ -62,10 +66,14 @@ export default function Navbar({ isArcade = true, onNavigate }: NavbarProps) {
     setExpanded((cur) => ({ ...cur, [id]: !cur[id] }));
 
   const renderDesktopItem = (c: Category, i: number) => {
+  const hasSubs = c.subitems && c.subitems.length > 0;
+  //const isOpen = !!expanded[c.id];
+
+  if (!hasSubs) {
     return (
       <li key={c.id} className="nav-item">
         {isArcade ? (
-          <Link className="nav-link" to={c.href || "#"}>
+          <Link className={`nav-link ${isActive(c.href) ? "is-active" : ""}`} to={c.href || "#"}>
             {c.label}
           </Link>
         ) : (
@@ -73,16 +81,87 @@ export default function Navbar({ isArcade = true, onNavigate }: NavbarProps) {
             className="nav-link"
             onClick={() => onNavigate?.(c.id)}
             type="button"
+            aria-current={isActive(c.href) ? "page" : undefined}
           >
             {c.label}
           </button>
         )}
-        {i < CATEGORIES.length - 1 && (
-          <span className="divider" aria-hidden="true"></span>
-        )}
+        {i < CATEGORIES.length - 1 && <span className="divider" aria-hidden="true"></span>}
       </li>
     );
-  };
+  }
+/*
+  // With subitems (e.g., Skills)
+  const panelId = `desk-sub-${c.id}`;
+  return (
+    <li key={c.id} className="nav-item has-sub">
+      {/* Parent can still go to the hub }
+      {isArcade ? (
+        <Link
+          className={`nav-link ${isActive(c.href) ? "is-active" : ""}`}
+          to={c.href || "#"}
+          onMouseEnter={() => setExpanded((s) => ({ ...s, [c.id]: true }))}
+          onMouseLeave={() => setExpanded((s) => ({ ...s, [c.id]: false }))}
+          aria-haspopup="menu"
+          aria-expanded={isOpen}
+          aria-controls={panelId}
+        >
+          {c.label}
+        </Link>
+      ) : (
+        <button
+          className="nav-link"
+          type="button"
+          onClick={() => onNavigate?.(c.id)}
+          onMouseEnter={() => setExpanded((s) => ({ ...s, [c.id]: true }))}
+          onMouseLeave={() => setExpanded((s) => ({ ...s, [c.id]: false }))}
+          aria-haspopup="menu"
+          aria-expanded={isOpen}
+          aria-controls={panelId}
+        >
+          {c.label}
+        </button>
+      )}
+
+      {/* Submenu (desktop) }
+      <div
+        id={panelId}
+        role="menu"
+        className={`desk-submenu ${isOpen ? "open" : ""}`}
+        onMouseEnter={() => setExpanded((s) => ({ ...s, [c.id]: true }))}
+        onMouseLeave={() => setExpanded((s) => ({ ...s, [c.id]: false }))}
+      >
+        <ul>
+          {c.subitems!.map((s) => (
+            <li key={s.id} role="none">
+              {isArcade ? (
+                <Link
+                  role="menuitem"
+                  className={`sub-link ${isActive(s.href) ? "is-active" : ""}`}
+                  to={s.href}
+                >
+                  {s.label}
+                </Link>
+              ) : (
+                <button
+                  role="menuitem"
+                  className="sub-link"
+                  type="button"
+                  onClick={() => onNavigate?.(s.id)}
+                >
+                  {s.label}
+                </button>
+              )}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {i < CATEGORIES.length - 1 && <span className="divider" aria-hidden="true"></span>}
+    </li>
+  );*/
+};
+
 
   const renderDrawerItem = (c: Category) => {
     const hasSubs = c.subitems && c.subitems.length > 0;

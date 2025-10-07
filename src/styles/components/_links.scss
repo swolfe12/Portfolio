@@ -149,6 +149,7 @@ p { font-size: 8px; line-height: 12px; margin: 0; }
 
 
 .links {
+  @include gradient-bg;
     position: relative;
     background: $indigo;
     background-size: cover;

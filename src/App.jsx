@@ -1,11 +1,13 @@
 // src/App.jsx
 import React, { useEffect, useState } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import Portfolio from "./components/FunSite/Portfolio";
-import Arcade from './components/FunSite/Arcade/Arcade';
-import Resume from './components/FunSite/Arcade/Resume';
-import Links from './components/FunSite/Arcade/Links';
+import Portfolio from './pages/Portfolio';
+import Arcade from './pages/arcade/Arcade';
+import Resume from './pages/arcade/Resume';
+import Links from './pages/arcade/Links';
+import SkillsHub from './pages/arcade/SkillsHub.tsx';
 import WorkPopup from './components/WorkPopup';
+
 
 export default function App() {
   const [isArcade, setIsArcade] = useState(false);
@@ -29,10 +31,15 @@ export default function App() {
           <Route path="/" element={<Arcade isArcade />} />
           <Route path="/links" element={<Links isArcade />} />
           <Route path="/resume" element={<Resume isArcade />} />
+          <Route path="/skills" element={<SkillsHub isArcade/>} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       ) : (
-        <Portfolio />
+        <Routes>
+          <Route path="/" element={<Portfolio />} />
+          <Route path="/skills" element={<SkillsHub />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
       )}
     </>
     /*

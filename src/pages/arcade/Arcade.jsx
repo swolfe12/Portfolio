@@ -1,10 +1,10 @@
 // src/components/FunSite/Arcade/Arcade.jsx
 import React from 'react';
-import avatar from '../../../assets/avatar3.png';
-import Navbar from './NavBar.tsx';
-import butterfly1 from '../../../assets/butterfly1.png';
-import butterfly2 from '../../../assets/butterfly2.png';
-import screensaver from '../../../assets/screensaver.jpg';
+import avatar from '../../assets/avatar3.png';
+import Navbar from '../../components/NavBar.tsx';
+import butterfly1 from '../../assets/butterfly1.png';
+import butterfly2 from '../../assets/butterfly2.png';
+import screensaver from '../../assets/screensaver.jpg';
 
 export const Arcade = ({ isArcade = true, onNavigate }) => {
   return (
