@@ -140,3 +140,22 @@
     max-width: 86vw;
   }
 }
+/* Body lock already handled by your code */
+.nav-scroll-lock { position: fixed; left: 0; right: 0; overflow: hidden; }
+
+/* External confirm modal */
+.external-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,.5);
+  display: grid; place-items: center; z-index: 1000;
+}
+.external-dialog {
+  width: min(92vw, 28rem);
+  background: #111; color: #fff; border-radius: 16px;
+  padding: 1.25rem 1.25rem 1rem; box-shadow: 0 10px 30px rgba(0,0,0,.5);
+}
+.external-title { margin: 0 0 .5rem; font-size: 28px; }
+.external-desc { margin: 0 0 1rem; line-height: 26px;font-size:22px; opacity: .85; font-family: 'roboto' }
+.external-actions { display: flex; gap: .75rem; justify-content: flex-end; }
+.btn { padding: .6rem 1rem; border-radius: .75rem; border: 0; cursor: pointer; }
+.btn-primary { background: #e567ae; color: #111; font-weight: 700; }
+.btn-secondary { background: #2b2b2b; color: #fff; }

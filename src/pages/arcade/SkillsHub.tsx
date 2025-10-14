@@ -14,7 +14,7 @@ const CATEGORIES = [
   { id: "backend", label: "Back-End Dev", img: BE },
   { id: "accessibility", label: "Accessibility Guru", img: access },
   { id: "cms", label: "CMS Star", img: CMS },
-  { id: "agile", label: "Agile Stuff", img:  tools },
+  { id: "uiux", label: "UI/UX Design", img:  tools },
   { id: "testing", label: "Testing", img: FE },
 ] as const;
 
