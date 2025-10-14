@@ -1,8 +1,8 @@
 
 import { Link, useParams } from "react-router-dom";
 import NavBar from '../../components/NavBar.tsx';
-import avatar from '../../assets/avatar3.png';
-import room from '../../assets/room.png';
+//import avatar from '../../assets/avatar3.png';
+//import room from '../../assets/room.png';
 
 type Block = { title: string; items: string[] };
 type Cat = {
@@ -100,17 +100,13 @@ export default function SkillCategory({ isArcade = false, onNavigate, categoryId
   }
 
   return (
-    <div className="skills-hub" aria-labelledby="skills-title">
+    <div className="skills-category" aria-labelledby="skills-title">
       <NavBar isArcade={isArcade} onNavigate={onNavigate} />
       <div className="game-box">
         <header className="skills-header">
           <h1 id="skills-title">{cat.name}</h1>
           <p className="blurb">{cat.blurb}</p>
         </header>
-
-        <div className="avatar" style={{ backgroundImage: `url(${room})` }}>
-          <img src={avatar} alt="Sam's avatar" />
-        </div>
 
         <div className="bubble-wrap">
           {cat.blocks.map((b) => (

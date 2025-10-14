@@ -1,7 +1,7 @@
 // src/components/FunSite/Laptop.jsx
 import React from 'react';
 import Arcade from '../pages/arcade/Arcade.tsx';
-//import Links from '../pages/arcade/Links';
+import Links from '../pages/arcade/Links';
 import Resume from '../pages/arcade/Resume';
 import SkillsHub from '../pages/arcade/SkillsHub.tsx';
 import TempPage from '../pages/arcade/TempPage.tsx';
@@ -42,8 +42,8 @@ const Laptop = ({ isOpen, currentPage, onNavigate }) => {
       case 'home':
         return <Arcade isArcade={false} onNavigate={onNavigate} />; // desktop-in-laptop landing
       case 'links':
-        return <TempPage isArcade={false} onNavigate={onNavigate} />;
-        //return <Links isArcade={false} onNavigate={onNavigate} />;
+        //return <TempPage isArcade={false} onNavigate={onNavigate} />;
+        return <Links isArcade={false} onNavigate={onNavigate} />;
       case 'resume':
         return <Resume isArcade={false} onNavigate={onNavigate} />;
       case 'about':
