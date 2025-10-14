@@ -120,6 +120,7 @@
     text-align: center;
     padding-top: 10px;
     margin-top: 10px;
+    width: 100%;
     #skills-title {
     font-family: 'Orbitron';
     }
@@ -128,10 +129,16 @@
     font-size: 24px;
     text-align: center;
   }
+    .skills-footer {
+    width: 100%;
+    }
 }
 
 .bubble-wrap {
-  display: grid; gap: 14px; margin-top: 16px;
+  display: flex; 
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 14px; margin-top: 16px;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   font-family:'Roboto';
   color: black;
@@ -139,6 +146,7 @@
 }
 .bubble {
   background: rgba($blue, .5);
+  width: 20%;
   border-radius: 18px;
   padding: 14px 16px;
   font-size: 20px;
