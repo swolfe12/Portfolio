@@ -12,12 +12,12 @@ export const Links = ({ isArcade = true, onNavigate }) => {
       <Navbar isArcade={isArcade} onNavigate={onNavigate} />
       <div className="game-box">
           <div className="list">
-            <a>
-              <img src={github} height="200px"></img><br/>
+            <a href="https://github.com/swolfe12?tab=repositories">
+              <img src={github} height="200px" alt="Github Icon"></img><br/>
               <span>Github <RiExternalLinkLine /></span>
             </a>
-            <a>
-              <img src={linkedin} height="200px"></img><br/>
+            <a href="https://www.linkedin.com/in/sam-wolfe-59465b186/"> 
+              <img src={linkedin} height="200px" alt="LinkedIn Icon"></img><br/>
               <span>LinkedIn <RiExternalLinkLine /></span>
             </a>
           </div>
