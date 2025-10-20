@@ -1,22 +1,20 @@
-
-import { Link, useParams } from "react-router-dom";
-import NavBar from '../../components/NavBar.tsx';
-//import avatar from '../../assets/avatar3.png';
-import room from '../../assets/room.png';
 import sfhat from '../../assets/sam-fhat.png';
 import sbhat from '../../assets/sam-bhat.png';
 import sheadphones from '../../assets/sam-headphones.png';
 
-type Block = { title: string; items: string[] };
-type Cat = {
+// types & shared data for Skills
+export type Block = { title: string; items: string[] };
+export type Cat = {
   id: string;
   name: string;
   blurb: string;
   blocks: Block[];
-  img: string;
+  img: string; // avatar image for this category
 };
 
-const DATA: Record<string, Cat> = {
+
+
+export const SKILL_DATA: Record<string, Cat> = {
   frontend: {
     id: "frontend",
     name: "Front-End Developer",
@@ -85,58 +83,6 @@ const DATA: Record<string, Cat> = {
       { title: "Types", items: ["Unit", "Integration", "e2e", "a11y tests"] },
       { title: "Tools", items: ["Vitest/Jest", "Testing Library", "Playwright"] },
     ],
-    img:sfhat,
+    img: sfhat,
   },
 };
-
-export default function SkillCategory({ isArcade = false, onNavigate, categoryId: propCategoryId,}) {
-    console.log("SkillsCategory isArcade?", isArcade);
-
-  const { categoryId: routeCategoryId = "" } = useParams();
-  const key = (propCategoryId ?? routeCategoryId ?? "").toLowerCase();
-  const cat = DATA[key];
-
-  if (!cat) {
-    return (
-      <main className="skills-screen">
-        <div className="skills-category">
-          <p>Whoops — that category doesn’t exist.</p>
-          <p>
-            <Link to="/skills" className="btn">Back to Skills</Link>
-          </p>
-        </div>
-      </main>
-    );
-  }
-
-  return (
-    <div className="skills-category" aria-labelledby="skills-title">
-      <NavBar isArcade={isArcade} onNavigate={onNavigate} />
-      <div className="game-box">
-        <header className="skills-header">
-          <h1 id="skills-title">{cat.name}</h1>
-          <p className="blurb">{cat.blurb}</p>
-        </header>
-        <div className="avatar" style={{ backgroundImage: `url(${room})` }}>
-            <img src={cat.img} alt="Sam's avatar"/>
-            
-          </div>
-
-        <div className="bubble-wrap">
-          {cat.blocks.map((b) => (
-            <div key={b.title} className="bubble">
-              <h2>{b.title}</h2>
-              <ul>
-                {b.items.map((i) => <li key={i}>{i}</li>)}
-              </ul>
-            </div>
-          ))}
-        </div>
-
-        <footer className="skills-footer">
-          <Link className="btn" to="/skills">← All categories</Link>
-        </footer>
-      </div>
-    </div>      
-  );
-}

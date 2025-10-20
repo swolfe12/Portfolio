@@ -159,7 +159,6 @@
 
 /* Headline + intro */
 .about-blob h2 {
-  font-family: "Trebuchet MS", system-ui, sans-serif;
   font-weight: 700;
   font-size: 30px;
   color: $super-hot-pink;
@@ -175,6 +174,7 @@
   margin: 0 0 1.25rem;
   color: color-mix(in oklab, $super-hot-pink, black 30%);
   font-size: 20px;
+  font-family: "VT323", monospace;
 }
 
 /* Link list styled like candy buttons */

@@ -1,0 +1,254 @@
+.projects {
+  @include gradient-bg;
+  position: relative;
+  background: $indigo;
+  background-size: cover;
+  overflow: scroll;
+  height: 100%;
+
+  .game-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .project-card {
+    width: 100%;
+    background-color: $skills-blue;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+    position: relative;
+    margin: auto;
+
+    @media (max-width: 767px) {
+      width: 90%;
+    }
+
+    .project-img-container {
+      min-height: 380px;
+      position: relative;
+      overflow: hidden;
+
+      @media (max-width: 767px) {
+        height: 380px;
+      }
+
+      .project-img {
+        height: 100%;
+        width: 100%;
+        background-position: center;
+        background-size: contain;
+
+        @media (max-width: 767px) {
+          background-size: cover;
+        }
+      }
+
+      .project-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          rgba(30, 27, 38, 0) 30%,
+          rgba(30, 27, 38, 0.7) 60%,
+          rgba(30, 27, 38, 1) 100%
+        );
+        z-index: 1;
+      }
+    }
+
+    .project-content {
+      padding: 24px;
+      position: relative;
+      margin-top: -120px;
+      z-index: 2;
+
+      .title-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 6px;
+
+        .project-title {
+          font-size: 24px;
+          font-weight: 700;
+          color: #fff;
+          text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+          flex: 1;
+          line-height: 1.2;
+          cursor: default;
+
+          .year-badge {
+            font-size: 14px;
+            font-weight: 600;
+            color: #d7d7d7;
+            margin-left: 8px;
+            opacity: 0.85;
+            
+          }
+        }
+      }
+
+      .genres {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-bottom: 16px;
+
+        .genre-tag {
+          background-color: #e63792;
+          border: 1px solid rgba(254, 65, 65, 0.3);
+          padding: 3px 10px;
+          border-radius: 16px;
+          font-size: 16px;
+          font-weight: 500;
+          color: #e7e7e7;
+          transition: all 0.2s ease;
+        cursor: default;
+        }
+      }
+
+      .description-section {
+        margin-bottom: 16px;
+
+        .section-title {
+
+          font-weight: 600;
+          letter-spacing: 1px;
+          margin-bottom: 10px;
+          color: #e7e7e7;
+        font-size: 16px;
+        }
+
+        .project-description {
+          font-size: 20px;
+          line-height: 1.1;
+          cursor: default;
+        }
+      }
+
+      .cast-section {
+        margin-bottom: 16px;
+        font-size: 20px;
+        color: #e7e7e7;
+
+        .cast-list {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 15px;
+
+          .cast-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 60px;
+            
+
+            .cast-photo {
+              width: 50px;
+              height: 50px;
+              border-radius: 4px;
+              margin-bottom: 5px;
+              object-fit: cover;
+              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+              background: #e7e7e7;
+              padding: 5px;
+            }
+
+            .cast-name {
+              font-size: 18px;
+              text-align: center;
+              color: #e7e7e7;
+              max-width: 100%;
+              white-space: wrap;
+            }
+          }
+        }
+      }
+
+      .action-row {
+        display: grid;
+        grid-template-columns: 1fr repeat(3, auto);
+        gap: 10px;
+        align-items: center;
+        margin-top: 10px;
+
+        .watch-btn {
+          //background-color: #fe4141;
+          background-color: #e63792;
+          border: none;
+          border-radius: 4px;
+          padding: 10px 16px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          box-shadow: 0 4px 8px rgba(254, 65, 65, 0.3);
+
+          &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(254, 65, 65, 0.4);
+            background-color: $hot-pink;
+          }
+
+          .watch-btn-text {
+            font-size: 13px;
+            font-weight: 600;
+            color: white;
+            margin-left: 8px;
+          }
+        }
+
+        .action-btn {
+          width: 40px;
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          background-color: rgba(255, 255, 255, 0.05);
+          border-radius: 4px;
+          transition: all 0.2s ease;
+
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+          }
+
+          .action-icon {
+            width: 18px;
+            height: 18px;
+            fill: #e7e7e7;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .project-card {
+      max-width: 650px;
+      display: flex;
+
+      .project-img-container {
+        width: 40%;
+        height: auto;
+
+        .project-overlay {
+          background: linear-gradient(
+            90deg,
+            rgba(30, 27, 38, 0) 0%,
+            rgba(30, 27, 38, 0.8) 100%
+          );
+        }
+      }
+
+      .project-content {
+        width: 60%;
+        margin-top: 0;
+      }
+    }
+  }
+}

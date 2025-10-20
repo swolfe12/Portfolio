@@ -1,3 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Orbitron:wght@400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Dancing+Script:wght@400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Dancing+Script:wght@400..700&family=Just+Another+Hand&family=Neonderthaw&display=swap');
+
+body{
+    font-family: "Montserrat", sans-serif;
+}
+.section-header {
+    //font-family: "VT323", monospace;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0 20px 0;
+    h1 {
+        font-size: 28px;
+        text-transform: uppercase;
+        color: #bf2a7c;
+    }
+
+}
+
+//font-family: "VT323", monospace;

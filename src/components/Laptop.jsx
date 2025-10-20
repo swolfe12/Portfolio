@@ -6,6 +6,7 @@ import Resume from '../pages/arcade/Resume';
 import SkillsHub from '../pages/arcade/SkillsHub.tsx';
 import TempPage from '../pages/arcade/TempPage.tsx';
 import SkillsCategory from '../pages/arcade/SkillsCategory.tsx';
+import Projects from '../pages/arcade/Projects.tsx';
 //import AboutMe from '../pages/arcade/AboutMe.tsx';
 import laptop from './../assets/laptop.png';
 
@@ -50,7 +51,8 @@ const Laptop = ({ isOpen, currentPage, onNavigate }) => {
         return <TempPage isArcade={false} onNavigate={onNavigate} />;
         //return <AboutMe isArcade={false} onNavigate={onNavigate} />; 
       case 'projects':
-        return <TempPage isArcade={false} onNavigate={onNavigate} />;
+        //return <TempPage isArcade={false} onNavigate={onNavigate} />;
+        return <Projects isArcade={false} onNavigate={onNavigate}/>
       case 'skills':
         console.log("case: skills");
         return <SkillsHub isArcade={false} onNavigate={onNavigate} />;

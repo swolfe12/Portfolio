@@ -7,6 +7,7 @@ import Resume from './pages/arcade/Resume';
 import Links from './pages/arcade/Links';
 import SkillsHub from './pages/arcade/SkillsHub.tsx';
 import SkillsCategory from './pages/arcade/SkillsCategory.tsx';
+import Projects from './pages/arcade/Projects.tsx';
 import WorkPopup from './components/WorkPopup';
 
 
@@ -34,13 +35,17 @@ export default function App() {
           <Route path="/resume" element={<Resume isArcade />} />
           <Route path="/skills" element={<SkillsHub isArcade/>} />
           <Route path="/skills/:categoryId" element={<SkillsCategory />} />
+          <Route path="/projects" element={<Projects isArcade/>} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       ) : (
         <Routes>
           <Route path="/" element={<Portfolio />} />
+          <Route path="/links" element={<Links isArcade />} />
+          <Route path="/resume" element={<Resume isArcade />} />
           <Route path="/skills" element={<SkillsHub isArcade/>} />
           <Route path="/skills/:categoryId" element={<SkillsCategory />} />
+          <Route path="/projects" element={<Projects isArcade/>} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       )}

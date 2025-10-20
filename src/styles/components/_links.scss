@@ -163,15 +163,22 @@ p { font-size: 8px; line-height: 12px; margin: 0; }
         margin: 50px auto;
         display: flex;
         justify-content: center;
-       a {
-        height: 200px;
-        margin: 50px;
-        &:hover {
-          transform: rotate(2deg);
-        }
-        img {
+        flex-wrap: wrap;
+        a {
           height: 200px;
-        }
+          margin: 50px;
+          &:hover {
+            transform: rotate(2deg);
+          }
+          img {
+            height: 200px;
+          }
+          @media(max-width: 959.98px){
+            height: 150px;
+            img {
+              height: 150px;
+            }
+          }
         span {
           width: 100%;
           color: black;
