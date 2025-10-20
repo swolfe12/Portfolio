@@ -4,7 +4,7 @@ import Slider from "react-slick";
 import { SKILL_DATA, Cat } from "./skillsData.ts";
 import { useSearchParams } from "react-router-dom";
 
-import avatarBase from '../../assets/avatar3.png';
+import avatarBase from '../../assets/avatar3.webp';
 import room from '../../assets/room.png';
 import fhat from '../../assets/fhat.png';
 import bhat from '../../assets/bhat.png';

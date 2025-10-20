@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Portfolio from './pages/Portfolio';
 import Arcade from './pages/arcade/Arcade.tsx';
-import Resume from './pages/arcade/Resume';
 import Links from './pages/arcade/Links';
 import SkillsHub from './pages/arcade/SkillsHub.tsx';
 import SkillsCategory from './pages/arcade/SkillsCategory.tsx';
@@ -32,7 +31,6 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Arcade isArcade />} />
           <Route path="/links" element={<Links isArcade />} />
-          <Route path="/resume" element={<Resume isArcade />} />
           <Route path="/skills" element={<SkillsHub isArcade/>} />
           <Route path="/skills/:categoryId" element={<SkillsCategory />} />
           <Route path="/projects" element={<Projects isArcade/>} />
@@ -42,7 +40,6 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Portfolio />} />
           <Route path="/links" element={<Links isArcade />} />
-          <Route path="/resume" element={<Resume isArcade />} />
           <Route path="/skills" element={<SkillsHub isArcade/>} />
           <Route path="/skills/:categoryId" element={<SkillsCategory />} />
           <Route path="/projects" element={<Projects isArcade/>} />

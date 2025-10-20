@@ -1,6 +1,5 @@
 
 import Navbar from '../../components/NavBar.tsx';
-import screensaver from '../../assets/screensaver.jpg';
 import github from '../../assets/github.png';
 import linkedin from '../../assets/linkedin.png';
 import { RiExternalLinkLine } from "react-icons/ri";
@@ -8,7 +7,7 @@ import { RiExternalLinkLine } from "react-icons/ri";
 
 export const Links = ({ isArcade = true, onNavigate }) => {
   return (
-    <div className='links' style={{ backgroundImage: `url(${screensaver})` }}>
+    <div className='links'>
       <Navbar isArcade={isArcade} onNavigate={onNavigate} />
       <div className="game-box">
           <div className="list">

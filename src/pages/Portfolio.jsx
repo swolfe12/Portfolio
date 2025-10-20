@@ -6,14 +6,11 @@ import Clock from './../components/Clock';
 import Laptop from './../components/Laptop';
 import MashImg from './../components/MashImage';
 import contact from './../assets/contact.png';
-import bgRoom from './../assets/bg-room.png';
 import plant from './../assets/plant.png';
 import coffee from './../assets/coffee.png';
 import gummies from './../assets/gummies.png';
 import pens from './../assets/pens.png';
-import jewelery from './../assets/jewelery-bowl.png';
 import notebook from './../assets/notebook.png';
-import airpods from './../assets/airpods.png';
 import headphones from './../assets/headphones.png';
 import lavalamp from './../assets/lavalamp.png';
 import sunnies from './../assets/sunnies.png';
@@ -24,8 +21,6 @@ import dogs from './../assets/dogs.png';
 import desk from './../assets/desk.png';
 import window from './../assets/window.png';
 import paper from './../assets/paper.png';
-import samBubble from './../assets/sam-bubble.png';
-import starbies from './../assets/starbies.png';
 import mouse from './../assets/mouse.png';
 import clouds from './../assets/window.mp4';
 import speaker from './../assets/speaker.png';
@@ -67,7 +62,7 @@ const Portfolio = () => {
     <div className="portfolio">
       <div className="inner-container">
 
-        <div className="bg-img" style={{ backgroundImage: `url(${bgRoom})` }}></div>
+    
 
         {isModalOpen && (
           <div className="popup">
@@ -75,7 +70,6 @@ const Portfolio = () => {
               <button className="close-btn" onClick={() => setIsModalOpen(false)}>
                 &times;
               </button>
-              <img className="sam-bubble" src={samBubble} alt="Sam Bubble" />
               <p>Hey! Nice to meet you, I'm Sam. Welcome to my room! Feel free to look around!
                 <br /><br />
                 P.S. I have some cool projects on my laptop. You should check them out!
@@ -142,14 +136,11 @@ const Portfolio = () => {
         <img className="paper" src={paper} alt="paper" />
         <img className="dogs" src={dogs} alt="dogs" />
         <img className="pens" src={pens} alt="Pens" />
-        <img className="jewelery" src={jewelery} alt="Jewelery" />
         <img className="notebook" src={notebook} alt="Notebook" />
         <MashImg />
-        <img className="airpods" src={airpods} alt="Airpods" />
         <img className="headphones" src={headphones} alt="Headphones" />
         <img className="lavalamp" src={lavalamp} alt="Lavalamp" />
         <img className="sunnies" src={sunnies} alt="Sunnies" />
-        <img className="starbies" src={starbies} alt="Starbucks Cup" />
         <img className="mouse" src={mouse} alt="Mouse pad" />
 
         <Calendar />

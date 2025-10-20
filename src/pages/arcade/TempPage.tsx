@@ -1,12 +1,11 @@
 
 import Navbar from '../../components/NavBar.tsx';
-import screensaver from '../../assets/screensaver.jpg';
 import signImage from '../../assets/work-sign.png';
 
 
 export const TempPage = ({ isArcade = true, onNavigate }) => {
   return (
-    <div className='temp' style={{ backgroundImage: `url(${screensaver})` }}>
+    <div className='temp'>
       <Navbar isArcade={isArcade} onNavigate={onNavigate} />
         <div className="popup-overlay">
       <div className="popup-box">

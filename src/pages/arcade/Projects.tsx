@@ -1,5 +1,4 @@
 import Navbar from '../../components/NavBar.tsx';
-import screensaver from '../../assets/screensaver.jpg';
 import wcc from '../../assets/WCC.png';
 import sass from '../../assets/sass-logo.png';
 import css from '../../assets/CSS-logo.png';
@@ -8,7 +7,7 @@ import artPortfolio from '../../assets/art-portfolio.png';
 
 export const Projects = ({ isArcade = true, onNavigate }) => {
   return (
-    <div className="projects" style={{ backgroundImage: `url(${screensaver})` }}>
+    <div className="projects" >
       <Navbar isArcade={isArcade} onNavigate={onNavigate} />
 
       <div className="game-box">

@@ -1,4 +1,5 @@
-.resume-page{
+/*.resume-page
+  
     position: relative;
     //background: $skills-blue !important;
     @include gradient-bg;
@@ -23,7 +24,7 @@
 }
 }
 
-/* src/components/FunSite/Arcade/ResumeInteractive.scss */
+/* src/components/FunSite/Arcade/ResumeInteractive.scss 
 
 .resume-page {
 
@@ -42,7 +43,7 @@
 .resume-figure {
   position: relative;
   width: min(100%, 940px);
-  aspect-ratio: 8.5 / 11; /* keep roughly letter ratio for the image layout */
+  aspect-ratio: 8.5 / 11; /* keep roughly letter ratio for the image layout 
   display: grid;
   place-items: center;
 
@@ -55,7 +56,7 @@
   }
 }
 
-/* Star buttons */
+/* Star buttons 
 .star-btn {
   position: absolute;
   display: grid;
@@ -63,8 +64,8 @@
   border: 0;
   border-radius: 999px;
   cursor: pointer;
-  color: #24d6ff;               /* cyan star */
-  background: #0b0f2a;          /* dark inner glow */
+  color: #24d6ff;               /* cyan star 
+  background: #0b0f2a;          /* dark inner glow 
   box-shadow: 0 0 0 2px white, 0 8px 20px rgba(0,0,0,.4);
   transition: transform .15s ease, box-shadow .2s ease, color .2s ease;
   outline-offset: 2px;
@@ -82,11 +83,11 @@
   }
 
   &.active {
-    color: #ffd166; /* gold when active */
+    color: #ffd166; /* gold when active 
   }
 }
 
-/* Blurb panel */
+/* Blurb panel 
 .blurb-panel {
   position: absolute;
   max-width: clamp(220px, 36vw, 360px);
@@ -134,12 +135,13 @@
   }
 }
 
-/* Small screens: keep panel inside the viewport */
+/* Small screens: keep panel inside the viewport 
 @media (max-width: 480px) {
   .blurb-panel {
     max-width: 86vw;
   }
 }
+*/
 /* Body lock already handled by your code */
 .nav-scroll-lock { position: fixed; left: 0; right: 0; overflow: hidden; }
 

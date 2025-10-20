@@ -1,11 +1,10 @@
 // src/components/FunSite/Arcade/Arcade.jsx
 import React from 'react';
 import { Link } from "react-router-dom";
-import avatar from '../../assets/avatar3.png';
+import avatar from '../../assets/avatar3.webp';
 import Navbar from '../../components/NavBar.tsx';
 import butterfly1 from '../../assets/butterfly1.png';
 import butterfly2 from '../../assets/butterfly2.png';
-import screensaver from '../../assets/screensaver.jpg';
 
 export const Arcade = ({ isArcade = true, onNavigate }) => {
 
@@ -22,7 +21,7 @@ export const Arcade = ({ isArcade = true, onNavigate }) => {
   };
 
   return (
-    <div className='arcade' id="home" style={{ backgroundImage: `url(${screensaver})` }}>
+    <div className='arcade' id="home">
       <Navbar isArcade={isArcade} onNavigate={onNavigate} />
       <div className="grid">
         <div className="avatar">
