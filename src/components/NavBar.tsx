@@ -10,7 +10,6 @@ type Category = {
 };
 
 const CATEGORIES: Category[] = [
-  { id: "about", label: "About Me", href: "/about" },
   { id: "projects", label: "Projects", href: "/projects" },
   { id: "skills", label: "Skills", href: "/skills"},
   { id: "resume", label: "Resume", href: "/resume" }, // kept for active styles; we'll intercept it
