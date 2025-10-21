@@ -352,6 +352,12 @@ body.nav-scroll-lock {
           &:active { transform: translateY(1px); box-shadow: inset 0 2px 0 var(--pink-lo); }
           &:focus-visible { outline: 2px dashed #fff; outline-offset: 2px; }
         }
+        button {
+          background: none;
+          border: none;
+          text-align: left;
+          padding-left: 0;
+        }
 
         .chev { filter: drop-shadow(0 1px 0 #0006); }
 

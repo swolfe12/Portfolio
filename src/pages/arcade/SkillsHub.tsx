@@ -21,7 +21,6 @@ const CATEGORIES = [
   { id: "accessibility", label: "Accessibility", img: headphones },
   { id: "cms", label: "CMS", img: flower },
   { id: "uiux", label: "UI/UX", img: glasses },
-  { id: "testing", label: "Testing", img: fhat },
 ] as const;
 
 const isMobile = window.innerWidth < 767;
@@ -29,10 +28,13 @@ const isMobile = window.innerWidth < 767;
 const settings = {
   dots: false,
   speed: 500,
-  slidesToShow: isMobile ? 3 : 2.2,
+  slidesToShow: isMobile ? 1.5 : 1.5,
   slidesToScroll: 1,
   infinite: true,
   vertical: !isMobile,
+  focusOnSelect: true,
+  swipeToSlide: true,
+  centerMode: true,
   responsive: [{ breakpoint: 900, settings: { slidesToShow: 2, vertical: false } }],
 };
 

@@ -1,6 +1,9 @@
-import sfhat from '../../assets/sam-fhat.png';
-import sbhat from '../../assets/sam-bhat.png';
-import sheadphones from '../../assets/sam-headphones.png';
+import sfhat from '../../assets/sam-fhat.webp';
+import sbhat from '../../assets/sam-bhat.webp';
+import sheadphones from '../../assets/sam-headphones.webp';
+import sflower from '../../assets/sam-flower.webp';
+import ssunnies from '../../assets/sam-sunnies.webp';
+
 
 // types & shared data for Skills
 export type Block = { title: string; items: string[] };
@@ -17,7 +20,7 @@ export type Cat = {
 export const SKILL_DATA: Record<string, Cat> = {
   frontend: {
     id: "frontend",
-    name: "Front-End Developer",
+    name: "Front-End Development",
     blurb:
       "Semantic, accessible, fast UIs with React/TypeScript and modern tooling.",
     blocks: [
@@ -31,9 +34,9 @@ export const SKILL_DATA: Record<string, Cat> = {
   },
   backend: {
     id: "backend",
-    name: "Back-End Developer",
+    name: "Back-End Development",
     blurb:
-      "APIs and services with Java/Spring Boot and C#/.NET when needed.",
+      "APIs and services with Java/Spring Boot and C#/.NET.",
     blocks: [
       { title: "Languages", items: ["Java", "C#", "Node.js (Express)"] },
       { title: "Frameworks", items: ["Spring Boot", ".NET Web API"] },
@@ -46,7 +49,7 @@ export const SKILL_DATA: Record<string, Cat> = {
     id: "accessibility",
     name: "Accessibility",
     blurb:
-      "Audit, remediation, and shift-left a11y practices across design & dev.",
+      "Audit, remediation, and implementation practices across design & dev.",
     blocks: [
       { title: "Standards", items: ["WCAG 2.2 AA", "Section 508"] },
       { title: "Practices", items: ["Semantics", "Color contrast", "Focus order"] },
@@ -63,18 +66,19 @@ export const SKILL_DATA: Record<string, Cat> = {
       { title: "Platforms", items: ["Sitecore", "Optimizely (Episerver)"] },
       { title: "Patterns", items: ["Headless", "Design Systems", "GraphQL/REST"] },
     ],
-    img: sfhat,
+    img: sflower,
   },
-  agile: {
-    id: "agile",
-    name: "Agile & DevEx",
+  uiux: {
+    id: "uiux",
+    name: "UI/UX Design",
     blurb: "Delivery flow that doesn’t suck.",
     blocks: [
       { title: "Practices", items: ["Scrum/Kanban", "Code review", "CI/CD"] },
       { title: "Tools", items: ["GitHub Actions", "Azure DevOps", "Jira"] },
     ],
-    img: sfhat,
+    img: ssunnies,
   },
+  /*
   testing: {
     id: "testing",
     name: "Testing",
@@ -83,6 +87,6 @@ export const SKILL_DATA: Record<string, Cat> = {
       { title: "Types", items: ["Unit", "Integration", "e2e", "a11y tests"] },
       { title: "Tools", items: ["Vitest/Jest", "Testing Library", "Playwright"] },
     ],
-    img: sfhat,
-  },
+    img: ssunnies,
+  },*/
 };
