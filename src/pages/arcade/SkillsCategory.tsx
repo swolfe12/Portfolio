@@ -1,7 +1,6 @@
 
 import { Link, useParams } from "react-router-dom";
 import NavBar from '../../components/NavBar.tsx';
-//import avatar from '../../assets/avatar3.png';
 import room from '../../assets/room.png';
 import sfhat from '../../assets/sam-fhat.png';
 import sbhat from '../../assets/sam-bhat.png';
