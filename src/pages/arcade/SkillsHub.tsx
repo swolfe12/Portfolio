@@ -24,13 +24,16 @@ const CATEGORIES = [
   { id: "testing", label: "Testing", img: fhat },
 ] as const;
 
+const isMobile = window.innerWidth < 767;
+
 const settings = {
   dots: false,
   speed: 500,
-  slidesToShow: 4,
+  slidesToShow: isMobile ? 3 : 2.2,
   slidesToScroll: 1,
   infinite: true,
-  responsive: [{ breakpoint: 768, settings: { slidesToShow: 2 } }],
+  vertical: !isMobile,
+  responsive: [{ breakpoint: 900, settings: { slidesToShow: 2, vertical: false } }],
 };
 
 type Props = { isArcade?: boolean; onNavigate?: (pageId: string) => void };
@@ -103,7 +106,16 @@ export default function SkillsHub({ isArcade = true , onNavigate}: Props) {
 
       <div className="game-box">
         <div className="dressup">
-          <Slider {...settings} className="skills-carousel" aria-label="Skill categories">
+  
+
+          <div className="dressup-avatar" style={{ backgroundImage: `url(${room})` }}>
+            <img
+              src={selected?.img ?? avatarBase}
+              alt="Sam's avatar"
+              className="dressup-avatar__img"
+            />
+          </div>
+            <Slider {...settings} className="skills-carousel" aria-label="Skill categories">
             {CATEGORIES.map((c) => (
               <div key={c.id} className="skills-card">
                 <h2 className="sr-only">{c.label}</h2>
@@ -128,8 +140,8 @@ export default function SkillsHub({ isArcade = true , onNavigate}: Props) {
                     alt=""
                     loading="lazy"
                     decoding="async"
-                    width={120}
-                    height={120}
+                    width={100}
+                    height={100}
                     className="skills-card__img"
                   />
                   <span>{c.label}</span>
@@ -137,14 +149,6 @@ export default function SkillsHub({ isArcade = true , onNavigate}: Props) {
               </div>
             ))}
           </Slider>
-
-          <div className="dressup-avatar" style={{ backgroundImage: `url(${room})` }}>
-            <img
-              src={selected?.img ?? avatarBase}
-              alt="Sam's avatar"
-              className="dressup-avatar__img"
-            />
-          </div>
         </div>
 
         <section

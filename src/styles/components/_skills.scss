@@ -24,29 +24,46 @@
                  height: 100%;
                  margin: auto;
                  background: $blue;
+                 display: flex;
+                 flex-wrap: wrap;
+                 @media (max-width: 900px){
+                    width: 90%;
+                 }
             .dressup-avatar {
                 background-repeat: no-repeat; /* Prevent image tiling */
                 background-position: center right; /* Center the image */
                 background-size: auto 100%;
-                width: 100%;
+                width: 78%;
                 max-width: 650px;
-                height: 450px;
+                height: 400px;
                 display: flex;
                 margin: auto;
+                @media (max-width: 900px){
+                    width: 100%;
+                }
 ;
                 img {
                     position: relative;
                     height: 370px;
                     margin: auto auto 0;
+
                 }
             }
             .skills-carousel {
                 height: 100%;
+                width: 22%;
+                margin: auto;
+                @media (max-width: 900px){
+                     width: 80%;
+                }
                 .skills-card {
                     border: none;
                     position: relative;
                     height: 150px;
                     overflow:hidden;
+                    @media (max-width: 900px){
+                        padding-right: 10px;
+                    }
                     button{
                         background: white;
                     }
@@ -58,14 +75,31 @@
                             padding: 0;
                      }
                     .skills-card__link{
-                        font-size: 20px;
+                        font-size: 16px;
                         font-weight: 800;
                         color: #2d2a2e;
                         height: 100%;
                         width: 100%;
                         border: none;
+                        @media (max-width: 900px){
+                            width: 95%;
+                        }
                     }
                  }
+                 @media(min-width: 900px){
+                 .slick-next {
+                    top: 101%;
+                    right: 40%;
+                    transform: rotate(90deg);
+                    color: hotpink;
+                 }
+                 .slick-prev {
+                    top: -7%;
+                    left: 40%;
+                    transform: rotate(90deg);
+                    color: hotpink;
+                 }
+                }
             }
         }
     }
@@ -78,10 +112,9 @@
             display: flex; 
             flex-wrap: wrap;
             width: 100%;
-            gap: 14px; margin-top: 16px;
+             margin-top: 16px;
             grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
             color: black;
-            padding: 20px;
             justify-content: center;
             .bubble {
                 background: rgba($blue, .5);
@@ -89,8 +122,13 @@
                 border-radius: 18px;
                 padding: 14px 16px;
                 font-size: 20px;
+                margin: 10px 10px;
                 h2 { font-size: 22px; margin: 0 0 6px; }
                 ul { margin: 0; padding-left: 1rem; }
+                @media (max-width: 900px){
+                    width: 70%;
+                    margin: 10px auto;
+                }
             }
         }
     }
