@@ -4,7 +4,6 @@ import sheadphones from '../../assets/sam-headphones.webp';
 import sflower from '../../assets/sam-flower.webp';
 import ssunnies from '../../assets/sam-sunnies.webp';
 
-
 // types & shared data for Skills
 export type Block = { title: string; items: string[] };
 export type Cat = {
@@ -15,78 +14,75 @@ export type Cat = {
   img: string; // avatar image for this category
 };
 
-
-
 export const SKILL_DATA: Record<string, Cat> = {
   frontend: {
     id: "frontend",
-    name: "Front-End Development",
+    name: "Front-End Engineering",
     blurb:
-      "Semantic, accessible, fast UIs with React/TypeScript and modern tooling.",
+      "React + TypeScript UIs that ship fast, look sharp, and don’t explode on mobile.",
     blocks: [
-      { title: "Core", items: ["HTML5", "CSS3", "JavaScript (ES202x)"] },
-      { title: "Frameworks", items: ["React", "React Router", "Redux/Zustand"] },
+      { title: "Core", items: ["HTML5", "CSS3", "JavaScript/TypeScript"] },
+      { title: "React Ecosystem", items: ["React", "Next.js", "React Router", "Redux"] },
       { title: "Styling", items: ["SCSS/Sass", "CSS Modules", "Tailwind"] },
-      { title: "Tooling", items: ["Vite", "Webpack", "Gulp", "ESLint/Prettier"] },
-      { title: "A11y", items: ["WCAG 2.2", "ARIA", "Keyboard & Focus Mgmt"] },
+      { title: "Performance", items: ["Code-splitting", "Lazy-loading", "Image optimization", "Bundle audits"] },
+      { title: "Tooling", items: ["Vite", "Webpack", "ESLint / Prettier"] },
     ],
     img: sfhat,
   },
-  backend: {
-    id: "backend",
-    name: "Back-End Development",
+
+  cms: {
+    id: "cms",
+    name: "Enterprise CMS & Design Systems",
     blurb:
-      "APIs and services with Java/Spring Boot and C#/.NET.",
+      "Scaled component libraries and theming across Sitecore & Optimizely ecosystems.",
     blocks: [
-      { title: "Languages", items: ["Java", "C#", "Node.js (Express)"] },
-      { title: "Frameworks", items: ["Spring Boot", ".NET Web API"] },
-      { title: "Data", items: ["PostgreSQL", "SQL Server", "Redis"] },
-      { title: "Auth", items: ["JWT/OIDC", "Keycloak", "Azure AD"] },
+      { title: "Platforms", items: ["Sitecore", "Optimizely (Episerver)"] },
+      { title: "Patterns", items: ["Headless/Decoupled", "Reusable Components", "Design Systems"] },
+      { title: "Content APIs", items: ["REST", "GraphQL"] },
+      { title: "Marketing Ops", items: ["Multi-page sites", "Brand migrations", "Authoring workflows"] },
     ],
-    img: sbhat,
+    img: sflower,
   },
+
   accessibility: {
     id: "accessibility",
     name: "Accessibility",
     blurb:
-      "Audit, remediation, and implementation practices across design & dev.",
+      "Audits and remediation aligned to WCAG 2.2 AA across design & build.",
     blocks: [
       { title: "Standards", items: ["WCAG 2.2 AA", "Section 508"] },
-      { title: "Practices", items: ["Semantics", "Color contrast", "Focus order"] },
-      { title: "Tools", items: ["Axe", "Lighthouse", "NVDA/VoiceOver"] },
+      { title: "Practices", items: ["Semantics", "Color contrast", "Readable focus", "Logical focus order"] },
+      { title: "Tools", items: ["axe", "Lighthouse", "NVDA", "VoiceOver"] },
+      { title: "Process", items: ["Defect triage", "Developer education", "A11y checklists"] },
     ],
     img: sheadphones,
   },
-  cms: {
-    id: "cms",
-    name: "CMS",
+
+  backend: {
+    id: "backend",
+    name: "Back-End & APIs",
     blurb:
-      "Scaled component libraries and theming for enterprise CMS ecosystems.",
+      "Pragmatic services for integration—Java/Spring Boot, .NET, and Node.",
     blocks: [
-      { title: "Platforms", items: ["Sitecore", "Optimizely (Episerver)"] },
-      { title: "Patterns", items: ["Headless", "Design Systems", "GraphQL/REST"] },
+      { title: "Languages", items: ["Java", "C#", "Node.js (Express)"] },
+      { title: "Frameworks", items: ["Spring Boot", ".NET Web API"] },
+      { title: "Data", items: ["PostgreSQL", "SQL Server", "Redis"] },
+      { title: "Auth & Security", items: ["JWT/OIDC", "Azure AD", "Keycloak"] },
+      { title: "API Styles", items: ["REST", "GraphQL"] },
     ],
-    img: sflower,
+    img: sbhat,
   },
+
   uiux: {
-    id: "uiux",
-    name: "UI/UX Design",
-    blurb: "Delivery flow that doesn’t suck.",
+    id: "uiux", // keep id for routing; repurpose as delivery/tooling/testing
+    name: "Delivery, CI/CD & Quality",
+    blurb: "Agile flow, automation, and tests to keep releases boring (in the best way).",
     blocks: [
-      { title: "Practices", items: ["Scrum/Kanban", "Code review", "CI/CD"] },
-      { title: "Tools", items: ["GitHub Actions", "Azure DevOps", "Jira"] },
+      { title: "Ways of Working", items: ["Scrum/Kanban", "Code review", "Branching strategies"] },
+      { title: "CI/CD", items: ["GitHub Actions", "Azure DevOps Pipelines", "Automated checks"] },
+      { title: "Testing", items: ["Jest/Vitest", "Testing Library", "Playwright", "A11y tests"] },
+      { title: "PM & Collab", items: ["Jira", "Confluence", "Figma (handoff)"] },
     ],
     img: ssunnies,
   },
-  /*
-  testing: {
-    id: "testing",
-    name: "Testing",
-    blurb: "Catch regressions before users do.",
-    blocks: [
-      { title: "Types", items: ["Unit", "Integration", "e2e", "a11y tests"] },
-      { title: "Tools", items: ["Vitest/Jest", "Testing Library", "Playwright"] },
-    ],
-    img: ssunnies,
-  },*/
 };

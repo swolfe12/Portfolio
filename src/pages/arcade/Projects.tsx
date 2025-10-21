@@ -4,6 +4,7 @@ import sass from '../../assets/sass-logo.png';
 import css from '../../assets/CSS-logo.png';
 import html from '../../assets/html-logo.png';
 import artPortfolio from '../../assets/art-portfolio.png';
+import projects from '../../assets/projects.png';
 
 export const Projects = ({ isArcade = true, onNavigate }) => {
   return (
@@ -12,7 +13,7 @@ export const Projects = ({ isArcade = true, onNavigate }) => {
 
       <div className="game-box">
         <div className="section-header">
-          <h1>My Projects</h1>
+          <img src={projects} alt="Projects"></img>
         </div>
 
         {/* --- Card 1: Woodstock Community Church --- */}
@@ -39,7 +40,7 @@ export const Projects = ({ isArcade = true, onNavigate }) => {
             <div className="description-section">
               <h5 className="section-title">DESCRIPTION</h5>
               <p className="project-description" id="description">
-                I redesigned and rebuilt Woodstock Community Church’s website to create a more
+                I designed and built Woodstock Community Church’s website to create a more
                 welcoming and accessible online experience. The new site features a modern layout,
                 mobile-friendly design, and simplified navigation that highlights the church’s events,
                 ministries, and message. Built with semantic HTML and responsive CSS/Sass, it loads

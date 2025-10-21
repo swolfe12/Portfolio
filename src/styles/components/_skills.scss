@@ -8,7 +8,7 @@
     background-size: cover;
     overflow: scroll;
     .game-box{
-        .skills-header {
+        .section-header {
             margin: 10px auto;
             text-align: center;
             color: black;
@@ -16,6 +16,7 @@
             font-family: 'Orbitron';
             h1 { font-size: 32px; }
             .subtitle { opacity: 1;font-size: 26px; }
+            img{ height: 100px;};
         }
 
         .dressup {
@@ -104,7 +105,12 @@
         }
     }
     .skills-details {
-        width: 100%;
+        width: 95%;
+        margin: 20px auto;
+        .skills-details__placeholder {
+            font-size: 20px;
+            text-align: center;
+        }
         .blurb {
             font-size: 22px;
         }

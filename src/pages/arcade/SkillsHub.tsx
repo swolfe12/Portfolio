@@ -11,7 +11,7 @@ import bhat from "../../assets/bhat.png";
 import headphones from "../../assets/plainheadphones.png";
 import flower from "../../assets/flower.png";
 import glasses from "../../assets/blackglasses.png";
-
+import skills from '../../assets/skills.png';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -105,8 +105,12 @@ export default function SkillsHub({ isArcade = true , onNavigate}: Props) {
       <div className="nav-layer">
         <NavBar isArcade={isArcade} onNavigate={onNavigate} />
       </div>
+      
 
       <div className="game-box">
+        <div className="section-header">
+          <img src={skills} alt="Skill Select"></img>
+        </div>
         <div className="dressup">
   
 

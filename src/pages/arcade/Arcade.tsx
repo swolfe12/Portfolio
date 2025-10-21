@@ -73,14 +73,14 @@ export const Arcade = ({ isArcade = true, onNavigate }) => {
                 <Link to="projects" aria-label="Open Projects">
                   <span className="dot" aria-hidden="true" />
                   <span className="title">projects</span>
-                  <span className="sub">a cool pic for your computer</span>
+                  <span className="sub">what I've been working on</span>
                 </Link>
               </li>
               <li>
                 <Link to="links" aria-label="Open Links">
                   <span className="dot" aria-hidden="true" />
                   <span className="title">links</span>
-                  <span className="sub">meet all my fab friends!</span>
+                  <span className="sub">let's link up!</span>
                 </Link>
               </li>
             </ul>

@@ -3,6 +3,7 @@ import Navbar from '../../components/NavBar.tsx';
 import github from '../../assets/github.png';
 import linkedin from '../../assets/linkedin.png';
 import { RiExternalLinkLine } from "react-icons/ri";
+import links from '../../assets/links.png';
 
 
 export const Links = ({ isArcade = true, onNavigate }) => {
@@ -10,6 +11,9 @@ export const Links = ({ isArcade = true, onNavigate }) => {
     <div className='links'>
       <Navbar isArcade={isArcade} onNavigate={onNavigate} />
       <div className="game-box">
+        <div className="section-header">
+          <img src={links} alt="Skill Select"></img>
+        </div>
           <div className="list">
             <a href="https://github.com/swolfe12?tab=repositories">
               <img src={github} height="200px" alt="Github Icon"></img><br/>
