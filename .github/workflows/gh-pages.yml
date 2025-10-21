@@ -10,21 +10,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
-          node-version: '23'  # Or whatever version you need
+          node-version: '20'
 
       - name: Install dependencies
         run: npm install
 
       - name: Build the app
         run: npm run build
-
-      - name: Add CNAME to build output
-        run: echo "sam-wolfe.com" > build/CNAME
 
       - name: Set Git user identity
         run: |
