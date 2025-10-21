@@ -2,7 +2,7 @@ import { useEffect, useId, useRef, useState } from "react";
 import NavBar from "../../components/NavBar.tsx";
 import Slider from "react-slick";
 import { SKILL_DATA, Cat } from "./skillsData.ts";
-import { useSearchParams, useLocation } from "react-router-dom";
+import { useSearchParams} from "react-router-dom";
 
 import avatarBase from "../../assets/avatar3.webp";
 import room from "../../assets/room.png";
@@ -38,7 +38,6 @@ type CatId = (typeof CATEGORIES)[number]["id"];
 
 export default function SkillsHub({ isArcade = true , onNavigate}: Props) {
   const [searchParams, setSearchParams] = useSearchParams();
-  const location = useLocation();
 
   // Initialize:
   // - Arcade (routing): read from ?cat=
