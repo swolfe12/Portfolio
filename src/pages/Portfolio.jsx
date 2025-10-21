@@ -7,12 +7,12 @@ import Laptop from '../components/Laptop';
 import MashImg from '../components/MashImage';
 import contact from './../assets/contact.png';
 import plant from './../assets/plant.png';
-import coffee from './../assets/coffee.png';
+import coffee from './../assets/coffee2.png';
 import gummies from './../assets/gummies.png';
 import pens from './../assets/pens.png';
 import notebook from './../assets/notebook.png';
 import headphones from './../assets/headphones.png';
-import lavalamp from './../assets/lavalamp.png';
+import lavalamp from './../assets/lavalamp2.png';
 import sunnies from './../assets/sunnies.png';
 import bulletin from './../assets/bulletin.png';
 import jellyfish from './../assets/jellyfish.png';
@@ -20,11 +20,11 @@ import samPoster from './../assets/sam-poster.png';
 import dogs from './../assets/dogs.png';
 import desk from './../assets/desk.png';
 import windowImg from './../assets/window.png';
-import paper from './../assets/paper.png';
+import paper from './../assets/paper.webp';
 import mouse from './../assets/mouse.png';
 import clouds from './../assets/window.mp4';
 import speaker from './../assets/speaker.png';
-import neon from './../assets/neon.png';
+import neon from './../assets/neon.webp';
 
 
 const Portfolio = () => {

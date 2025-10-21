@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import MashGame from './MashGame';
-import mashImg from './../assets/mash.png'
+import mashImg from './../assets/mash.webp'
 
 const MashImage = () => {
   const [showGame, setShowGame] = useState(false);
