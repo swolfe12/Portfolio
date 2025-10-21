@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.5a7f6e4a.css",
-    "main.js": "./static/js/main.cc2c2c9e.js",
+    "main.css": "./static/css/main.7d078708.css",
+    "main.js": "./static/js/main.53935382.js",
     "static/js/453.ace21015.chunk.js": "./static/js/453.ace21015.chunk.js",
     "static/media/coffee2.png": "./static/media/coffee2.2ce7a038b704f6c96c49.png",
     "static/media/lavalamp2.png": "./static/media/lavalamp2.c212425fa9f2afea7880.png",
@@ -16,11 +16,11 @@
     "static/media/x.png": "./static/media/x.4455cc87219d01428aea.png",
     "static/media/notebook.png": "./static/media/notebook.60418ffd0c8463fa6f94.png",
     "static/media/bulletin.png": "./static/media/bulletin.4f0559166799467dd90f.png",
-    "static/media/sam-fhat.png": "./static/media/sam-fhat.fbbf4fe3692fde080237.png",
     "static/media/linkedin.png": "./static/media/linkedin.66566374885eb65aa5f4.png",
     "static/media/sam-bhat.png": "./static/media/sam-bhat.81a26ca1c225afe2ebef.png",
     "static/media/sam-headphones.png": "./static/media/sam-headphones.33e7e841f0115e9b6a0b.png",
     "static/media/plant.png": "./static/media/plant.fd6ca237d148d8030491.png",
+    "static/media/sam-fhat.png": "./static/media/sam-fhat.b9c63a855d727741e58c.png",
     "static/media/clock-clean.png": "./static/media/clock-clean.5e6771c0a109cb42d851.png",
     "static/media/github.png": "./static/media/github.ce421d7b4bcbeebeab2f.png",
     "static/media/pens.png": "./static/media/pens.0ef2d599a43b3b39ebbd.png",
@@ -44,7 +44,12 @@
     "static/media/fhat.png": "./static/media/fhat.9a43047871f7152835b6.png",
     "static/media/neon.webp": "./static/media/neon.16f596f8930fe69a0006.webp",
     "static/media/blackglasses.png": "./static/media/blackglasses.878119f880c39e720894.png",
+    "static/media/sam-fhat.webp": "./static/media/sam-fhat.2789b41ed76c4fae8324.webp",
     "static/media/flower.png": "./static/media/flower.28b64b2c76def7fb3ab9.png",
+    "static/media/sam-flower.webp": "./static/media/sam-flower.ec584f36ee8fd5e68d89.webp",
+    "static/media/sam-headphones.webp": "./static/media/sam-headphones.d1e7b2d58380075cc85c.webp",
+    "static/media/sam-sunnies.webp": "./static/media/sam-sunnies.98964352f01e270ff4df.webp",
+    "static/media/sam-bhat.webp": "./static/media/sam-bhat.6743e18d4fb5f00bd14a.webp",
     "static/media/sass-logo.png": "./static/media/sass-logo.6747d5c68a381e29fc69.png",
     "static/media/mash.webp": "./static/media/mash.2d1244aa3b0ca7d3786e.webp",
     "static/media/slick.svg": "./static/media/slick.2630a3e3eab21c607e21.svg",
@@ -52,12 +57,12 @@
     "static/media/slick.ttf": "./static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "./static/media/slick.295183786cd8a1389865.woff",
     "index.html": "./index.html",
-    "main.5a7f6e4a.css.map": "./static/css/main.5a7f6e4a.css.map",
-    "main.cc2c2c9e.js.map": "./static/js/main.cc2c2c9e.js.map",
+    "main.7d078708.css.map": "./static/css/main.7d078708.css.map",
+    "main.53935382.js.map": "./static/js/main.53935382.js.map",
     "453.ace21015.chunk.js.map": "./static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5a7f6e4a.css",
-    "static/js/main.cc2c2c9e.js"
+    "static/css/main.7d078708.css",
+    "static/js/main.53935382.js"
   ]
 }
