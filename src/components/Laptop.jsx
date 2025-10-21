@@ -1,4 +1,4 @@
-// src/components/FunSite/Laptop.jsx
+
 import React from 'react';
 import Arcade from '../pages/arcade/Arcade.tsx';
 import Links from '../pages/arcade/Links';
@@ -11,22 +11,19 @@ import Projects from '../pages/arcade/Projects.tsx';
 import laptop from './../assets/laptop.png';
 
 
-// If you have other sections, import them here:
-// import Games from '../FunSite/Arcade/Games';
-// import Gallery from '../FunSite/Arcade/Gallery';
-// import Music from '../FunSite/Arcade/Music';
-// import Chat from '../FunSite/Arcade/Chat';
 
 const Laptop = ({ isOpen, currentPage, onNavigate }) => {
 
   if (typeof currentPage === 'string' && currentPage.startsWith('skills/')) {
     const categoryId = currentPage.slice('skills/'.length);
     return (
+     
       <div
-        className={`laptop clickable${isOpen ? ' scale-up active' : ''}`}
+        className={`laptop glowable${isOpen ? ' scale-up active' : ''}`}
         style={{ backgroundImage: `url(${laptop})` }}
         id="laptop"
       >
+         <h1>Big Test</h1>
         <div className="screen">
           <SkillsCategory
             isArcade={false}
@@ -63,7 +60,7 @@ const Laptop = ({ isOpen, currentPage, onNavigate }) => {
 
   return (
     <div
-      className={`laptop clickable${isOpen ? ' scale-up active' : ''}`}
+      className={`laptop glowable${isOpen ? ' scale-up active' : ''}`}
       style={{ backgroundImage: `url(${laptop})` }}
       id="laptop"
     >

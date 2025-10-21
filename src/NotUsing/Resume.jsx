@@ -17,7 +17,6 @@ export const Resume = ({ isArcade = true, onNavigate }) =>  {
 
 export default Resume;
 */
-// src/components/FunSite/Arcade/ResumeInteractive.jsx
 import { useEffect, useId, useRef, useState } from "react";
 import Navbar from "../components/NavBar.tsx"
 

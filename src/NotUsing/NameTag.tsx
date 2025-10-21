@@ -1,4 +1,3 @@
-// src/components/FunSite/Arcade/NameTag.tsx
 import React, {
   useCallback,
   useEffect,

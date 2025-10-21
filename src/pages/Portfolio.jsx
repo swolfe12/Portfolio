@@ -1,10 +1,10 @@
-// src/components/FunSite/Portfolio.jsx
+
 import React, { useState, useRef, useEffect } from "react";
 import "./../styles/main.scss";
-import Calendar from './../components/Calendar';
-import Clock from './../components/Clock';
-import Laptop from './../components/Laptop';
-import MashImg from './../components/MashImage';
+import Calendar from '../components/Calendar';
+import Clock from '../components/Clock';
+import Laptop from '../components/Laptop';
+import MashImg from '../components/MashImage';
 import contact from './../assets/contact.png';
 import plant from './../assets/plant.png';
 import coffee from './../assets/coffee.png';
@@ -19,7 +19,7 @@ import jellyfish from './../assets/jellyfish.png';
 import samPoster from './../assets/sam-poster.png';
 import dogs from './../assets/dogs.png';
 import desk from './../assets/desk.png';
-import window from './../assets/window.png';
+import windowImg from './../assets/window.png';
 import paper from './../assets/paper.png';
 import mouse from './../assets/mouse.png';
 import clouds from './../assets/window.mp4';
@@ -58,6 +58,58 @@ const Portfolio = () => {
     setIsContactOpen(prev => !prev);
   };
 
+   useEffect(() => {
+  const IDLE_AFTER_MS = 10000;   // 10s inactivity
+  const REPEAT_EVERY_MS = 10000; // repeat every 10s while idle
+
+  let idleTimer = null;
+  let repeatTimer = null;
+
+  const triggerGlowOnce = () => {
+    const root = document.documentElement; // <html>
+    root.classList.remove('glow-phase');
+    // force reflow so animation restarts
+    // eslint-disable-next-line no-unused-expressions
+    root.offsetWidth;
+    root.classList.add('glow-phase');
+    // strip the class after the pulse window (5s) so it can be retriggered cleanly
+    setTimeout(() => root.classList.remove('glow-phase'), 5000);
+  };
+
+  const clearTimers = () => {
+    if (idleTimer) clearTimeout(idleTimer);
+    if (repeatTimer) clearInterval(repeatTimer);
+  };
+
+  const startIdleWatch = () => {
+    clearTimers();
+    idleTimer = setTimeout(() => {
+      triggerGlowOnce();
+      repeatTimer = setInterval(triggerGlowOnce, REPEAT_EVERY_MS);
+    }, IDLE_AFTER_MS);
+  };
+
+  const onUserActivity = () => startIdleWatch();
+
+  const events = ['pointermove', 'keydown', 'touchstart', 'wheel', 'scroll'];
+  events.forEach((evt) =>
+    window.addEventListener(evt, onUserActivity, { passive: true })
+  );
+
+  // initial pulse + start idle watch
+  triggerGlowOnce();
+  startIdleWatch();
+
+  return () => {
+    clearTimers();
+    events.forEach((evt) =>
+      window.removeEventListener(evt, onUserActivity)
+    );
+    document.documentElement.classList.remove('glow-phase');
+  };
+}, []);
+
+
   return (
     <div className="portfolio">
       <div className="inner-container">
@@ -84,7 +136,7 @@ const Portfolio = () => {
         <img className="gummies" src={gummies} alt="Gummies" />
 
         <div
-          className={`contact clickable${isContactOpen ? ' scale-up active' : ''}`}
+          className={`contact glowable${isContactOpen ? ' scale-up active' : ''}`}
           style={{ backgroundImage: `url(${contact})` }}
           onClick={handleContactClick}
         >
@@ -132,7 +184,7 @@ const Portfolio = () => {
           Your browser does not support the video tag.
         </video>
 
-        <img className="window" src={window} alt="window" />
+        <img className="window" src={windowImg} alt="window" />
         <img className="paper" src={paper} alt="paper" />
         <img className="dogs" src={dogs} alt="dogs" />
         <img className="pens" src={pens} alt="Pens" />
@@ -148,6 +200,7 @@ const Portfolio = () => {
         <div className="border-top"></div>
       </div>
     </div>
+    
   );
 };
 

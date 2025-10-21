@@ -1,4 +1,4 @@
-// src/components/FunSite/Arcade/NavBar.tsx
+
 import React, { useEffect, useId, useRef, useState } from "react";
 import { Link, useLocation } from 'react-router-dom';
 
