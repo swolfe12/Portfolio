@@ -21,13 +21,13 @@
     }
   .laptop-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 200%; // covers full scaled area
-    height: 200%;
-    background: transparent;
-    z-index: 1000;
+    height: 685px;
+    top: -188px;
+    width: 1200px;
+    left: -259px;
+    transform: scale(0.32);
     pointer-events: all; // block interactions
+    z-index: 1;
   }
   }
   

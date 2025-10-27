@@ -40,11 +40,7 @@ export const Projects = ({ isArcade = true, onNavigate }) => {
             <div className="description-section">
               <h5 className="section-title">DESCRIPTION</h5>
               <p className="project-description" id="description">
-                I designed and built Woodstock Community Church’s website to create a more
-                welcoming and accessible online experience. The new site features a modern layout,
-                mobile-friendly design, and simplified navigation that highlights the church’s events,
-                ministries, and message. Built with semantic HTML and responsive CSS/Sass, it loads
-                quickly and is easy to update going forward.
+                Designed and built Woodstock Community Church’s website to create a more welcoming, accessible online experience
               </p>
             </div>
 
@@ -103,11 +99,7 @@ export const Projects = ({ isArcade = true, onNavigate }) => {
             <div className="description-section">
               <h5 className="section-title">DESCRIPTION</h5>
               <p className="project-description">
-                A clean, fast portfolio site for my sister’s artwork with a flexible gallery system. 
-                Pieces are organized by medium (oil, acrylic, watercolor, digital) and support titles, 
-                dates, dimensions, pricing, and availability. The layout is fully responsive, features 
-                keyboard-navigable modals for artwork details, and lazy-loads images for performance. 
-                Content can be updated by dropping new images and front-matter metadata files—no CMS required.
+                A clean, fast art portfolio site with a flexible cms gallery system. 
               </p>
             </div>
 

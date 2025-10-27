@@ -39,7 +39,7 @@
         height: 100%;
         width: 100%;
         background-position: center;
-        background-size: contain;
+        background-size: cover;
 
         @media (max-width: 767px) {
           background-size: cover;
@@ -126,7 +126,6 @@
           font-size: 20px;
           line-height: 1.1;
           cursor: default;
-          background: #ffffff3b;
   
         }
       }
@@ -232,11 +231,11 @@
 
   @media (min-width: 768px) {
     .project-card {
-      max-width: 650px;
+      max-width: 850px;
       display: flex;
 
       .project-img-container {
-        width: 40%;
+        width: 50%;
         height: auto;
 
         .project-overlay {
@@ -249,7 +248,7 @@
       }
 
       .project-content {
-        width: 60%;
+        width: 50%;
         margin-top: 0;
       }
     }
