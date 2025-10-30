@@ -60,6 +60,9 @@
     }
     .contact{
       //background: url('/assets/contact.png');
+      background: transparent;
+      padding: 0;
+      border: none;
       background-size: cover;
       height: 170px;
       background-position: center;
@@ -71,12 +74,15 @@
       margin-top: -90px;
       z-index: 4;
       transition: ease .3s;
+
       ul{
-          position: relative;
-          padding: 25px 24px;
-          top: 20px;
-          transform: rotate(-2deg);
-          opacity: 1;
+
+            padding: 0;
+            margin-bottom: 25px;
+            width: 75%;
+            transform: rotate(-2deg);
+            opacity: 1;
+
           li{
               list-style: none;
               color: #fedeff;
@@ -84,7 +90,9 @@
               font-family: "Edu AU VIC WA NT Hand", cursive;
           }
       }
-      &:hover {
+      &:hover, &:active, &:focus {
+        border: none;
+        outline: none;
           filter: drop-shadow(12px 12px 10px #fff) drop-shadow(-12px -12px 10px #fff) 
           drop-shadow(12px -12px 10px rgba(255, 255, 255, 0.5)) 
           drop-shadow(-12px 12px 10px rgba(255, 255, 255, 0.5));

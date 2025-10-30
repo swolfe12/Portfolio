@@ -35,6 +35,10 @@ const Portfolio = () => {
   const [currentPage, setCurrentPage] = useState('home');
   const [isAnimating, setIsAnimating] = useState(false); // prevents mid-frame flicker
 
+  // focus management
+  const laptopOpenerRef = useRef(null);
+  const laptopCloseBtnRef = useRef(null);
+
   // .screen element inside Laptop; Laptop must attach ref={screenRef} to its .screen
   const screenRef = useRef(null);
 
@@ -65,6 +69,10 @@ const Portfolio = () => {
       setIsLaptopOpen(true);
       // release animating flag after the CSS transition has ended
       const t = setTimeout(() => setIsAnimating(false), SCALE_MS);
+      // After it opens, move focus to the close button (or screen)
+      requestAnimationFrame(() => {
+        laptopCloseBtnRef.current?.focus?.() || screenRef.current?.focus?.();
+      });
       // safety in case route changes etc.
       return () => clearTimeout(t);
     });
@@ -76,6 +84,10 @@ const Portfolio = () => {
     requestAnimationFrame(() => {
       setIsLaptopOpen(false);
       const t = setTimeout(() => setIsAnimating(false), SCALE_MS);
+      // Return focus to the opener so keyboard users don't get lost
+      requestAnimationFrame(() => {
+        laptopOpenerRef.current?.focus?.();
+      });
       return () => clearTimeout(t);
     });
   };
@@ -168,26 +180,36 @@ const Portfolio = () => {
         <img className="speaker" src={speaker} alt="Speaker" />
         <img className="gummies" src={gummies} alt="Gummies" />
 
-        <div
-          className={`contact glowable${isContactOpen ? ' scale-up active' : ''}`}
-          style={{ backgroundImage: `url(${contact})` }}
-          onClick={handleContactClick}
-        >
-          <ul>
-            <li>(678) 314-8280</li>
-            <li>samgwolfe12@gmail.com</li>
-          </ul>
+        <div className={`contact-wrap`} >
+          <button
+            type="button"
+            className={`contact glowable${isContactOpen ? ' scale-up active' : ''}`}
+            style={{ backgroundImage: `url(${contact})` }}
+            onClick={handleContactClick}
+            aria-expanded={isContactOpen}
+            aria-controls="contact-panel"
+            aria-label={isContactOpen ? 'Hide contact info' : 'Show contact info'}
+          >
+            <ul>
+              <li>(678) 314-8280</li>
+              <li>samgwolfe12@gmail.com</li>
+            </ul>
+          </button>
         </div>
 
         <div className={`laptop-wrapper${isLaptopOpen ? ' active' : ''}`}>
           {/* CLOSED: overlay is the ONLY opener (one clean click) */}
           {!isLaptopOpen && (
-            <div
+            <button
+              type="button"
+              ref={laptopOpenerRef}
               className="laptop-overlay"
+              aria-label="Open laptop"
               onClick={(e) => {
-                e.stopPropagation();
-                smoothOpen();
+              e.stopPropagation();
+              smoothOpen();
               }}
+              disabled={isAnimating}
             />
           )}
 
@@ -195,6 +217,9 @@ const Portfolio = () => {
           {isLaptopOpen && (
             <button
               className="laptop-close-btn"
+              ref={laptopCloseBtnRef}
+              type="button"
+              aria-label="Close laptop"
               onClick={(e) => {
                 e.stopPropagation();
                 smoothClose();
