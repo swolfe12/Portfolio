@@ -119,14 +119,14 @@ export const Arcade = ({ isArcade = true, onNavigate }) => {
                 <button type="button" onClick={() => onNavigate?.("projects")} aria-label="Open Projects">
                   <span className="dot" aria-hidden="true" />
                   <span className="title">projects</span>
-                  <span className="sub">a cool pic for your computer</span>
+                  <span className="sub">what I've been working on</span>
                 </button>
               </li>
               <li>
                 <button type="button" onClick={() => onNavigate?.("links")} aria-label="Open Links">
                   <span className="dot" aria-hidden="true" />
                   <span className="title">links</span>
-                  <span className="sub">meet all my fab friends!</span>
+                  <span className="sub">let's link up!</span>
                 </button>
               </li>
             </ul>

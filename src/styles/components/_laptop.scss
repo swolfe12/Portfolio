@@ -19,6 +19,7 @@
             filter: none !important;
         }
     }
+    
   .laptop-overlay {
     position: absolute;
     height: 685px;
@@ -28,6 +29,11 @@
     transform: scale(0.32);
     pointer-events: all; // block interactions
     z-index: 1;
+    &:hover ~ .laptop {
+        filter: drop-shadow(12px 12px 10px #fff) drop-shadow(-12px -12px 10px #fff) 
+        drop-shadow(12px -12px 10px rgba(255, 255, 255, 0.5)) 
+        drop-shadow(-12px 12px 10px rgba(255, 255, 255, 0.5));
+    }
   }
   }
   
