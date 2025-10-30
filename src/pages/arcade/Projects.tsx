@@ -5,6 +5,13 @@ import css from '../../assets/CSS-logo.png';
 import html from '../../assets/html-logo.png';
 import artPortfolio from '../../assets/art-portfolio.png';
 import projects from '../../assets/projects.png';
+import netlify from '../../assets/netlify.png';
+import ionos from '../../assets/Ionos.jpeg';
+import react from '../../assets/react-logo.png';
+import gitactions from '../../assets/git-actions-logo.png';
+import vite from '../../assets/vite.jpeg';
+import js from '../../assets/javascript.png';
+import ts from '../../assets/typescript.png';
 
 export const Projects = ({ isArcade = true, onNavigate }) => {
   return (
@@ -34,7 +41,7 @@ export const Projects = ({ isArcade = true, onNavigate }) => {
             <div className="genres">
               <span className="genre-tag">WebDev</span>
               <span className="genre-tag">Frontend</span>
-              <span className="genre-tag">Design</span>
+              <span className="genre-tag">UX/UI Design</span>
             </div>
 
             <div className="description-section">
@@ -47,6 +54,10 @@ export const Projects = ({ isArcade = true, onNavigate }) => {
             <div className="cast-section">
               <h5 className="section-title">TOOLS</h5>
               <div className="cast-list">
+                 <div className="cast-item">
+                  <img src={js} className="cast-photo" alt="JavaScript" />
+                  <span className="cast-name">Java-Script</span>
+                </div>
                 <div className="cast-item">
                   <img src={sass} className="cast-photo" alt="Sass" />
                   <span className="cast-name">Sass</span>
@@ -59,13 +70,17 @@ export const Projects = ({ isArcade = true, onNavigate }) => {
                   <img src={css} className="cast-photo" alt="CSS3" />
                   <span className="cast-name">CSS3</span>
                 </div>
+                <div className="cast-item">
+                  <img src={ionos} className="cast-photo" alt="ionos" />
+                  <span className="cast-name">IONOS</span>
+                </div>
               </div>
             </div>
 
             <div className="action-row">
               <a
                 className="watch-btn"
-                href="https://woodstockchurch.org" // TODO: replace if different
+                href="https://wcchurch.org/" 
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -92,8 +107,9 @@ export const Projects = ({ isArcade = true, onNavigate }) => {
 
             <div className="genres">
               <span className="genre-tag">WebDev</span>
-              <span className="genre-tag">Frontend</span>
-              <span className="genre-tag">Design</span>
+              <span className="genre-tag">Full-stack</span>
+              <span className="genre-tag">CI/CD</span>
+              <span className="genre-tag">UX/UI Design</span>
             </div>
 
             <div className="description-section">
@@ -107,16 +123,28 @@ export const Projects = ({ isArcade = true, onNavigate }) => {
               <h5 className="section-title">TOOLS</h5>
               <div className="cast-list">
                 <div className="cast-item">
+                  <img src={react} className="cast-photo" alt="React" />
+                  <span className="cast-name">React</span>
+                </div>
+                <div className="cast-item">
+                  <img src={ts} className="cast-photo" alt="TypeScript" />
+                  <span className="cast-name">Type-Script</span>
+                </div>
+                <div className="cast-item">
                   <img src={sass} className="cast-photo" alt="Sass" />
                   <span className="cast-name">Sass</span>
                 </div>
                 <div className="cast-item">
-                  <img src={html} className="cast-photo" alt="HTML5" />
-                  <span className="cast-name">HTML5</span>
+                  <img src={gitactions} className="cast-photo" alt="Git Actions" />
+                  <span className="cast-name">Git Actions</span>
                 </div>
                 <div className="cast-item">
-                  <img src={css} className="cast-photo" alt="CSS3" />
-                  <span className="cast-name">CSS3</span>
+                  <img src={vite} className="cast-photo" alt="Vite" />
+                  <span className="cast-name">Vite</span>
+                </div>
+                <div className="cast-item">
+                  <img src={netlify} className="cast-photo" alt="Netlify" />
+                  <span className="cast-name">Netlify</span>
                 </div>
                 {/* If you want to show React/TS/Vite badges, import their logos and add here */}
               </div>
