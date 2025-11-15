@@ -30,6 +30,7 @@
 }
 
 @mixin gradient-bg {
+  //background: linear-gradient(-45deg, $purple, $blue, $indigo, $skills-blue) !important;
   background: linear-gradient(-45deg, $purple, $blue, $indigo, $skills-blue) !important;
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
@@ -75,6 +76,20 @@
   100% { transform: rotate(10deg); }
 }
 
+@keyframes float-little {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-3px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
 // --- MOTION REDUCTION SAFETY ---
 @media (prefers-reduced-motion: reduce) {
   .glow-now,
@@ -83,3 +98,4 @@
     animation: none !important;
   }
 }
+
