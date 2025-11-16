@@ -7,6 +7,7 @@ import TempPage from '../pages/arcade/TempPage.tsx';
 import Projects from '../pages/arcade/Projects.tsx';
 import phone from './../assets/phone.png';
 
+
 const Phone = ({currentPage, onNavigate }) => {
       const renderScreen = () => {
         switch (currentPage) {
@@ -37,6 +38,7 @@ const Phone = ({currentPage, onNavigate }) => {
       >
         {renderScreen()}
       </div>
+
     </div>
   );
 };
