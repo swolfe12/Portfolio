@@ -15,7 +15,7 @@
     grid-template-rows: 50px;
     min-height: 450px;
     margin-top: 30px;
-    @media (min-width: 960px){
+    @media (min-width: $desktop-min){
         padding: 00px 60px;
     }
 }
@@ -101,7 +101,7 @@
   position: relative;
   isolation: isolate;
 
-      @media (max-width: 959px){
+      @media (max-width: $tablet-max){
         width: 100%;
         //position: absolute;
         margin-right: 0;
@@ -133,7 +133,7 @@
         width: 200px;
         object-fit:contain;
         filter: drop-shadow(0 0 5px rgb(18, 18, 18));
-        @media (max-width: 959px){
+        @media (max-width: $tablet-max){
             top: -150px;
             right: 0px;
             width: 150px;
@@ -148,7 +148,7 @@
         object-fit:contain;
         transform: rotate(10deg);
         filter: drop-shadow(0 0 5px rgb(18, 18, 18));
-        @media (max-width: 959px){
+        @media (max-width: $tablet-max){
             top: -250px;
             right: 50px;
             width: 120px;
@@ -164,7 +164,7 @@
   color: $super-hot-pink;
   letter-spacing: .02em;
   margin: 0 0 .35rem;
-  @media(max-width: 767px){
+  @media(max-width: $mobile-max){
     font-size: 28px;
   }
 
@@ -179,7 +179,7 @@
   font-size: 20px;
   font-family: "roboto", monospace;
 
-  @media(max-width: 767px){
+  @media(max-width: $mobile-max){
     font-size: 16px;
   }
 }
@@ -194,7 +194,7 @@
   font-size: 24px;
 
 
-  @media (max-width: 640px) {
+  @media (max-width: $mobile-max) {
     grid-template-columns: 1fr;
   }
 
@@ -259,7 +259,7 @@
     text-transform: lowercase;
     letter-spacing: .02em;
     font-size: 26px;
-    @media(max-width: 767px){
+    @media(max-width: $mobile-max){
     font-size: 20px;
   }
   }
@@ -270,7 +270,7 @@
     grid-column: 2;
     font-size: 20px;
     color: color-mix(in oklab, $super-hot-pink, black 45%);
-    @media(max-width: 767px){
+    @media(max-width: $mobile-max){
     font-size: 18px;
   }
   }
@@ -291,7 +291,7 @@
 }
 
 /* Optional: tighten spacing when embedded in your laptop */
-@media (min-width: 961px) {
+@media (min-width: $desktop-min) {
   .about-wrap {
     padding: clamp(8px, 1.8vw, 20px);
   }
@@ -325,7 +325,7 @@
         margin: auto;
         
     }
-    @media (max-width: 959px){
+    @media (max-width: $tablet-max){
         width: 50%;
         position: relative;
         margin-bottom: 10px;
@@ -390,7 +390,7 @@
     cursor: pointer;
     box-shadow: 0 2px 6px rgba(255, 255, 255, 0.612);
     transition: transform 0.2s;
-    @media(max-width: 959px){
+    @media(max-width: Stablet-max){
       right: 16px;
       top: 0;
     }

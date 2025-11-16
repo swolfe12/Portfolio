@@ -100,7 +100,7 @@
         width: 50%;
         margin-block: 50px;
     }
-    @media (max-width: 748px){
+    @media (max-width: $mobile-max){
         width: 80%;
         .front{
             transform: rotate(3deg) translateY(-40px);
