@@ -83,3 +83,49 @@
     animation: none !important;
   }
 }
+.phone {
+  // your existing positioning / background
+  .phoneScreen {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #000; // this is the black you see on unlock
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Container that wraps Arcade / other pages */
+.phone-app-shell {
+  width: 100%;
+  height: 100%;
+  border-radius: 26px; // feels like an app window
+  overflow: hidden;
+  transform-origin: center center;
+  // so it doesn’t jump between states
+  will-change: transform, opacity;
+}
+
+/* While transitioning from lock -> app */
+.phone-app-shell.opening {
+  animation: phone-app-open 5s ease-out forwards;
+}
+
+/* Once open, it's just there */
+.phone-app-shell.open {
+  transform: scale(1);
+  opacity: 1;
+}
+
+@keyframes phone-app-open {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

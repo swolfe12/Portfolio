@@ -5,8 +5,12 @@ import linkedin from '../../assets/linkedin.png';
 import { RiExternalLinkLine } from "react-icons/ri";
 import links from '../../assets/links.png';
 
+type LinksProps = {
+  onNavigate?: (pageId: string) => void;
+}
 
-export const Links = (onNavigate) => {
+
+export const Links = ({ onNavigate }: LinksProps) => {
   return (
     <div className='links'>
       <Navbar onNavigate={onNavigate}/>

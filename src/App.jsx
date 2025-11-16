@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import MyRoom from './pages/MyRoom.jsx';
 import MyPhone from './pages/MyPhone.jsx';
-import Links from './pages/arcade/Links';
+import Links from './pages/arcade/Links.tsx';
 import SkillsHub from './pages/arcade/SkillsHub.tsx';
 import SkillsCategory from './pages/arcade/SkillsCategory.tsx';
 import Projects from './pages/arcade/Projects.tsx';

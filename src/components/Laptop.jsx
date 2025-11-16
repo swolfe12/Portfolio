@@ -1,6 +1,6 @@
 
 import Arcade from '../pages/arcade/Arcade.tsx';
-import Links from '../pages/arcade/Links';
+import Links from '../pages/arcade/Links.tsx';
 import Resume from '../NotUsing/Resume.jsx';
 import SkillsHub from '../pages/arcade/SkillsHub.tsx';
 import TempPage from '../pages/arcade/TempPage.tsx';

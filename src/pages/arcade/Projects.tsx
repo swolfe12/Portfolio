@@ -21,7 +21,6 @@ export const Projects = ({ onNavigate }: ProjectsProps) => {
   return (
     <div className="projects" >
       <Navbar onNavigate={onNavigate} />
-xw
       <div className="game-box">
         <div className="section-header">
           <img src={projects} alt="Projects"></img>
