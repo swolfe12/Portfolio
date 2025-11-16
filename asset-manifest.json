@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.19111396.css",
-    "main.js": "./static/js/main.2901a648.js",
+    "main.css": "./static/css/main.6ba93c68.css",
+    "main.js": "./static/js/main.f20b2293.js",
     "static/js/453.ace21015.chunk.js": "./static/js/453.ace21015.chunk.js",
     "static/media/coffee2.png": "./static/media/coffee2.2ce7a038b704f6c96c49.png",
     "static/media/lavalamp2.png": "./static/media/lavalamp2.c212425fa9f2afea7880.png",
@@ -19,6 +19,7 @@
     "static/media/linkedin.png": "./static/media/linkedin.66566374885eb65aa5f4.png",
     "static/media/sam-bhat.png": "./static/media/sam-bhat.81a26ca1c225afe2ebef.png",
     "static/media/sam-headphones.png": "./static/media/sam-headphones.33e7e841f0115e9b6a0b.png",
+    "static/media/logo2.png": "./static/media/logo2.34cb10670551bd6da8bf.png",
     "static/media/plant.png": "./static/media/plant.fd6ca237d148d8030491.png",
     "static/media/sam-fhat.png": "./static/media/sam-fhat.b9c63a855d727741e58c.png",
     "static/media/clock-clean.png": "./static/media/clock-clean.5e6771c0a109cb42d851.png",
@@ -65,12 +66,12 @@
     "static/media/slick.ttf": "./static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "./static/media/slick.295183786cd8a1389865.woff",
     "index.html": "./index.html",
-    "main.19111396.css.map": "./static/css/main.19111396.css.map",
-    "main.2901a648.js.map": "./static/js/main.2901a648.js.map",
+    "main.6ba93c68.css.map": "./static/css/main.6ba93c68.css.map",
+    "main.f20b2293.js.map": "./static/js/main.f20b2293.js.map",
     "453.ace21015.chunk.js.map": "./static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.19111396.css",
-    "static/js/main.2901a648.js"
+    "static/css/main.6ba93c68.css",
+    "static/js/main.f20b2293.js"
   ]
 }
