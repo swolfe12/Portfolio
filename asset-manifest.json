@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.7a741e78.css",
-    "main.js": "./static/js/main.92120ff8.js",
+    "main.css": "./static/css/main.0ff9b15e.css",
+    "main.js": "./static/js/main.2901a648.js",
     "static/js/453.ace21015.chunk.js": "./static/js/453.ace21015.chunk.js",
     "static/media/coffee2.png": "./static/media/coffee2.2ce7a038b704f6c96c49.png",
     "static/media/lavalamp2.png": "./static/media/lavalamp2.c212425fa9f2afea7880.png",
@@ -26,11 +26,11 @@
     "static/media/pens.png": "./static/media/pens.0ef2d599a43b3b39ebbd.png",
     "static/media/headphones.png": "./static/media/headphones.7c42c2a0ff7cfbb220b4.png",
     "static/media/mouse.png": "./static/media/mouse.98f4e60c00edc19cbf83.png",
-    "static/media/phone.png": "./static/media/phone.811fc58b6dcbbe7e8bc1.png",
     "static/media/butterfly1.png": "./static/media/butterfly1.c2b7ddb7b601746c615e.png",
     "static/media/plainheadphones.png": "./static/media/plainheadphones.ccb94b89428cce0f4217.png",
     "static/media/sunnies.png": "./static/media/sunnies.dfd11457c8fb0ae3dcaf.png",
     "static/media/laptop.png": "./static/media/laptop.5f15e80e0dfb4ed7d812.png",
+    "static/media/phone.png": "./static/media/phone.bf3cf61078deebeb6c3e.png",
     "static/media/contact.png": "./static/media/contact.ac3d0eb9bee82ed7123f.png",
     "static/media/desk.png": "./static/media/desk.68bb80aff5f4f12f7189.png",
     "static/media/window.png": "./static/media/window.92d63102c27495831871.png",
@@ -56,6 +56,8 @@
     "static/media/sam-headphones.webp": "./static/media/sam-headphones.d1e7b2d58380075cc85c.webp",
     "static/media/sam-sunnies.webp": "./static/media/sam-sunnies.98964352f01e270ff4df.webp",
     "static/media/sam-bhat.webp": "./static/media/sam-bhat.6743e18d4fb5f00bd14a.webp",
+    "static/media/answer.PNG": "./static/media/answer.fb203ad75c41fa4ad915.PNG",
+    "static/media/hangup.PNG": "./static/media/hangup.3d50c2c0a5e886fb70a8.PNG",
     "static/media/sass-logo.png": "./static/media/sass-logo.6747d5c68a381e29fc69.png",
     "static/media/mash.webp": "./static/media/mash.2d1244aa3b0ca7d3786e.webp",
     "static/media/slick.svg": "./static/media/slick.2630a3e3eab21c607e21.svg",
@@ -63,12 +65,12 @@
     "static/media/slick.ttf": "./static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "./static/media/slick.295183786cd8a1389865.woff",
     "index.html": "./index.html",
-    "main.7a741e78.css.map": "./static/css/main.7a741e78.css.map",
-    "main.92120ff8.js.map": "./static/js/main.92120ff8.js.map",
+    "main.0ff9b15e.css.map": "./static/css/main.0ff9b15e.css.map",
+    "main.2901a648.js.map": "./static/js/main.2901a648.js.map",
     "453.ace21015.chunk.js.map": "./static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7a741e78.css",
-    "static/js/main.92120ff8.js"
+    "static/css/main.0ff9b15e.css",
+    "static/js/main.2901a648.js"
   ]
 }
