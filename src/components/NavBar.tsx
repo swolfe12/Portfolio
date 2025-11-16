@@ -16,15 +16,15 @@ const CATEGORIES: Category[] = [
   { id: "links", label: "Links", href: "/links" },
 ];
 
-type NavbarProps = {
-  isArcade: boolean; // true = mobile mode (navigate), false = desktop-in-laptop (no URL change)
-  onNavigate?: (pageId: string) => void; // used when isArcade === false
-};
 
 const RESUME_URL =
   "https://docs.google.com/document/d/1ei5dTmXsQ0X0AeQnxmuT2cDt-WKHS_6uZe_WAqVl7yU/edit?usp=sharing";
 
-export default function Navbar({ isArcade = true, onNavigate }: NavbarProps) {
+  type NavbarProps = {
+  onNavigate?: (pageId: string) => void;
+};
+
+export default function Navbar({ onNavigate }: NavbarProps) {
   const { pathname } = useLocation();
   const isActive = (href?: string) => !!href && (pathname === href || pathname.startsWith(href + "/"));
 
@@ -117,15 +117,11 @@ export default function Navbar({ isArcade = true, onNavigate }: NavbarProps) {
             >
               {c.label}
             </button>
-          ) : isArcade ? (
-            <Link className={`nav-link ${isActive(c.href) ? "is-active" : ""}`} to={c.href || "#"}>
-              {c.label}
-            </Link>
-          ) : (
+          )  : (
             <button
               className="nav-link"
-              onClick={() => onNavigate?.(c.id)}
               type="button"
+              onClick={() => onNavigate?.(c.id)}
               aria-current={isActive(c.href) ? "page" : undefined}
             >
               {c.label}
@@ -158,15 +154,7 @@ export default function Navbar({ isArcade = true, onNavigate }: NavbarProps) {
             >
               {c.label}
             </button>
-          ) : isArcade ? (
-            <Link
-              to={c.href || "#"}
-              className="drawer-link"
-              onClick={() => setOpen(false)}
-            >
-              {c.label}
-            </Link>
-          ) : (
+          ) :  (
             <button
               className="drawer-link"
               type="button"
@@ -206,11 +194,7 @@ export default function Navbar({ isArcade = true, onNavigate }: NavbarProps) {
           <div className="sub-list" role="list">
             {c.subitems!.map((s) => (
               <li key={s.id}>
-                {isArcade ? (
-                  <Link to={s.href} className="sub-link" onClick={() => setOpen(false)}>
-                    {s.label}
-                  </Link>
-                ) : (
+
                   <button
                     className="sub-link"
                     type="button"
@@ -221,7 +205,6 @@ export default function Navbar({ isArcade = true, onNavigate }: NavbarProps) {
                   >
                     {s.label}
                   </button>
-                )}
               </li>
             ))}
           </div>
@@ -256,11 +239,7 @@ export default function Navbar({ isArcade = true, onNavigate }: NavbarProps) {
     <>
       <header className="site-header" role="banner">
         <div className="nav-container">
-          {isArcade ? (
-            <Link to="/" className="brand" onClick={() => setOpen(false)}>
-              Sam's Portfolio
-            </Link>
-          ) : (
+
             <button
               className="brand"
               type="button"
@@ -271,8 +250,6 @@ export default function Navbar({ isArcade = true, onNavigate }: NavbarProps) {
             >
               Sam's Portfolio
             </button>
-          )}
-
           <nav className="primary-nav desktop-only" aria-label="Primary" id={navId} role="navigation">
             <div className="nav-list" role="list">
               {CATEGORIES.map((c, i) => renderDesktopItem(c, i))}

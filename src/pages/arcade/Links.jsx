@@ -6,10 +6,10 @@ import { RiExternalLinkLine } from "react-icons/ri";
 import links from '../../assets/links.png';
 
 
-export const Links = ({ isArcade = true, onNavigate }) => {
+export const Links = (onNavigate) => {
   return (
     <div className='links'>
-      <Navbar isArcade={isArcade} onNavigate={onNavigate} />
+      <Navbar onNavigate={onNavigate}/>
       <div className="game-box">
         <div className="section-header">
           <img src={links} alt="Skill Select"></img>

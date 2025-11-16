@@ -88,8 +88,12 @@ const DATA: Record<string, Cat> = {
   },
 };
 
-export default function SkillCategory({ isArcade = false, onNavigate, categoryId: propCategoryId,}) {
-    console.log("SkillsCategory isArcade?", isArcade);
+type SkillsCategoryProps = {
+  onNavigate?: (pageId:string) => void;
+  propCategoryId?: number;
+}
+
+export default function SkillCategory({ onNavigate, propCategoryId}: SkillsCategoryProps) {
 
   const { categoryId: routeCategoryId = "" } = useParams();
   const key = (propCategoryId ?? routeCategoryId ?? "").toLowerCase();
@@ -110,7 +114,7 @@ export default function SkillCategory({ isArcade = false, onNavigate, categoryId
 
   return (
     <div className="skills-category" aria-labelledby="skills-title">
-      <NavBar isArcade={isArcade} onNavigate={onNavigate} />
+      <NavBar  onNavigate={onNavigate}/>
       <div className="game-box">
         <header className="skills-header">
           <h1 id="skills-title">{cat.name}</h1>

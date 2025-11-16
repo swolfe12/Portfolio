@@ -11,14 +11,15 @@ import WorkPopup from './components/WorkPopup';
 
 
 export default function App() {
-  const [isArcade, setIsArcade] = useState(false);
+
+  //Mobile -> show cell phone lockscreen -> Window opens to "Arcade"
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const query = '(max-width: 959.98px)';
-    const mql = window.matchMedia(query);
-    const onChange = e => setIsArcade(e.matches);
+    const mql = window.matchMedia('(max-width: 959px)');
+    const onChange = e => setIsMobile(e.matches);
 
-    setIsArcade(mql.matches);
+    setIsMobile(mql.matches);
     mql.addEventListener?.('change', onChange) ?? mql.addListener(onChange);
     return () => mql.removeEventListener?.('change', onChange) ?? mql.removeListener(onChange);
   }, []);
@@ -27,34 +28,14 @@ export default function App() {
     
     <>
       <WorkPopup />
-      {isArcade ? (
         <Routes>
-          <Route path="/" element={<Arcade isArcade />} />
-          <Route path="/links" element={<Links isArcade />} />
-          <Route path="/skills" element={<SkillsHub isArcade/>} />
-          <Route path="/skills/:categoryId" element={<SkillsCategory />} />
-          <Route path="/projects" element={<Projects isArcade/>} />
+          <Route path="/" element={<Portfolio onNavigate/>} />
+          <Route path="/links" element={<Links onNavigate/>} />
+          <Route path="/skills" element={<SkillsHub onNavigate/>} />
+          <Route path="/skills/:categoryId" element={<SkillsCategory onNavigate/>} />
+          <Route path="/projects" element={<Projects onNavigate/>} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
-      ) : (
-        <Routes>
-          <Route path="/" element={<Portfolio />} />
-          <Route path="/links" element={<Links isArcade />} />
-          <Route path="/skills" element={<SkillsHub isArcade/>} />
-          <Route path="/skills/:categoryId" element={<SkillsCategory />} />
-          <Route path="/projects" element={<Projects isArcade/>} />
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
-      )}
     </>
-    /*
-    <>
-    <Routes>
-          <Route path="/" element={<Arcade isArcade />} />
-          <Route path="/links" element={<Links isArcade />} />
-          <Route path="/resume" element={<Resume isArcade />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
-    </>*/
   );
 }

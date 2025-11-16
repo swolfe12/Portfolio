@@ -38,33 +38,31 @@ const settings = {
   responsive: [{ breakpoint: 900, settings: { slidesToShow: 2, vertical: false } }],
 };
 
-type Props = { isArcade?: boolean; onNavigate?: (pageId: string) => void };
 type CatId = (typeof CATEGORIES)[number]["id"];
 
-export default function SkillsHub({ isArcade = true , onNavigate}: Props) {
+type SkillsHubProps = {
+  onNavigate?: (pageId: string) => void;
+}
+
+export default function SkillsHub({onNavigate}: SkillsHubProps) {
   const [searchParams, setSearchParams] = useSearchParams();
 
   // Initialize:
   // - Arcade (routing): read from ?cat=
   // - Laptop (internal): read from pending hand-off if present; otherwise null
   const [selectedId, setSelectedId] = useState<CatId | null>(() => {
-    if (isArcade) {
-      const initial = (searchParams.get("cat") || "").toLowerCase() as CatId | "";
-      return (initial as CatId) || null;
-    }
-    const pending = (window).__SW_PENDING_SKILL as string | undefined;
+    const pending = (window as any).__SW_PENDING_SKILL as string | undefined;
     return (pending as CatId) || null;
   });
 
   // Consume the pending hand-off on mount (laptop mode only)
   useEffect(() => {
-    if (isArcade) return;
-    const pending = (window).__SW_PENDING_SKILL as string | undefined;
+    const pending = (window as any).__SW_PENDING_SKILL as string | undefined;
     if (pending) {
       setSelectedId(pending as CatId);
-      (window).__SW_PENDING_SKILL = undefined;
+      (window as any).__SW_PENDING_SKILL = undefined;
     }
-  }, [isArcade]);
+  });
 
   const selected: Cat | null = selectedId ? SKILL_DATA[selectedId] ?? null : null;
   const detailsRegionId = useId();
@@ -72,16 +70,14 @@ export default function SkillsHub({ isArcade = true , onNavigate}: Props) {
 
 
   useEffect(() => {
-    if (!isArcade) return;
     const urlCat = (searchParams.get("cat") || "").toLowerCase();
     if (urlCat !== (selectedId || "")) {
       setSelectedId((urlCat as CatId) || null);
     }
-  }, [isArcade, searchParams, selectedId]);
+  }, [searchParams, selectedId]);
 
   // === Laptop mode (internal app): ignore router; listen for the custom event ===
   useEffect(() => {
-    if (isArcade) return; // only in laptop mode
     const onSelect = (e: Event) => {
       const cat = (e as CustomEvent).detail as string | undefined;
       if (!cat) return;
@@ -90,7 +86,7 @@ export default function SkillsHub({ isArcade = true , onNavigate}: Props) {
     };
     window.addEventListener("skills:select", onSelect as EventListener);
     return () => window.removeEventListener("skills:select", onSelect as EventListener);
-  }, [isArcade, selectedId]);
+  }, [selectedId]);
 
   // Accessibility nicety: focus the title when selection changes
   useEffect(() => {
@@ -103,7 +99,7 @@ export default function SkillsHub({ isArcade = true , onNavigate}: Props) {
     <div className="skills-hub" aria-labelledby="skills-title">
       {/* Put NavBar on its own layer so clicks always work */}
       <div className="nav-layer">
-        <NavBar isArcade={isArcade} onNavigate={onNavigate} />
+        <NavBar onNavigate={onNavigate} />
       </div>
       
 
@@ -129,13 +125,8 @@ export default function SkillsHub({ isArcade = true , onNavigate}: Props) {
                   type="button"
                   className={`skills-card__link ${selectedId === c.id ? "is-active" : ""}`}
                   onClick={() => {
-                    if (isArcade) {
-                      // One navigation per click; no effects writing the URL.
-                      setSearchParams({ cat: c.id }, { replace: true });
-                    } else {
-                      // Laptop/internal mode keeps local state only.
+
                       setSelectedId(c.id);
-                    }
                   }}
                   aria-pressed={selectedId === c.id}
                   aria-controls={detailsRegionId}

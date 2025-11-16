@@ -5,10 +5,10 @@ import portrait from '../../assets/portrait.png';
 import nametag from '../../assets/nametag.png';
 
 
-export const AboutMe = ({ isArcade = true, onNavigate }) => {
+export const AboutMe = ({onNavigate }) => {
   return (
     <div className='about'>
-      <Navbar isArcade={isArcade} onNavigate={onNavigate} />
+      <Navbar onNavigate={onNavigate} />
        <div className="game-box">
         <div className="grid">
             <div className="full-box">

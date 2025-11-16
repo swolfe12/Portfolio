@@ -28,12 +28,14 @@ import neon from './../assets/neon.webp';
 
 const SCALE_MS = 320; // match your CSS transition duration
 
+
 const Portfolio = () => {
   const [isModalOpen, setIsModalOpen] = useState(true);
   const [isLaptopOpen, setIsLaptopOpen] = useState(false);
   const [isContactOpen, setIsContactOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState('home');
   const [isAnimating, setIsAnimating] = useState(false); // prevents mid-frame flicker
+
 
   // focus management
   const laptopOpenerRef = useRef(null);
@@ -234,7 +236,8 @@ const Portfolio = () => {
             isOpen={isLaptopOpen}
             currentPage={currentPage}
             onNavigate={setCurrentPage}
-            screenRef={screenRef} // <-- attach to .screen inside Laptop
+            screenRef={screenRef}
+            
           />
         </div>
 

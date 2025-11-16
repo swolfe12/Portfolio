@@ -13,11 +13,15 @@ import vite from '../../assets/vite.jpeg';
 import js from '../../assets/javascript.png';
 import ts from '../../assets/typescript.png';
 
-export const Projects = ({ isArcade = true, onNavigate }) => {
+type ProjectsProps = {
+  onNavigate?: (pageId: string) => void;
+}
+
+export const Projects = ({ onNavigate }: ProjectsProps) => {
   return (
     <div className="projects" >
-      <Navbar isArcade={isArcade} onNavigate={onNavigate} />
-
+      <Navbar onNavigate={onNavigate} />
+xw
       <div className="game-box">
         <div className="section-header">
           <img src={projects} alt="Projects"></img>
