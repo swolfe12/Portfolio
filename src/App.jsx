@@ -1,8 +1,8 @@
 // src/App.jsx
 import React, { useEffect, useState } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import Portfolio from './pages/Portfolio';
-import Arcade from './pages/arcade/Arcade.tsx';
+import MyRoom from './pages/MyRoom.jsx';
+import MyPhone from './pages/MyPhone.jsx';
 import Links from './pages/arcade/Links';
 import SkillsHub from './pages/arcade/SkillsHub.tsx';
 import SkillsCategory from './pages/arcade/SkillsCategory.tsx';
@@ -26,16 +26,21 @@ export default function App() {
 
   return (
     
-    <>
+  
+      <>
       <WorkPopup />
         <Routes>
-          <Route path="/" element={<Portfolio onNavigate/>} />
+          {isMobile? (
+            <Route path="/" element={<MyPhone onNavigate/>} />
+            ) : (
+              <Route path="/" element={<MyRoom onNavigate/>} />
+            )}
           <Route path="/links" element={<Links onNavigate/>} />
           <Route path="/skills" element={<SkillsHub onNavigate/>} />
           <Route path="/skills/:categoryId" element={<SkillsCategory onNavigate/>} />
           <Route path="/projects" element={<Projects onNavigate/>} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
-    </>
-  );
+      </>
+  )
 }

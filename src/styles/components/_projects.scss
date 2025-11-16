@@ -23,7 +23,7 @@
     margin: auto;
     margin-bottom: 100px;
 
-    @media (max-width: 767px) {
+    @media (max-width: $mobile-max) {
       width: 90%;
     }
 
@@ -32,7 +32,7 @@
       position: relative;
       overflow: hidden;
 
-      @media (max-width: 767px) {
+      @media (max-width: $mobile-max) {
         height: 380px;
       }
 
@@ -42,7 +42,7 @@
         background-position: center;
         background-size: cover;
 
-        @media (max-width: 767px) {
+        @media (max-width: $mobile-max) {
           background-size: cover;
         }
       }
@@ -231,7 +231,7 @@
     }
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-min) {
     .project-card {
       max-width: 850px;
       display: flex;

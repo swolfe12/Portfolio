@@ -1,4 +1,4 @@
-import React from 'react';
+
 import Arcade from '../pages/arcade/Arcade.tsx';
 import Links from '../pages/arcade/Links';
 import Resume from '../NotUsing/Resume.jsx';
@@ -24,7 +24,6 @@ const Laptop = ({ isOpen, currentPage, onNavigate, screenRef }) => {
           onPointerDown={(e) => e.stopPropagation()}
         >
           <SkillsCategory
-            isArcade={false}
             onNavigate={onNavigate}
             categoryId={categoryId}
           />
@@ -36,20 +35,20 @@ const Laptop = ({ isOpen, currentPage, onNavigate, screenRef }) => {
   const renderScreen = () => {
     switch (currentPage) {
       case 'home':
-        return <Arcade isArcade={false} onNavigate={onNavigate} />;
+        return <Arcade onNavigate={onNavigate} />;
       case 'links':
-        return <Links isArcade={false} onNavigate={onNavigate} />;
+        return <Links onNavigate={onNavigate} />;
       case 'resume':
-        return <Resume isArcade={false} onNavigate={onNavigate} />;
+        return <Resume onNavigate={onNavigate} />;
       case 'about':
-        return <TempPage isArcade={false} onNavigate={onNavigate} />;
+        return <TempPage onNavigate={onNavigate} />;
         // return <AboutMe isArcade={false} onNavigate={onNavigate} />;
       case 'projects':
-        return <Projects isArcade={false} onNavigate={onNavigate} />;
+        return <Projects onNavigate={onNavigate} />;
       case 'skills':
-        return <SkillsHub isArcade={false} onNavigate={onNavigate} />;
+        return <SkillsHub onNavigate={onNavigate} />;
       default:
-        return <Arcade isArcade={false} onNavigate={onNavigate} />;
+        return <Arcade onNavigate={onNavigate} />;
     }
   };
 

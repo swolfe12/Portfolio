@@ -1,9 +1,8 @@
 import { useEffect, useId, useRef, useState } from "react";
+import { useLocation } from "react-router-dom";
 import NavBar from "../../components/NavBar.tsx";
 import Slider from "react-slick";
 import { SKILL_DATA, Cat } from "./skillsData.ts";
-import { useSearchParams} from "react-router-dom";
-
 import avatarBase from "../../assets/avatar3.webp";
 import room from "../../assets/room.png";
 import fhat from "../../assets/fhat.png";
@@ -20,7 +19,7 @@ const CATEGORIES = [
   { id: "backend", label: "Back-End", img: bhat },
   { id: "accessibility", label: "Accessibility", img: headphones },
   { id: "cms", label: "CMS", img: flower },
-  { id: "uiux", label: "UI/UX", img: glasses },
+  { id: "uiux", label: "UI/UX", img: glasses }
 ] as const;
 
 const isMobile = window.innerWidth < 767;
@@ -35,48 +34,44 @@ const settings = {
   focusOnSelect: true,
   swipeToSlide: true,
   centerMode: true,
-  responsive: [{ breakpoint: 900, settings: { slidesToShow: 2, vertical: false } }],
+  responsive: [{ breakpoint: 900, settings: { slidesToShow: 2, vertical: false } }]
 };
 
 type CatId = (typeof CATEGORIES)[number]["id"];
 
 type SkillsHubProps = {
   onNavigate?: (pageId: string) => void;
-}
+};
 
-export default function SkillsHub({onNavigate}: SkillsHubProps) {
-  const [searchParams, setSearchParams] = useSearchParams();
-
-  // Initialize:
-  // - Arcade (routing): read from ?cat=
-  // - Laptop (internal): read from pending hand-off if present; otherwise null
+export default function SkillsHub({ onNavigate }: SkillsHubProps) {
   const [selectedId, setSelectedId] = useState<CatId | null>(() => {
     const pending = (window as any).__SW_PENDING_SKILL as string | undefined;
     return (pending as CatId) || null;
   });
 
-  // Consume the pending hand-off on mount (laptop mode only)
   useEffect(() => {
     const pending = (window as any).__SW_PENDING_SKILL as string | undefined;
     if (pending) {
       setSelectedId(pending as CatId);
       (window as any).__SW_PENDING_SKILL = undefined;
     }
-  });
+  }, []);
 
   const selected: Cat | null = selectedId ? SKILL_DATA[selectedId] ?? null : null;
   const detailsRegionId = useId();
   const detailsTitleRef = useRef<HTMLHeadingElement | null>(null);
 
+  const { search } = useLocation();
 
   useEffect(() => {
-    const urlCat = (searchParams.get("cat") || "").toLowerCase();
-    if (urlCat !== (selectedId || "")) {
-      setSelectedId((urlCat as CatId) || null);
-    }
-  }, [searchParams, selectedId]);
+  const params = new URLSearchParams(search);
+  const urlCat = (params.get("cat") || "").toLowerCase();
 
-  // === Laptop mode (internal app): ignore router; listen for the custom event ===
+  if (urlCat !== (selectedId || "")) {
+    setSelectedId((urlCat as CatId) || null);
+  }
+}, [search, selectedId]);
+
   useEffect(() => {
     const onSelect = (e: Event) => {
       const cat = (e as CustomEvent).detail as string | undefined;
@@ -88,7 +83,6 @@ export default function SkillsHub({onNavigate}: SkillsHubProps) {
     return () => window.removeEventListener("skills:select", onSelect as EventListener);
   }, [selectedId]);
 
-  // Accessibility nicety: focus the title when selection changes
   useEffect(() => {
     if (selected && detailsTitleRef.current) {
       detailsTitleRef.current.focus();
@@ -97,19 +91,16 @@ export default function SkillsHub({onNavigate}: SkillsHubProps) {
 
   return (
     <div className="skills-hub" aria-labelledby="skills-title">
-      {/* Put NavBar on its own layer so clicks always work */}
       <div className="nav-layer">
         <NavBar onNavigate={onNavigate} />
       </div>
-      
 
       <div className="game-box">
         <div className="section-header">
-          <img src={skills} alt="Skill Select"></img>
+          <img src={skills} alt="Skill Select" />
         </div>
-        <div className="dressup">
-  
 
+        <div className="dressup">
           <div className="dressup-avatar" style={{ backgroundImage: `url(${room})` }}>
             <img
               src={selected?.img ?? avatarBase}
@@ -117,17 +108,15 @@ export default function SkillsHub({onNavigate}: SkillsHubProps) {
               className="dressup-avatar__img"
             />
           </div>
-            <Slider {...settings} className="skills-carousel" aria-label="Skill categories">
+
+          <Slider {...settings} className="skills-carousel" aria-label="Skill categories">
             {CATEGORIES.map((c) => (
               <div key={c.id} className="skills-card">
                 <h2 className="sr-only">{c.label}</h2>
                 <button
                   type="button"
                   className={`skills-card__link ${selectedId === c.id ? "is-active" : ""}`}
-                  onClick={() => {
-
-                      setSelectedId(c.id);
-                  }}
+                  onClick={() => setSelectedId(c.id)}
                   aria-pressed={selectedId === c.id}
                   aria-controls={detailsRegionId}
                   aria-label={`Show ${c.label} details below`}

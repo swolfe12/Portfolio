@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import "./../styles/main.scss";
 import Calendar from '../components/Calendar';
 import Clock from '../components/Clock';
@@ -29,7 +29,7 @@ import neon from './../assets/neon.webp';
 const SCALE_MS = 320; // match your CSS transition duration
 
 
-const Portfolio = () => {
+const MyRoom = () => {
   const [isModalOpen, setIsModalOpen] = useState(true);
   const [isLaptopOpen, setIsLaptopOpen] = useState(false);
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -271,4 +271,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default MyRoom;

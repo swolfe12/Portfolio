@@ -1,5 +1,3 @@
-import React from "react";
-import { Link } from "react-router-dom";
 import avatar from "../../assets/avatar3.webp";
 import Navbar from "../../components/NavBar.tsx";
 import butterfly1 from "../../assets/butterfly1.png";
@@ -42,7 +40,6 @@ export const Arcade = ({ onNavigate }: ArcadeProps) => {
             Welcome to my site. Click the buttons below to see what I’m all about!
           </p>
 
-            // Laptop (inside the portfolio app): internal nav + custom event
             <ul className="about-links">
               <li>
                 <button type="button" onClick={() => openSkill("frontend")} aria-label="Open Front-End">
