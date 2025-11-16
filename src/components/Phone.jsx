@@ -8,7 +8,7 @@ import TempPage from '../pages/arcade/TempPage.tsx';
 import Projects from '../pages/arcade/Projects.tsx';
 import LockScreen from '../pages/LockScreen';
 import phone from './../assets/phone.png';
-
+import keyboard from './../assets/keyboard.png';
 const Phone = ({ currentPage = 'home', onNavigate }) => {
   // 'lock' -> lock screen, 'transition' -> black + opening anim, 'app' -> fully open
   const [screenStage, setScreenStage] = useState('lock');
@@ -59,6 +59,7 @@ const Phone = ({ currentPage = 'home', onNavigate }) => {
   }
 
   return (
+    <>
     <div
       className="phone"
       style={{ backgroundImage: `url(${phone})` }}
@@ -68,6 +69,9 @@ const Phone = ({ currentPage = 'home', onNavigate }) => {
         {content}
       </div>
     </div>
+    <div className="keyboard" style={{ backgroundImage: `url(${keyboard})` }}>
+    </div>
+    </>
   );
 };
 
