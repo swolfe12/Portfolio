@@ -18,7 +18,7 @@ const CATEGORIES = [
   { id: "backend", label: "Back-End", img: bhat },
   { id: "accessibility", label: "Accessibility", img: headphones },
   { id: "cms", label: "CMS", img: flower },
-  { id: "uiux", label: "UI/UX", img: glasses }
+  { id: "uiux", label: "UI/UX", img: glasses },
 ] as const;
 
 const isMobile = window.innerWidth < 767;
@@ -33,7 +33,9 @@ const settings = {
   focusOnSelect: true,
   swipeToSlide: true,
   centerMode: true,
-  responsive: [{ breakpoint: 900, settings: { slidesToShow: 2, vertical: false } }]
+  responsive: [
+    { breakpoint: 900, settings: { slidesToShow: 2, vertical: false } },
+  ],
 };
 
 type CatId = (typeof CATEGORIES)[number]["id"];
@@ -56,20 +58,22 @@ export default function SkillsHub({ onNavigate }: SkillsHubProps) {
     }
   }, []);
 
-  const selected: Cat | null = selectedId ? SKILL_DATA[selectedId] ?? null : null;
+  const selected: Cat | null = selectedId
+    ? SKILL_DATA[selectedId] ?? null
+    : null;
   const detailsRegionId = useId();
   const detailsTitleRef = useRef<HTMLHeadingElement | null>(null);
 
   const { search } = useLocation();
 
   useEffect(() => {
-  const params = new URLSearchParams(search);
-  const urlCat = (params.get("cat") || "").toLowerCase();
+    const params = new URLSearchParams(search);
+    const urlCat = (params.get("cat") || "").toLowerCase();
 
-  if (urlCat !== (selectedId || "")) {
-    setSelectedId((urlCat as CatId) || null);
-  }
-}, [search, selectedId]);
+    if (urlCat !== (selectedId || "")) {
+      setSelectedId((urlCat as CatId) || null);
+    }
+  }, [search, selectedId]);
 
   useEffect(() => {
     const onSelect = (e: Event) => {
@@ -79,7 +83,8 @@ export default function SkillsHub({ onNavigate }: SkillsHubProps) {
       if (next !== selectedId) setSelectedId(next);
     };
     window.addEventListener("skills:select", onSelect as EventListener);
-    return () => window.removeEventListener("skills:select", onSelect as EventListener);
+    return () =>
+      window.removeEventListener("skills:select", onSelect as EventListener);
   }, [selectedId]);
 
   useEffect(() => {
@@ -95,12 +100,13 @@ export default function SkillsHub({ onNavigate }: SkillsHubProps) {
       </div>
 
       <div className="game-box">
-        <div className="section-header">
-          
-        </div>
+        <div className="section-header"></div>
 
         <div className="dressup">
-          <div className="dressup-avatar" style={{ backgroundImage: `url(${room})` }}>
+          <div
+            className="dressup-avatar"
+            style={{ backgroundImage: `url(${room})` }}
+          >
             <img
               src={selected?.img ?? avatarBase}
               alt="Sam's avatar"
@@ -108,13 +114,19 @@ export default function SkillsHub({ onNavigate }: SkillsHubProps) {
             />
           </div>
 
-          <Slider {...settings} className="skills-carousel" aria-label="Skill categories">
+          <Slider
+            {...settings}
+            className="skills-carousel"
+            aria-label="Skill categories"
+          >
             {CATEGORIES.map((c) => (
               <div key={c.id} className="skills-card">
                 <h2 className="sr-only">{c.label}</h2>
                 <button
                   type="button"
-                  className={`skills-card__link ${selectedId === c.id ? "is-active" : ""}`}
+                  className={`skills-card__link ${
+                    selectedId === c.id ? "is-active" : ""
+                  }`}
                   onClick={() => setSelectedId(c.id)}
                   aria-pressed={selectedId === c.id}
                   aria-controls={detailsRegionId}

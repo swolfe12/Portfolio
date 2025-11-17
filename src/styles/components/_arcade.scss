@@ -1,34 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Dancing+Script:wght@400..700&family=Neonderthaw&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Dancing+Script:wght@400..700&family=Neonderthaw&display=swap");
 /* CSS */
-:root{
-  --cycle: 7s;          /* how fast Portfolio/Arcade alternate */
-  --blink: 9s;          /* slow overall sign blink */
-  --off-opacity: 0.18;  /* how dim a word looks when "off" */
+:root {
+  --cycle: 7s; /* how fast Portfolio/Arcade alternate */
+  --blink: 9s; /* slow overall sign blink */
+  --off-opacity: 0.18; /* how dim a word looks when "off" */
 }
 
 /* Optional: give it a dark stage so the neon pops */
 
 .grid {
-    padding: 0px 12px;
-    display: flex;
-    flex-wrap: wrap;
-    grid-template-rows: 50px;
-    min-height: 450px;
-    margin-top: 30px;
-    @media (min-width: $desktop-min){
-        padding: 00px 60px;
-    }
+  padding: 0px 12px;
+  display: flex;
+  flex-wrap: wrap;
+  grid-template-rows: 50px;
+  min-height: 450px;
+  margin-top: 30px;
+  @media (min-width: $desktop-min) {
+    padding: 00px 60px;
+  }
 }
 .arcade {
-    position: relative;
-    @include gradient-bg;
-    background-size: contain;
-    overflow: scroll;
-    //transform: scale(.7);
-    height: 100%;
-    //min-height: 850px;
-
-
+  position: relative;
+  @include gradient-bg;
+  background-size: contain;
+  overflow: scroll;
+  //transform: scale(.7);
+  height: 100%;
+  //min-height: 850px;
 }
 /* Container with gingham bg (updated to match navbar colors) */
 .gingham {
@@ -39,26 +37,31 @@
   background-color: $light-pink;
 
   /* two stripe stacks with different alpha create the gingham look */
-  background-image:
-    repeating-linear-gradient(
+  background-image: repeating-linear-gradient(
       0deg,
-      rgba( var(--gA, 255), var(--gB, 90), var(--gC, 166), 0.10 ) 0 calc(var(--cell) / 2),
-      rgba( var(--gA, 255), var(--gB, 90), var(--gC, 166), 0.00 ) calc(var(--cell) / 2) var(--cell)
+      rgba(var(--gA, 255), var(--gB, 90), var(--gC, 166), 0.1) 0
+        calc(var(--cell) / 2),
+      rgba(var(--gA, 255), var(--gB, 90), var(--gC, 166), 0)
+        calc(var(--cell) / 2) var(--cell)
     ),
     repeating-linear-gradient(
       90deg,
-      rgba( var(--gA, 255), var(--gB, 90), var(--gC, 166), 0.10 ) 0 calc(var(--cell) / 2),
-      rgba( var(--gA, 255), var(--gB, 90), var(--gC, 166), 0.00 ) calc(var(--cell) / 2) var(--cell)
+      rgba(var(--gA, 255), var(--gB, 90), var(--gC, 166), 0.1) 0
+        calc(var(--cell) / 2),
+      rgba(var(--gA, 255), var(--gB, 90), var(--gC, 166), 0)
+        calc(var(--cell) / 2) var(--cell)
     ),
     repeating-linear-gradient(
       0deg,
-      rgba( var(--gA, 255), var(--gB, 90), var(--gC, 166), 0.18 ) 0 var(--cell),
-      rgba( var(--gA, 255), var(--gB, 90), var(--gC, 166), 0.00 ) var(--cell) calc(var(--cell) * 2)
+      rgba(var(--gA, 255), var(--gB, 90), var(--gC, 166), 0.18) 0 var(--cell),
+      rgba(var(--gA, 255), var(--gB, 90), var(--gC, 166), 0) var(--cell)
+        calc(var(--cell) * 2)
     ),
     repeating-linear-gradient(
       90deg,
-      rgba( var(--gA, 255), var(--gB, 90), var(--gC, 166), 0.18 ) 0 var(--cell),
-      rgba( var(--gA, 255), var(--gB, 90), var(--gC, 166), 0.00 ) var(--cell) calc(var(--cell) * 2)
+      rgba(var(--gA, 255), var(--gB, 90), var(--gC, 166), 0.18) 0 var(--cell),
+      rgba(var(--gA, 255), var(--gB, 90), var(--gC, 166), 0) var(--cell)
+        calc(var(--cell) * 2)
     );
 
   /* Pull the actual RGB from --brand-pink for the stripes */
@@ -77,7 +80,7 @@
   display: grid;
   place-items: center;
 
-  background:none;
+  background: none;
 }
 
 /* The blob panel */
@@ -90,25 +93,23 @@
   width: 55%;
   border-radius: 24px;
   background: $light-pink;
-  border: 6px solid var(--ring);        
+  border: 6px solid var(--ring);
   padding: clamp(16px, 3vw, 28px) clamp(18px, 4vw, 36px);
-  box-shadow:
-    0 18px 40px -10px rgba(0,0,0,.25),
-    0 0 0 8px rgba(255,255,255,.45) inset;
-  box-shadow: inset 0 4px 0 var(--chrome-hi), inset 0 -5px 0 rgba(0, 0, 0, 0.2), 0 6px 0 rgba(0, 0, 0, 0.5);
-
+  box-shadow: 0 18px 40px -10px rgba(0, 0, 0, 0.25),
+    0 0 0 8px rgba(255, 255, 255, 0.45) inset;
+  box-shadow: inset 0 4px 0 var(--chrome-hi), inset 0 -5px 0 rgba(0, 0, 0, 0.2),
+    0 6px 0 rgba(0, 0, 0, 0.5);
 
   position: relative;
   isolation: isolate;
 
-      @media (max-width: $tablet-max){
-        width: 100%;
-        //position: absolute;
-        margin-right: 0;
-        margin-top: 0px;
-        margin-bottom: 50px;
-        
-    }
+  @media (max-width: $tablet-max) {
+    width: 100%;
+    //position: absolute;
+    margin-right: 0;
+    margin-top: 0px;
+    margin-bottom: 50px;
+  }
 
   /* speech-bubble tail */
   &::after {
@@ -116,45 +117,46 @@
     position: absolute;
     right: clamp(18px, 6vw, 48px);
     bottom: -18px;
-    width: 72px; height: 40px;
+    width: 72px;
+    height: 40px;
     background: $light-pink;
     border: 4px solid var(--ring);
-    border-left: none; border-top: none;
+    border-left: none;
+    border-top: none;
     border-radius: 0 0 24px 0 / 0 0 40px 0;
-    box-shadow: 10px 14px 24px rgba(0,0,0,.15);
+    box-shadow: 10px 14px 24px rgba(0, 0, 0, 0.15);
     transform: skewX(-15deg) rotate(3deg);
   }
 
-    .butterfly1 {
-        position: absolute;
-        z-index: 2;
-        right: -150px;
-        top: 0px;
-        width: 200px;
-        object-fit:contain;
-        filter: drop-shadow(0 0 5px rgb(18, 18, 18));
-        @media (max-width: $tablet-max){
-            top: -150px;
-            right: 0px;
-            width: 150px;
-        }
+  .butterfly1 {
+    position: absolute;
+    z-index: 2;
+    right: -150px;
+    top: 0px;
+    width: 200px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 5px rgb(18, 18, 18));
+    @media (max-width: $tablet-max) {
+      top: -150px;
+      right: 0px;
+      width: 150px;
     }
-    .butterfly2 {
-        position: absolute;
-        z-index: 2;
-        right: -150px;
-        top: 250px;
-        width: 150px;
-        object-fit:contain;
-        transform: rotate(10deg);
-        filter: drop-shadow(0 0 5px rgb(18, 18, 18));
-        @media (max-width: $tablet-max){
-            top: -250px;
-            right: 50px;
-            width: 120px;
-        }
+  }
+  .butterfly2 {
+    position: absolute;
+    z-index: 2;
+    right: -150px;
+    top: 250px;
+    width: 150px;
+    object-fit: contain;
+    transform: rotate(10deg);
+    filter: drop-shadow(0 0 5px rgb(18, 18, 18));
+    @media (max-width: $tablet-max) {
+      top: -250px;
+      right: 50px;
+      width: 120px;
     }
-
+  }
 }
 
 /* Headline + intro */
@@ -162,9 +164,9 @@
   font-weight: 700;
   font-size: 32px;
   color: $super-hot-pink;
-  letter-spacing: .02em;
-  margin: 0 0 .35rem;
-  @media(max-width: $mobile-max){
+  letter-spacing: 0.02em;
+  margin: 0 0 0.35rem;
+  @media (max-width: $mobile-max) {
     font-size: 28px;
   }
 
@@ -179,7 +181,7 @@
   font-size: 20px;
   font-family: "roboto", monospace;
 
-  @media(max-width: $mobile-max){
+  @media (max-width: $mobile-max) {
     font-size: 16px;
   }
 }
@@ -190,9 +192,9 @@
   grid-template-columns: 1fr 1fr;
   gap: 10px;
   list-style: none;
-  padding: 0; margin: 0;
+  padding: 0;
+  margin: 0;
   font-size: 24px;
-
 
   @media (max-width: $mobile-max) {
     grid-template-columns: 1fr;
@@ -207,17 +209,18 @@
     padding: 10px 12px;
     border-radius: 14px;
     background: color-mix(in oklab, white, $hot-pink 6%);
-    box-shadow: 0 2px 0 rgba(0,0,0,.05) inset;
-    transition: transform .12s ease, box-shadow .12s ease;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05) inset;
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
 
-    &:hover, &:focus-visible {
+    &:hover,
+    &:focus-visible {
       transform: translateY(-1px);
-      box-shadow: 0 6px 18px rgba(0,0,0,.10);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
       outline: 2px solid color-mix(in oklab, $hot-pink, white 40%);
       outline-offset: 2px;
     }
   }
-  li button{
+  li button {
     border: none;
     display: grid;
     width: 100%;
@@ -228,64 +231,78 @@
     padding: 10px 12px;
     border-radius: 14px;
     background: color-mix(in oklab, white, $hot-pink 6%);
-    box-shadow: 0 2px 0 rgba(0,0,0,.05) inset;
-    transition: transform .12s ease, box-shadow .12s ease;
-        font-family: "VT323", monospace;
-        text-align: left;
-        font-size: 24px;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05) inset;
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+    font-family: "VT323", monospace;
+    text-align: left;
+    font-size: 24px;
 
-    &:hover, &:focus-visible {
+    &:hover,
+    &:focus-visible {
       transform: translateY(-1px);
-      box-shadow: 0 6px 18px rgba(0,0,0,.10);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
       outline: 2px solid color-mix(in oklab, $hot-pink, white 40%);
       outline-offset: 2px;
+    }
   }
-}
 
   .dot {
     inline-size: 26px;
     block-size: 26px;
     border-radius: 50%;
-    background:
-      radial-gradient(circle at 35% 35%, white 0 3px, transparent 4px),
-      radial-gradient(circle, color-mix(in oklab, $hot-pink, white 10%) 0 6px, transparent 7px),
+    background: radial-gradient(circle at 35% 35%, white 0 3px, transparent 4px),
+      radial-gradient(
+        circle,
+        color-mix(in oklab, $hot-pink, white 10%) 0 6px,
+        transparent 7px
+      ),
       radial-gradient(circle, $hot-pink 0 10px, transparent 10px);
-    filter: drop-shadow(0 0 2px rgba(0,0,0,.12));
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.12));
   }
 
   .title {
     font-weight: 700;
     color: $super-hot-pink;
     text-transform: lowercase;
-    letter-spacing: .02em;
+    letter-spacing: 0.02em;
     font-size: 26px;
-    @media(max-width: $mobile-max){
-    font-size: 24px;
-  }
+    @media (max-width: $mobile-max) {
+      font-size: 24px;
+    }
   }
 
   .sub {
-    font-family: 'roboto';
+    font-family: "roboto";
     display: block;
     grid-column: 2;
     font-size: 20px;
     color: color-mix(in oklab, $super-hot-pink, black 45%);
-    @media(max-width: $mobile-max){
-    font-size: 20px;
-  }
+    @media (max-width: $mobile-max) {
+      font-size: 20px;
+    }
   }
 
   /* cute alternating ring colors */
-  li:nth-child(3n+1) .dot {
-    background:
-      radial-gradient(circle at 35% 35%, white 0 3px, transparent 4px),
-      radial-gradient(circle, color-mix(in oklab, $hot-pink, white 30%) 0 6px, transparent 7px),
-      radial-gradient(circle, color-mix(in oklab, $hot-pink, $super-hot-pink 35%) 0 10px, transparent 10px);
+  li:nth-child(3n + 1) .dot {
+    background: radial-gradient(circle at 35% 35%, white 0 3px, transparent 4px),
+      radial-gradient(
+        circle,
+        color-mix(in oklab, $hot-pink, white 30%) 0 6px,
+        transparent 7px
+      ),
+      radial-gradient(
+        circle,
+        color-mix(in oklab, $hot-pink, $super-hot-pink 35%) 0 10px,
+        transparent 10px
+      );
   }
-  li:nth-child(3n+2) .dot {
-    background:
-      radial-gradient(circle at 35% 35%, white 0 3px, transparent 4px),
-      radial-gradient(circle, color-mix(in oklab, $hot-pink, white 15%) 0 6px, transparent 7px),
+  li:nth-child(3n + 2) .dot {
+    background: radial-gradient(circle at 35% 35%, white 0 3px, transparent 4px),
+      radial-gradient(
+        circle,
+        color-mix(in oklab, $hot-pink, white 15%) 0 6px,
+        transparent 7px
+      ),
       radial-gradient(circle, $hot-pink 0 10px, transparent 10px);
   }
 }
@@ -298,66 +315,61 @@
 }
 
 .avatar {
-    width: 25%;
+  width: 25%;
+  object-fit: contain;
+  overflow: hidden;
+  //height: 500px;
+  margin: auto 10px;
+  background: $light-pink;
+  border-radius: 24px;
+  height: 100%;
+
+  --ring: color-mix(in oklab, #ff5aa6, white 45%);
+  --ring: #ff5aa6;
+  --shadow: color-mix(in oklab, #bf2a7c, black 70%);
+  background: $light-pink;
+  border: 6px solid var(--ring);
+  box-shadow: 0 18px 40px -10px rgba(0, 0, 0, 0.25),
+    0 0 0 8px rgba(255, 255, 255, 0.45) inset;
+  box-shadow: inset 0 4px 0 var(--chrome-hi), inset 0 -5px 0 rgba(0, 0, 0, 0.2),
+    0 6px 0 rgba(0, 0, 0, 0.5);
+
+  img {
     object-fit: contain;
-    overflow: hidden;
-    //height: 500px;
-    margin: auto 10px;
-    background: $light-pink;
-    border-radius: 24px;
-    height: 100%;
-
-    --ring: color-mix(in oklab, #ff5aa6, white 45%);
-    --ring: #ff5aa6;
-    --shadow: color-mix(in oklab, #bf2a7c, black 70%);
-    background: $light-pink;
-    border: 6px solid var(--ring);
-    box-shadow:
-        0 18px 40px -10px rgba(0,0,0,.25),
-        0 0 0 8px rgba(255,255,255,.45) inset;
-    box-shadow: inset 0 4px 0 var(--chrome-hi), inset 0 -5px 0 rgba(0, 0, 0, 0.2), 0 6px 0 rgba(0, 0, 0, 0.5);
-
-
-    img {
-        object-fit: contain;
-        width: 100%;
-        position: relative;
-        margin: auto;
-        
-    }
-    @media (max-width: $tablet-max){
-        width: 50%;
-        position: relative;
-        margin-bottom: 10px;
-        
-    }
+    width: 100%;
+    position: relative;
+    margin: auto;
+  }
+  @media (max-width: $tablet-max) {
+    width: 50%;
+    position: relative;
+    margin-bottom: 10px;
+  }
 }
-
-
 
 .not-found {
   h1 {
     font-size: 40px;
     min-height: 600px;
   }
-      position: relative;
-    background: $indigo;
-    background-size: cover;
-    overflow: scroll;
-    //transform: scale(.7);
-    height: 100%;
+  position: relative;
+  background: $indigo;
+  background-size: cover;
+  overflow: scroll;
+  //transform: scale(.7);
+  height: 100%;
 }
 
 .temp {
-    @include gradient-bg;
-    position: relative;
-    background: $indigo;
-    background-size: cover;
-    overflow: scroll;
-    //transform: scale(.7);
-    height: 100%;
+  @include gradient-bg;
+  position: relative;
+  background: $indigo;
+  background-size: cover;
+  overflow: scroll;
+  //transform: scale(.7);
+  height: 100%;
   .popup-overlay {
-        position: relative;
+    position: relative;
     width: 90%;
     margin: auto;
     height: 90%;
@@ -368,7 +380,7 @@
     align-items: center;
     z-index: 9999;
   }
-  
+
   .popup-box {
     background: transparent;
     padding: 20px;
@@ -390,28 +402,31 @@
     cursor: pointer;
     box-shadow: 0 2px 6px rgba(255, 255, 255, 0.612);
     transition: transform 0.2s;
-    @media(max-width: Stablet-max){
+    @media (max-width: Stablet-max) {
       right: 16px;
       top: 0;
     }
   }
-  
+
   .popup-close:hover {
     transform: scale(1.2);
   }
-  
+
   .sign-img {
     width: 440px;
     height: auto;
-    @media (max-width: $tablet-max){
+    @media (max-width: $tablet-max) {
       width: 360px;
     }
   }
-  
-  @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-  }
-  
-}
 
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+}

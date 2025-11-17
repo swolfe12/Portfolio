@@ -1,25 +1,25 @@
 .laptop-wrapper {
-    position: absolute;
-    top: 50%; 
-    left: 50%;
-    margin-left: -320px;
-    margin-top: -130px;
-    //transform: scale(0.42);
-    transform-origin: top left;
-    transition: transform 0.3s ease;
-    z-index: 4;
-    pointer-events: auto;
-    &.active {
-        transform: scale(1);
-        z-index: 9999;
-        top: 45%;
-        //margin-left: 0;
-        margin-top: 0;
-        .laptop {
-            filter: none !important;
-        }
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -320px;
+  margin-top: -130px;
+  //transform: scale(0.42);
+  transform-origin: top left;
+  transition: transform 0.3s ease;
+  z-index: 4;
+  pointer-events: auto;
+  &.active {
+    transform: scale(1);
+    z-index: 9999;
+    top: 45%;
+    //margin-left: 0;
+    margin-top: 0;
+    .laptop {
+      filter: none !important;
     }
-    
+  }
+
   .laptop-overlay {
     position: absolute;
     height: 685px;
@@ -30,285 +30,283 @@
     pointer-events: all; // block interactions
     z-index: 1;
     background: none;
-    &:hover ~ .laptop, &:focus ~ .laptop {
-        filter: drop-shadow(12px 12px 10px #fff) drop-shadow(-12px -12px 10px #fff) 
-        drop-shadow(12px -12px 10px rgba(255, 255, 255, 0.5)) 
+    &:hover ~ .laptop,
+    &:focus ~ .laptop {
+      filter: drop-shadow(12px 12px 10px #fff)
+        drop-shadow(-12px -12px 10px #fff)
+        drop-shadow(12px -12px 10px rgba(255, 255, 255, 0.5))
         drop-shadow(-12px 12px 10px rgba(255, 255, 255, 0.5));
-        outline: none;
+      outline: none;
     }
   }
-  }
-  
-  .laptop-close-btn {
-    position: absolute;
-    top: -350px;
-    left: 900px;
-    background: white;
-    border: 1px solid #aaa;
-    border-radius: 50%;
-    width: 24px;
-    height: 24px;
-    font-size: 14px;
-    line-height: 22px;
-    text-align: center;
-    z-index: 2000;
-    z-index: 99999;
-    cursor: pointer;
-  
-    &:hover {
-      background: #eee;
-    }
-  }
-  
-.laptop{
-    //background-image: url('/assets/laptop.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 540px;
-    width: 700px;
-    position: absolute;
-
-    //z-index: 4;
-    transition: ease .3s;
-    &.scale-up{
-        transform: scale(2.6);
-        //top: 50%;
-        //eft: 50%;
-        //margin-left: -285px;
-
-        //cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="36" height="48" viewBox="0 0 24 24"><path fill="%23FFF" stroke="%23000" stroke-width="2" stroke-linejoin="round" d="M18 14.88 8.16 3.15c-.26-.31-.76-.12-.76.28v15.31c0 .36.42.56.7.33l3.1-2.6 1.55 4.25c.08.22.33.34.55.26l1.61-.59a.43.43 0 0 0 .26-.55l-1.55-4.25h4.05c.36 0 .56-.42.33-.7Z"></path></svg>'), auto;
-        .explorer{
-            .project{
-                &:hover{
-                    transform: scale(1.1);
-                }
-            }
-        }
-    }
-    &:hover, &:active{
-    filter: drop-shadow(12px 12px 10px #fff) drop-shadow(-12px -12px 10px #fff) 
-        drop-shadow(12px -12px 10px rgba(255, 255, 255, 0.5)) 
-        drop-shadow(-12px 12px 10px rgba(255, 255, 255, 0.5));
-    }
-    .screen {
-        position: relative;
-        background-size: cover;
-        height: 685px;
-        top: -188px;
-        width: 1200px;
-        left: -259px;
-        transform: scale(.32);
-
-        .iconBar {
-            height: 20px;
-            position: absolute;
-            bottom: 1px;
-            background: #5ef7f5d0;
-            width: 90%;
-            left:5%;
-            border-radius: 5px;
-            display: flex;
-            justify-content: space-evenly;
-            .terminalIcon {
-                //position: relative;
-                height: 45px;
-                margin-top: -10px;
-                //left: 10px;
-                //bottom: -15px;
-                //z-index: 10000;
-            }
-            .github {
-                height: 36px;
-                margin-top: -5px;
-            }
-            .logo {
-                height: 28px;
-                margin-top: -2px;
-            }
-            .folderIcon {
-                height: 26px;
-                margin-top: -1px;
-            }
-        }
-    }
-    .resume {
-      position: relative;
-      top: -70px;
-      left: -60px;
-      //height:  150px;
-      //width: 150px;
-      transform: scale(.5);
-
-      object-fit: contain;
-      overflow: scroll;
-      height: 320px;
-    }
-    ::-webkit-scrollbar {
-    display: none;
 }
-    .browser {
-      position: relative;
-      width: 200px;
-      height: 140px;
-      top: 5px;
-      left: 10px;  
-      z-index: 10;
-      background: rgb(15, 15, 15);
-      border-radius: 5px;
-      overflow: hidden;
-      cursor: grab;
 
-        &.dragging {
-            cursor: grabbing;
-        }
-      .terminal{
-        color: white;
-        font-size: 5px;
-        top: 14px;
-        left: 5px;
-        position: relative;
-      }
-        .topBar {
-            width: 100%;
-            height: 10px;
-            position: absolute;
-            z-index: 11;
-            background-color: rgb(48, 48, 48);
-            button {
-                height: 10px;
-                //width: 2px;
-                border-radius: 100%;
-                position: absolute;
-                border: none;
-                
-                transform: scale(.5);
-                //cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="36" height="48" viewBox="0 0 24 24"><path fill="%23FFF" stroke="%23000" stroke-width="2" stroke-linejoin="round" d="M18 14.88 8.16 3.15c-.26-.31-.76-.12-.76.28v15.31c0 .36.42.56.7.33l3.1-2.6 1.55 4.25c.08.22.33.34.55.26l1.61-.59a.43.43 0 0 0 .26-.55l-1.55-4.25h4.05c.36 0 .56-.42.33-.7Z"></path></svg>'), auto;
-                .topBar {
-                    cursor: grab;
-                    user-select: none;
-                  }
-                &.close{
-                    background: red;
-                    left: 4px;
-                }
-                &.minimize{
-                    background: yellow;
-                    left: 12px;
-                }
-                &.expand {
-                    background: green;
-                    left: 20px;
-                }
-            }
-        }
-      img {
-        height: 184px;
-        width: 218px;
-        display: none;
-      }
-      .generic {
-        transform: scale(.174);
-        position: absolute;
-        top: -358px;
-        left: -490px;
-        z-index: 0;
-        height: 920px;
-        width: 1200px;
-        overflow: scroll;
-        scroll-behavior: auto;
-      }
+.laptop-close-btn {
+  position: absolute;
+  top: -350px;
+  left: 900px;
+  background: white;
+  border: 1px solid #aaa;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+  z-index: 2000;
+  z-index: 99999;
+  cursor: pointer;
 
-    }
-    
+  &:hover {
+    background: #eee;
+  }
+}
+
+.laptop {
+  //background-image: url('/assets/laptop.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 540px;
+  width: 700px;
+  position: absolute;
+
+  //z-index: 4;
+  transition: ease 0.3s;
+  &.scale-up {
+    transform: scale(2.6);
+    //top: 50%;
+    //eft: 50%;
+    //margin-left: -285px;
+
+    //cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="36" height="48" viewBox="0 0 24 24"><path fill="%23FFF" stroke="%23000" stroke-width="2" stroke-linejoin="round" d="M18 14.88 8.16 3.15c-.26-.31-.76-.12-.76.28v15.31c0 .36.42.56.7.33l3.1-2.6 1.55 4.25c.08.22.33.34.55.26l1.61-.59a.43.43 0 0 0 .26-.55l-1.55-4.25h4.05c.36 0 .56-.42.33-.7Z"></path></svg>'), auto;
     .explorer {
-        //position: relative;
-        display:none;
-        height: 130px;
-        background: #191919;
-        top: 0%;
-        left: 24%;
-        z-index: 11;
-            .topBar {
-                height: 8px;
-                cursor: grab;
-                user-select: none;
-            
-            button {
-                    height: 6px;
-                    //width: 2px;
-                    border-radius: 100%;
-                    position: absolute;
-                    border: none;
-                    &.close{
-                        background: red;
-                        left: 4px;
-                    }
-                    &.minimize{
-                        background: yellow;
-                        left: 12px;
-                    }
-                    &.expand {
-                        background: green;
-                        left: 20px;
-                    }
-            }
+      .project {
+        &:hover {
+          transform: scale(1.1);
         }
-        .location{
-            position: relative;
-            top: 0px;
-            left: 0;
-            width: 100%;
-            height: 10%;
-            background: black;
-            .path{
-                border:.5px solid rgb(251, 238, 250);
-                position: relative;
-                width: 90%;
-                left: 50%;
-                top: 50%;
-                transform:translate(-50%, -50%);
-                height: 50%;
-            }
-        }
-        .content{
-            display: flex;
-            flex-wrap: wrap;
-            font-size: 6px;
-            height: 90%;
-            .left{
-                width: 30%;
-                height: 100%;
-                border-right: 1px solid black;
-                ul{
-                    padding-left: 5px;
-                    li {
-                        list-style:none;
-                        color: rgba(251, 238, 250,.5);
-                        
-                    }
-                }
-            }
-            .right{
-                width: 55%;
-                height: 100%;
-                margin: 10px;
-                .project{
-                    display: flex;
-                    flex-wrap: wrap;
-                    .folder {
-                        width: 20%;
-                        height: 20px;
-                    }
-                    h2 {
-                        width: 60%;
-                        font-size: 6px;
-                        color: rgb(251, 238, 250);
-                    }
-                
-                }
-               
-            }
-        }
+      }
     }
+  }
+  &:hover,
+  &:active {
+    filter: drop-shadow(12px 12px 10px #fff) drop-shadow(-12px -12px 10px #fff)
+      drop-shadow(12px -12px 10px rgba(255, 255, 255, 0.5))
+      drop-shadow(-12px 12px 10px rgba(255, 255, 255, 0.5));
+  }
+  .screen {
+    position: relative;
+    background-size: cover;
+    height: 685px;
+    top: -188px;
+    width: 1200px;
+    left: -259px;
+    transform: scale(0.32);
 
+    .iconBar {
+      height: 20px;
+      position: absolute;
+      bottom: 1px;
+      background: #5ef7f5d0;
+      width: 90%;
+      left: 5%;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-evenly;
+      .terminalIcon {
+        //position: relative;
+        height: 45px;
+        margin-top: -10px;
+        //left: 10px;
+        //bottom: -15px;
+        //z-index: 10000;
+      }
+      .github {
+        height: 36px;
+        margin-top: -5px;
+      }
+      .logo {
+        height: 28px;
+        margin-top: -2px;
+      }
+      .folderIcon {
+        height: 26px;
+        margin-top: -1px;
+      }
+    }
+  }
+  .resume {
+    position: relative;
+    top: -70px;
+    left: -60px;
+    //height:  150px;
+    //width: 150px;
+    transform: scale(0.5);
+
+    object-fit: contain;
+    overflow: scroll;
+    height: 320px;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  .browser {
+    position: relative;
+    width: 200px;
+    height: 140px;
+    top: 5px;
+    left: 10px;
+    z-index: 10;
+    background: rgb(15, 15, 15);
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: grab;
+
+    &.dragging {
+      cursor: grabbing;
+    }
+    .terminal {
+      color: white;
+      font-size: 5px;
+      top: 14px;
+      left: 5px;
+      position: relative;
+    }
+    .topBar {
+      width: 100%;
+      height: 10px;
+      position: absolute;
+      z-index: 11;
+      background-color: rgb(48, 48, 48);
+      button {
+        height: 10px;
+        //width: 2px;
+        border-radius: 100%;
+        position: absolute;
+        border: none;
+
+        transform: scale(0.5);
+        //cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="36" height="48" viewBox="0 0 24 24"><path fill="%23FFF" stroke="%23000" stroke-width="2" stroke-linejoin="round" d="M18 14.88 8.16 3.15c-.26-.31-.76-.12-.76.28v15.31c0 .36.42.56.7.33l3.1-2.6 1.55 4.25c.08.22.33.34.55.26l1.61-.59a.43.43 0 0 0 .26-.55l-1.55-4.25h4.05c.36 0 .56-.42.33-.7Z"></path></svg>'), auto;
+        .topBar {
+          cursor: grab;
+          user-select: none;
+        }
+        &.close {
+          background: red;
+          left: 4px;
+        }
+        &.minimize {
+          background: yellow;
+          left: 12px;
+        }
+        &.expand {
+          background: green;
+          left: 20px;
+        }
+      }
+    }
+    img {
+      height: 184px;
+      width: 218px;
+      display: none;
+    }
+    .generic {
+      transform: scale(0.174);
+      position: absolute;
+      top: -358px;
+      left: -490px;
+      z-index: 0;
+      height: 920px;
+      width: 1200px;
+      overflow: scroll;
+      scroll-behavior: auto;
+    }
+  }
+
+  .explorer {
+    //position: relative;
+    display: none;
+    height: 130px;
+    background: #191919;
+    top: 0%;
+    left: 24%;
+    z-index: 11;
+    .topBar {
+      height: 8px;
+      cursor: grab;
+      user-select: none;
+
+      button {
+        height: 6px;
+        //width: 2px;
+        border-radius: 100%;
+        position: absolute;
+        border: none;
+        &.close {
+          background: red;
+          left: 4px;
+        }
+        &.minimize {
+          background: yellow;
+          left: 12px;
+        }
+        &.expand {
+          background: green;
+          left: 20px;
+        }
+      }
+    }
+    .location {
+      position: relative;
+      top: 0px;
+      left: 0;
+      width: 100%;
+      height: 10%;
+      background: black;
+      .path {
+        border: 0.5px solid rgb(251, 238, 250);
+        position: relative;
+        width: 90%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        height: 50%;
+      }
+    }
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      font-size: 6px;
+      height: 90%;
+      .left {
+        width: 30%;
+        height: 100%;
+        border-right: 1px solid black;
+        ul {
+          padding-left: 5px;
+          li {
+            list-style: none;
+            color: rgba(251, 238, 250, 0.5);
+          }
+        }
+      }
+      .right {
+        width: 55%;
+        height: 100%;
+        margin: 10px;
+        .project {
+          display: flex;
+          flex-wrap: wrap;
+          .folder {
+            width: 20%;
+            height: 20px;
+          }
+          h2 {
+            width: 60%;
+            font-size: 6px;
+            color: rgb(251, 238, 250);
+          }
+        }
+      }
+    }
+  }
 }

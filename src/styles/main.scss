@@ -1,26 +1,26 @@
-@use 'abstracts/variables';
+@use "abstracts/variables";
 
-@import 'base/fonts';
-@import 'base/animations';
+@import "base/fonts";
+@import "base/animations";
 
-@import 'layout/portfolio';
-@import 'layout/generic';
-@import 'layout/gamebox';
+@import "layout/portfolio";
+@import "layout/generic";
+@import "layout/gamebox";
 
-@import 'components/aboutme';
-@import 'components/arcade';
-@import 'components/laptop';
-@import 'components/links';
-@import 'components/calendar';
-@import 'components/clock';
-@import 'components/toggle';
-@import 'components/card';
-@import 'components/work-popup';
-@import 'components/mash';
-@import 'components/navbar';
+@import "components/aboutme";
+@import "components/arcade";
+@import "components/laptop";
+@import "components/links";
+@import "components/calendar";
+@import "components/clock";
+@import "components/toggle";
+@import "components/card";
+@import "components/work-popup";
+@import "components/mash";
+@import "components/navbar";
 //@import 'components/ducks';
-@import 'components/resume';
+@import "components/resume";
 //@import 'components/nametag';
-@import 'components/skills';
-@import 'components/projects';
-@import 'components/phone';
+@import "components/skills";
+@import "components/projects";
+@import "components/phone";
