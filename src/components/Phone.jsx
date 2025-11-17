@@ -13,9 +13,11 @@ const Phone = ({ currentPage = 'home', onNavigate }) => {
   // 'lock' -> lock screen, 'transition' -> black + opening anim, 'app' -> fully open
   const [screenStage, setScreenStage] = useState('lock');
 
-  const renderScreen = () => {
+  const renderPhoneScreen = () => {
+    console.log("renderPhoneScreen");
     switch (currentPage) {
       case 'home':
+        console.log("home page");
         return <Arcade onNavigate={onNavigate} />;
       case 'links':
         return <Links onNavigate={onNavigate} />;
@@ -24,6 +26,7 @@ const Phone = ({ currentPage = 'home', onNavigate }) => {
       case 'about':
         return <TempPage onNavigate={onNavigate} />;
       case 'projects':
+        console.log("case: projects");
         return <Projects onNavigate={onNavigate} />;
       case 'skills':
         return <SkillsHub onNavigate={onNavigate} />;
@@ -53,7 +56,7 @@ const Phone = ({ currentPage = 'home', onNavigate }) => {
           (screenStage === 'transition' ? 'opening' : 'open')
         }
       >
-        {renderScreen()}
+        {renderPhoneScreen()}
       </div>
     );
   }

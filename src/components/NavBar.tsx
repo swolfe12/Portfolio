@@ -146,6 +146,7 @@ export default function Navbar({ onNavigate }: NavbarProps) {
             className="drawer-link"
             type="button"
             onClick={() => {
+              console.log("drawer click: " + c.id);
               onNavigate?.(c.id);
               setOpen(false);
             }}

@@ -97,7 +97,7 @@ export default function SkillsHub({ onNavigate }: SkillsHubProps) {
 
       <div className="game-box">
         <div className="section-header">
-          <img src={skills} alt="Skill Select" />
+          
         </div>
 
         <div className="dressup">

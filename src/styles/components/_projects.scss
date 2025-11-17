@@ -98,6 +98,10 @@
         gap: 6px;
         margin-bottom: 16px;
 
+        @media (max-width: $tablet-max){
+          margin-top: 40px;
+        }
+
         .genre-tag {
           background-color: #e63792;
           border: 1px solid rgba(254, 65, 65, 0.3);

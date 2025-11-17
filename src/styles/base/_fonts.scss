@@ -18,7 +18,11 @@ body{
     img {
         margin: auto;
         height: 100px;
+        @media (max-width: 959px){
+            height: 60px;
+        }
     }
+
 
 }
 
