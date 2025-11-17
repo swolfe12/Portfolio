@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "./static/css/main.d45077d6.css",
-    "main.js": "./static/js/main.3ec8d3a5.js",
+    "main.css": "./static/css/main.706a26a8.css",
+    "main.js": "./static/js/main.e997644d.js",
     "static/js/453.ace21015.chunk.js": "./static/js/453.ace21015.chunk.js",
     "static/media/coffee2.png": "./static/media/coffee2.2ce7a038b704f6c96c49.png",
     "static/media/lavalamp2.png": "./static/media/lavalamp2.c212425fa9f2afea7880.png",
     "static/media/window.mp4": "./static/media/window.126024573dd888adc020.mp4",
     "static/media/WCC.png": "./static/media/WCC.ac4d170997c003c4f786.png",
     "static/media/room.png": "./static/media/room.8572e5d9353c8b1a8e81.png",
-    "static/media/art-portfolio.png": "./static/media/art-portfolio.452355258f1a56c09ab6.png",
+    "static/media/art-portfolio.png": "./static/media/art-portfolio.c3f01f0c2eafc9013d6d.png",
     "static/media/work-sign.png": "./static/media/work-sign.288603fe4d91ac5c6087.png",
     "static/media/today.png": "./static/media/today.26c03a0df33f43d78730.png",
     "static/media/gummies.png": "./static/media/gummies.c00199fca8a6a9d41012.png",
@@ -38,7 +38,6 @@
     "static/media/window.png": "./static/media/window.92d63102c27495831871.png",
     "static/media/jellyfish.png": "./static/media/jellyfish.bcbbff75aee1d3166a25.png",
     "static/media/sam-poster.png": "./static/media/sam-poster.f571d9075b484b865f8d.png",
-    "static/media/skills.png": "./static/media/skills.56fea2ddefa3c699d03c.png",
     "static/media/paper.webp": "./static/media/paper.56f2cf043353ad07aa30.webp",
     "static/media/calendar.png": "./static/media/calendar.1c99c757091fc93fb568.png",
     "static/media/projects.png": "./static/media/projects.76ca0c1b67b101dfa859.png",
@@ -50,6 +49,8 @@
     "static/media/typescript.png": "./static/media/typescript.f59def60f9336b586189.png",
     "static/media/fhat.png": "./static/media/fhat.9a43047871f7152835b6.png",
     "static/media/links.png": "./static/media/links.c53dded4307c5c49a55a.png",
+    "static/media/answer.PNG": "./static/media/answer.7da992e030177e93bca0.PNG",
+    "static/media/hangup.PNG": "./static/media/hangup.766157d951a184ce6092.PNG",
     "static/media/neon.webp": "./static/media/neon.16f596f8930fe69a0006.webp",
     "static/media/blackglasses.png": "./static/media/blackglasses.878119f880c39e720894.png",
     "static/media/sam-fhat.webp": "./static/media/sam-fhat.2789b41ed76c4fae8324.webp",
@@ -58,8 +59,6 @@
     "static/media/sam-headphones.webp": "./static/media/sam-headphones.d1e7b2d58380075cc85c.webp",
     "static/media/sam-sunnies.webp": "./static/media/sam-sunnies.98964352f01e270ff4df.webp",
     "static/media/sam-bhat.webp": "./static/media/sam-bhat.6743e18d4fb5f00bd14a.webp",
-    "static/media/answer.PNG": "./static/media/answer.644090288076ed25dca8.PNG",
-    "static/media/hangup.PNG": "./static/media/hangup.970f6768ba02a6c2ad51.PNG",
     "static/media/sass-logo.png": "./static/media/sass-logo.6747d5c68a381e29fc69.png",
     "static/media/mash.webp": "./static/media/mash.2d1244aa3b0ca7d3786e.webp",
     "static/media/slick.svg": "./static/media/slick.2630a3e3eab21c607e21.svg",
@@ -67,12 +66,12 @@
     "static/media/slick.ttf": "./static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "./static/media/slick.295183786cd8a1389865.woff",
     "index.html": "./index.html",
-    "main.d45077d6.css.map": "./static/css/main.d45077d6.css.map",
-    "main.3ec8d3a5.js.map": "./static/js/main.3ec8d3a5.js.map",
+    "main.706a26a8.css.map": "./static/css/main.706a26a8.css.map",
+    "main.e997644d.js.map": "./static/js/main.e997644d.js.map",
     "453.ace21015.chunk.js.map": "./static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d45077d6.css",
-    "static/js/main.3ec8d3a5.js"
+    "static/css/main.706a26a8.css",
+    "static/js/main.e997644d.js"
   ]
 }
