@@ -10,7 +10,6 @@ import bhat from "../../assets/bhat.png";
 import headphones from "../../assets/plainheadphones.png";
 import flower from "../../assets/flower.png";
 import glasses from "../../assets/blackglasses.png";
-import skills from '../../assets/skills.png';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
