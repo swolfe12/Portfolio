@@ -71,12 +71,13 @@ const Phone = ({ currentPage = "home", onNavigate }) => {
         id="phone"
       >
         <div className="phoneScreen">{content}</div>
+        <div className="btn-bar">
+          <img src={answer} className="answer-call" alt="Answer Call Button" />
+          <div className="home-btn"></div>
+          <img src={hangup} className="end-call" alt="End Call Button" />
+        </div>
       </div>
-      <div className="btn-bar">
-        <img src={answer} className="answer-call" alt="Answer Call Button" />
-        <div className="home-btn"></div>
-        <img src={hangup} className="end-call" alt="End Call Button" />
-      </div>
+
       <div
         className="keyboard"
         style={{ backgroundImage: `url(${keyboard})` }}

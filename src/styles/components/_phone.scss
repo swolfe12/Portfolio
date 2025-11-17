@@ -23,9 +23,9 @@
   .btn-bar {
     display: flex;
     width: 100%;
-    position: absolute;
+    position: relative;
     justify-content: space-around;
-    bottom: 13%;
+    top: -42px;
   }
   .answer-call {
     height: 50px;
