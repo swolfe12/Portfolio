@@ -1,73 +1,84 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sam Wolfe Portfolio</title>
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap" rel="stylesheet">
-<link rel="icon" href="logo.ico" type="image/x-icon"/>
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="logo.ico" type="image/x-icon" />
 
-    <link rel="stylesheet" href="dist/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="dist/style.css" />
+    <meta name="theme-color" content="#a5b5f9" />
+  </head>
+  <body>
     <div class="container">
-        <div class="bg-img"></div>
-        <img class="plant" src="assets/plant.png">
-        <img class="coffee" src="assets/coffee.gif">
-        <img class="gummies" src="assets/gummies.png">
-        <div class="contact glowable">
-            <ul>
-                <li>(678) 314-8280</li>
-                <li>samgwolfe12@gmail.com</li>
-            </ul>
-        </div>
-        <div class="laptop glowable"  id ="laptop">
-            <div class="window">
-                <div class="location">
-                    <div class="path"></div>
-                </div>
-                <div class="content">
-                    <div class="left">
-                        <ul>
-                            <li>Documents</li>
-                            <li>Downloads</li>
-                            <li>Pictures</li>
-                        </ul>
-                    </div>
-                    <div class ="right">
-                        <a class="project" target="_blank" href="https://github.com/swolfe12/Portfolio">
-                            <img class="folder" src="assets/folder.png">
-                            <h2>Portfolio Repo</h2>
-                        </a>
-                        <a class="project" target="_blank" href="https://samgwolfe12.github.io/WCC2/index.html">
-                            <img class="folder" src="assets/folder.png">
-                            <h2>WCC Website</h2>
-                        </a>
-
-                    </div>
-                </div>
+      <div class="bg-img"></div>
+      <img class="plant" src="assets/plant.png" />
+      <img class="coffee" src="assets/coffee.gif" />
+      <img class="gummies" src="assets/gummies.png" />
+      <div class="contact glowable">
+        <ul>
+          <li>(678) 314-8280</li>
+          <li>samgwolfe12@gmail.com</li>
+        </ul>
+      </div>
+      <div class="laptop glowable" id="laptop">
+        <div class="window">
+          <div class="location">
+            <div class="path"></div>
+          </div>
+          <div class="content">
+            <div class="left">
+              <ul>
+                <li>Documents</li>
+                <li>Downloads</li>
+                <li>Pictures</li>
+              </ul>
             </div>
+            <div class="right">
+              <a
+                class="project"
+                target="_blank"
+                href="https://github.com/swolfe12/Portfolio"
+              >
+                <img class="folder" src="assets/folder.png" />
+                <h2>Portfolio Repo</h2>
+              </a>
+              <a
+                class="project"
+                target="_blank"
+                href="https://samgwolfe12.github.io/WCC2/index.html"
+              >
+                <img class="folder" src="assets/folder.png" />
+                <h2>WCC Website</h2>
+              </a>
+            </div>
+          </div>
         </div>
-        <img class="pens" src="assets/pens.png">
-        
-        <img class="clock" src="assets/clock.gif">
-        <img class="jewelery" src="assets/jewelery.png">
-        <img class="notebook" src = "assets/notebook.png">
-        <img class="airpods" src="assets/airpods.png">
-        <img class="sunnies" src="assets/sunnies.png">
+      </div>
+      <img class="pens" src="assets/pens.png" />
 
+      <img class="clock" src="assets/clock.gif" />
+      <img class="jewelery" src="assets/jewelery.png" />
+      <img class="notebook" src="assets/notebook.png" />
+      <img class="airpods" src="assets/airpods.png" />
+      <img class="sunnies" src="assets/sunnies.png" />
     </div>
-</body>
+  </body>
 </html>
 <script>
-    
-$(document).ready(function() {
+  $(document).ready(function () {
     /*
     var dots = [],
         mouse = {
@@ -120,30 +131,24 @@ $(document).ready(function() {
     animate();
     */
 
-    
     // Check if the clicked element is inside the laptop
-    $('#laptop').on('click', function(e) {
-
-    
-    // Check if the clicked element is a link
-    var $clickedElement = $(e.target);
-    if ($clickedElement.is('a')) {
+    $("#laptop").on("click", function (e) {
+      // Check if the clicked element is a link
+      var $clickedElement = $(e.target);
+      if ($clickedElement.is("a")) {
         // Clicked on a link, do nothing
         console.log("click");
-    } else {
+      } else {
         // Clicked outside a link, toggle classes normally
-        $('.contact').removeClass('scale-up active');
-        $(this).toggleClass('scale-up active');
-    }
-});
-
-    $('.contact').on('click', function(e) {
-        e.preventDefault();
-        $('.laptop').removeClass('scale-up active');
-        $(this).toggleClass('scale-up active');
-        
+        $(".contact").removeClass("scale-up active");
+        $(this).toggleClass("scale-up active");
+      }
     });
-    
-});
+
+    $(".contact").on("click", function (e) {
+      e.preventDefault();
+      $(".laptop").removeClass("scale-up active");
+      $(this).toggleClass("scale-up active");
+    });
+  });
 </script>
-    
