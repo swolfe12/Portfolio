@@ -6,17 +6,18 @@ import butterfly2 from "../../assets/butterfly2.png";
 type ArcadeProps = {
   onNavigate?: (pageId: string) => void;
 };
-
+type SkillCategory = "frontend" | "backend" | "accessibility" | "uiux";
 export const Arcade = ({ onNavigate }: ArcadeProps) => {
-  const openSkill = (cat) => {
-    const id = String(cat).toLowerCase();
-    window.__SW_PENDING_SKILL = id;
+  const openSkill = (cat: SkillCategory) => {
+    const id = cat.toLowerCase();
+    (window as any).__SW_PENDING_SKILL = id;
+
     onNavigate?.("skills");
+
     setTimeout(() => {
       window.dispatchEvent(new CustomEvent("skills:select", { detail: id }));
     }, 0);
   };
-
   return (
     <div className="arcade" id="home">
       <Navbar onNavigate={onNavigate} />
