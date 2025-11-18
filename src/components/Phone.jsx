@@ -11,6 +11,7 @@ import phone from "./../assets/phone.png";
 import keyboard from "./../assets/keyboard.png";
 import answer from "./../assets/hangup.PNG";
 import hangup from "../assets/answer.PNG";
+
 const Phone = ({ currentPage = "home", onNavigate }) => {
   // 'lock' -> lock screen, 'transition' -> black + opening anim, 'app' -> fully open
   const [screenStage, setScreenStage] = useState("lock");
@@ -63,6 +64,15 @@ const Phone = ({ currentPage = "home", onNavigate }) => {
     );
   }
 
+  const goHome = () => {
+    // If we're on the lock screen, start the transition animation
+    if (screenStage === "lock") {
+      setScreenStage("transition");
+    }
+    // Tell the parent "show the arcade home page"
+    onNavigate?.("home");
+  };
+
   return (
     <>
       <div
@@ -73,7 +83,13 @@ const Phone = ({ currentPage = "home", onNavigate }) => {
         <div className="phoneScreen">{content}</div>
         <div className="btn-bar">
           <img src={answer} className="answer-call" alt="Answer Call Button" />
-          <div className="home-btn"></div>
+          <div
+            className={`home-btn`}
+            role="button"
+            aria-label="Go to home screen"
+            tabIndex={0}
+            onClick={goHome}
+          ></div>
           <img src={hangup} className="end-call" alt="End Call Button" />
         </div>
       </div>

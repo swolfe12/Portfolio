@@ -61,6 +61,14 @@
     border-radius: 10px;
     top: 25px;
     border: 2px solid black;
+    &:active {
+      //transform: translateY(2px);
+      //border: 2.5px solid black;
+      //height: 57px;
+      //width: 57px;
+      box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.5);
+      transform: scale(0.95);
+    }
   }
 
   .keyboard {
