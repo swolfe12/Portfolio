@@ -60,8 +60,8 @@ const LockScreen = ({ onUnlock }) => {
 
     const knobWidth = 35;
     const x = getClientX(e) - rect.left - knobWidth / 2;
-    const clamped = x;
-    //const clamped = Math.max(0, Math.min(x, rect.width - knobWidth));
+    //const clamped = x;
+    const clamped = Math.max(0, Math.min(x, rect.width - knobWidth));
     setDragX(clamped);
   };
 
@@ -75,7 +75,7 @@ const LockScreen = ({ onUnlock }) => {
     console.log("threshold: " + threshold);
 
     if (dragX + knobWidth >= threshold) {
-      setDragX(rect.width);
+      setDragX(rect.width - 18);
       playUnlockSound();
       //console.log("dragX + knobWidth: " + dragX + knobWidth);
       if (onUnlock) {
