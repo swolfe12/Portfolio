@@ -1,5 +1,5 @@
 .myPhone {
-  height: calc(100vh + 50px);
+  height: calc(100vh + 140px);
   width: 100vw;
   position: absolute;
   top: 0;
@@ -131,7 +131,7 @@
   .keyboard {
     position: fixed;
     background-size: 100% 100%;
-    top: 18vh;
+    top: 15vh;
     z-index: -1;
     height: 700px;
     width: 100%;
