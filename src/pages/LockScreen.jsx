@@ -3,11 +3,12 @@ import { useRef, useState, useEffect } from "react";
 import logo from "./../assets/logo2.png";
 import unlockSound from "./../assets/unlock-sound.wav";
 
-const getFormattedTime = () =>
-  new Date().toLocaleTimeString([], {
-    hour: "2-digit",
-    minute: "2-digit",
+function getFormattedTime() {
+  return new Date().toLocaleTimeString([], {
+    hour: "numeric", // ← no more leading zero
+    minute: "2-digit", // minutes can stay padded
   });
+}
 
 const LockScreen = ({ onUnlock }) => {
   const [dragX, setDragX] = useState(0);
@@ -15,13 +16,12 @@ const LockScreen = ({ onUnlock }) => {
   const dragging = useRef(false);
   const audioRef = useRef(null);
 
-  // ✅ Start with HH:MM, no seconds
   const [time, setTime] = useState(getFormattedTime);
 
   useEffect(() => {
     const timer = setInterval(() => {
       setTime(getFormattedTime());
-    }, 1000); // you could bump this to 15_000 or 30_000 if you only care about minutes
+    }, 1000);
 
     return () => clearInterval(timer);
   }, []);
