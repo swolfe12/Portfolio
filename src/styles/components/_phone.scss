@@ -28,6 +28,36 @@
       overflow: hidden;
       margin: 0;
     }
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgb(245, 235, 254);
+      border-radius: 20px;
+      border: 1px solid black;
+      height: 50%;
+      width: 80%;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      .modal {
+        padding: 10%;
+        #call-modal-title {
+          font-size: 24px;
+        }
+        p {
+          font-size: 20px;
+        }
+        button {
+          margin-top: 20px;
+          background: $skills-blue;
+          color: white;
+          font-size: 20px;
+          padding: 5px 20px;
+        }
+      }
+    }
   }
 
   .bedazzle-bar {
