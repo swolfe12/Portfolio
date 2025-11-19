@@ -57,13 +57,11 @@ const LockScreen = ({ onUnlock }) => {
     if (!dragging.current || !trackRef.current) return;
 
     const rect = trackRef.current.getBoundingClientRect();
-    const x = getClientX(e) - rect.left;
-    const knobWidth = 60;
 
-    const clamped = Math.max(
-      0,
-      Math.min(x - knobWidth / 2, rect.width - knobWidth)
-    );
+    const knobWidth = 70;
+    const x = getClientX(e) - rect.left - knobWidth / 2;
+    const clamped = x;
+    //const clamped = Math.max(0, Math.min(x, rect.width - knobWidth));
     setDragX(clamped);
   };
 
@@ -71,12 +69,15 @@ const LockScreen = ({ onUnlock }) => {
     if (!trackRef.current) return;
 
     const rect = trackRef.current.getBoundingClientRect();
-    const knobWidth = 44;
-    const threshold = rect.width * 0.6;
+    console.log("width: " + rect.width);
+    const knobWidth = 70;
+    const threshold = rect.width * 1.0;
+    console.log("threshold: " + threshold);
 
     if (dragX + knobWidth >= threshold) {
-      setDragX(rect.width - knobWidth);
+      setDragX(rect.width);
       playUnlockSound();
+      //console.log("dragX + knobWidth: " + dragX + knobWidth);
       onUnlock?.();
     } else {
       setDragX(0);
