@@ -11,6 +11,8 @@ import phone from "./../assets/phone.png";
 import keyboard from "./../assets/keyboard.png";
 import answer from "./../assets/hangup.PNG";
 import hangup from "../assets/answer.PNG";
+import music from "../assets/music-gems.png";
+import cherry from "../assets/cherry-gems.png";
 
 const Phone = ({ currentPage = "home", onNavigate }) => {
   // 'lock' -> lock screen, 'transition' -> black + opening anim, 'app' -> fully open
@@ -80,6 +82,18 @@ const Phone = ({ currentPage = "home", onNavigate }) => {
         style={{ backgroundImage: `url(${phone})` }}
         id="phone"
       >
+        <div className="bedazzle-bar">
+          <img
+            src={cherry}
+            className="cherry"
+            alt="Heart and Cherry Bejewels"
+          ></img>
+          <img
+            src={music}
+            className="music"
+            alt="Heart and Music Bejewels"
+          ></img>
+        </div>
         <div className="phoneScreen">{content}</div>
         <div className="btn-bar">
           <img src={answer} className="answer-call" alt="Answer Call Button" />
