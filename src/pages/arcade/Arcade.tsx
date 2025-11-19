@@ -24,7 +24,7 @@ export const Arcade = ({ onNavigate }: ArcadeProps) => {
       <div className="grid">
         <div className="speech-box" role="region" aria-labelledby="about-title">
           <h2 id="about-title">
-            <span className="hey">Hey, everyone,</span> I’m Sam!
+            <span className="hey">Hey, everyone!</span> I’m Sam!
           </h2>
           <ul className="contact-links">
             <li>
