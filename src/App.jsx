@@ -32,19 +32,34 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    const handleLoaded = () => {
-      setTimeout(() => {
+    const MIN_SPINNER_MS = 500;
+    const start = performance.now();
+    let done = false;
+
+    const finish = () => {
+      if (done) return;
+      done = true;
+
+      const elapsed = performance.now() - start;
+      const remaining = MIN_SPINNER_MS - elapsed;
+
+      if (remaining <= 0) {
         setReady(true);
-      }, 500);
+      } else {
+        setTimeout(() => setReady(true), remaining);
+      }
     };
 
     if (document.readyState === "complete") {
-      setReady(true);
+      finish();
     } else {
-      window.addEventListener("load", handleLoaded);
+      window.addEventListener("load", finish);
     }
 
-    return () => window.removeEventListener("load", handleLoaded);
+    return () => {
+      done = true;
+      window.removeEventListener("load", finish);
+    };
   }, []);
 
   if (!ready) return <Loader />;
