@@ -1,41 +1,39 @@
 import { useState, useRef, useEffect } from "react";
 import "./../styles/main.scss";
-import Calendar from '../components/Calendar';
-import Clock from '../components/Clock';
-import Laptop from '../components/Laptop';
-import MashImg from '../components/MashImage';
+import Calendar from "../components/Calendar";
+import Clock from "../components/Clock";
+import Laptop from "../components/Laptop";
+import MashImg from "../components/MashImage";
 
-import contact from './../assets/contact.png';
-import plant from './../assets/plant.png';
-import coffee from './../assets/coffee2.png';
-import gummies from './../assets/gummies.png';
-import pens from './../assets/pens.png';
-import notebook from './../assets/notebook.png';
-import headphones from './../assets/headphones.png';
-import lavalamp from './../assets/lavalamp2.png';
-import sunnies from './../assets/sunnies.png';
-import bulletin from './../assets/bulletin.png';
-import jellyfish from './../assets/jellyfish.png';
-import samPoster from './../assets/sam-poster.png';
-import dogs from './../assets/dogs.png';
-import desk from './../assets/desk.png';
-import windowImg from './../assets/window.png';
-import paper from './../assets/paper.webp';
-import mouse from './../assets/mouse.png';
-import clouds from './../assets/window.mp4';
-import speaker from './../assets/speaker.png';
-import neon from './../assets/neon.webp';
+import contact from "./../assets/contact.png";
+import plant from "./../assets/plant.png";
+import coffee from "./../assets/coffee2.png";
+import gummies from "./../assets/gummies.png";
+import pens from "./../assets/pens.png";
+import notebook from "./../assets/notebook.png";
+import headphones from "./../assets/headphones.png";
+import lavalamp from "./../assets/lavalamp2.png";
+import sunnies from "./../assets/sunnies.png";
+import bulletin from "./../assets/bulletin.png";
+import jellyfish from "./../assets/jellyfish.png";
+import samPoster from "./../assets/sam-poster.png";
+import dogs from "./../assets/dogs.png";
+import desk from "./../assets/desk.png";
+import windowImg from "./../assets/window.png";
+import paper from "./../assets/paper.webp";
+import mouse from "./../assets/mouse.png";
+import clouds from "./../assets/window.mp4";
+import speaker from "./../assets/speaker.png";
+import neon from "./../assets/neon.webp";
 
 const SCALE_MS = 320; // match your CSS transition duration
-
 
 const MyRoom = () => {
   const [isModalOpen, setIsModalOpen] = useState(true);
   const [isLaptopOpen, setIsLaptopOpen] = useState(false);
   const [isContactOpen, setIsContactOpen] = useState(false);
-  const [currentPage, setCurrentPage] = useState('home');
+  const [currentPage, setCurrentPage] = useState("home");
   const [isAnimating, setIsAnimating] = useState(false); // prevents mid-frame flicker
-
 
   // focus management
   const laptopOpenerRef = useRef(null);
@@ -47,19 +45,19 @@ const MyRoom = () => {
   // Pause glow while animating to avoid reflow/jank overlap
   useEffect(() => {
     const root = document.documentElement;
-    if (isAnimating) root.classList.add('glow-paused');
-    else root.classList.remove('glow-paused');
-    return () => root.classList.remove('glow-paused');
+    if (isAnimating) root.classList.add("glow-paused");
+    else root.classList.remove("glow-paused");
+    return () => root.classList.remove("glow-paused");
   }, [isAnimating]);
 
   // Escape to close (safe, small)
   useEffect(() => {
     if (!isLaptopOpen) return;
     const onKeyDown = (e) => {
-      if (e.key === 'Escape') smoothClose();
+      if (e.key === "Escape") smoothClose();
     };
-    window.addEventListener('keydown', onKeyDown);
-    return () => window.removeEventListener('keydown', onKeyDown);
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isLaptopOpen]);
 
@@ -110,12 +108,12 @@ const MyRoom = () => {
 
     const triggerGlowOnce = () => {
       // don't pulse while animating to avoid overlap
-      if (document.documentElement.classList.contains('glow-paused')) return;
+      if (document.documentElement.classList.contains("glow-paused")) return;
       const root = document.documentElement;
-      root.classList.remove('glow-phase');
+      root.classList.remove("glow-phase");
       void root.offsetWidth; // force reflow to restart animation
-      root.classList.add('glow-phase');
-      setTimeout(() => root.classList.remove('glow-phase'), 5000);
+      root.classList.add("glow-phase");
+      setTimeout(() => root.classList.remove("glow-phase"), 5000);
     };
 
     const clearTimers = () => {
@@ -132,7 +130,7 @@ const MyRoom = () => {
     };
 
     const onUserActivity = () => startIdleWatch();
-    const events = ['pointermove', 'keydown', 'touchstart', 'wheel', 'scroll'];
+    const events = ["pointermove", "keydown", "touchstart", "wheel", "scroll"];
 
     events.forEach((evt) =>
       window.addEventListener(evt, onUserActivity, { passive: true })
@@ -144,12 +142,12 @@ const MyRoom = () => {
     return () => {
       clearTimers();
       events.forEach((evt) => window.removeEventListener(evt, onUserActivity));
-      document.documentElement.classList.remove('glow-phase');
+      document.documentElement.classList.remove("glow-phase");
     };
   }, []);
 
   return (
-    <div className={`portfolio${isAnimating ? ' is-animating' : ''}`}>
+    <div className={`portfolio${isAnimating ? " is-animating" : ""}`}>
       {/* Close on click outside .screen (use CLICK capture = fires after layout, smoother than pointerdown) */}
       <div
         className="inner-container"
@@ -165,13 +163,19 @@ const MyRoom = () => {
         {isModalOpen && (
           <div className="popup">
             <div className="popup-content">
-              <button className="close-btn" onClick={() => setIsModalOpen(false)}>
+              <button
+                className="close-btn"
+                onClick={() => setIsModalOpen(false)}
+              >
                 &times;
               </button>
               <p>
-                Hey! Nice to meet you, I'm Sam. Welcome to my room! Feel free to look around!
-                <br /><br />
-                P.S. I have some cool projects on my laptop. You should check them out!
+                Hey! Nice to meet you, I'm Sam. Welcome to my room! Feel free to
+                look around!
+                <br />
+                <br />
+                P.S. I have some cool projects on my laptop. You should check
+                them out!
               </p>
             </div>
           </div>
@@ -182,24 +186,28 @@ const MyRoom = () => {
         <img className="speaker" src={speaker} alt="Speaker" />
         <img className="gummies" src={gummies} alt="Gummies" />
 
-        <div className={`contact-wrap`} >
+        <div className={`contact-wrap`}>
           <button
             type="button"
-            className={`contact glowable${isContactOpen ? ' scale-up active' : ''}`}
+            className={`contact glowable${
+              isContactOpen ? " scale-up active" : ""
+            }`}
             style={{ backgroundImage: `url(${contact})` }}
             onClick={handleContactClick}
             aria-expanded={isContactOpen}
             aria-controls="contact-panel"
-            aria-label={isContactOpen ? 'Hide contact info' : 'Show contact info'}
+            aria-label={
+              isContactOpen ? "Hide contact info" : "Show contact info"
+            }
           >
             <ul>
-              <li>(678) 314-8280</li>
+              <li>(678)314-8280</li>
               <li>samgwolfe12@gmail.com</li>
             </ul>
           </button>
         </div>
 
-        <div className={`laptop-wrapper${isLaptopOpen ? ' active' : ''}`}>
+        <div className={`laptop-wrapper${isLaptopOpen ? " active" : ""}`}>
           {/* CLOSED: overlay is the ONLY opener (one clean click) */}
           {!isLaptopOpen && (
             <button
@@ -208,8 +216,8 @@ const MyRoom = () => {
               className="laptop-overlay"
               aria-label="Open laptop"
               onClick={(e) => {
-              e.stopPropagation();
-              smoothOpen();
+                e.stopPropagation();
+                smoothOpen();
               }}
               disabled={isAnimating}
             />
@@ -237,7 +245,6 @@ const MyRoom = () => {
             currentPage={currentPage}
             onNavigate={setCurrentPage}
             screenRef={screenRef}
-            
           />
         </div>
 
