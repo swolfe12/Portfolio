@@ -71,7 +71,7 @@ const LockScreen = ({ onUnlock }) => {
     const rect = trackRef.current.getBoundingClientRect();
     console.log("width: " + rect.width);
     const knobWidth = 70;
-    const threshold = rect.width * 1.0;
+    const threshold = rect.width * 0.8;
     console.log("threshold: " + threshold);
 
     if (dragX + knobWidth >= threshold) {
