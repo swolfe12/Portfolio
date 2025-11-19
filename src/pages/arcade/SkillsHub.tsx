@@ -26,7 +26,7 @@ const isMobile = window.innerWidth < 767;
 const settings = {
   dots: false,
   speed: 500,
-  slidesToShow: isMobile ? 1.5 : 1.5,
+  slidesToShow: isMobile ? 1 : 1.5,
   slidesToScroll: 1,
   infinite: true,
   vertical: !isMobile,
@@ -70,10 +70,10 @@ export default function SkillsHub({ onNavigate }: SkillsHubProps) {
     const params = new URLSearchParams(search);
     const urlCat = (params.get("cat") || "").toLowerCase();
 
-    if (urlCat !== (selectedId || "")) {
-      setSelectedId((urlCat as CatId) || null);
-    }
-  }, [search, selectedId]);
+    if (!urlCat) return; // don't touch state if there's no cat in the URL
+
+    setSelectedId((prev) => (urlCat === prev ? prev : (urlCat as CatId)));
+  }, [search]);
 
   useEffect(() => {
     const onSelect = (e: Event) => {

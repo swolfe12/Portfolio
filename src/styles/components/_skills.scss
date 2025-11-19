@@ -1,160 +1,166 @@
 /* src/pages/Skills/skills.scss */
 
-
 .skills-hub {
   @include gradient-bg;
   height: 100%;
   position: relative;
-    background-size: cover;
-    overflow: scroll;
-    .game-box{
-        .section-header {
-            margin: 10px auto;
-            text-align: center;
-            color: black;
-            width: 100%;
-            font-family: 'Orbitron';
-            h1 { font-size: 32px; }
-            .subtitle { opacity: 1;font-size: 26px; }
-        }
-
-        .dressup {
-                width: 100%;
-                max-width: 600px;
-                 height: 100%;
-                 margin: auto;
-                 background: $skills-blue;
-                 display: flex;
-                 flex-wrap: wrap;
-                 @media (max-width: 900px){
-                    width: 90%;
-                 }
-            .dressup-avatar {
-                background-repeat: no-repeat; /* Prevent image tiling */
-                background-position: center right; /* Center the image */
-                background-size: auto 100%;
-                width: 78%;
-                max-width: 650px;
-                height: 400px;
-                display: flex;
-                margin: auto;
-                @media (max-width: 900px){
-                    width: 100%;
-                }
-;
-                img {
-                    position: relative;
-                    height: 370px;
-                    margin: auto auto 0;
-
-                }
-            }
-            .skills-carousel {
-                height: 100%;
-                width: 22%;
-                margin: auto;
-                @media (max-width: 900px){
-                     width: 80%;
-                }
-                .skills-card {
-                    border: none;
-                    position: relative;
-                    height: 150px;
-                    overflow:hidden;
-                    @media (max-width: 900px){
-                        padding-right: 10px;
-                    }
-                    button{
-                        background: white;
-                    }
-                    a {
-                        border: 1px solid black;
-                    }
-                    img {
-                            width: 100%;
-                            padding: 0;
-                     }
-                    .skills-card__link{
-                        font-size: 16px;
-                        font-weight: 800;
-                        color: #2d2a2e;
-                        height: 100%;
-                        width: 100%;
-                        border: none;
-                        @media (max-width: 900px){
-                            width: 95%;
-                        }
-                    }
-                 }
-                 @media(min-width: 900px){
-                 .slick-next {
-                    top: 101%;
-                    right: 40%;
-                    transform: rotate(90deg);
-                    color: hotpink;
-                 }
-                 .slick-prev {
-                    top: -7%;
-                    left: 40%;
-                    transform: rotate(90deg);
-                    color: hotpink;
-                 }
-                }
-            }
-        }
+  background-size: cover;
+  overflow: scroll;
+  .game-box {
+    .section-header {
+      margin: 10px auto;
+      text-align: center;
+      color: black;
+      width: 100%;
+      font-family: "Orbitron";
+      h1 {
+        font-size: 32px;
+      }
+      .subtitle {
+        opacity: 1;
+        font-size: 26px;
+      }
     }
-    .skills-details {
-        width: 95%;
-        margin: 20px auto;
-        .skills-details__placeholder {
-            font-size: 20px;
-            text-align: center;
-        }
-        .blurb {
-            font-size: 22px;
-        }
-        .bubble-wrap {
-            display: flex; 
-            flex-wrap: wrap;
-            width: 100%;
-             margin-top: 16px;
-            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-            color: black;
-            justify-content: center;
-            .bubble {
-                background: rgba($blue, .5);
-                width: 19%;
-                border-radius: 18px;
-                padding: 14px 16px;
-                font-size: 20px;
-                margin: 10px 10px;
-                h2 { font-size: 22px; margin: 0 0 6px; }
-                ul { margin: 0; padding-left: 1rem; }
-                @media (max-width: 900px){
-                    width: 70%;
-                    margin: 10px auto;
-                }
-            }
-        }
+    @media (max-width: $tablet-max) {
+      width: 95%;
     }
+
+    .dressup {
+      width: 100%;
+      max-width: 600px;
+      height: 100%;
+      margin: auto;
+      background: $skills-blue;
+      display: flex;
+      flex-wrap: wrap;
+      @media (max-width: 900px) {
+        width: 98%;
+      }
+      .dressup-avatar {
+        background-repeat: no-repeat; /* Prevent image tiling */
+        background-position: center right; /* Center the image */
+        background-size: auto 100%;
+        width: 78%;
+        max-width: 650px;
+        height: 400px;
+        display: flex;
+        margin: auto;
+        @media (max-width: 900px) {
+          width: 100%;
+        }
+        img {
+          position: relative;
+          height: 370px;
+          margin: auto auto 0;
+        }
+      }
+      .skills-carousel {
+        height: 100%;
+        width: 22%;
+        margin: auto;
+        @media (max-width: 900px) {
+          width: 80%;
+        }
+        .skills-card {
+          border: none;
+          position: relative;
+          height: 150px;
+          overflow: hidden;
+          @media (max-width: 900px) {
+            padding-right: 10px;
+            img {
+              height: 85%;
+            }
+          }
+          button {
+            background: $generic-bg;
+          }
+          a {
+            border: 1px solid black;
+          }
+          img {
+            width: 100%;
+            padding: 0;
+          }
+          .skills-card__link {
+            font-size: 16px;
+            font-weight: 800;
+            color: #2d2a2e;
+            height: 100%;
+            width: 100%;
+            border: none;
+            @media (max-width: 900px) {
+              width: 95%;
+            }
+          }
+        }
+        @media (min-width: 900px) {
+          .slick-next {
+            top: 101%;
+            right: 40%;
+            transform: rotate(90deg);
+            color: hotpink;
+          }
+          .slick-prev {
+            top: -7%;
+            left: 40%;
+            transform: rotate(90deg);
+            color: hotpink;
+          }
+        }
+      }
+    }
+  }
+  .skills-details {
+    width: 95%;
+    margin: 20px auto;
+    .skills-details__placeholder {
+      font-size: 20px;
+      text-align: center;
+    }
+    .blurb {
+      font-size: 22px;
+    }
+    .bubble-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      margin-top: 16px;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      color: black;
+      justify-content: center;
+      .bubble {
+        background: rgba($blue, 0.5);
+        width: 19%;
+        border-radius: 18px;
+        padding: 14px 16px;
+        font-size: 20px;
+        margin: 10px 10px;
+        h2 {
+          font-size: 22px;
+          margin: 0 0 6px;
+        }
+        ul {
+          margin: 0;
+          padding-left: 1rem;
+        }
+        @media (max-width: 900px) {
+          width: 70%;
+          margin: 10px auto;
+        }
+      }
+    }
+  }
 }
-
-
-
-
-
 
 .skills-card__link:focus-visible {
   outline: 4px solid #000;
   outline-offset: 3px;
 }
-.skills-card__link:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(0,0,0,.16); }
-
-
-
-
-
-
+.skills-card__link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
+}
 
 .btn {
   display: inline-block;
@@ -162,14 +168,20 @@
   border: 2px solid var(--chrome-dark);
   background: var(--chrome);
   font-weight: 700;
-  padding: .55rem 1rem;
+  padding: 0.55rem 1rem;
   color: #2d2a2e;
   text-decoration: none;
 }
-.btn:focus-visible { outline: 3px solid #000; outline-offset: 3px; }
+.btn:focus-visible {
+  outline: 3px solid #000;
+  outline-offset: 3px;
+}
 
 .sr-only {
   position: absolute !important;
-  height: 1px; width: 1px; overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px); white-space: nowrap;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
 }
