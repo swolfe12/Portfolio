@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.c22a2129.css",
-    "main.js": "./static/js/main.9e6085e3.js",
+    "main.css": "./static/css/main.e40d3364.css",
+    "main.js": "./static/js/main.3c98ecb7.js",
     "static/js/453.ace21015.chunk.js": "./static/js/453.ace21015.chunk.js",
     "static/media/coffee2.png": "./static/media/coffee2.2ce7a038b704f6c96c49.png",
     "static/media/lavalamp2.png": "./static/media/lavalamp2.c212425fa9f2afea7880.png",
@@ -17,6 +17,7 @@
     "static/media/notebook.png": "./static/media/notebook.60418ffd0c8463fa6f94.png",
     "static/media/bulletin.png": "./static/media/bulletin.4f0559166799467dd90f.png",
     "static/media/keyboard.png": "./static/media/keyboard.ba9951e7edfdb959d64a.png",
+    "static/media/cherry.png": "./static/media/cherry.1394136eb0dc41e3cfec.png",
     "static/media/linkedin.png": "./static/media/linkedin.66566374885eb65aa5f4.png",
     "static/media/sam-bhat.png": "./static/media/sam-bhat.81a26ca1c225afe2ebef.png",
     "static/media/sam-headphones.png": "./static/media/sam-headphones.33e7e841f0115e9b6a0b.png",
@@ -26,7 +27,6 @@
     "static/media/clock-clean.png": "./static/media/clock-clean.5e6771c0a109cb42d851.png",
     "static/media/github.png": "./static/media/github.ce421d7b4bcbeebeab2f.png",
     "static/media/pens.png": "./static/media/pens.0ef2d599a43b3b39ebbd.png",
-    "static/media/cherry.png": "./static/media/cherry.722312bef7a1b4a6dd19.png",
     "static/media/headphones.png": "./static/media/headphones.7c42c2a0ff7cfbb220b4.png",
     "static/media/mouse.png": "./static/media/mouse.98f4e60c00edc19cbf83.png",
     "static/media/butterfly1.png": "./static/media/butterfly1.c2b7ddb7b601746c615e.png",
@@ -69,12 +69,12 @@
     "static/media/slick.ttf": "./static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "./static/media/slick.295183786cd8a1389865.woff",
     "index.html": "./index.html",
-    "main.c22a2129.css.map": "./static/css/main.c22a2129.css.map",
-    "main.9e6085e3.js.map": "./static/js/main.9e6085e3.js.map",
+    "main.e40d3364.css.map": "./static/css/main.e40d3364.css.map",
+    "main.3c98ecb7.js.map": "./static/js/main.3c98ecb7.js.map",
     "453.ace21015.chunk.js.map": "./static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c22a2129.css",
-    "static/js/main.9e6085e3.js"
+    "static/css/main.e40d3364.css",
+    "static/js/main.3c98ecb7.js"
   ]
 }
