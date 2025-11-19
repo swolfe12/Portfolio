@@ -58,7 +58,7 @@ const LockScreen = ({ onUnlock }) => {
 
     const rect = trackRef.current.getBoundingClientRect();
 
-    const knobWidth = 70;
+    const knobWidth = 35;
     const x = getClientX(e) - rect.left - knobWidth / 2;
     const clamped = x;
     //const clamped = Math.max(0, Math.min(x, rect.width - knobWidth));
@@ -78,12 +78,22 @@ const LockScreen = ({ onUnlock }) => {
       setDragX(rect.width);
       playUnlockSound();
       //console.log("dragX + knobWidth: " + dragX + knobWidth);
-      onUnlock?.();
-    } else {
-      setDragX(0);
-    }
+      if (onUnlock) {
+        const isMobile = /Android|iPhone|iPad|iPod/i.test(
+          navigator.userAgent || ""
+        );
 
-    dragging.current = false;
+        const delay = isMobile ? 450 : 200; // mobile needs more time to actually output the audio
+
+        setTimeout(() => {
+          onUnlock();
+        }, delay);
+      } else {
+        setDragX(0);
+      }
+
+      dragging.current = false;
+    }
   };
 
   return (
