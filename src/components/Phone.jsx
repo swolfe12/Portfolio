@@ -12,7 +12,7 @@ import keyboard from "./../assets/keyboard.png";
 import answer from "./../assets/hangup.PNG";
 import hangup from "../assets/answer.PNG";
 import music from "../assets/music-gems.png";
-import cherry from "../assets/cherry-gems.png";
+import cherry from "../assets/cherry.png";
 
 const Phone = ({ currentPage = "home", onNavigate }) => {
   // 'lock' -> lock screen, 'transition' -> black + opening anim, 'app' -> fully open
