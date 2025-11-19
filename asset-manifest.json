@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.c6d5907b.css",
-    "main.js": "./static/js/main.2fad3c07.js",
+    "main.css": "./static/css/main.56097e89.css",
+    "main.js": "./static/js/main.41f58674.js",
     "static/js/453.ace21015.chunk.js": "./static/js/453.ace21015.chunk.js",
     "static/media/coffee2.png": "./static/media/coffee2.2ce7a038b704f6c96c49.png",
     "static/media/lavalamp2.png": "./static/media/lavalamp2.c212425fa9f2afea7880.png",
@@ -16,7 +16,7 @@
     "static/media/x.png": "./static/media/x.4455cc87219d01428aea.png",
     "static/media/notebook.png": "./static/media/notebook.60418ffd0c8463fa6f94.png",
     "static/media/bulletin.png": "./static/media/bulletin.4f0559166799467dd90f.png",
-    "static/media/keyboard.png": "./static/media/keyboard.ba9951e7edfdb959d64a.png",
+    "static/media/keyboard.png": "./static/media/keyboard.e305be68a64ba1bb5614.png",
     "static/media/cherry.png": "./static/media/cherry.1394136eb0dc41e3cfec.png",
     "static/media/linkedin.png": "./static/media/linkedin.66566374885eb65aa5f4.png",
     "static/media/sam-bhat.png": "./static/media/sam-bhat.81a26ca1c225afe2ebef.png",
@@ -69,12 +69,12 @@
     "static/media/slick.ttf": "./static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "./static/media/slick.295183786cd8a1389865.woff",
     "index.html": "./index.html",
-    "main.c6d5907b.css.map": "./static/css/main.c6d5907b.css.map",
-    "main.2fad3c07.js.map": "./static/js/main.2fad3c07.js.map",
+    "main.56097e89.css.map": "./static/css/main.56097e89.css.map",
+    "main.41f58674.js.map": "./static/js/main.41f58674.js.map",
     "453.ace21015.chunk.js.map": "./static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c6d5907b.css",
-    "static/js/main.2fad3c07.js"
+    "static/css/main.56097e89.css",
+    "static/js/main.41f58674.js"
   ]
 }
