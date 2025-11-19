@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.4a1533aa.css",
-    "main.js": "./static/js/main.9864cc5c.js",
+    "main.js": "./static/js/main.58687a3f.js",
     "static/js/453.ace21015.chunk.js": "./static/js/453.ace21015.chunk.js",
     "static/media/coffee2.png": "./static/media/coffee2.2ce7a038b704f6c96c49.png",
     "static/media/lavalamp2.png": "./static/media/lavalamp2.c212425fa9f2afea7880.png",
@@ -31,8 +31,8 @@
     "static/media/butterfly1.png": "./static/media/butterfly1.c2b7ddb7b601746c615e.png",
     "static/media/plainheadphones.png": "./static/media/plainheadphones.ccb94b89428cce0f4217.png",
     "static/media/sunnies.png": "./static/media/sunnies.dfd11457c8fb0ae3dcaf.png",
-    "static/media/phone.png": "./static/media/phone.3f7191cffd1fe19efa8b.png",
     "static/media/laptop.png": "./static/media/laptop.5f15e80e0dfb4ed7d812.png",
+    "static/media/phone.png": "./static/media/phone.0bffe4120b5538a37e06.png",
     "static/media/contact.png": "./static/media/contact.ac3d0eb9bee82ed7123f.png",
     "static/media/desk.png": "./static/media/desk.68bb80aff5f4f12f7189.png",
     "static/media/window.png": "./static/media/window.92d63102c27495831871.png",
@@ -68,11 +68,11 @@
     "static/media/slick.woff": "./static/media/slick.295183786cd8a1389865.woff",
     "index.html": "./index.html",
     "main.4a1533aa.css.map": "./static/css/main.4a1533aa.css.map",
-    "main.9864cc5c.js.map": "./static/js/main.9864cc5c.js.map",
+    "main.58687a3f.js.map": "./static/js/main.58687a3f.js.map",
     "453.ace21015.chunk.js.map": "./static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4a1533aa.css",
-    "static/js/main.9864cc5c.js"
+    "static/js/main.58687a3f.js"
   ]
 }
