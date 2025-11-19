@@ -1,45 +1,42 @@
-
-
 .portfolio {
-      display: flex;
-      margin: auto;
-      height: 100%;
-      //background: rgb(238, 187, 255);
-  
-      .inner-container{
-        position: relative;
-        //top: 0px;
-        //left: 0px;
-        width: 1700px;
-        height: 900px;
-        margin: auto auto;
-       //margin-bottom: 10px;
-        
-        overflow: hidden;
-        background: #43288c !important;
-        //border-radius: 0 0 3%;
-        
-        .neon {
-          height: 640px;
-          position: absolute;
-          top: 50%;
-          margin-top: -440px;
-          margin-left: -200px;
-          left: 50%;
-          z-index: 2;
-        }
-  
-  
-  .plant {
+  display: flex;
+  margin: auto;
+  height: 100%;
+  //background: rgb(238, 187, 255);
+
+  .inner-container {
+    position: relative;
+    //top: 0px;
+    //left: 0px;
+    width: 1700px;
+    height: 900px;
+    margin: auto auto;
+    //margin-bottom: 10px;
+
+    overflow: hidden;
+    background: #43288c !important;
+    //border-radius: 0 0 3%;
+
+    .neon {
+      height: 640px;
+      position: absolute;
+      top: 50%;
+      margin-top: -440px;
+      margin-left: -200px;
+      left: 50%;
+      z-index: 2;
+    }
+
+    .plant {
       height: 310px;
       position: absolute;
       left: 50%;
       top: 50%;
       margin-left: -480px;
       margin-top: -380px;
-      z-index: 2
-  }
-  .gummies{
+      z-index: 2;
+    }
+    .gummies {
       height: 350px;
       position: absolute;
       left: 50%;
@@ -48,17 +45,19 @@
       margin-left: -700px;
       transform: rotate(-25deg);
       z-index: 4;
-  }
+    }
 
-  .trail { /* className for the trail elements */
+    .trail {
+      /* className for the trail elements */
       position: absolute;
-      height: 8px; width: 8px;
+      height: 8px;
+      width: 8px;
       border-radius: 4px;
       background: white;
       border: 1px solid black;
       z-index: 10;
     }
-    .contact{
+    .contact {
       //background: url('/assets/contact.png');
       background: transparent;
       padding: 0;
@@ -73,34 +72,35 @@
       top: 50%;
       margin-top: -90px;
       z-index: 4;
-      transition: ease .3s;
+      transition: ease 0.3s;
 
-      ul{
+      ul {
+        padding: 0;
+        margin-bottom: 25px;
+        width: 75%;
+        transform: rotate(-2deg);
+        opacity: 1;
 
-            padding: 0;
-            margin-bottom: 25px;
-            width: 75%;
-            transform: rotate(-2deg);
-            opacity: 1;
-
-          li{
-              list-style: none;
-              color: #fedeff;
-              font-size: 8px;
-              font-family: "Edu AU VIC WA NT Hand", cursive;
-          }
+        li {
+          list-style: none;
+          color: #fedeff;
+          font-size: 8px;
+          font-family: "Edu AU VIC WA NT Hand", cursive;
+        }
       }
-      &:hover, &:active, &:focus {
+      &:hover,
+      &:active,
+      &:focus {
         border: none;
         outline: none;
-          filter: drop-shadow(12px 12px 10px #fff) drop-shadow(-12px -12px 10px #fff) 
-          drop-shadow(12px -12px 10px rgba(255, 255, 255, 0.5)) 
+        filter: drop-shadow(12px 12px 10px #fff)
+          drop-shadow(-12px -12px 10px #fff)
+          drop-shadow(12px -12px 10px rgba(255, 255, 255, 0.5))
           drop-shadow(-12px 12px 10px rgba(255, 255, 255, 0.5));
-  
       }
-      &.scale-up{
-          transform: scale(5);
-          margin-left: 0;
+      &.scale-up {
+        transform: scale(5);
+        margin-left: 0;
         z-index: 100;
       }
     }
@@ -114,7 +114,7 @@
       height: 270px;
       transform: rotate(6deg);
     }
-  
+
     .bulletin {
       width: 1000px;
       top: 50%;
@@ -123,7 +123,7 @@
       margin-left: 0px;
       position: absolute;
     }
-  
+
     .jellyfish {
       width: 210px;
       top: 50%;
@@ -133,8 +133,8 @@
       position: absolute;
       z-index: 3;
     }
-  
-    .sam-poster{
+
+    .sam-poster {
       width: 220px;
       top: 50%;
       left: 50%;
@@ -180,7 +180,7 @@
       position: absolute;
       z-index: 1;
     }
-  
+
     .speaker {
       width: 330px;
       top: 50%;
@@ -193,7 +193,7 @@
       margin-left: 600px;
       transform: rotate(3deg);
     }
-  
+
     .desk {
       width: 2000px;
       top: 50%;
@@ -212,9 +212,9 @@
       z-index: 2;
       position: absolute;
     }
-  
+
     .coffee {
-      height:  300px;
+      height: 300px;
       left: 50%;
       margin-left: -710px;
       top: 50%;
@@ -231,7 +231,7 @@
       margin-top: -96px;
       height: 230px;
     }
-  
+
     .headphones {
       position: absolute;
       left: 50%;
@@ -251,15 +251,14 @@
       z-index: 2;
       margin-left: -920px;
     }
-    .notebook{
+    .notebook {
       position: absolute;
       left: 50%;
       top: 50%;
       height: 320px;
       margin-left: 208px;
       margin-top: 50px;
-      z-index:1;
-  
+      z-index: 1;
     }
     .mouse {
       position: absolute;
@@ -290,47 +289,46 @@
       top: 50%;
       display: none;
       .popup-content {
-          //background: white;
-          //padding: 20px;
-          //border-radius: 10px;
-          //position: relative;
-          //text-align: center;
-      
-    
-          .close-btn {
-              position: absolute;
-              top: 30px;
-              right: 15px;
-              font-size: 24px;
-              border: none;
-              background: none;
-              cursor: pointer;
-              background-color: white;
-              border-radius: 50%;
-          }
-              
-          img {
-              width: 1000px;
-              /*filter: drop-shadow(12px 12px 10px #fff) drop-shadow(-12px -12px 10px #fff) 
+        //background: white;
+        //padding: 20px;
+        //border-radius: 10px;
+        //position: relative;
+        //text-align: center;
+
+        .close-btn {
+          position: absolute;
+          top: 30px;
+          right: 15px;
+          font-size: 24px;
+          border: none;
+          background: none;
+          cursor: pointer;
+          background-color: white;
+          border-radius: 50%;
+        }
+
+        img {
+          width: 1000px;
+          /*filter: drop-shadow(12px 12px 10px #fff) drop-shadow(-12px -12px 10px #fff) 
               drop-shadow(12px -12px 10px rgba(255, 255, 255, 0.5)) 
               drop-shadow(-12px 12px 10px rgba(255, 255, 255, 0.5));*/
-          }
-          p {
-              font-size: 30px;
-              color: white;
-              position: absolute;
-              width: 350px;
-              height: 500px;
-              z-index: 11;
-              top: 50%;
-              margin-top: -150px;
-              left: 50%;
-              margin-left: -50px;
-          }
+        }
+        p {
+          font-size: 30px;
+          color: white;
+          position: absolute;
+          width: 350px;
+          height: 500px;
+          z-index: 11;
+          top: 50%;
+          margin-top: -150px;
+          left: 50%;
+          margin-left: -50px;
+        }
       }
     }
-  
-    .border-top{
+
+    .border-top {
       width: 100%;
       height: 100px;
       background: black;
@@ -340,4 +338,31 @@
       z-index: 20;
     }
   }
+}
+.loader-wrapper {
+  position: fixed;
+  inset: 0;
+  background-color: #7550d9c7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #ccc;
+  border-top-color: #ff4fd8; // neon or whatever
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
   }
+  to {
+    transform: rotate(360deg);
+  }
+}
