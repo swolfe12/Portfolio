@@ -34,7 +34,7 @@ const settings = {
   swipeToSlide: true,
   centerMode: true,
   responsive: [
-    { breakpoint: 900, settings: { slidesToShow: 2, vertical: false } },
+    { breakpoint: 900, settings: { slidesToShow: 2, vertical: true } },
   ],
 };
 

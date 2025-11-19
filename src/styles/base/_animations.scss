@@ -75,11 +75,15 @@
 
 // --- GENTLE HOVER SHAKES ---
 .gentle-hover-shake1:hover {
-  animation: tilt-shaking 0.5s;
+  @media (min-width: 960px) {
+    animation: tilt-shaking 0.5s;
+  }
 }
 
 .gentle-hover-shake2:hover {
-  animation: tilt-shaking2 0.5s;
+  @media (min-width: 960px) {
+    animation: tilt-shaking 0.5s;
+  }
 }
 
 @keyframes tilt-shaking {
