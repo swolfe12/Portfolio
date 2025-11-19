@@ -11,6 +11,9 @@ body {
   --safari-bottom-bar-bg: #a5b5f9;
   background-color: #a5b5f9;
 }
+html {
+  background-color: #a5b5f9;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
