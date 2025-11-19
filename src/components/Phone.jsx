@@ -18,6 +18,7 @@ import cherry from "../assets/cherry.png";
 
 const Phone = ({ currentPage = "home", onNavigate }) => {
   // 'lock' -> lock screen, 'transition' -> black + opening anim, 'app' -> fully open
+
   const [screenStage, setScreenStage] = useState("lock");
 
   const renderPhoneScreen = () => {

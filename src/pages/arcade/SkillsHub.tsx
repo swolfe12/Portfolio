@@ -1,7 +1,8 @@
+// src/pages/arcade/SkillsHub.tsx
 import { useEffect, useId, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import NavBar from "../../components/NavBar.tsx";
-import Slider from "react-slick";
+import Breadcrumbs from "../../components/Breadcrumbs.tsx";
 import { SKILL_DATA, Cat } from "./skillsData.ts";
 import avatarBase from "../../assets/avatar3.webp";
 import room from "../../assets/room.png";
@@ -10,6 +11,7 @@ import bhat from "../../assets/bhat.png";
 import headphones from "../../assets/plainheadphones.png";
 import flower from "../../assets/flower.png";
 import glasses from "../../assets/blackglasses.png";
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -61,6 +63,7 @@ export default function SkillsHub({ onNavigate }: SkillsHubProps) {
   const selected: Cat | null = selectedId
     ? SKILL_DATA[selectedId] ?? null
     : null;
+
   const detailsRegionId = useId();
   const detailsTitleRef = useRef<HTMLHeadingElement | null>(null);
 
@@ -70,7 +73,7 @@ export default function SkillsHub({ onNavigate }: SkillsHubProps) {
     const params = new URLSearchParams(search);
     const urlCat = (params.get("cat") || "").toLowerCase();
 
-    if (!urlCat) return; // don't touch state if there's no cat in the URL
+    if (!urlCat) return;
 
     setSelectedId((prev) => (urlCat === prev ? prev : (urlCat as CatId)));
   }, [search]);
@@ -93,11 +96,41 @@ export default function SkillsHub({ onNavigate }: SkillsHubProps) {
     }
   }, [selected]);
 
+  // 🔹 Build breadcrumb items with optional category-level crumb
+  const categoryMeta = selectedId
+    ? CATEGORIES.find((c) => c.id === selectedId)
+    : undefined;
+
+  const categoryLabel =
+    categoryMeta?.label || selected?.name || selectedId || "";
+
+  const breadcrumbItems = [
+    { id: "home" as const, label: "Home" },
+    {
+      id: "skills" as const,
+      label: "Skills",
+      // Skills is "current" only when no specific category is selected
+      isCurrent: !selectedId,
+    },
+    // Add category-level crumb when a category is selected
+    ...(selectedId && categoryLabel
+      ? [
+          {
+            id: `skills/${selectedId}`,
+            label: categoryLabel,
+            isCurrent: true,
+          },
+        ]
+      : []),
+  ];
+
   return (
     <div className="skills-hub" aria-labelledby="skills-title">
       <div className="nav-layer">
         <NavBar onNavigate={onNavigate} />
       </div>
+
+      <Breadcrumbs onNavigate={onNavigate} items={breadcrumbItems} />
 
       <div className="game-box">
         <div className="section-header"></div>

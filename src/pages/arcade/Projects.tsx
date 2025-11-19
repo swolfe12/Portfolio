@@ -12,6 +12,7 @@ import gitactions from "../../assets/git-actions-logo.png";
 import vite from "../../assets/vite.jpeg";
 import js from "../../assets/javascript.png";
 import ts from "../../assets/typescript.png";
+import Breadcrumbs from "../../components/Breadcrumbs.tsx";
 
 type ProjectsProps = {
   onNavigate?: (pageId: string) => void;
@@ -21,6 +22,13 @@ export const Projects = ({ onNavigate }: ProjectsProps) => {
   return (
     <div className="projects">
       <Navbar onNavigate={onNavigate} />
+      <Breadcrumbs
+        onNavigate={onNavigate}
+        items={[
+          { id: "home", label: "Home" },
+          { id: "projects", label: "Projects", isCurrent: true },
+        ]}
+      />
       <div className="game-box">
         <div className="section-header">
           <img src={projects} alt="Projects"></img>
