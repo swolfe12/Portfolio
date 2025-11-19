@@ -1,27 +1,39 @@
 // --- GRADIENT BACKGROUND ---
 
-
 @keyframes gradient {
-  0%   { background-position: 0% 50%; }
-  50%  { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 // --- BLINK (if you still use it) ---
 @keyframes blink {
-  0%, 49% { opacity: .8; }
-  50%, 100% { opacity: .2; }
+  0%,
+  49% {
+    opacity: 0.8;
+  }
+  50%,
+  100% {
+    opacity: 0.2;
+  }
 }
 
 // --- GLOW EFFECT (cleaned up and reusable) ---
 @keyframes glow-pulse {
-  0%, 100% { filter: none; }
+  0%,
+  100% {
+    filter: none;
+  }
   50% {
-    filter:
-      drop-shadow(12px 12px 10px #fff)
-      drop-shadow(-12px -12px 10px #fff)
-      drop-shadow(12px -12px 10px rgba(255,255,255,.5))
-      drop-shadow(-12px 12px 10px rgba(255,255,255,.5));
+    filter: drop-shadow(12px 12px 10px #fff) drop-shadow(-12px -12px 10px #fff)
+      drop-shadow(12px -12px 10px rgba(255, 255, 255, 0.5))
+      drop-shadow(-12px 12px 10px rgba(255, 255, 255, 0.5));
   }
 }
 :root.glow-phase .glowable {
@@ -30,14 +42,21 @@
 }
 
 @mixin gradient-bg {
-  background: linear-gradient(-45deg, $purple, $blue, $indigo, $skills-blue) !important;
+  background: linear-gradient(
+    -45deg,
+    $purple,
+    $blue,
+    $indigo,
+    $skills-blue
+  ) !important;
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   height: 100vh;
 }
 
 // base marker class — no animation by default
-.glowable { }
+.glowable {
+}
 
 // triggers a visible 5s glow pulse
 .glow-now {
@@ -64,15 +83,27 @@
 }
 
 @keyframes tilt-shaking {
-  0% { transform: rotate(0deg); }
-  50% { transform: rotate(5deg); }
-  100% { transform: rotate(0deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 @keyframes tilt-shaking2 {
-  0% { transform: rotate(10deg); }
-  50% { transform: rotate(5deg); }
-  100% { transform: rotate(10deg); }
+  0% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
 }
 
 // --- MOTION REDUCTION SAFETY ---
@@ -127,5 +158,34 @@
   to {
     transform: scale(1);
     opacity: 1;
+  }
+}
+
+@keyframes overlayFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes drawerSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-14px) scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes scanScroll {
+  from {
+    background-position-y: 0;
+  }
+  to {
+    background-position-y: 3px;
   }
 }

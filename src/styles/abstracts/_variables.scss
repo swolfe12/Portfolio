@@ -1,6 +1,6 @@
 $calendar-color: rgba(46, 28, 126, 0.8);
 $calendar-bg: #744890;
-$generic-bg: rgb(251, 251, 251); 
+$generic-bg: rgb(251, 251, 251);
 $purple: #7550d9c7;
 //$purple: #9D89EB;
 $tan: rgb(210, 198, 183);
@@ -8,37 +8,44 @@ $blue: #00aaff;
 $duck-active: #7550d9;
 
 $indigo: #4c5dd7;
-$button: #23A1DF;
+$button: #23a1df;
 $mulberry: #bc4f8f;
 $richblack: #0a0a20;
 $lightblack: #7777c8;
 $neon: $purple;
 //$neon: $blue;
 
+$hot-pink: #ff4fa5;
+$super-hot-pink: #bf2a7c;
+$light-pink: #ffe9f3;
 
-$hot-pink: #ff4fa5;   /* primary from navbar */
-$super-hot-pink:#bf2a7c;   /* darker accent */
-$light-pink: #ffe9f3;  /* panel base */
-
-
-$skills-blue: #3c61ff; 
+$skills-blue: #3c61ff;
 $paper: #cfe9ff;
 
-
+/* MOBILE NAV THEME USING YOUR COLORS */
+$nav-bg: $richblack; // deep background
+$nav-panel: $calendar-color; // translucent purple/indigo
+$glow-primary: $purple; // main neon
+$glow-secondary: $mulberry; // pink/magenta glow
+$accent-1: $hot-pink; // bright hover
+$accent-2: $super-hot-pink; // stronger glow
+$accent-cool: $skills-blue; // blue-ish highlight
+$border-soft: rgba(255, 255, 255, 0.08);
+$highlight-soft: rgba(255, 255, 255, 0.06);
 
 /* ===========================================
    THEME VARIABLES
    =========================================== */
 :root {
-  --blue-bg: #1a4f8a;        // denim blue
+  --blue-bg: #1a4f8a; // denim blue
   --blue-dither-1: #1f5aa0;
   --blue-dither-2: #163f73;
 
-  --pink-hi: #ff69b7;        // highlight
-  --pink: #ff4fa5;           // base
-  --pink-lo: #e63792;        // shadow
-  --chrome-hi: #ffe9ff;      // glossy bevel
-  --chrome: #ffd7ff;         // outer plastic
+  --pink-hi: #ff69b7; // highlight
+  --pink: #ff4fa5; // base
+  --pink-lo: #e63792; // shadow
+  --chrome-hi: #ffe9ff; // glossy bevel
+  --chrome: #ffd7ff; // outer plastic
   --chrome-lo: #f0a9df;
 
   --ink: #0b0b14;
@@ -54,10 +61,8 @@ $radius-chonk: 18px; // chunky 90s corners
    MIXINS
    =========================================== */
 @mixin bevel($hi: var(--chrome-hi), $lo: var(--pink-lo)) {
-  box-shadow:
-    inset 0 4px 0 $hi,
-    inset 0 -5px 0 rgba(0, 0, 0, .2),
-    0 6px 0 rgba(0, 0, 0, .5);
+  box-shadow: inset 0 4px 0 $hi, inset 0 -5px 0 rgba(0, 0, 0, 0.2),
+    0 6px 0 rgba(0, 0, 0, 0.5);
 }
 
 @mixin pillButton {
@@ -71,5 +76,3 @@ $mobile-max: 767px;
 $tablet-min: 768px;
 $tablet-max: 959px;
 $desktop-min: 960px;
-
-

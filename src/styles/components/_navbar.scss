@@ -1,147 +1,156 @@
-/* This is for the generic site 
+/* ===========================================
+   Legacy generic site navbar (optional)
+   =========================================== */
+/*
 .navbar {
-    background: rgb(255, 255, 255);
-    border-bottom: 1px solid #ddd;
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-  
-    &__container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: relative;
-  
-      @media (max-width: 768px) {
-        justify-content: center;
-            min-height: 50px;
-      }
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    @media (max-width: 768px) {
+      justify-content: center;
+      min-height: 50px;
     }
-  
-    &__logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #333;
-      height: 70px;
-      margin-top: -15px;
-      overflow: hidden;
-      margin-left: -160px;
-      .logo {
-        height: 90px;
-      }
-  
-      @media (max-width: 768px) {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-      }
+  }
+
+  &__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    height: 70px;
+    margin-top: -15px;
+    overflow: hidden;
+    margin-left: -160px;
+
+    .logo {
+      height: 90px;
     }
-  
-    &__links {
-      list-style: none;
-      display: flex;
-      gap: 2rem;
-  
-      li {
-        cursor: pointer;
-        font-weight: 500;
-        color: #444;
-        font-size: 18px;
-  
-        &:hover {
-          color: black;
-        }
-      }
-  
-      @media (max-width: 768px) {
-        display: none;
-      }
+
+    @media (max-width: 768px) {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
     }
-  
-    &__socials {
-      display: flex;
-      gap: 1rem;
-      font-size: 1.25rem;
-  
-      a {
-        color: #555;
-  
-        &:hover {
-          color: black;
-        }
-      }
-  
-      @media (max-width: 768px) {
-        display: none;
-      }
-    }
-  
-    &__toggle {
-      display: none;
-      background: none;
-      border: none;
-      font-size: 1.75rem;
-      color: #555;
+  }
+
+  &__links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+
+    li {
       cursor: pointer;
-      z-index: 1100;
-  
-      @media (max-width: 768px) {
-        display: block;
-        position: absolute;
-        right: 1rem;
+      font-weight: 500;
+      color: #444;
+      font-size: 18px;
+
+      &:hover {
+        color: #000;
       }
     }
-  
-    &__mobile-menu {
+
+    @media (max-width: 768px) {
       display: none;
-  
-      @media (max-width: 768px) {
-        display: block;
-        padding: 1rem;
-        background: white;
-        border-top: 1px solid #ddd;
-  
-        ul {
-          list-style: none;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 1rem;
-          padding: 1rem 0;
-  
-          li {
-            cursor: pointer;
-            font-weight: 500;
-            color: #444;
-  
-            &:hover {
-              color: black;
-            }
+    }
+  }
+
+  &__socials {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.25rem;
+
+    a {
+      color: #555;
+
+      &:hover {
+        color: #000;
+      }
+    }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.75rem;
+    color: #555;
+    cursor: pointer;
+    z-index: 1100;
+
+    @media (max-width: 768px) {
+      display: block;
+      position: absolute;
+      right: 1rem;
+    }
+  }
+
+  &__mobile-menu {
+    display: none;
+
+    @media (max-width: 768px) {
+      display: block;
+      padding: 1rem;
+      background: #fff;
+      border-top: 1px solid #ddd;
+
+      ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 0;
+
+        li {
+          cursor: pointer;
+          font-weight: 500;
+          color: #444;
+
+          &:hover {
+            color: #000;
           }
         }
-  
-        .navbar__mobile-socials {
-          display: flex;
-          justify-content: center;
-          gap: 1rem;
-          font-size: 1.25rem;
-  
-          a {
-            color: #555;
-  
-            &:hover {
-              color: black;
-            }
+      }
+
+      .navbar__mobile-socials {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        font-size: 1.25rem;
+
+        a {
+          color: #555;
+
+          &:hover {
+            color: #000;
           }
         }
       }
     }
   }
-  */
+}
+*/
+
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap");
+
+/* ===========================================
+   Global helpers
+   =========================================== */
 
 body.nav-scroll-lock {
   position: fixed;
@@ -178,11 +187,11 @@ body.nav-scroll-lock {
 /* ===========================================
    HEADER + BRAND CAPSULE
    =========================================== */
+
 .site-header {
   background: linear-gradient(180deg, var(--chrome), var(--chrome-lo));
   border-radius: $radius-chonk;
   margin: 12px 12px 8px;
-  //max-width: 1120px;
   position: relative;
   @include bevel;
 
@@ -216,33 +225,36 @@ body.nav-scroll-lock {
 }
 
 /* Capsule brand */
+
 .brand {
   display: inline-block;
   padding: 1rem 1.25rem;
   border-radius: 999px;
   background: linear-gradient(180deg, var(--pink-hi), var(--pink));
-  //box-shadow: inset 0 -5px 0 var(--pink-lo), 0 3px 0 rgba(0,0,0,.4);
-  color: #fff;
+  color: $richblack;
   font-size: 16px;
   text-decoration: none;
-  //text-shadow: 0 2px 0 #0006;
   margin-right: 5px;
   border: none;
   font-family: "Press Start 2P", monospace;
-  color: black;
   text-align: left;
   text-transform: uppercase;
+  transition: transform 0.15s ease;
+
   @media (min-width: $desktop-min) {
     margin-right: 20px;
     font-size: 20px;
   }
+
   &:hover {
     transform: translateY(-1px);
   }
+
   &:active {
     transform: translateY(1px);
     box-shadow: inset 0 2px 0 var(--pink-lo);
   }
+
   &:focus-visible {
     outline: 2px dashed #fff;
     outline-offset: 3px;
@@ -252,6 +264,7 @@ body.nav-scroll-lock {
 /* ===========================================
    DESKTOP NAV
    =========================================== */
+
 .primary-nav.desktop-only {
   display: none;
 
@@ -281,14 +294,17 @@ body.nav-scroll-lock {
       border: none;
       font-family: "Press Start 2P", monospace;
       text-transform: uppercase;
+      transition: transform 0.15s ease;
 
       &:hover {
         transform: translateY(-1px);
       }
+
       &:active {
         transform: translateY(1px);
         box-shadow: inset 0 2px 0 var(--pink-lo);
       }
+
       &:focus-visible {
         outline: 2px dashed #fff;
         outline-offset: 2px;
@@ -308,39 +324,117 @@ body.nav-scroll-lock {
 /* ===========================================
    MOBILE TOGGLE
    =========================================== */
+
 .mobile-only {
   display: inline-flex;
 }
+
 @media (min-width: $desktop-min) {
   .mobile-only {
     display: none;
   }
 }
 
-.menu-toggle {
-  @include pillButton;
-  color: #333;
+.menu-toggle.mobile-only {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid $glow-primary;
+  background: radial-gradient(
+      circle at 30% 20%,
+      rgba(255, 255, 255, 0.18),
+      transparent 55%
+    ),
+    radial-gradient(circle at 70% 80%, rgba(0, 0, 0, 0.5), transparent 60%),
+    linear-gradient(135deg, $nav-panel, $richblack);
+  /*box-shadow: 0 0 12px rgba($glow-primary, 0.6),
+    0 0 30px rgba($glow-secondary, 0.5);*/
+  color: $generic-bg;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease,
+    border-color 0.15s ease;
+
+  &:hover {
+    transform: translateY(-1px) scale(1.03);
+    box-shadow: 0 0 16px rgba($glow-primary, 0.9),
+      0 0 34px rgba($glow-secondary, 0.75);
+  }
+
+  &:active {
+    transform: translateY(1px) scale(0.95);
+  }
+
+  &[aria-expanded="true"] {
+    border-color: $accent-1;
+    color: $accent-1;
+  }
+
   svg {
-    display: block;
+    transition: transform 0.2s ease;
+    margin-top: 6px;
+    margin-left: 2px;
+  }
+
+  &[aria-expanded="true"] svg {
+    transform: rotate(90deg);
   }
 }
 
 /* ===========================================
    MOBILE DRAWER
    =========================================== */
+
 .mobile-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  display: grid;
-  grid-template-columns: minmax(0, 420px) 1fr;
-  z-index: 9999;
+  z-index: 50;
+  display: flex;
+  justify-content: flex-end;
+  background: radial-gradient(
+      circle at top,
+      rgba($glow-primary, 0.12),
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at bottom,
+      rgba($glow-secondary, 0.12),
+      transparent 60%
+    ),
+    rgba($richblack, 0.75);
+  backdrop-filter: blur(4px);
+  animation: overlayFadeIn 0.2s ease-out;
 
   .mobile-drawer {
-    background: linear-gradient(180deg, var(--chrome), var(--chrome-lo));
-    border-radius: 0 $radius-chonk $radius-chonk 0;
-    @include bevel;
-    padding: 1rem 0.75rem 2rem;
+    position: relative;
+    width: min(320px, 80vw);
+    margin: 14px 0 24px;
+    border-radius: 20px;
+    padding: 16px;
+    background: linear-gradient(145deg, $nav-panel, $richblack);
+    border: 1px solid $border-soft;
+    box-shadow: 0 0 0 1px rgba($glow-primary, 0.35),
+      0 0 28px rgba($glow-secondary, 0.55), 0 12px 34px rgba(0, 0, 0, 0.85);
+    color: $generic-bg;
+    transform-origin: top right;
+    animation: drawerSlideIn 0.26s cubic-bezier(0.23, 0.9, 0.32, 1.3);
+    overflow: hidden;
+
+    /* scanning CRT lines */
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.05) 1px,
+        transparent 1px
+      );
+      background-size: 100% 3px;
+      opacity: 0.18;
+      pointer-events: none;
+      animation: scanScroll 6s linear infinite;
+    }
 
     .drawer-bar {
       display: flex;
@@ -349,77 +443,91 @@ body.nav-scroll-lock {
       margin-bottom: 0.5rem;
 
       .drawer-title {
-        color: #1b1b2d;
-        text-transform: uppercase;
-        letter-spacing: 0.8px;
-        font-size: 30px;
+        color: rgb(215 155 255);
+        letter-spacing: 0.15em;
+        text-shadow: 0 0 8px rgba($glow-primary, 0.8),
+          0 0 16px rgba($accent-1, 0.65);
+        font-size: 26px;
       }
 
       .icon-btn {
-        @include pillButton;
+        background: transparent;
+        border: none;
+        color: $generic-bg;
+        padding: 4px 8px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.15s ease, transform 0.15s ease;
+        font-size: 18px;
+
+        &:hover {
+          background: rgba($generic-bg, 0.05);
+        }
+
+        &:active {
+          transform: scale(0.95);
+        }
       }
     }
 
     .drawer-list {
-      display: grid;
+      margin-top: 0.5rem;
+      display: flex;
+      flex-direction: column;
       gap: 0.25rem;
-      padding: 0;
-      margin: 0;
-      background: linear-gradient(180deg, var(--pink-hi), var(--pink));
+    }
 
-      .drawer-item {
-        list-style: none;
-        padding: 0.85rem 0.75rem;
+    .drawer-item {
+      list-style: none;
+    }
 
-        .drawer-link,
-        .disclosure {
-          color: #fff;
-          //border-radius: 12px;
-          width: 100%;
+    .drawer-link {
+      width: 100%;
+      text-align: left;
+      font-size: 24px;
+      background: transparent;
+      color: $generic-bg;
+      padding: 12px 14px;
+      border-radius: 10px;
+      cursor: pointer;
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      transition: transform 0.15s ease, background 0.15s ease,
+        box-shadow 0.15s ease;
 
-          //box-shadow: inset 0 -5px 0 var(--pink-lo), 0 2px 0 rgba(0,0,0,.35);
-          text-transform: uppercase;
-          font-size: 30px;
-          letter-spacing: 0.5px;
+      &::before {
+        content: "▸";
+        color: $glow-primary;
+        text-shadow: 0 0 10px rgba($glow-primary, 0.9),
+          0 0 16px rgba($glow-secondary, 0.7);
+        margin-right: 8px;
+      }
 
-          &:hover {
-            transform: translateY(-1px);
-          }
-          &:active {
-            transform: translateY(1px);
-            box-shadow: inset 0 2px 0 var(--pink-lo);
-          }
-          &:focus-visible {
-            outline: 2px dashed #fff;
-            outline-offset: 2px;
-          }
-        }
-        button {
-          background: none;
-          border: none;
-          text-align: left;
-          padding-left: 0;
-        }
+      &:hover {
+        background: linear-gradient(
+          90deg,
+          rgba($glow-primary, 0.22),
+          rgba($accent-1, 0.22)
+        );
+        transform: translateX(3px);
+        box-shadow: 0 0 16px rgba($glow-primary, 0.7),
+          0 0 26px rgba($accent-1, 0.6);
+      }
 
-        .chev {
-          filter: drop-shadow(0 1px 0 #0006);
-        }
+      &:active {
+        transform: translateX(1px) scale(0.96);
+        box-shadow: 0 0 6px rgba($glow-primary, 0.5);
+      }
 
-        .sub-list {
-          padding-left: 1rem;
-
-          .sub-link {
-            color: #fff;
-            text-decoration: none;
-            font-size: 0.65rem;
-            padding: 0.35rem 0;
-            border-bottom: 1px dotted #ffffff66;
-
-            &:hover {
-              text-decoration: underline;
-            }
-          }
-        }
+      &.is-active {
+        background: linear-gradient(
+          90deg,
+          rgba($accent-1, 0.28),
+          rgba($glow-primary, 0.28)
+        );
+        box-shadow: 0 0 20px rgba($accent-1, 0.9),
+          0 0 28px rgba($glow-secondary, 0.8);
       }
     }
   }
@@ -428,6 +536,7 @@ body.nav-scroll-lock {
 /* ===========================================
    REDUCED MOTION
    =========================================== */
+
 @media (prefers-reduced-motion: reduce) {
   .nav-link,
   .brand,

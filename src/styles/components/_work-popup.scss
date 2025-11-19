@@ -1,54 +1,58 @@
 .popup-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(223, 184, 255, 0.45);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
+  position: fixed;
+  inset: 0;
+  background: rgba(223, 184, 255, 0.771);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-box {
+  background: transparent;
+  padding: 20px;
+  border-radius: 10px;
+  animation: float 2.5s ease-in-out infinite;
+}
+.popup-close {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #fff;
+  color: #000000;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.612);
+  transition: transform 0.2s;
+  @media (max-width: $tablet-max) {
+    right: 16px;
+    top: 0;
   }
-  
-  .popup-box {
-    background: transparent;
-    padding: 20px;
-    border-radius: 10px;
-    animation: float 2.5s ease-in-out infinite;
+}
+
+.popup-close:hover {
+  transform: scale(1.2);
+}
+
+.sign-img {
+  width: 440px;
+  height: auto;
+  @media (max-width: $tablet-max) {
+    width: 360px;
   }
-  .popup-close {
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    background: #fff;
-    color: #000000;
-    border: none;
-    font-size: 1.5rem;
-    font-weight: bold;
-    border-radius: 50%;
-    width: 32px;
-    height: 32px;
-    cursor: pointer;
-    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.612);
-    transition: transform 0.2s;
-    @media(max-width: $tablet-max){
-      right: 16px;
-      top: 0;
-    }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
   }
-  
-  .popup-close:hover {
-    transform: scale(1.2);
+  50% {
+    transform: translateY(-10px);
   }
-  
-  .sign-img {
-    width: 440px;
-    height: auto;
-    @media (max-width: $tablet-max){
-      width: 360px;
-    }
-  }
-  
-  @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-  }
-  
+}
