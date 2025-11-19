@@ -18,8 +18,7 @@ export const Resume = ({ isArcade = true, onNavigate }) =>  {
 export default Resume;
 */
 import { useEffect, useId, useRef, useState } from "react";
-import Navbar from "../components/NavBar.tsx"
-
+import Navbar from "../components/NavBar.tsx";
 
 const STAR_SIZE = 36; // px for the clickable star
 
@@ -27,40 +26,35 @@ const STAR_SIZE = 36; // px for the clickable star
 const HOTSPOTS = [
   {
     id: "name",
-    left: 64,  // %
-    top: 3,   // %
+    left: 64, // %
+    top: 3, // %
     title: "Hi! I go by Sam",
-    body:
-      "Legal name is Samantha, but please call me Sam. Front-end specialist focused on React + TypeScript and delightful, accessible UI.",
+    body: "Legal name is Samantha, but please call me Sam. Front-end specialist focused on React + TypeScript and delightful, accessible UI.",
   },
   {
     id: "experience-top",
     left: 84,
     top: 19,
     title: "Experience Snapshot",
-    body:
-      "Led front-end on 30+ projects, upgraded design systems, killed bugs with kindness, and shipped WCAG-compliant UI at scale.",
+    body: "Led front-end on 30+ projects, upgraded design systems, killed bugs with kindness, and shipped WCAG-compliant UI at scale.",
   },
   {
     id: "skills-center",
     left: 36,
     top: 62,
     title: "Core Skills",
-    body:
-      "React, TS, CSS architecture, accessibility (WCAG 2.1), performance, design systems, CI/CD habits that won’t ruin Fridays.",
+    body: "React, TS, CSS architecture, accessibility (WCAG 2.1), performance, design systems, CI/CD habits that won’t ruin Fridays.",
   },
   {
     id: "skills-right",
     left: 86,
     top: 76,
     title: "Tooling I actually use",
-    body:
-      "GitHub Actions, Webpack, Docker, Sitecore/Optimizely integration, analytics hooks, and pragmatic testing.",
+    body: "GitHub Actions, Webpack, Docker, Sitecore/Optimizely integration, analytics hooks, and pragmatic testing.",
   },
 ];
 
 export default function ResumeInteractive({ isArcade = true, onNavigate }) {
-  console.log("Arcade:", isArcade);
   const [openId, setOpenId] = useState(null);
   const overlayRef = useRef(null);
   const panelRef = useRef(null);
@@ -90,16 +84,14 @@ export default function ResumeInteractive({ isArcade = true, onNavigate }) {
   }, [openId]);
 
   return (
-    <div
-      className="resume-page"
-    >
+    <div className="resume-page">
       <Navbar isArcade={isArcade} onNavigate={onNavigate} />
       <h1>{isArcade} </h1>
       <div className="resume-grid">
         {/* Image wrapper is the positioning context */}
         <div className="resume-figure" ref={overlayRef}>
           <img
-            src={''}
+            src={""}
             alt="Resume of Sam Wolfe"
             className="resume-image"
             id={resumeId}
@@ -149,8 +141,8 @@ export default function ResumeInteractive({ isArcade = true, onNavigate }) {
 
 function BlurbPanel({ hotspot, onClose, panelRef }) {
   // Nudge the panel slightly so it doesn’t sit directly under your finger/star.
-  const OFFSET_X = 1;  // %
-  const OFFSET_Y = 3;  // %
+  const OFFSET_X = 1; // %
+  const OFFSET_Y = 3; // %
 
   return (
     <div

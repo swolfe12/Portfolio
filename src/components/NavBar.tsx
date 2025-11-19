@@ -146,7 +146,7 @@ export default function Navbar({ onNavigate }: NavbarProps) {
             className="drawer-link"
             type="button"
             onClick={() => {
-              console.log("drawer click: " + c.id);
+              console.log("[Navbar] drawer click", c.id);
               onNavigate?.(c.id);
               setOpen(false);
             }}
@@ -215,9 +215,7 @@ export default function Navbar({ onNavigate }: NavbarProps) {
             aria-controls={dialogId}
             onClick={() => setOpen((v) => !v)}
           >
-            <span className="sr-only">
-              {open ? "Close menu" : "Open menu"}
-            </span>
+            <span className="sr-only">{open ? "Close menu" : "Open menu"}</span>
             <svg viewBox="0 0 24 24" aria-hidden="true" width="24" height="24">
               <path
                 d="M3 6h18M3 12h18M3 18h18"

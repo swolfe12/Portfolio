@@ -1,25 +1,25 @@
-import Navbar from '../../components/NavBar.tsx';
-import wcc from '../../assets/WCC.png';
-import sass from '../../assets/sass-logo.png';
-import css from '../../assets/CSS-logo.png';
-import html from '../../assets/html-logo.png';
-import artPortfolio from '../../assets/art-portfolio.png';
-import projects from '../../assets/projects.png';
-import netlify from '../../assets/netlify.png';
-import ionos from '../../assets/Ionos.jpeg';
-import react from '../../assets/react-logo.png';
-import gitactions from '../../assets/git-actions-logo.png';
-import vite from '../../assets/vite.jpeg';
-import js from '../../assets/javascript.png';
-import ts from '../../assets/typescript.png';
+import Navbar from "../../components/NavBar.tsx";
+import wcc from "../../assets/WCC.png";
+import sass from "../../assets/sass-logo.png";
+import css from "../../assets/CSS-logo.png";
+import html from "../../assets/html-logo.png";
+import artPortfolio from "../../assets/art-portfolio.png";
+import projects from "../../assets/projects.png";
+import netlify from "../../assets/netlify.png";
+import ionos from "../../assets/Ionos.jpeg";
+import react from "../../assets/react-logo.png";
+import gitactions from "../../assets/git-actions-logo.png";
+import vite from "../../assets/vite.jpeg";
+import js from "../../assets/javascript.png";
+import ts from "../../assets/typescript.png";
 
 type ProjectsProps = {
   onNavigate?: (pageId: string) => void;
-}
+};
 
 export const Projects = ({ onNavigate }: ProjectsProps) => {
   return (
-    <div className="projects" >
+    <div className="projects">
       <Navbar onNavigate={onNavigate} />
       <div className="game-box">
         <div className="section-header">
@@ -29,7 +29,10 @@ export const Projects = ({ onNavigate }: ProjectsProps) => {
         {/* --- Card 1: Woodstock Community Church --- */}
         <div className="project-card">
           <div className="project-img-container">
-            <div className="project-img" style={{ backgroundImage: `url(${wcc})` }} />
+            <div
+              className="project-img"
+              style={{ backgroundImage: `url(${wcc})` }}
+            />
             <div className="project-overlay" />
           </div>
 
@@ -50,14 +53,15 @@ export const Projects = ({ onNavigate }: ProjectsProps) => {
             <div className="description-section">
               <h5 className="section-title">DESCRIPTION</h5>
               <p className="project-description" id="description">
-                Designed and built Woodstock Community Church’s website to create a more welcoming, accessible online experience
+                Designed and built Woodstock Community Church’s website to
+                create a more welcoming, accessible online experience
               </p>
             </div>
 
             <div className="cast-section">
               <h5 className="section-title">TOOLS</h5>
               <div className="cast-list">
-                 <div className="cast-item">
+                <div className="cast-item">
                   <img src={js} className="cast-photo" alt="JavaScript" />
                   <span className="cast-name">Java-Script</span>
                 </div>
@@ -83,7 +87,7 @@ export const Projects = ({ onNavigate }: ProjectsProps) => {
             <div className="action-row">
               <a
                 className="watch-btn"
-                href="https://wcchurch.org/" 
+                href="https://wcchurch.org/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -96,7 +100,10 @@ export const Projects = ({ onNavigate }: ProjectsProps) => {
         {/* --- Card 2: Sister's Art Portfolio --- */}
         <div className="project-card">
           <div className="project-img-container">
-            <div className="project-img" style={{ backgroundImage: `url(${artPortfolio})` }} />
+            <div
+              className="project-img"
+              style={{ backgroundImage: `url(${artPortfolio})` }}
+            />
             <div className="project-overlay" />
           </div>
 
@@ -118,7 +125,8 @@ export const Projects = ({ onNavigate }: ProjectsProps) => {
             <div className="description-section">
               <h5 className="section-title">DESCRIPTION</h5>
               <p className="project-description">
-                A clean, fast art portfolio site with a flexible cms gallery system. 
+                A clean, fast art portfolio site with a flexible cms gallery
+                system.
               </p>
             </div>
 
@@ -138,7 +146,11 @@ export const Projects = ({ onNavigate }: ProjectsProps) => {
                   <span className="cast-name">Sass</span>
                 </div>
                 <div className="cast-item">
-                  <img src={gitactions} className="cast-photo" alt="Git Actions" />
+                  <img
+                    src={gitactions}
+                    className="cast-photo"
+                    alt="Git Actions"
+                  />
                   <span className="cast-name">Git Actions</span>
                 </div>
                 <div className="cast-item">
@@ -166,7 +178,6 @@ export const Projects = ({ onNavigate }: ProjectsProps) => {
           </div>
         </div>
         {/* --- end card 2 --- */}
-
       </div>
     </div>
   );

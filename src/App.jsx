@@ -10,9 +10,14 @@ import Projects from "./pages/arcade/Projects.tsx";
 import WorkPopup from "./components/WorkPopup";
 import Loader from "./components/Loader";
 
+import {
+  NavigationProvider,
+  useNavigation,
+} from "./hooks/NavigationContext.tsx";
+
+// Outer App keeps your loader + mobile detection
 export default function App() {
   const [ready, setReady] = useState(false);
-  //Mobile -> show cell phone lockscreen -> Window opens to "Arcade"
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -30,7 +35,7 @@ export default function App() {
     const handleLoaded = () => {
       setTimeout(() => {
         setReady(true);
-      }, 500); // adjust delay as needed
+      }, 500);
     };
 
     if (document.readyState === "complete") {
@@ -45,21 +50,32 @@ export default function App() {
   if (!ready) return <Loader />;
 
   return (
+    <NavigationProvider>
+      <AppWithNav isMobile={isMobile} />
+    </NavigationProvider>
+  );
+}
+
+// This lives *inside* NavigationProvider, so it can use the hook
+function AppWithNav({ isMobile }) {
+  const { goTo } = useNavigation();
+
+  return (
     <>
       <WorkPopup />
       <Routes>
         {isMobile ? (
-          <Route path="/" element={<MyPhone onNavigate />} />
+          <Route path="/" element={<MyPhone onNavigate={goTo} />} />
         ) : (
-          <Route path="/" element={<MyRoom onNavigate />} />
+          <Route path="/" element={<MyRoom onNavigate={goTo} />} />
         )}
-        <Route path="/links" element={<Links onNavigate />} />
-        <Route path="/skills" element={<SkillsHub onNavigate />} />
+        <Route path="/links" element={<Links onNavigate={goTo} />} />
+        <Route path="/skills" element={<SkillsHub onNavigate={goTo} />} />
         <Route
           path="/skills/:categoryId"
-          element={<SkillsCategory onNavigate />}
+          element={<SkillsCategory onNavigate={goTo} />}
         />
-        <Route path="/projects" element={<Projects onNavigate />} />
+        <Route path="/projects" element={<Projects onNavigate={goTo} />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </>
