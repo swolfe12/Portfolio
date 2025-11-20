@@ -26,7 +26,9 @@ export const Resume = ({ onNavigate }: ResumeProps) => {
             below, or click the link to view it full-size.
           </p>
           <button className="resume-btn basic-btn">
-            Go To Resume <RiExternalLinkLine />
+            <a href={documentURL} target="_blank" rel="noopener noreferrer">
+              Go To Resume <RiExternalLinkLine />
+            </a>
           </button>
           <iframe
             title="Resume"
