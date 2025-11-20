@@ -108,11 +108,11 @@ export const Arcade = ({ onNavigate }: ArcadeProps) => {
             <li>
               <button
                 type="button"
-                onClick={() => openSkill("uiux")}
-                aria-label="Open UI/UX"
+                onClick={() => openSkill("agile")}
+                aria-label="Open Agile"
               >
                 <span className="dot" aria-hidden="true" />
-                <span className="title">UI/UX design</span>
+                <span className="title">Agile Workflows</span>
                 <span className="sub">where function meets fabulous</span>
               </button>
             </li>

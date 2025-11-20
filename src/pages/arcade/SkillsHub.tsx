@@ -20,7 +20,7 @@ const CATEGORIES = [
   { id: "backend", label: "Back-End", img: bhat },
   { id: "accessibility", label: "Accessibility", img: headphones },
   { id: "cms", label: "CMS", img: flower },
-  { id: "uiux", label: "UI/UX", img: glasses },
+  { id: "agile", label: "Agile", img: glasses },
 ] as const;
 
 const isMobile = window.innerWidth < 767;
@@ -282,6 +282,19 @@ export default function SkillsHub({ onNavigate }: SkillsHubProps) {
                   </div>
                 ))}
               </div>
+              {selected.certImg && (
+                <section
+                  className="skills-cert"
+                  aria-label={`${selected.name} certification`}
+                >
+                  <h2>{selected.certAlt}</h2>
+                  <img
+                    src={selected.certImg}
+                    alt={selected.certAlt ?? `${selected.name} certification`}
+                    height={300}
+                  />
+                </section>
+              )}
             </div>
           ) : (
             <p className="skills-details__placeholder">

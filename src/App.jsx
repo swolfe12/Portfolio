@@ -5,7 +5,6 @@ import MyRoom from "./pages/MyRoom.jsx";
 import MyPhone from "./pages/MyPhone.jsx";
 import Links from "./pages/arcade/Links.tsx";
 import SkillsHub from "./pages/arcade/SkillsHub.tsx";
-import SkillsCategory from "./pages/arcade/SkillsCategory.tsx";
 import Projects from "./pages/arcade/Projects.tsx";
 import WorkPopup from "./components/WorkPopup";
 import Loader from "./components/Loader";
@@ -87,10 +86,6 @@ function AppWithNav({ isMobile }) {
         )}
         <Route path="/links" element={<Links onNavigate={goTo} />} />
         <Route path="/skills" element={<SkillsHub onNavigate={goTo} />} />
-        <Route
-          path="/skills/:categoryId"
-          element={<SkillsCategory onNavigate={goTo} />}
-        />
         <Route path="/resume" element={<Resume onNavigate={goTo} />} />
         <Route path="/projects" element={<Projects onNavigate={goTo} />} />
         <Route path="*" element={<Navigate to="/" replace />} />

@@ -2,7 +2,6 @@ import Arcade from "../pages/arcade/Arcade.tsx";
 import Links from "../pages/arcade/Links.tsx";
 import SkillsHub from "../pages/arcade/SkillsHub.tsx";
 import TempPage from "../pages/arcade/TempPage.tsx";
-import SkillsCategory from "../pages/arcade/SkillsCategory.tsx";
 import Projects from "../pages/arcade/Projects.tsx";
 import Resume from "../pages/arcade/Resume.tsx";
 // import AboutMe from '../pages/arcade/AboutMe.tsx';
@@ -22,7 +21,7 @@ const Laptop = ({ isOpen, currentPage, onNavigate, screenRef }) => {
           ref={screenRef}
           onPointerDown={(e) => e.stopPropagation()}
         >
-          <SkillsCategory onNavigate={onNavigate} categoryId={categoryId} />
+          <SkillsHub onNavigate={onNavigate} categoryId={categoryId} />
         </div>
       </div>
     );
