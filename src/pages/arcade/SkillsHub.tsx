@@ -81,11 +81,11 @@ export default function SkillsHub({ onNavigate }: SkillsHubProps) {
   useEffect(() => {
     if (hubRef.current) {
       console.log(hubRef.current);
-      hubRef.current.scrollTo({ top: 0, left: 0, behavior: "auto" });
-      setTimeout(
+      //hubRef.current.scrollTo({ top: 0, left: 0, behavior: "auto" });
+      /*setTimeout(
         () => hubRef.current?.scrollTo({ top: 0, left: 0, behavior: "auto" }),
         200
-      );
+      );*/
     } else {
       window.scrollTo({ top: 0, left: 0, behavior: "auto" });
     }
