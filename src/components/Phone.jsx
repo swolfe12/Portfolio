@@ -15,6 +15,7 @@ import back from "./../assets/back.png";
 //import hangup from "../assets/answer.PNG";
 import music from "../assets/music-gems.png";
 import cherry from "../assets/cherry.png";
+import samSunnies from "../assets/sam-sunnies.webp";
 
 const Phone = ({ currentPage = "home", onNavigate, screenRef }) => {
   // 'lock' -> lock screen, 'transition' -> black + opening anim, 'app' -> fully open
@@ -85,7 +86,7 @@ const Phone = ({ currentPage = "home", onNavigate, screenRef }) => {
   };
 
   const handleCall = () => {
-    setShowCallModal(true);
+    setShowCallModal((prev) => !prev);
   };
 
   const handleCloseCall = () => {
@@ -113,6 +114,7 @@ const Phone = ({ currentPage = "home", onNavigate, screenRef }) => {
         </div>
 
         <div className="phoneScreen">
+          {content}
           {showCallModal && (
             <div
               className="modal-backdrop"
@@ -126,15 +128,40 @@ const Phone = ({ currentPage = "home", onNavigate, screenRef }) => {
                 aria-labelledby="call-modal-title"
                 onClick={(e) => e.stopPropagation()}
               >
-                <h2 id="call-modal-title">Calling Sam’s Portfolio Hotline…</h2>
-                <p>Ring ring. Totally real phone call happening here.</p>
-                <button type="button" onClick={handleCloseCall}>
-                  Hang Up
+                {/* X close button in the corner */}
+                <button
+                  type="button"
+                  className="modal__close"
+                  aria-label="Close contact modal"
+                  onClick={handleCloseCall}
+                >
+                  ×
                 </button>
+
+                <h2 id="call-modal-title">Add Me To Your Contacts!</h2>
+
+                <div className="contact-pic">
+                  <img src={samSunnies} alt="Sam's Profile Pic" />
+                </div>
+
+                <div className="contact-buttons">
+                  <a
+                    href="tel:+16783148280"
+                    className="contact-btn contact-btn--phone"
+                  >
+                    Call Me
+                  </a>
+
+                  <a
+                    href="mailto:samgwolfe12@gmail.com"
+                    className="contact-btn contact-btn--email"
+                  >
+                    Email Me
+                  </a>
+                </div>
               </div>
             </div>
           )}
-          {content}
         </div>
         <div className="btn-bar">
           <button

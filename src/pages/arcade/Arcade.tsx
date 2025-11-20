@@ -32,7 +32,7 @@ export const Arcade = ({ onNavigate }: ArcadeProps) => {
                 📞
               </span>
               <span>
-                <a href="tel:+16783148280">(678) 314-8280</a>
+                <a href="tel:+16783148280">(678)314-8280</a>
               </span>
             </li>
             <li>
