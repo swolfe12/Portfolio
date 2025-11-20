@@ -165,7 +165,7 @@ export default function SkillsHub({ onNavigate }: SkillsHubProps) {
         left: 0,
         behavior: "smooth",
       });
-    }, 200);
+    }, 300);
 
     return () => window.clearTimeout(timer);
   }, [selected]);
