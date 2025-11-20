@@ -6,7 +6,6 @@ import MyPhone from "./pages/MyPhone.jsx";
 import Links from "./pages/arcade/Links.tsx";
 import SkillsHub from "./pages/arcade/SkillsHub.tsx";
 import Projects from "./pages/arcade/Projects.tsx";
-import WorkPopup from "./components/WorkPopup";
 import Loader from "./components/Loader";
 import Resume from "./pages/arcade/Resume.tsx";
 
@@ -77,7 +76,6 @@ function AppWithNav({ isMobile }) {
 
   return (
     <>
-      <WorkPopup />
       <Routes>
         {isMobile ? (
           <Route path="/" element={<MyPhone onNavigate={goTo} />} />
