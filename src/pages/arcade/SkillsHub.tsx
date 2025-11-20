@@ -69,7 +69,6 @@ export default function SkillsHub({ onNavigate }: SkillsHubProps) {
   const { search } = useLocation();
 
   const goToCategorySlide = (id: CatId | null) => {
-    console.log("gotToCategory called");
     if (!id || !sliderRef.current) return;
     const index = CATEGORIES.findIndex((c) => c.id === id);
     console.log(index);
@@ -81,9 +80,10 @@ export default function SkillsHub({ onNavigate }: SkillsHubProps) {
   // Always start at the *top* of the SkillsHub container (or window fallback)
   useEffect(() => {
     if (hubRef.current) {
-      hubRef.current.scrollTo({ top: 0, left: 0, behavior: "auto" });
+      console.log(hubRef.current);
+      hubRef.current.scrollTo({ top: -100, left: 0, behavior: "auto" });
     } else {
-      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+      window.scrollTo({ top: -100, left: 0, behavior: "auto" });
     }
   }, []);
 
