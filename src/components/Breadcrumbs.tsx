@@ -12,7 +12,6 @@ type BreadcrumbsProps = {
   items: Crumb[];
   onNavigate?: (pageId: PageId) => void;
 };
-
 const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items, onNavigate }) => {
   if (!items.length) return null;
 
@@ -21,7 +20,8 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items, onNavigate }) => {
       <ol className="breadcrumbs__list">
         {items.map((item, index) => {
           const isLast = index === items.length - 1;
-          const isCurrent = !!item.isCurrent || isLast;
+          // 🔑 Only treat as "current" if explicitly marked
+          const isCurrent = item.isCurrent === true;
 
           if (isCurrent) {
             return (
@@ -31,6 +31,11 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items, onNavigate }) => {
                 aria-current="page"
               >
                 <span className="breadcrumbs__label">{item.label}</span>
+                {!isLast && (
+                  <span className="breadcrumbs__separator" aria-hidden="true">
+                    /
+                  </span>
+                )}
               </li>
             );
           }
@@ -44,9 +49,11 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items, onNavigate }) => {
               >
                 {item.label}
               </button>
-              <span className="breadcrumbs__separator" aria-hidden="true">
-                /
-              </span>
+              {!isLast && (
+                <span className="breadcrumbs__separator" aria-hidden="true">
+                  /
+                </span>
+              )}
             </li>
           );
         })}

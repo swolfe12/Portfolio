@@ -21,9 +21,7 @@ export const Links = ({ onNavigate }: LinksProps) => {
         ]}
       />
       <div className="game-box">
-        <div className="section-header">
-          <img src={links} alt="Skill Select"></img>
-        </div>
+        <div className="section-header">Links</div>
         <div className="list">
           <a href="https://github.com/swolfe12?tab=repositories">
             <img src={github} height="200px" alt="Github Icon"></img>

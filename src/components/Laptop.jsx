@@ -1,20 +1,19 @@
-
-import Arcade from '../pages/arcade/Arcade.tsx';
-import Links from '../pages/arcade/Links.tsx';
-import Resume from '../NotUsing/Resume.jsx';
-import SkillsHub from '../pages/arcade/SkillsHub.tsx';
-import TempPage from '../pages/arcade/TempPage.tsx';
-import SkillsCategory from '../pages/arcade/SkillsCategory.tsx';
-import Projects from '../pages/arcade/Projects.tsx';
+import Arcade from "../pages/arcade/Arcade.tsx";
+import Links from "../pages/arcade/Links.tsx";
+import SkillsHub from "../pages/arcade/SkillsHub.tsx";
+import TempPage from "../pages/arcade/TempPage.tsx";
+import SkillsCategory from "../pages/arcade/SkillsCategory.tsx";
+import Projects from "../pages/arcade/Projects.tsx";
+import Resume from "../pages/arcade/Resume.tsx";
 // import AboutMe from '../pages/arcade/AboutMe.tsx';
-import laptop from './../assets/laptop.png';
+import laptop from "./../assets/laptop.png";
 
 const Laptop = ({ isOpen, currentPage, onNavigate, screenRef }) => {
-  if (typeof currentPage === 'string' && currentPage.startsWith('skills/')) {
-    const categoryId = currentPage.slice('skills/'.length);
+  if (typeof currentPage === "string" && currentPage.startsWith("skills/")) {
+    const categoryId = currentPage.slice("skills/".length);
     return (
       <div
-        className={`laptop glowable${isOpen ? ' scale-up active' : ''}`}
+        className={`laptop glowable${isOpen ? " scale-up active" : ""}`}
         style={{ backgroundImage: `url(${laptop})` }}
         id="laptop"
       >
@@ -23,10 +22,7 @@ const Laptop = ({ isOpen, currentPage, onNavigate, screenRef }) => {
           ref={screenRef}
           onPointerDown={(e) => e.stopPropagation()}
         >
-          <SkillsCategory
-            onNavigate={onNavigate}
-            categoryId={categoryId}
-          />
+          <SkillsCategory onNavigate={onNavigate} categoryId={categoryId} />
         </div>
       </div>
     );
@@ -34,19 +30,19 @@ const Laptop = ({ isOpen, currentPage, onNavigate, screenRef }) => {
 
   const renderScreen = () => {
     switch (currentPage) {
-      case 'home':
+      case "home":
         return <Arcade onNavigate={onNavigate} />;
-      case 'links':
+      case "links":
         return <Links onNavigate={onNavigate} />;
-      case 'resume':
+      case "resume":
         return <Resume onNavigate={onNavigate} />;
-      case 'about':
+      case "about":
         return <TempPage onNavigate={onNavigate} />;
-        // return <AboutMe isArcade={false} onNavigate={onNavigate} />;
-      case 'projects':
+      // return <AboutMe isArcade={false} onNavigate={onNavigate} />;
+      case "projects":
         return <Projects onNavigate={onNavigate} />;
-      case 'skills':
-        return <SkillsHub onNavigate={onNavigate} />;
+      case "skills":
+        return <SkillsHub onNavigate={onNavigate} screenRef={screenRef} />;
       default:
         return <Arcade onNavigate={onNavigate} />;
     }
@@ -54,7 +50,7 @@ const Laptop = ({ isOpen, currentPage, onNavigate, screenRef }) => {
 
   return (
     <div
-      className={`laptop glowable${isOpen ? ' scale-up active' : ''}`}
+      className={`laptop glowable${isOpen ? " scale-up active" : ""}`}
       style={{ backgroundImage: `url(${laptop})` }}
       id="laptop"
     >

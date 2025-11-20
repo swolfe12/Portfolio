@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import "./../styles/main.scss";
 import Calendar from "../components/Calendar";
 import Clock from "../components/Clock";
-import Laptop from "../components/Laptop";
+import Laptop from "../components/Laptop.jsx";
 import MashImg from "../components/MashImage";
 
 import contact from "./../assets/contact.png";

@@ -74,7 +74,7 @@ export default function Navbar({ onNavigate }: NavbarProps) {
     return () => document.removeEventListener("keydown", onKeyDown);
   }, [open, exitOpen]);
 
-  // Resume modal logic
+  /* Resume modal logic
   const handleResumeClick = (
     e?: React.MouseEvent,
     triggerEl?: HTMLElement | null
@@ -83,7 +83,7 @@ export default function Navbar({ onNavigate }: NavbarProps) {
     setOpen(false);
     if (triggerEl) resumeTriggerRef.current = triggerEl as any;
     setExitOpen(true);
-  };
+  };*/
 
   const confirmLeave = () => {
     setExitOpen(false);
@@ -97,29 +97,16 @@ export default function Navbar({ onNavigate }: NavbarProps) {
   };
 
   const renderDesktopItem = (c: Category, i: number) => {
-    const isResume = c.id === "resume";
     return (
       <li key={c.id} className="nav-item">
-        {isResume ? (
-          <button
-            className={`nav-link ${isActive(c.href) ? "is-active" : ""}`}
-            type="button"
-            onClick={(e) => handleResumeClick(e, e.currentTarget)}
-            aria-haspopup="dialog"
-            aria-controls={exitId}
-          >
-            {c.label}
-          </button>
-        ) : (
-          <button
-            className="nav-link"
-            type="button"
-            onClick={() => onNavigate?.(c.id)}
-            aria-current={isActive(c.href) ? "page" : undefined}
-          >
-            {c.label}
-          </button>
-        )}
+        <button
+          className="nav-link"
+          type="button"
+          onClick={() => onNavigate?.(c.id)}
+          aria-current={isActive(c.href) ? "page" : undefined}
+        >
+          {c.label}
+        </button>
         {i < CATEGORIES.length - 1 && (
           <span className="divider" aria-hidden="true"></span>
         )}
@@ -128,32 +115,19 @@ export default function Navbar({ onNavigate }: NavbarProps) {
   };
 
   const renderDrawerItem = (c: Category) => {
-    const isResume = c.id === "resume";
     return (
       <li key={c.id} className="drawer-item">
-        {isResume ? (
-          <button
-            className="drawer-link"
-            type="button"
-            onClick={(e) => handleResumeClick(e, e.currentTarget)}
-            aria-haspopup="dialog"
-            aria-controls={exitId}
-          >
-            {c.label}
-          </button>
-        ) : (
-          <button
-            className="drawer-link"
-            type="button"
-            onClick={() => {
-              console.log("[Navbar] drawer click", c.id);
-              onNavigate?.(c.id);
-              setOpen(false);
-            }}
-          >
-            {c.label}
-          </button>
-        )}
+        <button
+          className="drawer-link"
+          type="button"
+          onClick={() => {
+            console.log("[Navbar] drawer click", c.id);
+            onNavigate?.(c.id);
+            setOpen(false);
+          }}
+        >
+          {c.label}
+        </button>
       </li>
     );
   };

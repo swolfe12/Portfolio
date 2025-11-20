@@ -40,7 +40,7 @@
         background-repeat: no-repeat; /* Prevent image tiling */
         background-position: center right; /* Center the image */
         background-size: auto 100%;
-        width: 78%;
+        width: 75%;
         max-width: 650px;
         height: 400px;
         display: flex;
@@ -56,7 +56,7 @@
       }
       .skills-carousel {
         height: 100%;
-        width: 22%;
+        width: 25%;
         margin: auto;
         @media (max-width: 900px) {
           width: 80%;
@@ -69,7 +69,9 @@
           @media (max-width: 900px) {
             padding-right: 10px;
             img {
-              height: 85%;
+              width: 150px;
+              margin: auto;
+              //height: 150px;
             }
           }
           button {
@@ -79,8 +81,10 @@
             border: 1px solid black;
           }
           img {
-            width: 100%;
+            //width: 100%;
             padding: 0;
+            margin: auto;
+            width: 150px;
           }
           .skills-card__link {
             font-size: 16px;

@@ -232,18 +232,20 @@ body.nav-scroll-lock {
   border-radius: 999px;
   background: linear-gradient(180deg, var(--pink-hi), var(--pink));
   color: $richblack;
-  font-size: 16px;
+  font-size: 24px;
   text-decoration: none;
   margin-right: 5px;
   border: none;
   font-family: "Press Start 2P", monospace;
+  font-family: "Orbitron";
+  font-weight: 700;
   text-align: left;
   text-transform: uppercase;
   transition: transform 0.15s ease;
 
   @media (min-width: $desktop-min) {
     margin-right: 20px;
-    font-size: 20px;
+    font-size: 26px;
   }
 
   &:hover {
@@ -289,7 +291,7 @@ body.nav-scroll-lock {
       color: #fff;
       text-decoration: none;
       background: linear-gradient(180deg, var(--pink-hi), var(--pink));
-      box-shadow: inset 0 -4px 0 var(--pink-lo), 0 2px 0 rgba(0, 0, 0, 0.35);
+      //box-shadow: inset 0 -4px 0 var(--pink-lo), 0 2px 0 rgba(0, 0, 0, 0.35);
       font-size: 14px;
       border: none;
       font-family: "Press Start 2P", monospace;
@@ -357,8 +359,6 @@ body.nav-scroll-lock {
 
   &:hover {
     transform: translateY(-1px) scale(1.03);
-    box-shadow: 0 0 16px rgba($glow-primary, 0.9),
-      0 0 34px rgba($glow-secondary, 0.75);
   }
 
   &:active {

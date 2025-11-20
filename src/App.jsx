@@ -9,6 +9,7 @@ import SkillsCategory from "./pages/arcade/SkillsCategory.tsx";
 import Projects from "./pages/arcade/Projects.tsx";
 import WorkPopup from "./components/WorkPopup";
 import Loader from "./components/Loader";
+import Resume from "./pages/arcade/Resume.tsx";
 
 import {
   NavigationProvider,
@@ -90,6 +91,7 @@ function AppWithNav({ isMobile }) {
           path="/skills/:categoryId"
           element={<SkillsCategory onNavigate={goTo} />}
         />
+        <Route path="/resume" element={<Resume onNavigate={goTo} />} />
         <Route path="/projects" element={<Projects onNavigate={goTo} />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>

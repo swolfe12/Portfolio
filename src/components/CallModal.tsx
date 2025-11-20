@@ -38,7 +38,7 @@ export default function CallModal() {
         <h2 id="call-modal-title">Incoming Call</h2>
         <p>Connecting you to Sam’s fake portfolio hotline… 📞</p>
         <div className="modal__actions">
-          <button type="button" onClick={closeCall}>
+          <button type="button" className="basic-btn" onClick={closeCall}>
             Hang Up
           </button>
         </div>

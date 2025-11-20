@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useNavigation } from "../hooks/NavigationContext.tsx";
 import Arcade from "../pages/arcade/Arcade.tsx";
 import Links from "../pages/arcade/Links.tsx";
-import Resume from "../NotUsing/Resume.jsx";
+import Resume from "../pages/arcade/Resume.tsx";
 import SkillsHub from "../pages/arcade/SkillsHub.tsx";
 import TempPage from "../pages/arcade/TempPage.tsx";
 import Projects from "../pages/arcade/Projects.tsx";
@@ -16,7 +16,7 @@ import back from "./../assets/back.png";
 import music from "../assets/music-gems.png";
 import cherry from "../assets/cherry.png";
 
-const Phone = ({ currentPage = "home", onNavigate }) => {
+const Phone = ({ currentPage = "home", onNavigate, screenRef }) => {
   // 'lock' -> lock screen, 'transition' -> black + opening anim, 'app' -> fully open
 
   const [screenStage, setScreenStage] = useState("lock");
@@ -34,7 +34,7 @@ const Phone = ({ currentPage = "home", onNavigate }) => {
       case "projects":
         return <Projects onNavigate={onNavigate} />;
       case "skills":
-        return <SkillsHub onNavigate={onNavigate} />;
+        return <SkillsHub onNavigate={onNavigate} screenRef={screenRef} />;
       default:
         return <Arcade onNavigate={onNavigate} />;
     }

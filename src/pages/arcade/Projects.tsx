@@ -30,9 +30,7 @@ export const Projects = ({ onNavigate }: ProjectsProps) => {
         ]}
       />
       <div className="game-box">
-        <div className="section-header">
-          <img src={projects} alt="Projects"></img>
-        </div>
+        <div className="section-header">Projects</div>
 
         {/* --- Card 1: Woodstock Community Church --- */}
         <div className="project-card">
