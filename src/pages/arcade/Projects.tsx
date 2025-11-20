@@ -4,7 +4,6 @@ import sass from "../../assets/sass-logo.png";
 import css from "../../assets/CSS-logo.png";
 import html from "../../assets/html-logo.png";
 import artPortfolio from "../../assets/art-portfolio.png";
-import projects from "../../assets/projects.png";
 import netlify from "../../assets/netlify.png";
 import ionos from "../../assets/Ionos.jpeg";
 import react from "../../assets/react-logo.png";

@@ -2,7 +2,6 @@ import Navbar from "../../components/NavBar.tsx";
 import github from "../../assets/github.png";
 import linkedin from "../../assets/linkedin.png";
 import { RiExternalLinkLine } from "react-icons/ri";
-import links from "../../assets/links.png";
 import Breadcrumbs from "../../components/Breadcrumbs.tsx";
 
 type LinksProps = {
