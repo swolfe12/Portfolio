@@ -1,5 +1,5 @@
 // src/components/Phone.tsx
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigation } from "../context/NavigationContext";
 import Arcade from "../pages/arcade/Arcade";
 import Links from "../pages/arcade/Links";
@@ -12,36 +12,14 @@ import LockScreen from "../pages/LockScreen";
 type PhoneProps = {
   currentPage?: string;
   onNavigate?: (pageId: string) => void;
-  screenRef?: React.RefObject<HTMLDivElement>;
 };
 
-const Phone: React.FC<PhoneProps> = ({
-  currentPage = "home",
-  onNavigate,
-  screenRef,
-}) => {
+const Phone = ({ currentPage = "home", onNavigate }: PhoneProps) => {
   const [screenStage, setScreenStage] = useState<"lock" | "transition" | "app">(
     "lock"
   );
-  const { goBack } = useNavigation();
 
-  const openScreen = () => {
-    setScreenStage("transition");
-    setTimeout(() => setScreenStage("app"), 400);
-  };
-  /*
-  const closeScreen = () => {
-    setScreenStage("transition");
-    setTimeout(() => setScreenStage("lock"), 400);
-  };
-
-  useEffect(() => {
-    if (screenStage === "lock") {
-      closeScreen;
-    }
-  }, [screenStage]);
-*/
-  const getPageComponent = () => {
+  const renderPhoneScreen = () => {
     switch (currentPage) {
       case "home":
         return <Arcade onNavigate={onNavigate} />;
@@ -60,53 +38,155 @@ const Phone: React.FC<PhoneProps> = ({
     }
   };
 
+  useEffect(() => {
+    if (screenStage === "transition") {
+      const timer = setTimeout(() => {
+        setScreenStage("app");
+      }, 200);
+      return () => clearTimeout(timer);
+    }
+  }, [screenStage]);
+
+  let content;
+  if (screenStage === "lock") {
+    content = <LockScreen onUnlock={() => setScreenStage("transition")} />;
+  } else {
+    content = (
+      <div
+        className={
+          "phone-app-shell " +
+          (screenStage === "transition" ? "opening" : "open")
+        }
+      >
+        {renderPhoneScreen()}
+      </div>
+    );
+  }
+
+  const goHome = () => {
+    if (screenStage === "lock") {
+      setScreenStage("transition");
+    }
+    onNavigate?.("home");
+  };
+
+  const { goBack, last } = useNavigation();
+  const canGoBack = !!last;
+  const [showCallModal, setShowCallModal] = useState(false);
+
+  const handleBack = () => {
+    goBack();
+  };
+
+  const handleCall = () => {
+    setShowCallModal((prev) => !prev);
+  };
+
+  const handleCloseCall = () => {
+    setShowCallModal(false);
+  };
+
   return (
-    <div className="phone-wrapper">
+    <>
       <div
         className="phone"
         style={{ backgroundImage: 'url("/assets/phone.png")' }}
+        id="phone"
       >
-        <div className="status-bar">
-          <div className="time">9:41</div>
-          <div className="icons">
-            <span className="icon-signal" />
-            <span className="icon-wifi" />
-            <span className="icon-battery" />
-          </div>
+        <div className="bedazzle-bar">
+          <img
+            src="/assets/cherry.png"
+            className="cherry"
+            alt="Heart and Cherry Bejewels"
+          />
+          <img
+            src="/assets/music-gems.png"
+            className="music"
+            alt="Heart and Music Bejewels"
+          />
         </div>
 
-        <div className={`phone-screen ${screenStage}`}>
-          {screenStage === "lock" && <LockScreen onUnlock={openScreen} />}
-          {screenStage === "app" && (
-            <div className="app-screen">
-              <button className="back-btn" onClick={goBack}>
-                <img src="/assets/back.png" alt="Back" />
-              </button>
-
+        <div className="phoneScreen">
+          {content}
+          {showCallModal && (
+            <div
+              className="modal-backdrop"
+              role="presentation"
+              onClick={handleCloseCall}
+            >
               <div
-                className="screen"
-                ref={screenRef}
-                onPointerDown={(e) => e.stopPropagation()}
+                className="modal"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="call-modal-title"
+                onClick={(e) => e.stopPropagation()}
               >
-                {getPageComponent()}
+                <button
+                  type="button"
+                  className="modal__close"
+                  aria-label="Close contact modal"
+                  onClick={handleCloseCall}
+                >
+                  ×
+                </button>
+
+                <h2 id="call-modal-title">Add Me To Your Contacts!</h2>
+
+                <div className="contact-pic">
+                  <img src="/assets/sam-sunnies.webp" alt="Sam's Profile Pic" />
+                </div>
+
+                <div className="contact-buttons">
+                  <a
+                    href="tel:+16783148280"
+                    className="contact-btn contact-btn--phone"
+                  >
+                    Call Me
+                  </a>
+
+                  <a
+                    href="mailto:samgwolfe12@gmail.com"
+                    className="contact-btn contact-btn--email"
+                  >
+                    Email Me
+                  </a>
+                </div>
               </div>
             </div>
           )}
         </div>
-
-        <div className="bottom-bar">
-          <img src="/assets/keyboard.png" alt="Keyboard" className="nav-icon" />
-          <img src="/assets/music-gems.png" alt="Music" className="nav-icon" />
-          <img src="/assets/cherry.png" alt="Cherry" className="nav-icon" />
-        </div>
-
-        <div className="incoming-call">
-          <button className="answer-btn">
-            <img src="/assets/answer.PNG" alt="Answer" />
+        <div className="btn-bar">
+          <button
+            type="button"
+            className="phone-btn phone-btn--back"
+            onClick={handleBack}
+            disabled={!canGoBack}
+            aria-disabled={!canGoBack}
+          >
+            <img src="/assets/back.png" className="back" alt="Back" />
+          </button>
+          <div
+            className="home-btn"
+            role="button"
+            aria-label="Go to home screen"
+            tabIndex={0}
+            onClick={goHome}
+          />
+          <button
+            type="button"
+            className="phone-btn phone-btn--call"
+            onClick={handleCall}
+          >
+            <img src="/assets/answer.PNG" className="answer" alt="Answer" />
           </button>
         </div>
       </div>
-    </div>
+
+      <div
+        className="keyboard"
+        style={{ backgroundImage: 'url("/assets/keyboard.png")' }}
+      />
+    </>
   );
 };
 
