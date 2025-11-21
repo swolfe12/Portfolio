@@ -1,0 +1,36 @@
+name: build-and-publish-gh-pages #just the title displayed on github - doesn't affect behavior at all
+
+on: #question: what causes workflow to run?
+  push: #answer: when I push to the main branch
+    branches:
+      - main
+
+jobs: #what the workflow is going to do
+  deploy: #only one job: deploy
+    runs-on: ubuntu-latest #start a linux VM (Ubuntu) to run the job - starts the runner
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm install #reads package.json and downloads dependencies (react etc.) into node_modules
+
+      - name: Build the app
+        run: npm run build #runs build script defined in package.json - bundles/minifies src -> build folder
+
+      - name: Set Git user identity
+        run: |
+          git config --global user.email "samgwolfe12@gmail.com"
+          git config --global user.name "swolfe12"
+
+      - name: Authenticate GitHub Pages deployment #Github generates an automatic secret every evertime the workflow runs - nobody never sees it
+        run: |
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+
+      - name: Deploy to GitHub Pages
+        run: npm run deploy #runs script from package.json - pushes build folder to gh-pages branch
