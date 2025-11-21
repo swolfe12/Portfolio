@@ -1,13 +1,12 @@
-import avatar from "../../assets/avatar3.webp";
-import Navbar from "../../components/NavBar.tsx";
-import butterfly1 from "../../assets/butterfly1.png";
-import butterfly2 from "../../assets/butterfly2.png";
+import Navbar from "../../components/NavBar";
 
 type ArcadeProps = {
   onNavigate?: (pageId: string) => void;
 };
-type SkillCategory = "frontend" | "backend" | "accessibility" | "uiux";
-export const Arcade = ({ onNavigate }: ArcadeProps) => {
+
+type SkillCategory = "frontend" | "backend" | "accessibility" | "agile";
+
+export const Arcade: React.FC<ArcadeProps> = ({ onNavigate }) => {
   const openSkill = (cat: SkillCategory) => {
     const id = cat.toLowerCase();
     (window as any).__SW_PENDING_SKILL = id;
@@ -18,6 +17,7 @@ export const Arcade = ({ onNavigate }: ArcadeProps) => {
       window.dispatchEvent(new CustomEvent("skills:select", { detail: id }));
     }, 0);
   };
+
   return (
     <div className="arcade" id="home">
       <Navbar onNavigate={onNavigate} />
@@ -57,7 +57,7 @@ export const Arcade = ({ onNavigate }: ArcadeProps) => {
         </div>
 
         <div className="avatar">
-          <img src={avatar} alt="Sam avatar" />
+          <img src="/assets/avatar3.webp" alt="Sam avatar" />
         </div>
 
         <div className="about-blob" role="region" aria-labelledby="about-title">
@@ -141,12 +141,12 @@ export const Arcade = ({ onNavigate }: ArcadeProps) => {
           </ul>
           <img
             className="butterfly1 gentle-hover-shake1"
-            src={butterfly1}
+            src="/assets/butterfly1.png"
             alt=""
           />
           <img
             className="butterfly2 gentle-hover-shake2"
-            src={butterfly2}
+            src="/assets/butterfly2.png"
             alt=""
           />
         </div>

@@ -15,9 +15,9 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 /* StrictMode is just a dev tool that helps catch issues in the component lifestyle
    It can cause issues because it mounts-> unmounts-> mounts to test that the useEffects can handle it  
    ...so useEffects will run teice in dev mode
+
+  BrowserRouter: keeps app in sync with browser
 */
-/* BrowserRouter:
- */
 root.render(
   <React.StrictMode>
     <BrowserRouter>

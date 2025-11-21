@@ -1,13 +1,15 @@
-import Navbar from "../../components/NavBar.tsx";
-import Breadcrumbs from "../../components/Breadcrumbs.tsx";
+import Navbar from "../../components/NavBar";
+import Breadcrumbs from "../../components/Breadcrumbs";
 import { RiExternalLinkLine } from "react-icons/ri";
 
 type ResumeProps = {
   onNavigate?: (pageId: string) => void;
 };
+
 const documentURL =
   "https://docs.google.com/document/d/1ei5dTmXsQ0X0AeQnxmuT2cDt-WKHS_6uZe_WAqVl7yU/edit?usp=sharing";
-export const Resume = ({ onNavigate }: ResumeProps) => {
+
+export const Resume: React.FC<ResumeProps> = ({ onNavigate }) => {
   return (
     <div className="resume">
       <Navbar onNavigate={onNavigate} />

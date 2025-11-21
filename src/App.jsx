@@ -1,5 +1,5 @@
 // src/App.jsx
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import MyRoom from "./pages/MyRoom.jsx";
 import MyPhone from "./pages/MyPhone.jsx";
@@ -12,16 +12,16 @@ import Resume from "./pages/arcade/Resume.tsx";
 import {
   NavigationProvider,
   useNavigation,
-} from "./hooks/NavigationContext.tsx";
+} from "./context/NavigationContext.tsx";
 
 export default function App() {
   const [ready, setReady] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
+  // Watches for change in window size and sets IsMobile accordingly
   useEffect(() => {
     const mql = window.matchMedia("(max-width: 959px)");
     const onChange = (e) => setIsMobile(e.matches);
-
     setIsMobile(mql.matches);
     mql.addEventListener?.("change", onChange) ?? mql.addListener(onChange);
     return () =>
@@ -29,11 +29,13 @@ export default function App() {
       mql.removeListener(onChange);
   }, []);
 
+  //Page load spinner
   useEffect(() => {
     const MIN_SPINNER_MS = 500;
     const start = performance.now();
     let done = false;
 
+    // If the minimum amount of time hasnt passed keep spinning until then
     const finish = () => {
       if (done) return;
       done = true;
@@ -63,13 +65,18 @@ export default function App() {
   if (!ready) return <Loader />;
 
   return (
+    /* App.jsx is not wrapped in NavigationProvider so I make AppWithNav ao it looks like this: 
+    -App
+    --NavigationProvider
+    ---AppWithNav
+    */
     <NavigationProvider>
       <AppWithNav isMobile={isMobile} />
     </NavigationProvider>
   );
 }
 
-// This lives *inside* NavigationProvider, so it can use the hook
+// This lives inside NavigationProvider, so it can use the hook
 function AppWithNav({ isMobile }) {
   const { goTo } = useNavigation();
 

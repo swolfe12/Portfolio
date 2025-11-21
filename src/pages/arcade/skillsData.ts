@@ -1,14 +1,5 @@
-//src/pages/arcade/skillsData.ts
-import sfhat from "../../assets/sam-fhat.webp";
-import sbhat from "../../assets/sam-bhat.webp";
-import sheadphones from "../../assets/sam-headphones.webp";
-import sflower from "../../assets/sam-flower.webp";
-import ssunnies from "../../assets/sam-sunnies.webp";
-import cmsCert from "../../assets/sitecore.png";
-import agileCert from "../../assets/scrum.png";
-
-// types & shared data for Skills
 export type Block = { title: string; items: string[] };
+
 export type Cat = {
   id: string;
   name: string;
@@ -43,7 +34,7 @@ export const SKILL_DATA: Record<string, Cat> = {
       },
       { title: "Tooling", items: ["Vite", "Webpack", "ESLint / Prettier"] },
     ],
-    img: sfhat,
+    img: "/assets/sam-fhat.webp",
   },
 
   cms: {
@@ -63,8 +54,8 @@ export const SKILL_DATA: Record<string, Cat> = {
         items: ["Multi-page sites", "Brand migrations", "Authoring workflows"],
       },
     ],
-    img: sflower,
-    certImg: cmsCert,
+    img: "/assets/sam-flower.webp",
+    certImg: "/assets/sitecore.png",
     certAlt: "Sitecore 10 developer certification",
   },
 
@@ -90,7 +81,7 @@ export const SKILL_DATA: Record<string, Cat> = {
         items: ["Defect triage", "Developer education", "A11y checklists"],
       },
     ],
-    img: sheadphones,
+    img: "/assets/sam-headphones.webp",
   },
 
   backend: {
@@ -105,7 +96,7 @@ export const SKILL_DATA: Record<string, Cat> = {
       { title: "Auth & Security", items: ["JWT/OIDC", "Azure AD", "Keycloak"] },
       { title: "API Styles", items: ["REST", "GraphQL"] },
     ],
-    img: sbhat,
+    img: "/assets/sam-bhat.webp",
   },
 
   agile: {
@@ -131,8 +122,8 @@ export const SKILL_DATA: Record<string, Cat> = {
         items: ["Jira", "Confluence", "Figma (handoff)"],
       },
     ],
-    img: ssunnies,
-    certImg: agileCert,
+    img: "/assets/sam-sunnies.webp",
+    certImg: "/assets/scrum.png",
     certAlt: "Scrum certification",
   },
 };

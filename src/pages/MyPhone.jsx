@@ -1,6 +1,6 @@
 // src/pages/MyPhone.jsx
 import Phone from "../components/Phone";
-import { useNavigation } from "../hooks/NavigationContext.tsx";
+import { useNavigation } from "../context/NavigationContext.tsx";
 
 const MyPhone = () => {
   const { current, goTo } = useNavigation();

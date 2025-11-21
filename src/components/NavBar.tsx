@@ -1,4 +1,4 @@
-import React, { useEffect, useId, useRef, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 
 type Category = {
@@ -42,7 +42,6 @@ export default function Navbar({ onNavigate }: NavbarProps) {
   const exitCancelBtnRef = useRef<HTMLButtonElement | null>(null);
   const scrollYRef = useRef(0);
 
-  // Lock scroll when mobile menu opens
   useEffect(() => {
     if (open) {
       scrollYRef.current = window.scrollY;
@@ -55,7 +54,6 @@ export default function Navbar({ onNavigate }: NavbarProps) {
     }
   }, [open]);
 
-  // Escape key handling
   useEffect(() => {
     function onKeyDown(e: KeyboardEvent) {
       if (e.key === "Escape") {
@@ -73,17 +71,6 @@ export default function Navbar({ onNavigate }: NavbarProps) {
     document.addEventListener("keydown", onKeyDown);
     return () => document.removeEventListener("keydown", onKeyDown);
   }, [open, exitOpen]);
-
-  /* Resume modal logic
-  const handleResumeClick = (
-    e?: React.MouseEvent,
-    triggerEl?: HTMLElement | null
-  ) => {
-    e?.preventDefault();
-    setOpen(false);
-    if (triggerEl) resumeTriggerRef.current = triggerEl as any;
-    setExitOpen(true);
-  };*/
 
   const confirmLeave = () => {
     setExitOpen(false);
@@ -121,7 +108,6 @@ export default function Navbar({ onNavigate }: NavbarProps) {
           className="drawer-link"
           type="button"
           onClick={() => {
-            console.log("[Navbar] drawer click", c.id);
             onNavigate?.(c.id);
             setOpen(false);
           }}
@@ -132,7 +118,6 @@ export default function Navbar({ onNavigate }: NavbarProps) {
     );
   };
 
-  // Focus trap for exit modal
   useEffect(() => {
     if (!exitOpen) return;
     const prevActive = document.activeElement as HTMLElement | null;
@@ -166,7 +151,7 @@ export default function Navbar({ onNavigate }: NavbarProps) {
               onNavigate?.("home");
             }}
           >
-            Sam's Portfolio
+            Sam&apos;s Portfolio
           </button>
 
           <nav
@@ -180,7 +165,6 @@ export default function Navbar({ onNavigate }: NavbarProps) {
             </div>
           </nav>
 
-          {/* Mobile toggle */}
           <button
             ref={menuButtonRef}
             type="button"

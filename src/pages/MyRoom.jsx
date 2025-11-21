@@ -1,35 +1,15 @@
+// src/pages/MyRoom.jsx
 import { useState, useRef, useEffect } from "react";
 import "./../styles/main.scss";
 import Calendar from "../components/Calendar";
 import Clock from "../components/Clock";
-import Laptop from "../components/Laptop.jsx";
+import Laptop from "../components/Laptop";
 import MashImg from "../components/MashImage";
-
-import contact from "./../assets/contact.png";
-import plant from "./../assets/plant.png";
-import coffee from "./../assets/coffee2.png";
-import gummies from "./../assets/gummies.png";
-import pens from "./../assets/pens.png";
-import notebook from "./../assets/notebook.png";
-import headphones from "./../assets/headphones.png";
-import lavalamp from "./../assets/lavalamp2.png";
-import sunnies from "./../assets/sunnies.png";
-import bulletin from "./../assets/bulletin.png";
-import jellyfish from "./../assets/jellyfish.png";
-import samPoster from "./../assets/sam-poster.png";
-import dogs from "./../assets/dogs.png";
-import desk from "./../assets/desk.png";
-import windowImg from "./../assets/window.png";
-import paper from "./../assets/paper.webp";
-import mouse from "./../assets/mouse.png";
-import clouds from "./../assets/window.mp4";
-import speaker from "./../assets/speaker.png";
-import neon from "./../assets/neon.webp";
 
 const SCALE_MS = 320; // match your CSS transition duration
 
 const MyRoom = () => {
-  const [isModalOpen, setIsModalOpen] = useState(true);
+  //const [isModalOpen, setIsModalOpen] = useState(true);
   const [isLaptopOpen, setIsLaptopOpen] = useState(false);
   const [isContactOpen, setIsContactOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState("home");
@@ -50,7 +30,7 @@ const MyRoom = () => {
     return () => root.classList.remove("glow-paused");
   }, [isAnimating]);
 
-  // Escape to close (safe, small)
+  // Escape to close
   useEffect(() => {
     if (!isLaptopOpen) return;
     const onKeyDown = (e) => {
@@ -148,7 +128,7 @@ const MyRoom = () => {
 
   return (
     <div className={`portfolio${isAnimating ? " is-animating" : ""}`}>
-      {/* Close on click outside .screen (use CLICK capture = fires after layout, smoother than pointerdown) */}
+      {/* Close on click outside .screen */}
       <div
         className="inner-container"
         onClickCapture={(e) => {
@@ -160,6 +140,7 @@ const MyRoom = () => {
           }
         }}
       >
+        {/*
         {isModalOpen && (
           <div className="popup">
             <div className="popup-content">
@@ -179,12 +160,12 @@ const MyRoom = () => {
               </p>
             </div>
           </div>
-        )}
+        )}*/}
 
-        <img className="plant" src={plant} alt="Plant" />
-        <img className="coffee" src={coffee} alt="Coffee" />
-        <img className="speaker" src={speaker} alt="Speaker" />
-        <img className="gummies" src={gummies} alt="Gummies" />
+        <img className="plant" src="/assets/plant.png" alt="Plant" />
+        <img className="coffee" src="/assets/coffee2.png" alt="Coffee" />
+        <img className="speaker" src="/assets/speaker.png" alt="Speaker" />
+        <img className="gummies" src="/assets/gummies.png" alt="Gummies" />
 
         <div className={`contact-wrap`}>
           <button
@@ -192,7 +173,7 @@ const MyRoom = () => {
             className={`contact glowable${
               isContactOpen ? " scale-up active" : ""
             }`}
-            style={{ backgroundImage: `url(${contact})` }}
+            style={{ backgroundImage: 'url("/assets/contact.png")' }}
             onClick={handleContactClick}
             aria-expanded={isContactOpen}
             aria-controls="contact-panel"
@@ -208,7 +189,6 @@ const MyRoom = () => {
         </div>
 
         <div className={`laptop-wrapper${isLaptopOpen ? " active" : ""}`}>
-          {/* CLOSED: overlay is the ONLY opener (one clean click) */}
           {!isLaptopOpen && (
             <button
               type="button"
@@ -223,7 +203,7 @@ const MyRoom = () => {
             />
           )}
 
-          {/* OPEN: close button */}
+          {/* close button */}
           {isLaptopOpen && (
             <button
               className="laptop-close-btn"
@@ -248,27 +228,39 @@ const MyRoom = () => {
           />
         </div>
 
-        <img className="neon" src={neon} alt="neon sign" />
-        <img className="bulletin" src={bulletin} alt="bulletin" />
-        <img className="jellyfish" src={jellyfish} alt="jellyfish" />
-        <img className="sam-poster" src={samPoster} alt="Sam Wolfe" />
-        <img className="desk" src={desk} alt="desk" />
+        <img className="neon" src="/assets/neon.webp" alt="neon sign" />
+        <img className="bulletin" src="/assets/bulletin.png" alt="bulletin" />
+        <img
+          className="jellyfish"
+          src="/assets/jellyfish.png"
+          alt="jellyfish"
+        />
+        <img
+          className="sam-poster"
+          src="/assets/sam-poster.png"
+          alt="Sam Wolfe"
+        />
+        <img className="desk" src="/assets/desk.png" alt="desk" />
 
         <video autoPlay loop muted playsInline className="clouds" id="myVideo">
-          <source src={clouds} type="video/mp4" />
+          <source src="/assets/window.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
-        <img className="window" src={windowImg} alt="window" />
-        <img className="paper" src={paper} alt="paper" />
-        <img className="dogs" src={dogs} alt="dogs" />
-        <img className="pens" src={pens} alt="Pens" />
-        <img className="notebook" src={notebook} alt="Notebook" />
+        <img className="window" src="/assets/window.png" alt="window" />
+        <img className="paper" src="/assets/paper.webp" alt="paper" />
+        <img className="dogs" src="/assets/dogs.png" alt="dogs" />
+        <img className="pens" src="/assets/pens.png" alt="Pens" />
+        <img className="notebook" src="/assets/notebook.png" alt="Notebook" />
         <MashImg />
-        <img className="headphones" src={headphones} alt="Headphones" />
-        <img className="lavalamp" src={lavalamp} alt="Lavalamp" />
-        <img className="sunnies" src={sunnies} alt="Sunnies" />
-        <img className="mouse" src={mouse} alt="Mouse pad" />
+        <img
+          className="headphones"
+          src="/assets/headphones.png"
+          alt="Headphones"
+        />
+        <img className="lavalamp" src="/assets/lavalamp2.png" alt="Lavalamp" />
+        <img className="sunnies" src="/assets/sunnies.png" alt="Sunnies" />
+        <img className="mouse" src="/assets/mouse.png" alt="Mouse pad" />
 
         <Calendar />
         <Clock />

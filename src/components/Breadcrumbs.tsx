@@ -1,6 +1,6 @@
 // src/components/Breadcrumbs.tsx
 import React from "react";
-import type { PageId } from "../hooks/NavigationContext";
+import type { PageId } from "../context/NavigationContext";
 
 type Crumb = {
   id: PageId;
@@ -12,6 +12,7 @@ type BreadcrumbsProps = {
   items: Crumb[];
   onNavigate?: (pageId: PageId) => void;
 };
+
 const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items, onNavigate }) => {
   if (!items.length) return null;
 
@@ -20,7 +21,6 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items, onNavigate }) => {
       <ol className="breadcrumbs__list">
         {items.map((item, index) => {
           const isLast = index === items.length - 1;
-          // 🔑 Only treat as "current" if explicitly marked
           const isCurrent = item.isCurrent === true;
 
           if (isCurrent) {

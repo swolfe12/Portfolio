@@ -1,23 +1,11 @@
-import Navbar from "../../components/NavBar.tsx";
-import wcc from "../../assets/WCC.png";
-import sass from "../../assets/sass-logo.png";
-import css from "../../assets/CSS-logo.png";
-import html from "../../assets/html-logo.png";
-import artPortfolio from "../../assets/art-portfolio.png";
-import netlify from "../../assets/netlify.png";
-import ionos from "../../assets/Ionos.jpeg";
-import react from "../../assets/react-logo.png";
-import gitactions from "../../assets/git-actions-logo.png";
-import vite from "../../assets/vite.jpeg";
-import js from "../../assets/javascript.png";
-import ts from "../../assets/typescript.png";
-import Breadcrumbs from "../../components/Breadcrumbs.tsx";
+import Navbar from "../../components/NavBar";
+import Breadcrumbs from "../../components/Breadcrumbs";
 
 type ProjectsProps = {
   onNavigate?: (pageId: string) => void;
 };
 
-export const Projects = ({ onNavigate }: ProjectsProps) => {
+export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
   return (
     <div className="projects">
       <Navbar onNavigate={onNavigate} />
@@ -31,12 +19,11 @@ export const Projects = ({ onNavigate }: ProjectsProps) => {
       <div className="game-box">
         <div className="section-header">Projects</div>
 
-        {/* --- Card 1: Woodstock Community Church --- */}
         <div className="project-card">
           <div className="project-img-container">
             <div
               className="project-img"
-              style={{ backgroundImage: `url(${wcc})` }}
+              style={{ backgroundImage: 'url("/assets/WCC.png")' }}
             />
             <div className="project-overlay" />
           </div>
@@ -67,23 +54,43 @@ export const Projects = ({ onNavigate }: ProjectsProps) => {
               <h5 className="section-title">TOOLS</h5>
               <div className="cast-list">
                 <div className="cast-item">
-                  <img src={js} className="cast-photo" alt="JavaScript" />
+                  <img
+                    src="/assets/javascript.png"
+                    className="cast-photo"
+                    alt="JavaScript"
+                  />
                   <span className="cast-name">Java-Script</span>
                 </div>
                 <div className="cast-item">
-                  <img src={sass} className="cast-photo" alt="Sass" />
+                  <img
+                    src="/assets/sass-logo.png"
+                    className="cast-photo"
+                    alt="Sass"
+                  />
                   <span className="cast-name">Sass</span>
                 </div>
                 <div className="cast-item">
-                  <img src={html} className="cast-photo" alt="HTML5" />
+                  <img
+                    src="/assets/html-logo.png"
+                    className="cast-photo"
+                    alt="HTML5"
+                  />
                   <span className="cast-name">HTML5</span>
                 </div>
                 <div className="cast-item">
-                  <img src={css} className="cast-photo" alt="CSS3" />
+                  <img
+                    src="/assets/CSS-logo.png"
+                    className="cast-photo"
+                    alt="CSS3"
+                  />
                   <span className="cast-name">CSS3</span>
                 </div>
                 <div className="cast-item">
-                  <img src={ionos} className="cast-photo" alt="ionos" />
+                  <img
+                    src="/assets/Ionos.jpeg"
+                    className="cast-photo"
+                    alt="IONOS"
+                  />
                   <span className="cast-name">IONOS</span>
                 </div>
               </div>
@@ -102,12 +109,11 @@ export const Projects = ({ onNavigate }: ProjectsProps) => {
           </div>
         </div>
 
-        {/* --- Card 2: Sister's Art Portfolio --- */}
         <div className="project-card">
           <div className="project-img-container">
             <div
               className="project-img"
-              style={{ backgroundImage: `url(${artPortfolio})` }}
+              style={{ backgroundImage: 'url("/assets/art-portfolio.png")' }}
             />
             <div className="project-overlay" />
           </div>
@@ -139,34 +145,53 @@ export const Projects = ({ onNavigate }: ProjectsProps) => {
               <h5 className="section-title">TOOLS</h5>
               <div className="cast-list">
                 <div className="cast-item">
-                  <img src={react} className="cast-photo" alt="React" />
+                  <img
+                    src="/assets/react-logo.png"
+                    className="cast-photo"
+                    alt="React"
+                  />
                   <span className="cast-name">React</span>
                 </div>
                 <div className="cast-item">
-                  <img src={ts} className="cast-photo" alt="TypeScript" />
+                  <img
+                    src="/assets/typescript.png"
+                    className="cast-photo"
+                    alt="TypeScript"
+                  />
                   <span className="cast-name">Type-Script</span>
                 </div>
                 <div className="cast-item">
-                  <img src={sass} className="cast-photo" alt="Sass" />
+                  <img
+                    src="/assets/sass-logo.png"
+                    className="cast-photo"
+                    alt="Sass"
+                  />
                   <span className="cast-name">Sass</span>
                 </div>
                 <div className="cast-item">
                   <img
-                    src={gitactions}
+                    src="/assets/git-actions-logo.png"
                     className="cast-photo"
                     alt="Git Actions"
                   />
                   <span className="cast-name">Git Actions</span>
                 </div>
                 <div className="cast-item">
-                  <img src={vite} className="cast-photo" alt="Vite" />
+                  <img
+                    src="/assets/vite.jpeg"
+                    className="cast-photo"
+                    alt="Vite"
+                  />
                   <span className="cast-name">Vite</span>
                 </div>
                 <div className="cast-item">
-                  <img src={netlify} className="cast-photo" alt="Netlify" />
+                  <img
+                    src="/assets/netlify.png"
+                    className="cast-photo"
+                    alt="Netlify"
+                  />
                   <span className="cast-name">Netlify</span>
                 </div>
-                {/* If you want to show React/TS/Vite badges, import their logos and add here */}
               </div>
             </div>
 
@@ -182,7 +207,6 @@ export const Projects = ({ onNavigate }: ProjectsProps) => {
             </div>
           </div>
         </div>
-        {/* --- end card 2 --- */}
       </div>
     </div>
   );
