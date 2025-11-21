@@ -14,7 +14,6 @@ import {
   useNavigation,
 } from "./hooks/NavigationContext.tsx";
 
-// Outer App keeps your loader + mobile detection
 export default function App() {
   const [ready, setReady] = useState(false);
   const [isMobile, setIsMobile] = useState(false);

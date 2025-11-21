@@ -32,5 +32,5 @@ jobs: #what the workflow is going to do
         run: |
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy to gh-pages Branch
         run: npm run deploy #runs script from package.json - pushes build folder to gh-pages branch
